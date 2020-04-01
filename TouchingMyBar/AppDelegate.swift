@@ -38,6 +38,10 @@ class TouchBarController: NSObject {
         DFRElementSetControlStripPresenceForIdentifier(.candidateList, true)
     }
 
+    @objc func presentTouchBar() {
+        // Do nothing for now.
+    }
+    
     private override init() {
         super.init()
         touchBar.delegate = self
