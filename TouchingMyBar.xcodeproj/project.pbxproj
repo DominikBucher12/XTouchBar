@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE39F24103A9D00B9283D /* AppDelegate.swift */; };
+		E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3A124103A9D00B9283D /* ViewController.swift */; };
+		E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A324103AA000B9283D /* Assets.xcassets */; };
+		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
+		E72CE3B324103AA100B9283D /* TouchingMyBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */; };
+		E72CE3C72410404C00B9283D /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3C62410404C00B9283D /* cat.jpg */; };
+		E72CE3CA241045E300B9283D /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72CE3C9241045E300B9283D /* DFRFoundation.framework */; };
+		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E72CE3AF24103AA100B9283D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E72CE39424103A9D00B9283D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E72CE39B24103A9D00B9283D;
+			remoteInfo = TouchingMyBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E72CE39C24103A9D00B9283D /* TouchingMyBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchingMyBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E72CE39F24103A9D00B9283D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E72CE3A124103A9D00B9283D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E72CE3A324103AA000B9283D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E72CE3A624103AA000B9283D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E72CE3A824103AA000B9283D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E72CE3A924103AA000B9283D /* TouchingMyBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TouchingMyBar.entitlements; sourceTree = "<group>"; };
+		E72CE3AE24103AA100B9283D /* TouchingMyBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchingMyBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchingMyBarTests.swift; sourceTree = "<group>"; };
+		E72CE3B424103AA100B9283D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchBarPrivateApi.h; sourceTree = "<group>"; };
+		E72CE3C524103EE800B9283D /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
+		E72CE3C62410404C00B9283D /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
+		E72CE3C9241045E300B9283D /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
+		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E72CE39924103A9D00B9283D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72CE3CA241045E300B9283D /* DFRFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E72CE3AB24103AA000B9283D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E72CE39324103A9D00B9283D = {
+			isa = PBXGroup;
+			children = (
+				E72CE39E24103A9D00B9283D /* TouchingMyBar */,
+				E72CE3B124103AA100B9283D /* TouchingMyBarTests */,
+				E72CE39D24103A9D00B9283D /* Products */,
+				E72CE3C8241045E200B9283D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E72CE39D24103A9D00B9283D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E72CE39C24103A9D00B9283D /* TouchingMyBar.app */,
+				E72CE3AE24103AA100B9283D /* TouchingMyBarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E72CE39E24103A9D00B9283D /* TouchingMyBar */ = {
+			isa = PBXGroup;
+			children = (
+				E72CE3C524103EE800B9283D /* Bridging.h */,
+				E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */,
+				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
+				E72CE3A124103A9D00B9283D /* ViewController.swift */,
+				E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */,
+				E72CE3A324103AA000B9283D /* Assets.xcassets */,
+				E72CE3A524103AA000B9283D /* Main.storyboard */,
+				E72CE3A824103AA000B9283D /* Info.plist */,
+				E72CE3C62410404C00B9283D /* cat.jpg */,
+				E72CE3A924103AA000B9283D /* TouchingMyBar.entitlements */,
+			);
+			path = TouchingMyBar;
+			sourceTree = "<group>";
+		};
+		E72CE3B124103AA100B9283D /* TouchingMyBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */,
+				E72CE3B424103AA100B9283D /* Info.plist */,
+			);
+			path = TouchingMyBarTests;
+			sourceTree = "<group>";
+		};
+		E72CE3C8241045E200B9283D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E72CE3C9241045E300B9283D /* DFRFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E72CE39B24103A9D00B9283D /* TouchingMyBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E72CE3B724103AA100B9283D /* Build configuration list for PBXNativeTarget "TouchingMyBar" */;
+			buildPhases = (
+				E72CE39824103A9D00B9283D /* Sources */,
+				E72CE39924103A9D00B9283D /* Frameworks */,
+				E72CE39A24103A9D00B9283D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchingMyBar;
+			productName = TouchingMyBar;
+			productReference = E72CE39C24103A9D00B9283D /* TouchingMyBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E72CE3AD24103AA000B9283D /* TouchingMyBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E72CE3BA24103AA100B9283D /* Build configuration list for PBXNativeTarget "TouchingMyBarTests" */;
+			buildPhases = (
+				E72CE3AA24103AA000B9283D /* Sources */,
+				E72CE3AB24103AA000B9283D /* Frameworks */,
+				E72CE3AC24103AA000B9283D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E72CE3B024103AA100B9283D /* PBXTargetDependency */,
+			);
+			name = TouchingMyBarTests;
+			productName = TouchingMyBarTests;
+			productReference = E72CE3AE24103AA100B9283D /* TouchingMyBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E72CE39424103A9D00B9283D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Dominik Bucher";
+				TargetAttributes = {
+					E72CE39B24103A9D00B9283D = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					E72CE3AD24103AA000B9283D = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = E72CE39B24103A9D00B9283D;
+					};
+				};
+			};
+			buildConfigurationList = E72CE39724103A9D00B9283D /* Build configuration list for PBXProject "TouchingMyBar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E72CE39324103A9D00B9283D;
+			productRefGroup = E72CE39D24103A9D00B9283D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E72CE39B24103A9D00B9283D /* TouchingMyBar */,
+				E72CE3AD24103AA000B9283D /* TouchingMyBarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E72CE39A24103A9D00B9283D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72CE3C72410404C00B9283D /* cat.jpg in Resources */,
+				E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */,
+				E72CE3A724103AA000B9283D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E72CE3AC24103AA000B9283D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E72CE39824103A9D00B9283D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */,
+				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
+				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E72CE3AA24103AA000B9283D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72CE3B324103AA100B9283D /* TouchingMyBarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E72CE3B024103AA100B9283D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E72CE39B24103A9D00B9283D /* TouchingMyBar */;
+			targetProxy = E72CE3AF24103AA100B9283D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E72CE3A524103AA000B9283D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E72CE3A624103AA000B9283D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E72CE3B524103AA100B9283D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E72CE3B624103AA100B9283D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		E72CE3B824103AA100B9283D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TouchingMyBar/TouchingMyBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X2MB65427X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
+				INFOPLIST_FILE = TouchingMyBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dominikbucher.TouchingMyBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = TouchingMyBar/Bridging.h;
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		E72CE3B924103AA100B9283D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TouchingMyBar/TouchingMyBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X2MB65427X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
+				INFOPLIST_FILE = TouchingMyBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dominikbucher.TouchingMyBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = TouchingMyBar/Bridging.h;
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		E72CE3BB24103AA100B9283D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X2MB65427X;
+				INFOPLIST_FILE = TouchingMyBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dominikbucher.TouchingMyBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchingMyBar.app/Contents/MacOS/TouchingMyBar";
+			};
+			name = Debug;
+		};
+		E72CE3BC24103AA100B9283D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X2MB65427X;
+				INFOPLIST_FILE = TouchingMyBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dominikbucher.TouchingMyBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchingMyBar.app/Contents/MacOS/TouchingMyBar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E72CE39724103A9D00B9283D /* Build configuration list for PBXProject "TouchingMyBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E72CE3B524103AA100B9283D /* Debug */,
+				E72CE3B624103AA100B9283D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E72CE3B724103AA100B9283D /* Build configuration list for PBXNativeTarget "TouchingMyBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E72CE3B824103AA100B9283D /* Debug */,
+				E72CE3B924103AA100B9283D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E72CE3BA24103AA100B9283D /* Build configuration list for PBXNativeTarget "TouchingMyBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E72CE3BB24103AA100B9283D /* Debug */,
+				E72CE3BC24103AA100B9283D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E72CE39424103A9D00B9283D /* Project object */;
+}
