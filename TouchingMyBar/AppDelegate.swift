@@ -13,7 +13,7 @@ import AppKit
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        TouchBarController.shared.setupControlStripPresence()
+        TouchBarController.shared.clearUpTouchBar()
 
         // Insert code here to initialize your application
     }
@@ -28,20 +28,10 @@ class TouchBarController: NSObject {
     static let shared = TouchBarController()
     let touchBar = NSTouchBar()
     
-    func setupControlStripPresence() {
-        presentSystemModal(TouchBarController.shared.touchBar, systemTrayItemIdentifier: .controlStripItem)
-        DFRSystemModalShowsCloseBoxWhenFrontMost(false)
-        let item = NSCustomTouchBarItem(identifier:.candidateList)
-        item.view = NSButton(image: NSImage(named: "cat")! , target: self, action: #selector(TouchBarController.presentTouchBar))
-        NSTouchBarItem.addSystemTrayItem(item)
-
-        DFRElementSetControlStripPresenceForIdentifier(.candidateList, true)
+    func clearUpTouchBar() {
+        presentSystemModal(TouchBarController.shared.touchBar, placement: 1, systemTrayItemIdentifier: .controlStripItem)
     }
 
-    @objc func presentTouchBar() {
-        // Do nothing for now.
-    }
-    
     private override init() {
         super.init()
         touchBar.delegate = self

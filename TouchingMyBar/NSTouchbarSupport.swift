@@ -10,7 +10,7 @@ extension NSTouchBarItem.Identifier {
     static let controlStripItem = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.controlStrip")
 }
 
-/// This function replaces the current touchbar with custom implementation, keep in mid it should be the same touchbar as
+/// This function replaces the current touchbar with custom implementation, keep in mind it should be the same touchbar as
 /// `TouchBarController.shared.touchbar` otherwise you will have a bad time.
 /// - Parameters:
 ///   - touchBar: Touchbar instance which to present
@@ -26,6 +26,10 @@ func presentSystemModal(_ touchBar: NSTouchBar!, systemTrayItemIdentifier identi
 ///   - identifier: <#identifier description#>
 func presentSystemModal(_ touchBar: NSTouchBar!, placement: Int64, systemTrayItemIdentifier identifier: NSTouchBarItem.Identifier!) {
     NSTouchBar.presentSystemModalTouchBar(touchBar, placement: placement, systemTrayItemIdentifier: identifier)
+}
+
+func dismissSystemModal(_ touchBar: NSTouchBar) {
+    NSTouchBar.dismissSystemModalTouchBar(touchBar)
 }
 
 /// Minimize the system touchbar, make it go away, you don't want this :D
