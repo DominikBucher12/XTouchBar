@@ -8,13 +8,14 @@
 
 import Cocoa
 import AppKit
+import SwiftUI
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         TouchBarController.shared.clearUpTouchBar()
-
+		TouchBarController.shared.makeButton()
         // Insert code here to initialize your application
     }
 
@@ -31,6 +32,14 @@ class TouchBarController: NSObject {
     func clearUpTouchBar() {
         presentSystemModal(TouchBarController.shared.touchBar, placement: 1, systemTrayItemIdentifier: .controlStripItem)
     }
+	
+	func makeButton() {
+		let item = NSCustomTouchBarItem(identifier: NSTouchBarItem.Identifier(rawValue: "HelloWorld"))
+		item.view = NSHostingView(rootView: HelloWorld())
+		
+		TouchBarController.shared.touchBar.defaultItemIdentifiers = [item.identifier]
+		TouchBarController.shared.touchBar.templateItems = [item]
+	}
 
     private override init() {
         super.init()
