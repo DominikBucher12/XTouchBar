@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38E001332436775700A1EBC0 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E001322436775700A1EBC0 /* HelloWorld.swift */; };
 		E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE39F24103A9D00B9283D /* AppDelegate.swift */; };
 		E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3A124103A9D00B9283D /* ViewController.swift */; };
 		E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A324103AA000B9283D /* Assets.xcassets */; };
@@ -16,6 +15,7 @@
 		E72CE3C72410404C00B9283D /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3C62410404C00B9283D /* cat.jpg */; };
 		E72CE3CA241045E300B9283D /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72CE3C9241045E300B9283D /* DFRFoundation.framework */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
+		E796044624367BCE00F39215 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044524367BCE00F39215 /* HelloWorld.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		38E001322436775700A1EBC0 /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelloWorld.swift; path = ../../../../../Desktop/HelloWorld.swift; sourceTree = "<group>"; };
 		E72CE39C24103A9D00B9283D /* TouchingMyBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchingMyBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72CE39F24103A9D00B9283D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E72CE3A124103A9D00B9283D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		E72CE3C62410404C00B9283D /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
 		E72CE3C9241045E300B9283D /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
+		E796044524367BCE00F39215 /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 				E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E72CE3A124103A9D00B9283D /* ViewController.swift */,
-				38E001322436775700A1EBC0 /* HelloWorld.swift */,
+				E796044524367BCE00F39215 /* HelloWorld.swift */,
 				E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */,
 				E72CE3A324103AA000B9283D /* Assets.xcassets */,
 				E72CE3A524103AA000B9283D /* Main.storyboard */,
@@ -224,7 +224,7 @@
 				E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
-				38E001332436775700A1EBC0 /* HelloWorld.swift in Sources */,
+				E796044624367BCE00F39215 /* HelloWorld.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
