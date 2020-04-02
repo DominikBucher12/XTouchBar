@@ -16,6 +16,8 @@
 		E72CE3CA241045E300B9283D /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72CE3C9241045E300B9283D /* DFRFoundation.framework */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E796044624367BCE00F39215 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044524367BCE00F39215 /* HelloWorld.swift */; };
+		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
+		E796044A24367E3100F39215 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044924367E3100F39215 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		E72CE3C9241045E300B9283D /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
 		E796044524367BCE00F39215 /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
+		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +92,12 @@
 		E72CE39E24103A9D00B9283D /* TouchingMyBar */ = {
 			isa = PBXGroup;
 			children = (
+				E796044724367CE400F39215 /* README.md */,
 				E72CE3C524103EE800B9283D /* Bridging.h */,
 				E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E72CE3A124103A9D00B9283D /* ViewController.swift */,
+				E796044924367E3100F39215 /* Constants.swift */,
 				E796044524367BCE00F39215 /* HelloWorld.swift */,
 				E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */,
 				E72CE3A324103AA000B9283D /* Assets.xcassets */,
@@ -203,6 +209,7 @@
 			files = (
 				E72CE3C72410404C00B9283D /* cat.jpg in Resources */,
 				E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */,
+				E796044824367CE400F39215 /* README.md in Resources */,
 				E72CE3A724103AA000B9283D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E796044A24367E3100F39215 /* Constants.swift in Sources */,
 				E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
@@ -376,9 +384,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TouchingMyBar/TouchingMyBar.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E8938J75P7;
+				DEVELOPMENT_TEAM = X2MB65427X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
 				INFOPLIST_FILE = TouchingMyBar/Info.plist;
@@ -402,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TouchingMyBar/TouchingMyBar.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X2MB65427X;

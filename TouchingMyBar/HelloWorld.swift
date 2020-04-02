@@ -18,7 +18,7 @@ struct HelloWorld: View {
 	
     var body: some View {
         Text("Jak to sviští? 😎")
-			.frame(width: 400, height: touchBarElementMaxHeight, alignment: .center)
+            .frame(width: Constants.TouchBar.width, height: Constants.TouchBar.height, alignment: .center)
 			.foregroundColor(.white)
 			.shadow(color: .black, radius: 2, x: 0, y: 0)
 			.shadow(color: .black, radius: 2, x: 0, y: 0)
