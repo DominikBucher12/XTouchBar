@@ -160,7 +160,6 @@
 				E72CE39924103A9D00B9283D /* Frameworks */,
 				E72CE39A24103A9D00B9283D /* Resources */,
 				385EA4152437D68B0064C23D /* Embed Frameworks */,
-				385EA4192437D80C0064C23D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -247,26 +246,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		385EA4192437D80C0064C23D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho $DEVELOPER_FRAMEWORKS_DIR > ~/Documents/Programming/xcode_log.txt\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E72CE39824103A9D00B9283D /* Sources */ = {
