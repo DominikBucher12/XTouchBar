@@ -14,7 +14,6 @@ struct HelloWorld: View {
 	@State private var previousColor = Color.red
 	
 	private let colors: [Color] = [.red, .orange, .green, .blue, .yellow]
-	private let touchBarElementMaxHeight: CGFloat = 30
 	
     var body: some View {
         Text("Jak to sviští? 😎")
