@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		385EA4132437D68B0064C23D /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; };
+		385EA4142437D68B0064C23D /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		385EA4172437D6E30064C23D /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; };
+		385EA4182437D6E30064C23D /* IDEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE39F24103A9D00B9283D /* AppDelegate.swift */; };
 		E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3A124103A9D00B9283D /* ViewController.swift */; };
 		E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A324103AA000B9283D /* Assets.xcassets */; };
@@ -17,10 +21,6 @@
 		E796044624367BCE00F39215 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044524367BCE00F39215 /* HelloWorld.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
 		E796044A24367E3100F39215 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044924367E3100F39215 /* Constants.swift */; };
-		E7DABF462437D135002A1DD9 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DABF452437D135002A1DD9 /* IDEKit.framework */; };
-		E7DABF472437D135002A1DD9 /* IDEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7DABF452437D135002A1DD9 /* IDEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E7DABF492437D163002A1DD9 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DABF482437D163002A1DD9 /* DFRFoundation.framework */; };
-		E7DABF4A2437D163002A1DD9 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7DABF482437D163002A1DD9 /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E7B30C5A2437BDD000E81AF5 /* Embed Frameworks */ = {
+		385EA4152437D68B0064C23D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E7DABF4A2437D163002A1DD9 /* DFRFoundation.framework in Embed Frameworks */,
-				E7DABF472437D135002A1DD9 /* IDEKit.framework in Embed Frameworks */,
+				385EA4182437D6E30064C23D /* IDEKit.framework in Embed Frameworks */,
+				385EA4142437D68B0064C23D /* DFRFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +49,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		385EA4122437D68B0064C23D /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
+		385EA4162437D6E30064C23D /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
 		E72CE39C24103A9D00B9283D /* TouchingMyBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchingMyBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72CE39F24103A9D00B9283D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E72CE3A124103A9D00B9283D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,8 +69,6 @@
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7B30C532437AF4F00E81AF5 /* IDEKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
-		E7DABF452437D135002A1DD9 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
-		E7DABF482437D163002A1DD9 /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7DABF492437D163002A1DD9 /* DFRFoundation.framework in Frameworks */,
-				E7DABF462437D135002A1DD9 /* IDEKit.framework in Frameworks */,
+				385EA4172437D6E30064C23D /* IDEKit.framework in Frameworks */,
+				385EA4132437D68B0064C23D /* DFRFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +143,8 @@
 		E72CE3C8241045E200B9283D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E7DABF482437D163002A1DD9 /* DFRFoundation.framework */,
-				E7DABF452437D135002A1DD9 /* IDEKit.framework */,
+				385EA4162437D6E30064C23D /* IDEKit.framework */,
+				385EA4122437D68B0064C23D /* DFRFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,7 +159,8 @@
 				E72CE39824103A9D00B9283D /* Sources */,
 				E72CE39924103A9D00B9283D /* Frameworks */,
 				E72CE39A24103A9D00B9283D /* Resources */,
-				E7B30C5A2437BDD000E81AF5 /* Embed Frameworks */,
+				385EA4152437D68B0064C23D /* Embed Frameworks */,
+				385EA4192437D80C0064C23D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -246,6 +247,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		385EA4192437D80C0064C23D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho $DEVELOPER_FRAMEWORKS_DIR > ~/Documents/Programming/xcode_log.txt\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E72CE39824103A9D00B9283D /* Sources */ = {
@@ -411,7 +432,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = X2MB65427X;
+				DEVELOPMENT_TEAM = E8938J75P7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -450,7 +471,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = X2MB65427X;
+				DEVELOPMENT_TEAM = E8938J75P7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
