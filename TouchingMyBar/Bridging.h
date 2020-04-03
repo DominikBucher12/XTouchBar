@@ -10,6 +10,7 @@
 #define Bridging_h
 
 #import "TouchBarPrivateApi.h"
+#import "IDEKit.h"
 
 #endif /* Bridging_h */
 

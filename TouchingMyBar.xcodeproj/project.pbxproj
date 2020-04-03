@@ -18,6 +18,7 @@
 		E796044624367BCE00F39215 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044524367BCE00F39215 /* HelloWorld.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
 		E796044A24367E3100F39215 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044924367E3100F39215 /* Constants.swift */; };
+		E7B30C572437B03C00E81AF5 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B30C562437B03C00E81AF5 /* IDEKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		E796044524367BCE00F39215 /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E7B30C532437AF4F00E81AF5 /* IDEKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
+		E7B30C562437B03C00E81AF5 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B30C572437B03C00E81AF5 /* IDEKit.framework in Frameworks */,
 				E72CE3CA241045E300B9283D /* DFRFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +99,7 @@
 				E796044724367CE400F39215 /* README.md */,
 				E72CE3C524103EE800B9283D /* Bridging.h */,
 				E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */,
+				E7B30C532437AF4F00E81AF5 /* IDEKit.h */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E72CE3A124103A9D00B9283D /* ViewController.swift */,
 				E796044924367E3100F39215 /* Constants.swift */,
@@ -121,6 +126,7 @@
 		E72CE3C8241045E200B9283D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7B30C562437B03C00E81AF5 /* IDEKit.framework */,
 				E72CE3C9241045E300B9283D /* DFRFoundation.framework */,
 			);
 			name = Frameworks;
@@ -392,6 +398,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					/Applications/Xcode.app/Contents/Developer/Library/Frameworks,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TouchingMyBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +413,7 @@
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					/Applications/Xcode.app/Contents/Developer/Library/Frameworks,
 					"$(inherited)",
+					/Applications/Xcode.app/Contents/Frameworks/,
 				);
 			};
 			name = Debug;
@@ -423,6 +431,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					/Applications/Xcode.app/Contents/Developer/Library/Frameworks,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TouchingMyBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -437,6 +446,7 @@
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					/Applications/Xcode.app/Contents/Developer/Library/Frameworks,
 					"$(inherited)",
+					/Applications/Xcode.app/Contents/Frameworks/,
 				);
 			};
 			name = Release;
