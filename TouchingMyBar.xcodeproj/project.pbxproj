@@ -69,8 +69,6 @@
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7B30C532437AF4F00E81AF5 /* IDEKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
 		E7B30C5F2437BE9C00E81AF5 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
-		E7B30C692437C38100E81AF5 /* DVTDeviceFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTDeviceFoundation.framework; path = ../../../../Applications/Xcode.app/Contents/SharedFrameworks/DVTDeviceFoundation.framework; sourceTree = "<group>"; };
-		E7B30C6B2437C3B300E81AF5 /* DVTDeviceFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DVTDeviceFoundation.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +94,6 @@
 		E72CE39324103A9D00B9283D = {
 			isa = PBXGroup;
 			children = (
-				E7B30C692437C38100E81AF5 /* DVTDeviceFoundation.framework */,
-				E7B30C6B2437C3B300E81AF5 /* DVTDeviceFoundation.framework */,
 				E72CE39E24103A9D00B9283D /* TouchingMyBar */,
 				E72CE3B124103AA100B9283D /* TouchingMyBarTests */,
 				E72CE39D24103A9D00B9283D /* Products */,
