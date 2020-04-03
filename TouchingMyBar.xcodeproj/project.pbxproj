@@ -13,12 +13,14 @@
 		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
 		E72CE3B324103AA100B9283D /* TouchingMyBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */; };
 		E72CE3C72410404C00B9283D /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3C62410404C00B9283D /* cat.jpg */; };
-		E72CE3CA241045E300B9283D /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72CE3C9241045E300B9283D /* DFRFoundation.framework */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E796044624367BCE00F39215 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044524367BCE00F39215 /* HelloWorld.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
 		E796044A24367E3100F39215 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044924367E3100F39215 /* Constants.swift */; };
-		E7B30C572437B03C00E81AF5 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B30C562437B03C00E81AF5 /* IDEKit.framework */; };
+		E7B30C5B2437BDD200E81AF5 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72CE3C9241045E300B9283D /* DFRFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E7B30C5C2437BDD200E81AF5 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E72CE3C9241045E300B9283D /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E7B30C602437BE9C00E81AF5 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B30C5F2437BE9C00E81AF5 /* IDEKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E7B30C612437BE9C00E81AF5 /* IDEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7B30C5F2437BE9C00E81AF5 /* IDEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,21 @@
 			remoteInfo = TouchingMyBar;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E7B30C5A2437BDD000E81AF5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E7B30C612437BE9C00E81AF5 /* IDEKit.framework in Embed Frameworks */,
+				E7B30C5C2437BDD200E81AF5 /* DFRFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E72CE39C24103A9D00B9283D /* TouchingMyBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchingMyBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +68,9 @@
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7B30C532437AF4F00E81AF5 /* IDEKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
-		E7B30C562437B03C00E81AF5 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
+		E7B30C5F2437BE9C00E81AF5 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
+		E7B30C692437C38100E81AF5 /* DVTDeviceFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTDeviceFoundation.framework; path = ../../../../Applications/Xcode.app/Contents/SharedFrameworks/DVTDeviceFoundation.framework; sourceTree = "<group>"; };
+		E7B30C6B2437C3B300E81AF5 /* DVTDeviceFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DVTDeviceFoundation.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7B30C572437B03C00E81AF5 /* IDEKit.framework in Frameworks */,
-				E72CE3CA241045E300B9283D /* DFRFoundation.framework in Frameworks */,
+				E7B30C602437BE9C00E81AF5 /* IDEKit.framework in Frameworks */,
+				E7B30C5B2437BDD200E81AF5 /* DFRFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +96,8 @@
 		E72CE39324103A9D00B9283D = {
 			isa = PBXGroup;
 			children = (
+				E7B30C692437C38100E81AF5 /* DVTDeviceFoundation.framework */,
+				E7B30C6B2437C3B300E81AF5 /* DVTDeviceFoundation.framework */,
 				E72CE39E24103A9D00B9283D /* TouchingMyBar */,
 				E72CE3B124103AA100B9283D /* TouchingMyBarTests */,
 				E72CE39D24103A9D00B9283D /* Products */,
@@ -126,7 +147,7 @@
 		E72CE3C8241045E200B9283D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E7B30C562437B03C00E81AF5 /* IDEKit.framework */,
+				E7B30C5F2437BE9C00E81AF5 /* IDEKit.framework */,
 				E72CE3C9241045E300B9283D /* DFRFoundation.framework */,
 			);
 			name = Frameworks;
@@ -142,6 +163,7 @@
 				E72CE39824103A9D00B9283D /* Sources */,
 				E72CE39924103A9D00B9283D /* Frameworks */,
 				E72CE39A24103A9D00B9283D /* Resources */,
+				E7B30C5A2437BDD000E81AF5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,11 +421,15 @@
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					/Applications/Xcode.app/Contents/Developer/Library/Frameworks,
 					"$(PROJECT_DIR)",
+					/Applications/Xcode.app/Contents/Frameworks/,
+					/Applications/Xcode.app/Contents/SharedFrameworks/,
 				);
 				INFOPLIST_FILE = TouchingMyBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path/Frameworks",
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					/Applications/Xcode.app/Contents/Frameworks/,
+					/Applications/Xcode.app/Contents/SharedFrameworks/,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dominikbucher.TouchingMyBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +440,7 @@
 					/Applications/Xcode.app/Contents/Developer/Library/Frameworks,
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Frameworks/,
+					/Applications/Xcode.app/Contents/SharedFrameworks/,
 				);
 			};
 			name = Debug;
@@ -432,11 +459,15 @@
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					/Applications/Xcode.app/Contents/Developer/Library/Frameworks,
 					"$(PROJECT_DIR)",
+					/Applications/Xcode.app/Contents/Frameworks/,
+					/Applications/Xcode.app/Contents/SharedFrameworks/,
 				);
 				INFOPLIST_FILE = TouchingMyBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path/Frameworks",
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					/Applications/Xcode.app/Contents/Frameworks/,
+					/Applications/Xcode.app/Contents/SharedFrameworks/,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dominikbucher.TouchingMyBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +478,7 @@
 					/Applications/Xcode.app/Contents/Developer/Library/Frameworks,
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Frameworks/,
+					/Applications/Xcode.app/Contents/SharedFrameworks/,
 				);
 			};
 			name = Release;
