@@ -17,10 +17,10 @@
 		E796044624367BCE00F39215 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044524367BCE00F39215 /* HelloWorld.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
 		E796044A24367E3100F39215 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044924367E3100F39215 /* Constants.swift */; };
-		E7B30C5B2437BDD200E81AF5 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72CE3C9241045E300B9283D /* DFRFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		E7B30C5C2437BDD200E81AF5 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E72CE3C9241045E300B9283D /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E7B30C602437BE9C00E81AF5 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B30C5F2437BE9C00E81AF5 /* IDEKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		E7B30C612437BE9C00E81AF5 /* IDEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7B30C5F2437BE9C00E81AF5 /* IDEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E7DABF462437D135002A1DD9 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DABF452437D135002A1DD9 /* IDEKit.framework */; };
+		E7DABF472437D135002A1DD9 /* IDEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7DABF452437D135002A1DD9 /* IDEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E7DABF492437D163002A1DD9 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DABF482437D163002A1DD9 /* DFRFoundation.framework */; };
+		E7DABF4A2437D163002A1DD9 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7DABF482437D163002A1DD9 /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E7B30C612437BE9C00E81AF5 /* IDEKit.framework in Embed Frameworks */,
-				E7B30C5C2437BDD200E81AF5 /* DFRFoundation.framework in Embed Frameworks */,
+				E7DABF4A2437D163002A1DD9 /* DFRFoundation.framework in Embed Frameworks */,
+				E7DABF472437D135002A1DD9 /* IDEKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,13 +62,13 @@
 		E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchBarPrivateApi.h; sourceTree = "<group>"; };
 		E72CE3C524103EE800B9283D /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		E72CE3C62410404C00B9283D /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
-		E72CE3C9241045E300B9283D /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
 		E796044524367BCE00F39215 /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7B30C532437AF4F00E81AF5 /* IDEKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
-		E7B30C5F2437BE9C00E81AF5 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
+		E7DABF452437D135002A1DD9 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
+		E7DABF482437D163002A1DD9 /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7B30C602437BE9C00E81AF5 /* IDEKit.framework in Frameworks */,
-				E7B30C5B2437BDD200E81AF5 /* DFRFoundation.framework in Frameworks */,
+				E7DABF492437D163002A1DD9 /* DFRFoundation.framework in Frameworks */,
+				E7DABF462437D135002A1DD9 /* IDEKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +143,8 @@
 		E72CE3C8241045E200B9283D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E7B30C5F2437BE9C00E81AF5 /* IDEKit.framework */,
-				E72CE3C9241045E300B9283D /* DFRFoundation.framework */,
+				E7DABF482437D163002A1DD9 /* DFRFoundation.framework */,
+				E7DABF452437D135002A1DD9 /* IDEKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -426,6 +426,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Frameworks/,
 					/Applications/Xcode.app/Contents/SharedFrameworks/,
+					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dominikbucher.TouchingMyBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -464,6 +465,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Frameworks/,
 					/Applications/Xcode.app/Contents/SharedFrameworks/,
+					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dominikbucher.TouchingMyBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
