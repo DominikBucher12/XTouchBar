@@ -13,4 +13,9 @@ public enum Constants {
         public static let height: CGFloat = 30
         public static let width: CGFloat = 1084
     }
+	
+	public enum AppIDs {
+		public static let xcode = "com.apple.dt.Xcode"
+		public static let xTouchBar = "com.dominikbucher.TouchingMyBar"
+	}
 }

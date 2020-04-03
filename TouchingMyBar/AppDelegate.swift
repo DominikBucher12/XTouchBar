@@ -17,11 +17,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         TouchBarController.shared.clearUpTouchBar()
 		TouchBarController.shared.makeButton()
         // Insert code here to initialize your application
+		
+		NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didLaunchApplicationNotification, object: nil)
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didTerminateApplicationNotification, object: nil)
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didActivateApplicationNotification, object: nil)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+	
+	@objc private func hideOrShowXTouchBar() {
+		guard let appID = NSWorkspace.shared.frontmostApplication?.bundleIdentifier else {
+			TouchBarController.shared.hideXTouchBar()
+			return
+		}
+		
+		if appID == Constants.AppIDs.xcode || appID == Constants.AppIDs.xTouchBar {
+			TouchBarController.shared.clearUpTouchBar()
+		} else {
+			TouchBarController.shared.hideXTouchBar()
+		}
+	}
 }
 
 class TouchBarController: NSObject {
@@ -32,6 +49,10 @@ class TouchBarController: NSObject {
     func clearUpTouchBar() {
         presentSystemModal(TouchBarController.shared.touchBar, placement: 1, systemTrayItemIdentifier: .controlStripItem)
     }
+	
+	func hideXTouchBar() {
+		minimizeSystemModal(TouchBarController.shared.touchBar)
+	}
 	
 	func makeButton() {
 		let item = NSCustomTouchBarItem(identifier: NSTouchBarItem.Identifier(rawValue: "HelloWorld"))
