@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		385EA4132437D68B0064C23D /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; };
-		385EA4142437D68B0064C23D /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		385EA4172437D6E30064C23D /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; };
-		385EA4182437D6E30064C23D /* IDEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE39F24103A9D00B9283D /* AppDelegate.swift */; };
 		E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3A124103A9D00B9283D /* ViewController.swift */; };
 		E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A324103AA000B9283D /* Assets.xcassets */; };
 		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
 		E72CE3B324103AA100B9283D /* TouchingMyBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */; };
 		E72CE3C72410404C00B9283D /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3C62410404C00B9283D /* cat.jpg */; };
+		E779DF5B2437E39A00A70379 /* MenuKeyBindingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779DF5A2437E39A00A70379 /* MenuKeyBindingProvider.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E796044624367BCE00F39215 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044524367BCE00F39215 /* HelloWorld.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
 		E796044A24367E3100F39215 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044924367E3100F39215 /* Constants.swift */; };
+		E7DAC10E2437DD17002A1DD9 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; };
+		E7DAC10F2437DD17002A1DD9 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E7DAC1112437DD18002A1DD9 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; };
+		E7DAC1122437DD18002A1DD9 /* IDEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		385EA4152437D68B0064C23D /* Embed Frameworks */ = {
+		E7DAC1102437DD17002A1DD9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				385EA4182437D6E30064C23D /* IDEKit.framework in Embed Frameworks */,
-				385EA4142437D68B0064C23D /* DFRFoundation.framework in Embed Frameworks */,
+				E7DAC1122437DD18002A1DD9 /* IDEKit.framework in Embed Frameworks */,
+				E7DAC10F2437DD17002A1DD9 /* DFRFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,11 +65,26 @@
 		E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchBarPrivateApi.h; sourceTree = "<group>"; };
 		E72CE3C524103EE800B9283D /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		E72CE3C62410404C00B9283D /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
+		E779DF502437DF7900A70379 /* IDEMenuKeyBindingSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEMenuKeyBindingSet.h; sourceTree = "<group>"; };
+		E779DF512437DF9F00A70379 /* IDEMenuKeyBindingProvider-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDEMenuKeyBindingProvider-Protocol.h"; sourceTree = "<group>"; };
+		E779DF522437DFC600A70379 /* IDETextKeyBindingSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDETextKeyBindingSet.h; sourceTree = "<group>"; };
+		E779DF532437E01600A70379 /* IDEKeyBindingSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEKeyBindingSet.h; sourceTree = "<group>"; };
+		E779DF542437E01600A70379 /* IDEKeyBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEKeyBinding.h; sourceTree = "<group>"; };
+		E779DF552437E01600A70379 /* IDEMenuKeyBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEMenuKeyBinding.h; sourceTree = "<group>"; };
+		E779DF562437E01700A70379 /* IDETextKeyBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDETextKeyBinding.h; sourceTree = "<group>"; };
+		E779DF572437E07000A70379 /* DVTInvalidation-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DVTInvalidation-Protocol.h"; sourceTree = "<group>"; };
+		E779DF5A2437E39A00A70379 /* MenuKeyBindingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuKeyBindingProvider.swift; sourceTree = "<group>"; };
+		E779DF5C2437E53500A70379 /* IDESourceEditorExtensionCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtensionCommand.h; sourceTree = "<group>"; };
+		E779DF5D2437E53500A70379 /* IDESourceEditorExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtension.h; sourceTree = "<group>"; };
+		E779DF5E2437E53500A70379 /* IDESourceEditorExtensionTextChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtensionTextChange.h; sourceTree = "<group>"; };
+		E779DF5F2437E53500A70379 /* IDESourceEditorInProcessExtensionCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorInProcessExtensionCommand.h; sourceTree = "<group>"; };
+		E779DF602437E53500A70379 /* IDESourceEditorExtensionCommandParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtensionCommandParameters.h; sourceTree = "<group>"; };
+		E779DF612437E53500A70379 /* IDESourceEditorExtensionCommandInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtensionCommandInvocation.h; sourceTree = "<group>"; };
+		E779DF622437E53500A70379 /* IDESourceEditorExtensionInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtensionInitialization.h; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
 		E796044524367BCE00F39215 /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E7B30C532437AF4F00E81AF5 /* IDEKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				385EA4172437D6E30064C23D /* IDEKit.framework in Frameworks */,
-				385EA4132437D68B0064C23D /* DFRFoundation.framework in Frameworks */,
+				E7DAC1112437DD18002A1DD9 /* IDEKit.framework in Frameworks */,
+				E7DAC10E2437DD17002A1DD9 /* DFRFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,13 +131,11 @@
 			children = (
 				E796044724367CE400F39215 /* README.md */,
 				E72CE3C524103EE800B9283D /* Bridging.h */,
-				E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */,
-				E7B30C532437AF4F00E81AF5 /* IDEKit.h */,
+				E779DF4D2437DE4600A70379 /* Private headers */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E72CE3A124103A9D00B9283D /* ViewController.swift */,
 				E796044924367E3100F39215 /* Constants.swift */,
 				E796044524367BCE00F39215 /* HelloWorld.swift */,
-				E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */,
 				E72CE3A324103AA000B9283D /* Assets.xcassets */,
 				E72CE3A524103AA000B9283D /* Main.storyboard */,
 				E72CE3A824103AA000B9283D /* Info.plist */,
@@ -149,6 +163,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E779DF4D2437DE4600A70379 /* Private headers */ = {
+			isa = PBXGroup;
+			children = (
+				E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */,
+				E779DF5A2437E39A00A70379 /* MenuKeyBindingProvider.swift */,
+				E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */,
+				E779DF502437DF7900A70379 /* IDEMenuKeyBindingSet.h */,
+				E779DF512437DF9F00A70379 /* IDEMenuKeyBindingProvider-Protocol.h */,
+				E779DF522437DFC600A70379 /* IDETextKeyBindingSet.h */,
+				E779DF542437E01600A70379 /* IDEKeyBinding.h */,
+				E779DF532437E01600A70379 /* IDEKeyBindingSet.h */,
+				E779DF552437E01600A70379 /* IDEMenuKeyBinding.h */,
+				E779DF562437E01700A70379 /* IDETextKeyBinding.h */,
+				E779DF5D2437E53500A70379 /* IDESourceEditorExtension.h */,
+				E779DF5C2437E53500A70379 /* IDESourceEditorExtensionCommand.h */,
+				E779DF612437E53500A70379 /* IDESourceEditorExtensionCommandInvocation.h */,
+				E779DF602437E53500A70379 /* IDESourceEditorExtensionCommandParameters.h */,
+				E779DF622437E53500A70379 /* IDESourceEditorExtensionInitialization.h */,
+				E779DF5E2437E53500A70379 /* IDESourceEditorExtensionTextChange.h */,
+				E779DF5F2437E53500A70379 /* IDESourceEditorInProcessExtensionCommand.h */,
+				E779DF572437E07000A70379 /* DVTInvalidation-Protocol.h */,
+			);
+			path = "Private headers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,7 +198,7 @@
 				E72CE39824103A9D00B9283D /* Sources */,
 				E72CE39924103A9D00B9283D /* Frameworks */,
 				E72CE39A24103A9D00B9283D /* Resources */,
-				385EA4152437D68B0064C23D /* Embed Frameworks */,
+				E7DAC1102437DD17002A1DD9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +294,7 @@
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
 				E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
+				E779DF5B2437E39A00A70379 /* MenuKeyBindingProvider.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
 				E796044624367BCE00F39215 /* HelloWorld.swift in Sources */,
 			);
@@ -411,7 +451,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E8938J75P7;
+				DEVELOPMENT_TEAM = X2MB65427X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -450,7 +490,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E8938J75P7;
+				DEVELOPMENT_TEAM = X2MB65427X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",

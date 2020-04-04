@@ -10,7 +10,13 @@
 #define Bridging_h
 
 #import "TouchBarPrivateApi.h"
-#import "IDEKit.h"
+#import "IDEKeyBinding.h"
+#import "IDEMenuKeyBindingSet.h"
+#import "IDETextKeyBinding.h"
+#import "IDEMenuKeyBindingProvider-Protocol.h"
+// TODO: Class-dump and import IDEFoundation.framework
+//#import "IDESourceEditorExtension.h"
+
 
 #endif /* Bridging_h */
 

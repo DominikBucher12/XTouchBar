@@ -19,11 +19,6 @@ func presentSystemModal(_ touchBar: NSTouchBar!, systemTrayItemIdentifier identi
     NSTouchBar.presentSystemModalTouchBar(touchBar, systemTrayItemIdentifier: identifier)
 }
 
-/// <#Description#>
-/// - Parameters:
-///   - touchBar: <#touchBar description#>
-///   - placement: <#placement description#>
-///   - identifier: <#identifier description#>
 func presentSystemModal(_ touchBar: NSTouchBar!, placement: Int64, systemTrayItemIdentifier identifier: NSTouchBarItem.Identifier!) {
     NSTouchBar.presentSystemModalTouchBar(touchBar, placement: placement, systemTrayItemIdentifier: identifier)
 }

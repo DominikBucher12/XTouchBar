@@ -26,6 +26,8 @@ struct HelloWorld: View {
 					.foregroundColor(backgroundColor)
 			)
 			.onTapGesture {
+                // This is probably how it's done
+                MenuKeyBindingProvider.registerMenuKeyBindings(to: IDEMenuKeyBindingSet(dictionary: [:]))
 				var newColor = self.colors.randomElement()!
 				
 				while newColor == self.previousColor {
@@ -35,11 +37,5 @@ struct HelloWorld: View {
 				self.previousColor = newColor
 				self.backgroundColor = newColor
 		}
-    }
-}
-
-struct HelloWorld_Previews: PreviewProvider {
-    static var previews: some View {
-        HelloWorld()
     }
 }
