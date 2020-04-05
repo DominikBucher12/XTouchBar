@@ -6,6 +6,7 @@
 #import "IDEMenuKeyBindingSet.h"
 #import "IDETextKeyBinding.h"
 #import "IDEMenuKeyBindingProvider-Protocol.h"
+#import "DVTPreferenceSet-Protocol.h"
 // TODO: Class-dump and import IDEFoundation.framework
 //#import "IDESourceEditorExtension.h"
 

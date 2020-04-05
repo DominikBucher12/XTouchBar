@@ -50,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3840BD45243A4FA2005ED586 /* DVTPreferenceSet-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DVTPreferenceSet-Protocol.h"; sourceTree = "<group>"; };
 		385EA4122437D68B0064C23D /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		385EA4162437D6E30064C23D /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
 		E72CE39C24103A9D00B9283D /* TouchingMyBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchingMyBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +177,7 @@
 				E779DF532437E01600A70379 /* IDEKeyBindingSet.h */,
 				E779DF552437E01600A70379 /* IDEMenuKeyBinding.h */,
 				E779DF562437E01700A70379 /* IDETextKeyBinding.h */,
+				3840BD45243A4FA2005ED586 /* DVTPreferenceSet-Protocol.h */,
 				E779DF5D2437E53500A70379 /* IDESourceEditorExtension.h */,
 				E779DF5C2437E53500A70379 /* IDESourceEditorExtensionCommand.h */,
 				E779DF612437E53500A70379 /* IDESourceEditorExtensionCommandInvocation.h */,
@@ -451,7 +453,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = X2MB65427X;
+				DEVELOPMENT_TEAM = E8938J75P7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
