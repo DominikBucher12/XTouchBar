@@ -27,6 +27,11 @@ struct HelloWorld: View {
 			)
 			.onTapGesture {
                 // This is probably how it's done
+                let preferenceSet = IDEKeyBindingPreferenceSet()//(name: "XCode usper preference set", dataURL: URL(fileURLWithPath: ""))
+//
+                let bindings = preferenceSet.allKeyBindings as! [IDETextKeyBinding]
+                let magicBinding = bindings.first { $0.title == "My Magic Key Binding" }
+                
                 MenuKeyBindingProvider.registerMenuKeyBindings(to: IDEMenuKeyBindingSet(dictionary: [:]))
 				var newColor = self.colors.randomElement()!
 				

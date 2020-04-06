@@ -7,9 +7,8 @@
 #import "IDETextKeyBinding.h"
 #import "IDEMenuKeyBindingProvider-Protocol.h"
 #import "DVTPreferenceSet-Protocol.h"
-// TODO: Class-dump and import IDEFoundation.framework
-//#import "IDESourceEditorExtension.h"
-
+#import "IDEKeyBindingPreferenceSet.h"
+#import "_XCodeSourceEditorServiceProtocol-Protocol.h"
 
 #endif /* Bridging_h */
 
