@@ -130,7 +130,6 @@
 		E72CE39324103A9D00B9283D = {
 			isa = PBXGroup;
 			children = (
-				E7557607243BAC2800441B69 /* TouchBarPresenter.swift */,
 				E72CE39E24103A9D00B9283D /* TouchingMyBar */,
 				E72CE3B124103AA100B9283D /* TouchingMyBarTests */,
 				E72CE39D24103A9D00B9283D /* Products */,
@@ -155,6 +154,7 @@
 				E779DF4D2437DE4600A70379 /* Private headers */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E796044924367E3100F39215 /* Constants.swift */,
+				E7557607243BAC2800441B69 /* TouchBarPresenter.swift */,
 				384DE4F9243B7A5A00885559 /* UI */,
 				E72CE3A324103AA000B9283D /* Assets.xcassets */,
 				E72CE3A524103AA000B9283D /* Main.storyboard */,
