@@ -11,7 +11,6 @@
 		384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FC243B7ACC00885559 /* BarButton.swift */; };
 		384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FE243B8DF300885559 /* BarSpacer.swift */; };
 		E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE39F24103A9D00B9283D /* AppDelegate.swift */; };
-		E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3A124103A9D00B9283D /* ViewController.swift */; };
 		E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A324103AA000B9283D /* Assets.xcassets */; };
 		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
 		E72CE3B324103AA100B9283D /* TouchingMyBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */; };
@@ -61,7 +60,6 @@
 		385EA4162437D6E30064C23D /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
 		E72CE39C24103A9D00B9283D /* TouchingMyBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchingMyBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72CE39F24103A9D00B9283D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E72CE3A124103A9D00B9283D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E72CE3A324103AA000B9283D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E72CE3A624103AA000B9283D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E72CE3A824103AA000B9283D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 				E72CE3C524103EE800B9283D /* Bridging.h */,
 				E779DF4D2437DE4600A70379 /* Private headers */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
-				E72CE3A124103A9D00B9283D /* ViewController.swift */,
 				E796044924367E3100F39215 /* Constants.swift */,
 				384DE4F9243B7A5A00885559 /* UI */,
 				E72CE3A324103AA000B9283D /* Assets.xcassets */,
@@ -317,7 +314,6 @@
 				384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */,
 				384DE4FB243B7A7F00885559 /* TouchBarContainer.swift in Sources */,
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
-				E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */,
 				384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
 				E779DF5B2437E39A00A70379 /* MenuKeyBindingProvider.swift in Sources */,

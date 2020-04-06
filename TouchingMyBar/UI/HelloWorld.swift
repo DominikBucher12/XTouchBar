@@ -31,8 +31,7 @@ struct HelloWorld: View {
 //
                 let bindings = preferenceSet.allKeyBindings as! [IDETextKeyBinding]
                 let magicBinding = bindings.first { $0.title == "My Magic Key Binding" }
-
-                MenuKeyBindingProvider.registerMenuKeyBindings(to: IDEMenuKeyBindingSet(dictionary: [:]))
+                s
 				var newColor = self.colors.randomElement()!
 
 				while newColor == self.previousColor {
