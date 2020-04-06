@@ -16,30 +16,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         TouchBarController.shared.clearUpTouchBar()
 		TouchBarController.shared.makeButton()
-        // Insert code here to initialize your application
-		
-		NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didLaunchApplicationNotification, object: nil)
-        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didTerminateApplicationNotification, object: nil)
-        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didActivateApplicationNotification, object: nil)
-    }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        RegisterXcodeAppearanceObservers()
     }
-	
-	@objc private func hideOrShowXTouchBar() {
-		guard let appID = NSWorkspace.shared.frontmostApplication?.bundleIdentifier else {
-			TouchBarController.shared.hideXTouchBar()
-			return
-		}
-		
-		if appID == Constants.AppIDs.xcode || appID == Constants.AppIDs.xTouchBar {
-			TouchBarController.shared.clearUpTouchBar()
-		} else {
-			TouchBarController.shared.hideXTouchBar()
-		}
-	}
 }
+
 
 class TouchBarController: NSObject {
 
@@ -72,5 +53,33 @@ class TouchBarController: NSObject {
 extension TouchBarController: NSTouchBarDelegate {
     func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
         return nil
+    }
+}
+
+// MARK: - Xcode obesrvations
+private extension AppDelegate {
+    /// Observes when Xcode is shown on the screen. Can occur at 3 scenarios.
+    /// - `didLaunchApplicationNotification` (whenever Xcode is launched, presents our custom Touchbar App)
+    /// - `didTerminateApplicationNotification` (when Xcode is terminated, will minimize the touchbarApp, but not kill it so it can appear again on previous sscenario)
+    /// - `didActivateApplicationNotification` (when Xcode is toggled ass focus app.)
+    func RegisterXcodeAppearanceObservers() {
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didLaunchApplicationNotification, object: nil)
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didTerminateApplicationNotification, object: nil)
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didActivateApplicationNotification, object: nil)
+    }
+
+
+    /// Pretty self-explanatory. Hides or shows Xtouchbar, see `RegisterXcodeAppearanceObservers()`'s documentations for more info.
+    @objc func hideOrShowXTouchBar() {
+        guard let appID = NSWorkspace.shared.frontmostApplication?.bundleIdentifier else {
+            TouchBarController.shared.hideXTouchBar()
+            return
+        }
+
+        if appID == Constants.AppIDs.xcode || appID == Constants.AppIDs.xTouchBar {
+            TouchBarController.shared.clearUpTouchBar()
+        } else {
+            TouchBarController.shared.hideXTouchBar()
+        }
     }
 }
