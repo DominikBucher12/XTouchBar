@@ -15,6 +15,7 @@
 		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
 		E72CE3B324103AA100B9283D /* TouchingMyBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */; };
 		E72CE3C72410404C00B9283D /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3C62410404C00B9283D /* cat.jpg */; };
+		E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7557607243BAC2800441B69 /* TouchBarPresenter.swift */; };
 		E779DF5B2437E39A00A70379 /* MenuKeyBindingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779DF5A2437E39A00A70379 /* MenuKeyBindingProvider.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E796044624367BCE00F39215 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044524367BCE00F39215 /* HelloWorld.swift */; };
@@ -71,6 +72,7 @@
 		E72CE3C524103EE800B9283D /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		E72CE3C62410404C00B9283D /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
 		E75575E1243A59DB00441B69 /* _XCodeSourceEditorServiceProtocol-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "_XCodeSourceEditorServiceProtocol-Protocol.h"; sourceTree = "<group>"; };
+		E7557607243BAC2800441B69 /* TouchBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarPresenter.swift; sourceTree = "<group>"; };
 		E779DF502437DF7900A70379 /* IDEMenuKeyBindingSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEMenuKeyBindingSet.h; sourceTree = "<group>"; };
 		E779DF512437DF9F00A70379 /* IDEMenuKeyBindingProvider-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDEMenuKeyBindingProvider-Protocol.h"; sourceTree = "<group>"; };
 		E779DF522437DFC600A70379 /* IDETextKeyBindingSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDETextKeyBindingSet.h; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		E72CE39324103A9D00B9283D = {
 			isa = PBXGroup;
 			children = (
+				E7557607243BAC2800441B69 /* TouchBarPresenter.swift */,
 				E72CE39E24103A9D00B9283D /* TouchingMyBar */,
 				E72CE3B124103AA100B9283D /* TouchingMyBarTests */,
 				E72CE39D24103A9D00B9283D /* Products */,
@@ -315,6 +318,7 @@
 				384DE4FB243B7A7F00885559 /* TouchBarContainer.swift in Sources */,
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
 				384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */,
+				E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
 				E779DF5B2437E39A00A70379 /* MenuKeyBindingProvider.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,

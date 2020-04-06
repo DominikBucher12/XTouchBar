@@ -14,43 +14,14 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        TouchBarController.shared.clearUpTouchBar()
-		TouchBarController.shared.makeButton()
+        TouchBarPresenter.shared.clearUpTouchBar()
+		TouchBarPresenter.shared.makeButton()
 
         RegisterXcodeAppearanceObservers()
     }
 }
 
-
-class TouchBarController: NSObject {
-
-    static let shared = TouchBarController()
-    let touchBar = NSTouchBar()
-    
-    func clearUpTouchBar() {
-        presentSystemModal(TouchBarController.shared.touchBar, placement: 1, systemTrayItemIdentifier: .controlStripItem)
-    }
-	
-	func hideXTouchBar() {
-		minimizeSystemModal(TouchBarController.shared.touchBar)
-	}
-	
-	func makeButton() {
-		let item = NSCustomTouchBarItem(identifier: NSTouchBarItem.Identifier(rawValue: "HelloWorld"))
-		item.view = NSHostingView(rootView: TouchBarContainer())
-		
-		TouchBarController.shared.touchBar.defaultItemIdentifiers = [item.identifier]
-		TouchBarController.shared.touchBar.templateItems = [item]
-	}
-
-    private override init() {
-        super.init()
-        touchBar.delegate = self
-        touchBar.defaultItemIdentifiers = []
-    }
-}
-
-extension TouchBarController: NSTouchBarDelegate {
+extension TouchBarPresenter: NSTouchBarDelegate {
     func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
         return nil
     }
@@ -72,14 +43,14 @@ private extension AppDelegate {
     /// Pretty self-explanatory. Hides or shows Xtouchbar, see `RegisterXcodeAppearanceObservers()`'s documentations for more info.
     @objc func hideOrShowXTouchBar() {
         guard let appID = NSWorkspace.shared.frontmostApplication?.bundleIdentifier else {
-            TouchBarController.shared.hideXTouchBar()
+            TouchBarPresenter.shared.hideXTouchBar()
             return
         }
 
         if appID == Constants.AppIDs.xcode || appID == Constants.AppIDs.xTouchBar {
-            TouchBarController.shared.clearUpTouchBar()
+            TouchBarPresenter.shared.clearUpTouchBar()
         } else {
-            TouchBarController.shared.hideXTouchBar()
+            TouchBarPresenter.shared.hideXTouchBar()
         }
     }
 }

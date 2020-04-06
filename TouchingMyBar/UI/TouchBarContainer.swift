@@ -13,7 +13,7 @@ struct TouchBarContainer: View {
     @State private var dummyIcon = "x"
     @State private var dummyColor = Color.green
     @State private var dummySize = Constants.BarElementWidth.small
-    @State private var dummyAction = { TouchBarController.shared.hideXTouchBar() }
+    @State private var dummyAction = { TouchBarPresenter.shared.hideXTouchBar() }
     
     var body: some View {
         HStack {
