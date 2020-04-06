@@ -4,6 +4,7 @@ Making proper use of Touchbar inside Xcode.
 
 ## TODO: 
 - [ x ] Detect when Xcode is topmost application (focused), probably AppleScript is our friend :D 
+- [ ] Create some mechanism that users can change to shortcuts on go.
 - [ ] Create some intuitive icon-set for the shortcuts etc like add documentation... 
 - [ ] Create collection for the buttons and assign to the buttons the given shortcuts.
 - [ ] Figure out how to call shortcuts to desired Xcode features 
