@@ -56,7 +56,7 @@ class TouchBarController: NSObject {
 	
 	func makeButton() {
 		let item = NSCustomTouchBarItem(identifier: NSTouchBarItem.Identifier(rawValue: "HelloWorld"))
-		item.view = NSHostingView(rootView: HelloWorld())
+		item.view = NSHostingView(rootView: TouchBarContainer())
 		
 		TouchBarController.shared.touchBar.defaultItemIdentifiers = [item.identifier]
 		TouchBarController.shared.touchBar.templateItems = [item]

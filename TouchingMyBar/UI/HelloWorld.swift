@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct HelloWorld: View {
-	
+
 	@State private var backgroundColor = Color.red
 	@State private var previousColor = Color.red
-	
+
 	private let colors: [Color] = [.red, .orange, .green, .blue, .yellow]
-	
+
     var body: some View {
         Text("Jak to sviští? 😎")
-            .frame(width: Constants.TouchBar.width, height: Constants.TouchBar.height, alignment: .center)
+            .frame(width: Constants.BarElementWidth.big.rawValue, height: Constants.TouchBar.height, alignment: .center)
 			.foregroundColor(.white)
 			.shadow(color: .black, radius: 2, x: 0, y: 0)
 			.shadow(color: .black, radius: 2, x: 0, y: 0)
@@ -31,14 +31,14 @@ struct HelloWorld: View {
 //
                 let bindings = preferenceSet.allKeyBindings as! [IDETextKeyBinding]
                 let magicBinding = bindings.first { $0.title == "My Magic Key Binding" }
-                
+
                 MenuKeyBindingProvider.registerMenuKeyBindings(to: IDEMenuKeyBindingSet(dictionary: [:]))
 				var newColor = self.colors.randomElement()!
-				
+
 				while newColor == self.previousColor {
 					newColor = self.colors.randomElement()!
 				}
-				
+
 				self.previousColor = newColor
 				self.backgroundColor = newColor
 		}

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		384DE4FB243B7A7F00885559 /* TouchBarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FA243B7A7F00885559 /* TouchBarContainer.swift */; };
+		384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FC243B7ACC00885559 /* BarButton.swift */; };
+		384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FE243B8DF300885559 /* BarSpacer.swift */; };
 		E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE39F24103A9D00B9283D /* AppDelegate.swift */; };
 		E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3A124103A9D00B9283D /* ViewController.swift */; };
 		E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A324103AA000B9283D /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 
 /* Begin PBXFileReference section */
 		3840BD45243A4FA2005ED586 /* DVTPreferenceSet-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DVTPreferenceSet-Protocol.h"; sourceTree = "<group>"; };
+		384DE4FA243B7A7F00885559 /* TouchBarContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarContainer.swift; sourceTree = "<group>"; };
+		384DE4FC243B7ACC00885559 /* BarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
+		384DE4FE243B8DF300885559 /* BarSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarSpacer.swift; sourceTree = "<group>"; };
 		385EA4122437D68B0064C23D /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		385EA4162437D6E30064C23D /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
 		E72CE39C24103A9D00B9283D /* TouchingMyBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchingMyBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +116,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		384DE4F9243B7A5A00885559 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E796044524367BCE00F39215 /* HelloWorld.swift */,
+				384DE4FC243B7ACC00885559 /* BarButton.swift */,
+				384DE4FE243B8DF300885559 /* BarSpacer.swift */,
+				384DE4FA243B7A7F00885559 /* TouchBarContainer.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		E72CE39324103A9D00B9283D = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +155,7 @@
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E72CE3A124103A9D00B9283D /* ViewController.swift */,
 				E796044924367E3100F39215 /* Constants.swift */,
-				E796044524367BCE00F39215 /* HelloWorld.swift */,
+				384DE4F9243B7A5A00885559 /* UI */,
 				E72CE3A324103AA000B9283D /* Assets.xcassets */,
 				E72CE3A524103AA000B9283D /* Main.storyboard */,
 				E72CE3A824103AA000B9283D /* Info.plist */,
@@ -297,8 +314,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */,
+				384DE4FB243B7A7F00885559 /* TouchBarContainer.swift in Sources */,
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
 				E72CE3A224103A9D00B9283D /* ViewController.swift in Sources */,
+				384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
 				E779DF5B2437E39A00A70379 /* MenuKeyBindingProvider.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
@@ -457,7 +477,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = X2MB65427X;
+				DEVELOPMENT_TEAM = E8938J75P7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -496,7 +516,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = X2MB65427X;
+				DEVELOPMENT_TEAM = E8938J75P7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
