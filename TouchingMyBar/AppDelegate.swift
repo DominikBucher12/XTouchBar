@@ -34,11 +34,20 @@ private extension AppDelegate {
     /// - `didTerminateApplicationNotification` (when Xcode is terminated, will minimize the touchbarApp, but not kill it so it can appear again on previous scenario)
     /// - `didActivateApplicationNotification` (when Xcode is toggled as focus app.)
     func RegisterXcodeAppearanceObservers() {
-        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didLaunchApplicationNotification, object: nil)
-        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didTerminateApplicationNotification, object: nil)
-        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didActivateApplicationNotification, object: nil)
+        [
+            NSWorkspace.didLaunchApplicationNotification,
+            NSWorkspace.didTerminateApplicationNotification,
+            NSWorkspace.didActivateApplicationNotification
+        ]
+            .forEach {
+                NSWorkspace.shared.notificationCenter.addObserver(
+                    self,
+                    selector: #selector(hideOrShowXTouchBar),
+                    name: $0,
+                    object: nil
+                )
+        }
     }
-
 
     /// Pretty self-explanatory. Hides or shows Xtouchbar, see `RegisterXcodeAppearanceObservers()`'s documentations for more info.
     @objc func hideOrShowXTouchBar() {
