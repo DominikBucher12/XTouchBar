@@ -14,9 +14,7 @@
 		E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A324103AA000B9283D /* Assets.xcassets */; };
 		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
 		E72CE3B324103AA100B9283D /* TouchingMyBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */; };
-		E72CE3C72410404C00B9283D /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3C62410404C00B9283D /* cat.jpg */; };
 		E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7557607243BAC2800441B69 /* TouchBarPresenter.swift */; };
-		E779DF5B2437E39A00A70379 /* MenuKeyBindingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779DF5A2437E39A00A70379 /* MenuKeyBindingProvider.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E796044624367BCE00F39215 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044524367BCE00F39215 /* HelloWorld.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
@@ -53,7 +51,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3840BD45243A4FA2005ED586 /* DVTPreferenceSet-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DVTPreferenceSet-Protocol.h"; sourceTree = "<group>"; };
 		384DE4FA243B7A7F00885559 /* TouchBarContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarContainer.swift; sourceTree = "<group>"; };
 		384DE4FC243B7ACC00885559 /* BarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
 		384DE4FE243B8DF300885559 /* BarSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarSpacer.swift; sourceTree = "<group>"; };
@@ -70,26 +67,7 @@
 		E72CE3B424103AA100B9283D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchBarPrivateApi.h; sourceTree = "<group>"; };
 		E72CE3C524103EE800B9283D /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
-		E72CE3C62410404C00B9283D /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
-		E75575E1243A59DB00441B69 /* _XCodeSourceEditorServiceProtocol-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "_XCodeSourceEditorServiceProtocol-Protocol.h"; sourceTree = "<group>"; };
 		E7557607243BAC2800441B69 /* TouchBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarPresenter.swift; sourceTree = "<group>"; };
-		E779DF502437DF7900A70379 /* IDEMenuKeyBindingSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEMenuKeyBindingSet.h; sourceTree = "<group>"; };
-		E779DF512437DF9F00A70379 /* IDEMenuKeyBindingProvider-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDEMenuKeyBindingProvider-Protocol.h"; sourceTree = "<group>"; };
-		E779DF522437DFC600A70379 /* IDETextKeyBindingSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDETextKeyBindingSet.h; sourceTree = "<group>"; };
-		E779DF532437E01600A70379 /* IDEKeyBindingSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEKeyBindingSet.h; sourceTree = "<group>"; };
-		E779DF542437E01600A70379 /* IDEKeyBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEKeyBinding.h; sourceTree = "<group>"; };
-		E779DF552437E01600A70379 /* IDEMenuKeyBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEMenuKeyBinding.h; sourceTree = "<group>"; };
-		E779DF562437E01700A70379 /* IDETextKeyBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDETextKeyBinding.h; sourceTree = "<group>"; };
-		E779DF572437E07000A70379 /* DVTInvalidation-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DVTInvalidation-Protocol.h"; sourceTree = "<group>"; };
-		E779DF5A2437E39A00A70379 /* MenuKeyBindingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuKeyBindingProvider.swift; sourceTree = "<group>"; };
-		E779DF5C2437E53500A70379 /* IDESourceEditorExtensionCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtensionCommand.h; sourceTree = "<group>"; };
-		E779DF5D2437E53500A70379 /* IDESourceEditorExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtension.h; sourceTree = "<group>"; };
-		E779DF5E2437E53500A70379 /* IDESourceEditorExtensionTextChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtensionTextChange.h; sourceTree = "<group>"; };
-		E779DF5F2437E53500A70379 /* IDESourceEditorInProcessExtensionCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorInProcessExtensionCommand.h; sourceTree = "<group>"; };
-		E779DF602437E53500A70379 /* IDESourceEditorExtensionCommandParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtensionCommandParameters.h; sourceTree = "<group>"; };
-		E779DF612437E53500A70379 /* IDESourceEditorExtensionCommandInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtensionCommandInvocation.h; sourceTree = "<group>"; };
-		E779DF622437E53500A70379 /* IDESourceEditorExtensionInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditorExtensionInitialization.h; sourceTree = "<group>"; };
-		E779DF63243A52C400A70379 /* IDEKeyBindingPreferenceSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEKeyBindingPreferenceSet.h; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
 		E796044524367BCE00F39215 /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -151,15 +129,13 @@
 			children = (
 				E796044724367CE400F39215 /* README.md */,
 				E72CE3C524103EE800B9283D /* Bridging.h */,
-				E779DF4D2437DE4600A70379 /* Private headers */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E796044924367E3100F39215 /* Constants.swift */,
-				E7557607243BAC2800441B69 /* TouchBarPresenter.swift */,
+				E779DF4D2437DE4600A70379 /* TouchBarSupport */,
 				384DE4F9243B7A5A00885559 /* UI */,
 				E72CE3A324103AA000B9283D /* Assets.xcassets */,
 				E72CE3A524103AA000B9283D /* Main.storyboard */,
 				E72CE3A824103AA000B9283D /* Info.plist */,
-				E72CE3C62410404C00B9283D /* cat.jpg */,
 				E72CE3A924103AA000B9283D /* TouchingMyBar.entitlements */,
 			);
 			path = TouchingMyBar;
@@ -183,32 +159,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E779DF4D2437DE4600A70379 /* Private headers */ = {
+		E779DF4D2437DE4600A70379 /* TouchBarSupport */ = {
 			isa = PBXGroup;
 			children = (
+				E7557607243BAC2800441B69 /* TouchBarPresenter.swift */,
 				E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */,
-				E779DF5A2437E39A00A70379 /* MenuKeyBindingProvider.swift */,
-				E75575E1243A59DB00441B69 /* _XCodeSourceEditorServiceProtocol-Protocol.h */,
-				E779DF63243A52C400A70379 /* IDEKeyBindingPreferenceSet.h */,
 				E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */,
-				E779DF502437DF7900A70379 /* IDEMenuKeyBindingSet.h */,
-				E779DF512437DF9F00A70379 /* IDEMenuKeyBindingProvider-Protocol.h */,
-				E779DF522437DFC600A70379 /* IDETextKeyBindingSet.h */,
-				E779DF542437E01600A70379 /* IDEKeyBinding.h */,
-				E779DF532437E01600A70379 /* IDEKeyBindingSet.h */,
-				E779DF552437E01600A70379 /* IDEMenuKeyBinding.h */,
-				E779DF562437E01700A70379 /* IDETextKeyBinding.h */,
-				3840BD45243A4FA2005ED586 /* DVTPreferenceSet-Protocol.h */,
-				E779DF5D2437E53500A70379 /* IDESourceEditorExtension.h */,
-				E779DF5C2437E53500A70379 /* IDESourceEditorExtensionCommand.h */,
-				E779DF612437E53500A70379 /* IDESourceEditorExtensionCommandInvocation.h */,
-				E779DF602437E53500A70379 /* IDESourceEditorExtensionCommandParameters.h */,
-				E779DF622437E53500A70379 /* IDESourceEditorExtensionInitialization.h */,
-				E779DF5E2437E53500A70379 /* IDESourceEditorExtensionTextChange.h */,
-				E779DF5F2437E53500A70379 /* IDESourceEditorInProcessExtensionCommand.h */,
-				E779DF572437E07000A70379 /* DVTInvalidation-Protocol.h */,
 			);
-			path = "Private headers";
+			path = TouchBarSupport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +251,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E72CE3C72410404C00B9283D /* cat.jpg in Resources */,
 				E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */,
 				E796044824367CE400F39215 /* README.md in Resources */,
 				E72CE3A724103AA000B9283D /* Main.storyboard in Resources */,
@@ -320,7 +277,6 @@
 				384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */,
 				E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
-				E779DF5B2437E39A00A70379 /* MenuKeyBindingProvider.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
 				E796044624367BCE00F39215 /* HelloWorld.swift in Sources */,
 			);
@@ -477,7 +433,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E8938J75P7;
+				DEVELOPMENT_TEAM = X2MB65427X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -516,7 +472,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E8938J75P7;
+				DEVELOPMENT_TEAM = X2MB65427X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",

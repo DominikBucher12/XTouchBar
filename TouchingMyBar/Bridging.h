@@ -2,13 +2,6 @@
 #define Bridging_h
 
 #import "TouchBarPrivateApi.h"
-#import "IDEKeyBinding.h"
-#import "IDEMenuKeyBindingSet.h"
-#import "IDETextKeyBinding.h"
-#import "IDEMenuKeyBindingProvider-Protocol.h"
-#import "DVTPreferenceSet-Protocol.h"
-#import "IDEKeyBindingPreferenceSet.h"
-#import "_XCodeSourceEditorServiceProtocol-Protocol.h"
 
 #endif /* Bridging_h */
 
