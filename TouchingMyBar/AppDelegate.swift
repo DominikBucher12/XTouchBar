@@ -27,12 +27,12 @@ extension TouchBarPresenter: NSTouchBarDelegate {
     }
 }
 
-// MARK: - Xcode obesrvations
+// MARK: - Xcode observations
 private extension AppDelegate {
     /// Observes when Xcode is shown on the screen. Can occur at 3 scenarios.
     /// - `didLaunchApplicationNotification` (whenever Xcode is launched, presents our custom Touchbar App)
-    /// - `didTerminateApplicationNotification` (when Xcode is terminated, will minimize the touchbarApp, but not kill it so it can appear again on previous sscenario)
-    /// - `didActivateApplicationNotification` (when Xcode is toggled ass focus app.)
+    /// - `didTerminateApplicationNotification` (when Xcode is terminated, will minimize the touchbarApp, but not kill it so it can appear again on previous scenario)
+    /// - `didActivateApplicationNotification` (when Xcode is toggled as focus app.)
     func RegisterXcodeAppearanceObservers() {
         NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didLaunchApplicationNotification, object: nil)
         NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(hideOrShowXTouchBar), name: NSWorkspace.didTerminateApplicationNotification, object: nil)
