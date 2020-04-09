@@ -26,14 +26,10 @@ extension KeyPresser {
 
         for modifier in shortcut.modifiers {
             switch modifier {
-            case .shift:
-                keyDownEvent.flags.insert(.maskShift)
-            case .control:
-                keyDownEvent.flags.insert(.maskControl)
-            case .option:
-                keyDownEvent.flags.insert(.maskAlternate)
-            case .command:
-                keyDownEvent.flags.insert(.maskCommand)
+            case .shift: keyDownEvent.flags.insert(.maskShift)
+            case .control: keyDownEvent.flags.insert(.maskControl)
+            case .option: keyDownEvent.flags.insert(.maskAlternate)
+            case .command: keyDownEvent.flags.insert(.maskCommand)
             }
         }
         keyDownEvent.post(tap: .cghidEventTap)
@@ -51,7 +47,10 @@ struct Shortcut {
     /// Set because it's fancy and doesn't contain duplicates
     let modifiers: Set<KeyModifier>
 
-    public static var openFile: Shortcut {
+    public static var openFileQuickly: Shortcut {
         return Shortcut(key: .O, modifiers: [.command, .shift])
+    }
+    public static var openFile: Shortcut {
+        return Shortcut(key: .O, modifiers: [.command])
     }
 }
