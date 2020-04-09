@@ -6,16 +6,20 @@
 //  Copyright © 2020 Dominik Bucher. All rights reserved.
 //
 
-protocol Performable {
+/// Protocol which has only one thing to do -> Perform shortcut command.
+/// This should be responsible only to call the shortcut.
+protocol KeyPresser {
+    /// Performs  given shortcut on input with propriate modifiers like `cmd`, `shift`...
+    /// - Parameter shortcut: `Shortcut` instance.
     func perform(_ shortcut: Shortcut)
 }
 
-extension Performable {
+extension KeyPresser {
 
     func perform(_ shortcut: Shortcut) {
 
-        let KeyCode: UInt16 = shortcut.key.rawValue
-        guard let keyDownEvent = CGEvent(keyboardEventSource: nil, virtualKey: KeyCode, keyDown: true) else {
+        let keyCode: UInt16 = shortcut.key.rawValue
+        guard let keyDownEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: true) else {
             #warning("TODO: Do we just crash or handle this somehow? 🤔")
             fatalError("Messed something up...")
         }
@@ -32,12 +36,17 @@ extension Performable {
                 keyDownEvent.flags.insert(.maskCommand)
             }
         }
-
         keyDownEvent.post(tap: .cghidEventTap)
     }
 }
 
+/// Purest form of shortcut.
+/// In real life, shortcut consists of some keys (like `cmd + a`, or `cmd + shift + o`)
+/// In here, we divide the shortcut into actual pure keys (like letters, numbers, commas...)
+/// and modifiers (The fancy keys like `cmd`, `control`, `shift`, `alt`)
 struct Shortcut {
+    /// Just simple key -> `a`, `y`, `,`, `=`, `+`
     let key: Key
-    let modifiers: [KeyModifier]
+    /// Array of Modifier(s), the more fancier: `cmd`, `shift`, `control`, `alt`,???
+    let modifiers: Set<KeyModifier>
 }

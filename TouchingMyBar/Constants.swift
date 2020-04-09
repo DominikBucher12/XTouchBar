@@ -11,7 +11,7 @@ import IOKit
 
 public enum Constants {
     public enum TouchBar {
-        /// The height of touchbar. Until Apple gets crazy, this shouldn't be more than 30 points.
+        /// The height of touchbar. Until Apple gets crazy, this never needs to be more than 30 points.
         public static let height: CGFloat = 30
         
         /// The Width of touchbar. On Newer 16" Model it's actually 1004px. On Older it's 1085px.
@@ -25,7 +25,9 @@ public enum Constants {
             return model == .sixteenInch2019NormalKeyboard ? 1004 : 1085
         }
 
-        public static func getMacModel() -> String {
+        /// This is really funny way to figure out the Touchbar width :D But here we go :D
+        /// - Returns: The current mac model with Macbook13,2 or whatever :D
+        private static func getMacModel() -> String {
             let service = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceMatching("IOPlatformExpertDevice"))
 
             guard let modelData = IORegistryEntryCreateCFProperty(service, "model" as CFString, kCFAllocatorDefault, 0).takeRetainedValue() as? Data,

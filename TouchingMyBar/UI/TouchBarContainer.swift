@@ -10,7 +10,7 @@ import CoreGraphics
 import SwiftUI
 
 #warning("TODO: Remove ASAP - just here for testing.")
-struct DummyPerformable: Performable {}
+struct DummyPerformable: KeyPresser { }
 
 struct TouchBarContainer: View {
     
@@ -25,7 +25,7 @@ struct TouchBarContainer: View {
     @State private var alohomoraAction = {
         #warning("TODO: Replace with real implementation")
         let dummy = DummyPerformable()
-        let shortcut = Shortcut(key: .A, modifiers: [.command, .shift]) // Show code actions
+        let shortcut = Shortcut(key: .D, modifiers: [.command, .shift, .control]) // Show code actions
         dummy.perform(shortcut)
     }
     
