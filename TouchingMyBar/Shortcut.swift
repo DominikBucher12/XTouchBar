@@ -47,6 +47,7 @@ extension KeyPresser {
 struct Shortcut {
     /// Just simple key -> `a`, `y`, `,`, `=`, `+`
     let key: Key
-    /// Array of Modifier(s), the more fancier: `cmd`, `shift`, `control`, `alt`,???
+    /// Set of Modifier(s), the more fancier: `cmd`, `shift`, `control`, `alt`,???
+    /// Set because it's fancy and doesn't contain duplicates
     let modifiers: Set<KeyModifier>
 }
