@@ -19,6 +19,7 @@
 		E72CE3B324103AA100B9283D /* TouchingMyBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */; };
 		E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7557607243BAC2800441B69 /* TouchBarPresenter.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
+		E78FF299243F5DB300EBA80D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FF298243F5DB300EBA80D /* Colors.swift */; };
 		E796044624367BCE00F39215 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044524367BCE00F39215 /* HelloWorld.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
 		E796044A24367E3100F39215 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044924367E3100F39215 /* Constants.swift */; };
@@ -75,6 +76,9 @@
 		E72CE3C524103EE800B9283D /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		E7557607243BAC2800441B69 /* TouchBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarPresenter.swift; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
+		E78FF298243F5DB300EBA80D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E78FF29A243F63D000EBA80D /* IDECommandManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDECommandManager.h; sourceTree = "<group>"; };
+		E78FF29B243F6E7B00EBA80D /* IDEScriptingHack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEScriptingHack.h; sourceTree = "<group>"; };
 		E796044524367BCE00F39215 /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -135,8 +139,11 @@
 			children = (
 				E796044724367CE400F39215 /* README.md */,
 				E72CE3C524103EE800B9283D /* Bridging.h */,
+				E78FF29A243F63D000EBA80D /* IDECommandManager.h */,
+				E78FF29B243F6E7B00EBA80D /* IDEScriptingHack.h */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E796044924367E3100F39215 /* Constants.swift */,
+				E78FF298243F5DB300EBA80D /* Colors.swift */,
 				38C2BCE2243E5C330009A015 /* Shortcut.swift */,
 				38C2BCE4243E5C4B0009A015 /* Key.swift */,
 				38C2BCE6243E5C580009A015 /* KeyModifier.swift */,
@@ -281,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C2BCE7243E5C580009A015 /* KeyModifier.swift in Sources */,
+				E78FF299243F5DB300EBA80D /* Colors.swift in Sources */,
 				384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */,
 				38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */,
 				384DE4FB243B7A7F00885559 /* TouchBarContainer.swift in Sources */,

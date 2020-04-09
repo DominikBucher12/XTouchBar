@@ -7,7 +7,7 @@
 //
 import SwiftUI
 
-class TouchBarPresenter: NSObject {
+class TouchBarPresenter: NSObject, NSTouchBarDelegate {
 
     static let shared = TouchBarPresenter()
     let touchBar = NSTouchBar()
