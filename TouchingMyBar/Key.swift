@@ -7,9 +7,12 @@
 //
 
 #warning("TODO: Figure out if ok.")
-// Does this work universally? Or just on some keyboards?
-// Will this stay the same in future versions of MacOS?
-// See: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
+/// Does this work universally? Or just on some keyboards?
+/// Will this stay the same in future versions of MacOS?
+/// See: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
+///
+/// Note from @buchedom: This is probably pretty retarded. But try youreslf debug `Xcode` in instruments with SIP disabled or figure out from `IDEKit` private headers how the menu items are called.
+/// I bet you will find this solution pretty awesome afterwards. :D
 enum Key: UInt16 {
     case A              = 0x00
     case B              = 0x0B

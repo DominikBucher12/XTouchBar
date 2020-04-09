@@ -40,7 +40,7 @@ struct BarButton: View {
     var body: some View {
         Button(action: { self.action() }) {
             Text(self.icon)
-                .font(.headline)
+                .font(.callout)
                 .frame(width: self.size.rawValue, height: Constants.TouchBar.height, alignment: .center)
         }
         .buttonStyle(CustomButtonStyle(color: self.color))

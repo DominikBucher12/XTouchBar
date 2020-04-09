@@ -31,7 +31,6 @@ struct TouchBarContainer: View {
 
     @State private var openFile = "Open"
     @State private var shortcutAction = { DummyPerformable().perform(Shortcut.openFile) }
-
     var body: some View {
         HStack {
             BarButton(icon: $dummyIcon, color: $dummyColor, size: $dummySize, action: $dummyAction)

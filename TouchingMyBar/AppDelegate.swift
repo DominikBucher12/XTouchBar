@@ -20,13 +20,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         RegisterXcodeAppearanceObservers()
     }
 }
-
-extension TouchBarPresenter: NSTouchBarDelegate {
-    func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
-        return nil
-    }
-}
-
 // MARK: - Xcode observations
 private extension AppDelegate {
     /// Observes when Xcode is shown on the screen. Can occur at 3 scenarios.

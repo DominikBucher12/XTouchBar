@@ -8,6 +8,7 @@
 
 import Foundation
 import IOKit
+import SwiftUI
 
 public enum Constants {
     public enum TouchBar {
@@ -38,18 +39,22 @@ public enum Constants {
             return String(cString: modelIdentifierCString)
         }
     }
-    
+
+    // MARK: - Touchbar elements
     public enum BarElementWidth: CGFloat {
         case small = 60
+        case medium = 70
         case big = 120
     }
-    
+
+    // MARK: AppIDs
     public enum AppIDs {
         public static let xcode = "com.apple.dt.Xcode"
         public static let xTouchBar = "com.dominikbucher.TouchingMyBar"
     }
 }
 
+// MARK: - TouchBar Support
 
 private enum TouchBarSupportingMacs: String, CaseIterable {
     case thirteenInch2016 = "MacBookPro13,2"

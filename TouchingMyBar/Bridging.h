@@ -2,6 +2,8 @@
 #define Bridging_h
 
 #import "TouchBarPrivateApi.h"
+#import "IDECommandManager.h"
+#import "IDEScriptingHack.h"
 
 #endif /* Bridging_h */
 

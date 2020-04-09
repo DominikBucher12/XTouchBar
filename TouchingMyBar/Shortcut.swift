@@ -50,4 +50,8 @@ struct Shortcut {
     /// Set of Modifier(s), the more fancier: `cmd`, `shift`, `control`, `alt`,???
     /// Set because it's fancy and doesn't contain duplicates
     let modifiers: Set<KeyModifier>
+
+    public static var openFile: Shortcut {
+        return Shortcut(key: .O, modifiers: [.command, .shift])
+    }
 }
