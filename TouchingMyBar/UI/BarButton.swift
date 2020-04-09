@@ -20,7 +20,7 @@ fileprivate struct CustomButtonStyle: ButtonStyle {
         configuration.label
             .foregroundColor(.white)
             .background(
-                RoundedRectangle(cornerRadius: 7)
+                RoundedRectangle(cornerRadius: 5)
                     .foregroundColor(self.color)
                     .scaleEffect(configuration.isPressed ? 0.95 : 1)
                 )

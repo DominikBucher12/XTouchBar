@@ -32,7 +32,7 @@ public enum Constants {
 
             guard let modelData = IORegistryEntryCreateCFProperty(service, "model" as CFString, kCFAllocatorDefault, 0).takeRetainedValue() as? Data,
                   let modelIdentifierCString = String(data: modelData, encoding: .utf8)?.cString(using: .utf8)
-                else { return "Unknown mac model?"}
+            else { return "Unknown mac model?"}
 
             defer { IOObjectRelease(service) } // See documentation on the method why I need to do this.
             return String(cString: modelIdentifierCString)
@@ -58,14 +58,7 @@ private enum TouchBarSupportingMacs: String, CaseIterable {
     case thirteenInch2019 = "MacBookPro15,4"
     case fifteenInch2016 = "MacBookPro13,3"
     case fifteenInch2017 = "MacBookPro14,3"
-    case fifteenInch2018 = "MacBookPro15,1" //Really consistent Apple.
+    case fifteenInch2018 = "MacBookPro15,1" // Really consistent Apple.
     case fifteenInch2018VEGA = "MacBookPro15,3"
     case sixteenInch2019NormalKeyboard = "MacBookPro16,1"
-
-    var touchBarWidth: CGFloat {
-        switch self {
-        default:
-            return 0
-        }
-    }
 }

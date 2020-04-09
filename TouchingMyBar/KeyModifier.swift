@@ -6,6 +6,11 @@
 //  Copyright © 2020 Dominik Bucher. All rights reserved.
 //
 
+/// These are special keys among others, usually used to invoke shortcuts :)
+/// - shift
+/// - control
+/// - option
+/// - command
 enum KeyModifier {
     case shift
     case control
