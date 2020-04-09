@@ -20,22 +20,19 @@ extension Performable {
             fatalError("Messed something up...")
         }
 
-        var flags = CGEventFlags()
-
         for modifier in shortcut.modifiers {
             switch modifier {
             case .shift:
-                flags.insert(.maskShift)
+                keyDownEvent.flags.insert(.maskShift)
             case .control:
-                flags.insert(.maskControl)
+                keyDownEvent.flags.insert(.maskControl)
             case .option:
-                flags.insert(.maskAlternate)
+                keyDownEvent.flags.insert(.maskAlternate)
             case .command:
-                flags.insert(.maskCommand)
+                keyDownEvent.flags.insert(.maskCommand)
             }
         }
 
-        keyDownEvent.flags = flags
         keyDownEvent.post(tap: .cghidEventTap)
     }
 }
