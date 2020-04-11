@@ -26,9 +26,9 @@ extension KeyPresser {
 
         for modifier in shortcut.modifiers {
             switch modifier {
-            case .shift: keyDownEvent.flags.insert(.maskShift)
+            case .shift:   keyDownEvent.flags.insert(.maskShift)
             case .control: keyDownEvent.flags.insert(.maskControl)
-            case .option: keyDownEvent.flags.insert(.maskAlternate)
+            case .option:  keyDownEvent.flags.insert(.maskAlternate)
             case .command: keyDownEvent.flags.insert(.maskCommand)
             }
         }
@@ -41,6 +41,8 @@ extension KeyPresser {
 /// In here, we divide the shortcut into actual pure keys (like letters, numbers, commas...)
 /// and modifiers (The fancy keys like `cmd`, `control`, `shift`, `alt`)
 struct Shortcut {
+    /// The shortcuts identifier. Pretty self-explanatory.
+    let id: String
     /// Just simple key -> `a`, `y`, `,`, `=`, `+`
     let key: Key
     /// Set of Modifier(s), the more fancier: `cmd`, `shift`, `control`, `alt`,???
@@ -48,9 +50,11 @@ struct Shortcut {
     let modifiers: Set<KeyModifier>
 
     public static var openFileQuickly: Shortcut {
-        return Shortcut(key: .O, modifiers: [.command, .shift])
+        #warning("FIX ME!!!")
+        return Shortcut(id: "BOGUS_ID", key: .O, modifiers: [.command, .shift])
     }
     public static var openFile: Shortcut {
-        return Shortcut(key: .O, modifiers: [.command])
+        #warning("FIX ME!!!")
+        return Shortcut(id: "BOGUS_ID", key: .O, modifiers: [.command])
     }
 }

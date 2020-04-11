@@ -25,8 +25,10 @@ struct TouchBarContainer: View {
     @State private var alohomoraAction = {
         #warning("TODO: Replace with real implementation")
         let dummy = DummyPerformable()
-        let shortcut = Shortcut(key: .D, modifiers: [.command, .shift, .control]) // Show code actions
+        let shortcut = Shortcut(id: "BOGUS_ID", key: .D, modifiers: [.command, .shift, .control])
         dummy.perform(shortcut)
+        #warning("JUST HERE FOR TESTING!!! Handle the error properly!!!")
+        let p = try! UserDefinedShortcutsParser()
     }
 
     @State private var openFile = "Open"
