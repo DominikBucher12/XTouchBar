@@ -24,7 +24,7 @@ final class UserDefinedShortcutsParser {
     private let fm = FileManager.default
     
     public init() throws {
-        let pathFromHome = "Library/Developer/Xcode/UserData/KeyBindings/Default.idekeybindings"
+        let pathFromHome = "Library/Developer/Xcode/UserData/KeyBindings/Really retarded Keybinding.idekeybindings"
         let url = fm.homeDirectoryForCurrentUser.appendingPathComponent(pathFromHome)
         
         do {
@@ -36,6 +36,7 @@ final class UserDefinedShortcutsParser {
         
         self.parseFile()
         let s = self.parseShortcutsAndIDs()
+
         #warning("Delete")
         print("SHORTCUTS:", s)
     }
