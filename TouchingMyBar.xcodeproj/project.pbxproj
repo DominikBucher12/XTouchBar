@@ -18,6 +18,7 @@
 		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
 		E72CE3B324103AA100B9283D /* TouchingMyBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */; };
 		E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7557607243BAC2800441B69 /* TouchBarPresenter.swift */; };
+		E76CBC5E24420044002349DC /* KeyBindingParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76CBC5D24420044002349DC /* KeyBindingParser.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E78FF299243F5DB300EBA80D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FF298243F5DB300EBA80D /* Colors.swift */; };
 		E796044624367BCE00F39215 /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044524367BCE00F39215 /* HelloWorld.swift */; };
@@ -27,6 +28,7 @@
 		E7DAC10F2437DD17002A1DD9 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7DAC1112437DD18002A1DD9 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; };
 		E7DAC1122437DD18002A1DD9 /* IDEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E7F7CB062442225E0012FF6A /* PropertyListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7CB052442225E0012FF6A /* PropertyListParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,11 +77,13 @@
 		E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchBarPrivateApi.h; sourceTree = "<group>"; };
 		E72CE3C524103EE800B9283D /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		E7557607243BAC2800441B69 /* TouchBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarPresenter.swift; sourceTree = "<group>"; };
+		E76CBC5D24420044002349DC /* KeyBindingParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBindingParser.swift; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
 		E78FF298243F5DB300EBA80D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E796044524367BCE00F39215 /* HelloWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E7F7CB052442225E0012FF6A /* PropertyListParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +144,10 @@
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E796044924367E3100F39215 /* Constants.swift */,
 				E78FF298243F5DB300EBA80D /* Colors.swift */,
-				38C2BCE2243E5C330009A015 /* Shortcut.swift */,
+				E76CBC5D24420044002349DC /* KeyBindingParser.swift */,
+				E7F7CB052442225E0012FF6A /* PropertyListParser.swift */,
+				E76CBC5C2442002D002349DC /* Keys */,
 				38D1D754243F9AAE007ABEFB /* UserDefinedShortcutsParser.swift */,
-				38C2BCE4243E5C4B0009A015 /* Key.swift */,
 				E779DF4D2437DE4600A70379 /* TouchBarSupport */,
 				384DE4F9243B7A5A00885559 /* UI */,
 				E72CE3A324103AA000B9283D /* Assets.xcassets */,
@@ -169,6 +174,15 @@
 				385EA4122437D68B0064C23D /* DFRFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E76CBC5C2442002D002349DC /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				38C2BCE2243E5C330009A015 /* Shortcut.swift */,
+				38C2BCE4243E5C4B0009A015 /* Key.swift */,
+			);
+			path = Keys;
 			sourceTree = "<group>";
 		};
 		E779DF4D2437DE4600A70379 /* TouchBarSupport */ = {
@@ -283,12 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E76CBC5E24420044002349DC /* KeyBindingParser.swift in Sources */,
 				E78FF299243F5DB300EBA80D /* Colors.swift in Sources */,
 				384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */,
 				38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */,
 				384DE4FB243B7A7F00885559 /* TouchBarContainer.swift in Sources */,
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
 				384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */,
+				E7F7CB062442225E0012FF6A /* PropertyListParser.swift in Sources */,
 				E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,

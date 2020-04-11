@@ -90,7 +90,7 @@ final class UserDefinedShortcutsParser {
             } else if startLookingForShortcutsInTextKeyBindings && !shouldInspectTag {
                 if buf.hasPrefix("<key>") && isInDictTag {
                     buf.removeFirst(5)
-                    buf.removeLast(6)
+//                    buf.removeLast(6)
                     shortcutKeyBindings.append(buf)
                 } else if buf.hasPrefix("<string>") && isInDictTag {
                     buf.removeFirst(8)
@@ -147,7 +147,9 @@ final class UserDefinedShortcutsParser {
             
 //            var key: Key?
             var modifiers = Set<KeyModifier>()
-            
+
+            // Note by @dbucher:
+            _ = "\u{232B}" // Backspace
             for character in shortcutKeyBindings[i] {
                 switch character {
                 case "^": modifiers.insert(.control)
@@ -166,7 +168,8 @@ final class UserDefinedShortcutsParser {
             //            }
             
         }
-        
+
+        shortcuts.forEach { print("ID: \($0.id), keys: \($0.key)")}
         return shortcuts
     }
     
