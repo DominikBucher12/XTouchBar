@@ -86,4 +86,70 @@ enum Key: UInt16 {
     case slash          = 0x2C
     case period         = 0x2F
     case grave          = 0x32 // WTF is grave???
+    
+    public init?(character: Character) {
+        switch character {
+        case "a", "A": self = .A
+        case "b", "B": self = .B
+        case "c", "C": self = .C
+        case "d", "D": self = .D
+        case "e", "E": self = .E
+        case "f", "F": self = .F
+        case "g", "G": self = .G
+        case "h", "H": self = .H
+        case "i", "I": self = .I
+        case "j", "J": self = .J
+        case "k", "K": self = .K
+        case "l", "L": self = .L
+        case "m", "M": self = .M
+        case "n", "N": self = .N
+        case "o", "O": self = .O
+        case "p", "P": self = .P
+        case "q", "Q": self = .Q
+        case "r", "R": self = .R
+        case "s", "S": self = .S
+        case "t", "T": self = .T
+        case "u", "U": self = .U
+        case "v", "V": self = .V
+        case "w", "W": self = .W
+        case "x", "X": self = .X
+        case "y", "Y": self = .Y
+        case "z", "Z": self = .Z
+            
+        case "0": self = .keypad0
+        case "1": self = .keypad1
+        case "2": self = .keypad2
+        case "3": self = .keypad3
+        case "4": self = .keypad4
+        case "5": self = .keypad5
+        case "6": self = .keypad6
+        case "7": self = .keypad7
+        case "8": self = .keypad8
+        case "9": self = .keypad9
+        
+        #warning("Is there a difference between keypad = and 'normal' = ???")
+// 		case "=": self = .keypadEqual
+// 		case "-": self = .keypadMinus
+// 		case "+": self = .keypadPlus
+// 		case "*": self = .keypadMultiply
+// 		case "/": self = .keypadDivide
+// 		case "": self = .keypadDecimal
+// 		case "": self = .keypadClear
+// 		case "": self = .keypadEnter
+            
+        case ")": self  = .rightBracket
+        case "(": self  = .leftBracket
+        case "'": self  = .quote
+        case ";": self  = .semicolon
+        case "\\": self = .backslash
+        case ",": self  = .comma
+        case "/": self  = .slash
+        case ".": self  = .period
+// 		case "": self = .grave
+            
+        default:
+            preconditionFailure("Couldn't read character '\(character)'.")
+            return nil
+        }
+    }
 }
