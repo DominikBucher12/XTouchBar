@@ -93,11 +93,46 @@ struct Parser: PListParser {
     }
 }
 
+enum ParsingError: Error {
+    case noKeyBindingsFileFound
+    case moreThanOneKeyBindingsFileFound
+}
+
 struct PListProcessor {
-    static func process() {
+    static func process() throws {
+        // Find some .idekeybindings file to parse.
+        // If there is none or more than one, throw ParsingError.
+        let fm = FileManager.default
         let homeDir = NSHomeDirectory()
+        let pathToFolder = "\(homeDir)/Library/Developer/Xcode/UserData/KeyBindings/"
+        var keyBindingsFileName = ""
+        
+        let folderContents: [String] = {
+            if let contents = try? fm.contentsOfDirectory(atPath: pathToFolder) {
+                return contents
+            }
+            return [""]
+        }()
+        
+        if folderContents.isEmpty {
+            throw ParsingError.noKeyBindingsFileFound
+        } else if folderContents.count > 1 {
+            var idekeybindingsFilesCount = 0
+            
+            for file in folderContents {
+                if idekeybindingsFilesCount > 1 { throw ParsingError.moreThanOneKeyBindingsFileFound }
+                if file.hasSuffix(".idekeybindings") {
+                    idekeybindingsFilesCount += 1
+                    keyBindingsFileName = file
+                }
+            }
+        } else if folderContents.first!.hasSuffix(".idekeybindings") {
+            keyBindingsFileName = folderContents.first!
+        }
+        
+        // We found .idekeybindings file, parse it.
         let dict = Parser().parse(
-            atPath: "\(homeDir)/Library/Developer/Xcode/UserData/KeyBindings/Default.idekeybindings"
+            atPath: "\(pathToFolder)\(keyBindingsFileName)"
             ) as! [String: [String: Any]]
         let array = dict["Menu Key Bindings"]?["Key Bindings"] as! [[String: Any]] // Really fuck you XML
 

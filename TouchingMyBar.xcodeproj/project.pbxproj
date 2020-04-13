@@ -12,7 +12,6 @@
 		384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FE243B8DF300885559 /* BarSpacer.swift */; };
 		38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE2243E5C330009A015 /* Shortcut.swift */; };
 		38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE4243E5C4B0009A015 /* Key.swift */; };
-		38D1D755243F9AAE007ABEFB /* UserDefinedShortcutsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D1D754243F9AAE007ABEFB /* UserDefinedShortcutsParser.swift */; };
 		E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE39F24103A9D00B9283D /* AppDelegate.swift */; };
 		E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A324103AA000B9283D /* Assets.xcassets */; };
 		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
@@ -64,7 +63,6 @@
 		385EA4162437D6E30064C23D /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
 		38C2BCE2243E5C330009A015 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		38C2BCE4243E5C4B0009A015 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		38D1D754243F9AAE007ABEFB /* UserDefinedShortcutsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefinedShortcutsParser.swift; sourceTree = "<group>"; };
 		E72CE39C24103A9D00B9283D /* TouchingMyBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchingMyBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72CE39F24103A9D00B9283D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E72CE3A324103AA000B9283D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				E76CBC5D24420044002349DC /* KeyBindingParser.swift */,
 				E7F7CB052442225E0012FF6A /* PropertyListParser.swift */,
 				E76CBC5C2442002D002349DC /* Keys */,
-				38D1D754243F9AAE007ABEFB /* UserDefinedShortcutsParser.swift */,
 				E779DF4D2437DE4600A70379 /* TouchBarSupport */,
 				384DE4F9243B7A5A00885559 /* UI */,
 				E72CE3A324103AA000B9283D /* Assets.xcassets */,
@@ -310,7 +307,6 @@
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
 				E796044624367BCE00F39215 /* HelloWorld.swift in Sources */,
 				38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */,
-				38D1D755243F9AAE007ABEFB /* UserDefinedShortcutsParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

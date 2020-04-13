@@ -28,7 +28,7 @@ struct TouchBarContainer: View {
         let shortcut = Shortcut(id: "BOGUS_ID", key: .D, modifiers: [.command, .shift, .control])
         dummy.perform(shortcut)
         #warning("JUST HERE FOR TESTING!!! Handle the error properly!!!")
-        PListProcessor.process()
+        try! PListProcessor.process()
     }
 
     @State private var openFile = "Open"
