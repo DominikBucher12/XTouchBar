@@ -6,6 +6,8 @@
 //  Copyright © 2020 Dominik Bucher. All rights reserved.
 //
 
+import Foundation
+
 protocol PListParser {
     func parse(atPath path: String) -> [String: Any]
 }
@@ -93,8 +95,9 @@ struct Parser: PListParser {
 
 struct PListProcessor {
     static func process() {
+        let homeDir = NSHomeDirectory()
         let dict = Parser().parse(
-            atPath: "/Users/dominikbucher/Library/Developer/Xcode/UserData/KeyBindings/Really retarded Keybinding.idekeybindings"
+            atPath: "\(homeDir)/Library/Developer/Xcode/UserData/KeyBindings/Default.idekeybindings"
             ) as! [String: [String: Any]]
         let array = dict["Menu Key Bindings"]?["Key Bindings"] as! [[String: Any]] // Really fuck you XML
 
