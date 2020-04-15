@@ -1,0 +1,208 @@
+indentation: 4
+
+disabled_rules: # rule identifiers to exclude from running
+ - trailing_whitespace
+ - conditional_returns_on_newline
+ - private_outlet
+ - switch_case_on_newline
+ - redundant_optional_initialization
+ - sorted_imports
+ - shorthand_operator
+ - explicit_type_interface
+ - file_header
+ - notification_center_detachment
+ - number_separator
+ - empty_enum_arguments
+ - empty_parentheses_with_trailing_closure
+ - private_over_fileprivate
+ - identifier_name
+ - todo
+ - type_name # desn't make much sense to limit ourselfs
+ - nesting
+ - orphaned_doc_comment
+
+opt_in_rules:
+ - closure_spacing
+ - contains_over_first_not_nil
+ - explicit_init
+ - force_unwrapping
+ - literal_expression_end_indentation
+ - overridden_super_call
+ - redundant_nil_coalescing
+#  - attributes
+ - closure_end_indentation
+ - first_where
+ - operator_whitespace
+ - operator_usage_whitespace
+ - fatal_error_message
+ - implicitly_unwrapped_optional
+ - multiline_arguments
+ - multiline_parameters
+ - empty_count
+ - unneeded_parentheses_in_closure_argument
+ - vertical_parameter_alignment_on_call
+ - fallthrough
+ - attributes
+
+excluded:
+ - Pods
+ - Tests
+ - iOSUITests
+ - Tests
+ - Source/managers/logger/context/SHMLogger+LoggableContextProtocols.swift
+ - Source/lib/localization/L10n.swift
+ - Source/managers/asset_cache/types/AssetCache+Fields+Available.swift
+ - build
+ - iOSUITests/EarlGrey.swift
+ - iOSUITests/EarlGreyWrappers
+ - iOSUITests/EarlGreyBlueprint.swift
+ - old/libs/network/reachability/Reachability.swift
+ - Sourcery
+ - Core/Sourcery
+ - Mediator/Sourcery
+ - Features/Home/Sourcery
+ - Features/Rest/Sourcery
+ - Core/legacy/gConstants.swift
+ - Features/Rest/gConstants.swift
+ - Core/lib/L10n.swift
+ - Core/logging/SHMLogger/SHMLogger+LoggableContextProtocols.swift
+ - Services/Downloads/Sourcery
+ - Services/Downloads/Tests
+
+custom_rules:
+    maximum_one_space:
+        name: "Maximum one space"
+        regex: "\\s(var|let)\\s{2,}"
+        severity: error
+
+
+attributes:
+  severity: error
+
+class_delegate_protocol: error
+compiler_protocol_init: error
+closure_end_indentation: error
+closure_parameter_position: error
+closing_brace: error
+closure_spacing: error
+colon:
+  severity: error
+
+comma: error
+conditional_returns_on_newline:
+  severity: error
+
+contains_over_first_not_nil: error
+control_statement: error
+discarded_notification_center_observer: error
+empty_count: error
+empty_parameters: error
+explicit_init: error
+fallthrough: error
+fatal_error_message: error
+first_where: error
+force_cast: error
+force_try: error
+force_unwrapping: error
+for_where: error
+implicit_getter: error
+implicitly_unwrapped_optional:
+    severity: error
+
+large_tuple:
+    warning: 3
+    error: 3
+
+leading_whitespace: error
+legacy_cggeometry_functions: error
+legacy_constant: error
+legacy_constructor: error
+legacy_nsgeometry_functions: error
+literal_expression_end_indentation: error
+
+mark: error
+multiline_arguments:
+  severity: error
+
+multiline_parameters:
+  severity: error
+
+multiple_closures_with_trailing_closure:
+  severity: error
+
+opening_brace: error
+operator_whitespace: error
+operator_usage_whitespace: error
+overridden_super_call:
+  severity: error
+
+protocol_property_accessors_order: error
+redundant_nil_coalescing:
+  severity: error
+
+redundant_void_return: error
+return_arrow_whitespace: error
+redundant_string_enum_value: error
+redundant_discardable_let: error
+statement_position:
+  severity: error
+
+switch_case_alignment:
+  severity: error
+
+syntactic_sugar: error
+trailing_newline: error
+trailing_semicolon: error
+trailing_comma:
+  severity: error
+
+unneeded_parentheses_in_closure_argument: error
+unneeded_break_in_switch:
+  severity: error
+
+unused_closure_parameter: error
+unused_enumerated: error
+unused_optional_binding:
+  severity: error
+
+valid_ibinspectable: error
+void_return: error
+vertical_parameter_alignment: error
+vertical_parameter_alignment_on_call: error
+vertical_whitespace:
+  severity: error
+
+weak_delegate: error
+
+cyclomatic_complexity:
+  warning: 15
+  error: 15
+
+file_length:
+  warning: 10000
+  error: 30000
+
+function_body_length:
+  warning: 50
+  error: 50
+
+function_parameter_count:
+  warning: 10
+  error: 10
+
+line_length:
+  warning: 150
+  error: 150
+
+type_body_length:
+  warning: 5000
+  error: 9000
+
+identifier_name:
+  min_length:
+    warning: 0
+    error: 0
+
+  max_length:
+    warning: 50
+    error: 50

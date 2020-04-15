@@ -12,6 +12,8 @@
 		384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FE243B8DF300885559 /* BarSpacer.swift */; };
 		38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE2243E5C330009A015 /* Shortcut.swift */; };
 		38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE4243E5C4B0009A015 /* Key.swift */; };
+		534AC083854F45165D0E2402 /* Pods_TouchingMyBarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70CF88E4FAEB8F20546903D /* Pods_TouchingMyBarTests.framework */; };
+		971AC489DF8A6D55C85DC95B /* Pods_TouchingMyBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A10D4358D0AECF5DD860B3 /* Pods_TouchingMyBar.framework */; };
 		E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE39F24103A9D00B9283D /* AppDelegate.swift */; };
 		E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A324103AA000B9283D /* Assets.xcassets */; };
 		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
@@ -62,6 +64,12 @@
 		385EA4162437D6E30064C23D /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
 		38C2BCE2243E5C330009A015 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		38C2BCE4243E5C4B0009A015 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		499194A10AFF54D4344A2343 /* Pods-TouchingMyBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchingMyBarTests.release.xcconfig"; path = "Target Support Files/Pods-TouchingMyBarTests/Pods-TouchingMyBarTests.release.xcconfig"; sourceTree = "<group>"; };
+		4F5403DEEDE196A7E62D6453 /* Pods-TouchingMyBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchingMyBar.debug.xcconfig"; path = "Target Support Files/Pods-TouchingMyBar/Pods-TouchingMyBar.debug.xcconfig"; sourceTree = "<group>"; };
+		6AB216570A2349A353488882 /* Pods-TouchingMyBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchingMyBar.release.xcconfig"; path = "Target Support Files/Pods-TouchingMyBar/Pods-TouchingMyBar.release.xcconfig"; sourceTree = "<group>"; };
+		8BBE2176228C717A30E74513 /* Pods-TouchingMyBarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchingMyBarTests.debug.xcconfig"; path = "Target Support Files/Pods-TouchingMyBarTests/Pods-TouchingMyBarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2A10D4358D0AECF5DD860B3 /* Pods_TouchingMyBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchingMyBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70CF88E4FAEB8F20546903D /* Pods_TouchingMyBarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchingMyBarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72CE39C24103A9D00B9283D /* TouchingMyBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchingMyBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72CE39F24103A9D00B9283D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E72CE3A324103AA000B9283D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 			files = (
 				E7DAC1112437DD18002A1DD9 /* IDEKit.framework in Frameworks */,
 				E7DAC10E2437DD17002A1DD9 /* DFRFoundation.framework in Frameworks */,
+				971AC489DF8A6D55C85DC95B /* Pods_TouchingMyBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				534AC083854F45165D0E2402 /* Pods_TouchingMyBarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +123,18 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		901FDE3EB703680609389540 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F5403DEEDE196A7E62D6453 /* Pods-TouchingMyBar.debug.xcconfig */,
+				6AB216570A2349A353488882 /* Pods-TouchingMyBar.release.xcconfig */,
+				8BBE2176228C717A30E74513 /* Pods-TouchingMyBarTests.debug.xcconfig */,
+				499194A10AFF54D4344A2343 /* Pods-TouchingMyBarTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E72CE39324103A9D00B9283D = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +142,7 @@
 				E72CE3B124103AA100B9283D /* TouchingMyBarTests */,
 				E72CE39D24103A9D00B9283D /* Products */,
 				E72CE3C8241045E200B9283D /* Frameworks */,
+				901FDE3EB703680609389540 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,6 +189,8 @@
 			children = (
 				385EA4162437D6E30064C23D /* IDEKit.framework */,
 				385EA4122437D68B0064C23D /* DFRFoundation.framework */,
+				C2A10D4358D0AECF5DD860B3 /* Pods_TouchingMyBar.framework */,
+				C70CF88E4FAEB8F20546903D /* Pods_TouchingMyBarTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -196,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E72CE3B724103AA100B9283D /* Build configuration list for PBXNativeTarget "TouchingMyBar" */;
 			buildPhases = (
+				5501ED63D51FF27CD854AF7A /* [CP] Check Pods Manifest.lock */,
 				E72CE39824103A9D00B9283D /* Sources */,
 				E72CE39924103A9D00B9283D /* Frameworks */,
 				E72CE39A24103A9D00B9283D /* Resources */,
@@ -214,6 +240,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E72CE3BA24103AA100B9283D /* Build configuration list for PBXNativeTarget "TouchingMyBarTests" */;
 			buildPhases = (
+				868A23405C9F772361B20F4F /* [CP] Check Pods Manifest.lock */,
 				E72CE3AA24103AA000B9283D /* Sources */,
 				E72CE3AB24103AA000B9283D /* Frameworks */,
 				E72CE3AC24103AA000B9283D /* Resources */,
@@ -285,6 +312,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5501ED63D51FF27CD854AF7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TouchingMyBar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		868A23405C9F772361B20F4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TouchingMyBarTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E72CE39824103A9D00B9283D /* Sources */ = {
@@ -451,6 +525,7 @@
 		};
 		E72CE3B824103AA100B9283D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F5403DEEDE196A7E62D6453 /* Pods-TouchingMyBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TouchingMyBar/TouchingMyBar.entitlements;
@@ -490,6 +565,7 @@
 		};
 		E72CE3B924103AA100B9283D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AB216570A2349A353488882 /* Pods-TouchingMyBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TouchingMyBar/TouchingMyBar.entitlements;
@@ -529,6 +605,7 @@
 		};
 		E72CE3BB24103AA100B9283D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BBE2176228C717A30E74513 /* Pods-TouchingMyBarTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -551,6 +628,7 @@
 		};
 		E72CE3BC24103AA100B9283D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 499194A10AFF54D4344A2343 /* Pods-TouchingMyBarTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

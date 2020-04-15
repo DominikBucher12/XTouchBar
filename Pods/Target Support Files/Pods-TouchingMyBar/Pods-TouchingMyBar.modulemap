@@ -1,0 +1,6 @@
+framework module Pods_TouchingMyBar {
+  umbrella header "Pods-TouchingMyBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
