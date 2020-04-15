@@ -60,17 +60,6 @@ struct ShortcutObject: Codable {
         )
     }
 
-    /// <#Description#>
-    /// - Parameters:
-    ///   - action: <#action description#>
-    ///   - alternate: <#alternate description#>
-    ///   - commandID: <#commandID description#>
-    ///   - group: <#group description#>
-    ///   - groupID: <#groupID description#>
-    ///   - groupedAlternate: <#groupedAlternate description#>
-    ///   - keyboardShortcut: <#keyboardShortcut description#>
-    ///   - navigation: <#navigation description#>
-    ///   - title: <#title description#>
     init(action: String, alternate: Bool, commandID: String, group: String, groupID: String, groupedAlternate: Bool, keyboardShortcut: String?, navigation: Bool, title: String) {
         self.action = action
         self.alternate = alternate
