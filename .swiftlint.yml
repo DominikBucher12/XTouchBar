@@ -20,6 +20,7 @@ disabled_rules: # rule identifiers to exclude from running
  - type_name # desn't make much sense to limit ourselfs
  - nesting
  - orphaned_doc_comment
+ - multiple_closures_with_trailing_closure
 
 opt_in_rules:
  - closure_spacing
@@ -46,36 +47,17 @@ opt_in_rules:
 
 excluded:
  - Pods
- - Tests
- - iOSUITests
- - Tests
- - Source/managers/logger/context/SHMLogger+LoggableContextProtocols.swift
- - Source/lib/localization/L10n.swift
- - Source/managers/asset_cache/types/AssetCache+Fields+Available.swift
- - build
- - iOSUITests/EarlGrey.swift
- - iOSUITests/EarlGreyWrappers
- - iOSUITests/EarlGreyBlueprint.swift
- - old/libs/network/reachability/Reachability.swift
- - Sourcery
- - Core/Sourcery
- - Mediator/Sourcery
- - Features/Home/Sourcery
- - Features/Rest/Sourcery
- - Core/legacy/gConstants.swift
- - Features/Rest/gConstants.swift
- - Core/lib/L10n.swift
- - Core/logging/SHMLogger/SHMLogger+LoggableContextProtocols.swift
- - Services/Downloads/Sourcery
- - Services/Downloads/Tests
+ - TouchingMyBarTests
+ - TouchingMyBar/Keys/Key.swift
+ - TouchingMyBar/TouchBarSupport/NSTouchbarSupport.swift
+ 
 
 custom_rules:
     maximum_one_space:
         name: "Maximum one space"
         regex: "\\s(var|let)\\s{2,}"
         severity: error
-
-
+        
 attributes:
   severity: error
 
@@ -125,9 +107,6 @@ multiline_arguments:
   severity: error
 
 multiline_parameters:
-  severity: error
-
-multiple_closures_with_trailing_closure:
   severity: error
 
 opening_brace: error

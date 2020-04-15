@@ -33,7 +33,7 @@ public enum Constants {
 
             guard let modelData = IORegistryEntryCreateCFProperty(service, "model" as CFString, kCFAllocatorDefault, 0).takeRetainedValue() as? Data,
                   let modelIdentifierCString = String(data: modelData, encoding: .utf8)?.cString(using: .utf8)
-            else { return "Unknown mac model?"}
+            else { return "Unknown mac model?" }
 
             defer { IOObjectRelease(service) } // See documentation on the method why I need to do this.
             return String(cString: modelIdentifierCString)

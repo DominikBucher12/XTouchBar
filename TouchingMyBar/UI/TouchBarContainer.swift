@@ -15,20 +15,20 @@ struct DummyPerformable: KeyPresser { }
 struct TouchBarContainer: View {
 
     @State private var dummyIcon       = "esc"
-    @State private var dummyColor      = Color.white.opacity(0.2)
-    @State private var dummySize       = Constants.BarElementWidth.small
+    @State private var dummyColor = Color.white.opacity(0.2)
+    @State private var dummySize = Constants.BarElementWidth.small
     @State private var dummyAction     = { TouchBarPresenter.shared.hideXTouchBar() }
 
     @State private var alohomoraIcon   = "///"
-    @State private var alohomoraColor  = Colors.buttonUnselected
-    @State private var alohomoraSize   = Constants.BarElementWidth.medium
+    @State private var alohomoraColor = Colors.buttonUnselected
+    @State private var alohomoraSize = Constants.BarElementWidth.medium
     @State private var alohomoraAction = {
         #warning("TODO: Replace with real implementation")
         let dummy = DummyPerformable()
         let shortcut = Shortcut(id: "BOGUS_ID", key: .D, modifiers: [.command, .shift, .control])
         dummy.perform(shortcut)
         #warning("JUST HERE FOR TESTING!!! Handle the error properly!!!")
-        try! PListProcessor.process()
+        try? PListProcessor.process()
     }
 
     @State private var openFile = "Open"

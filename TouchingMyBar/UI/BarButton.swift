@@ -35,7 +35,7 @@ struct BarButton: View {
     @Binding var icon: String
     @Binding var color: Color
     @Binding var size: Constants.BarElementWidth
-    @Binding var action: () -> ()
+    @Binding var action: () -> Void
 
     var body: some View {
         Button(action: { self.action() }) {

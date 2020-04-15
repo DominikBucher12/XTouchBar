@@ -19,97 +19,90 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		000E665D04EED7E66E23E3A79DB03E89 /* Pods-TouchingMyBarTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C4022F2A6B1837DC714D62EEFE4FC9 /* Pods-TouchingMyBarTests-dummy.m */; };
-		34AB9636EB4B34A47BFC4F1E760984D3 /* Pods-TouchingMyBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C7C3EC07EF1B8735952E5D273BBFA3 /* Pods-TouchingMyBar-dummy.m */; };
-		87C4CA60E34ADC25273EA6D49DA5E8A1 /* Pods-TouchingMyBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D72D16C3F0F6A1A3995DC37483BB4693 /* Pods-TouchingMyBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92F592E7076E66C887E3C832C9E98F83 /* Pods-TouchingMyBarTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90964F6F571F359ED9B69E7AB6F95290 /* Pods-TouchingMyBarTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F90928F413DEFF7D7604212A3B4A841 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
-		BB42347ACA2B14EB0B552D1F6A2720AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		A37E041E7618486983DCAA66464F9FB3 /* Pods-TouchingMyBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D3C62F3492BCB83A2A7CA3844596EB /* Pods-TouchingMyBar-dummy.m */; };
+		B09EEC712B16A729350D2280AE3D91FB /* Pods-TouchingMyBarTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB639E960EA96B6566AB7C7706802383 /* Pods-TouchingMyBarTests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		34A06B00E1D2FF0097C7C7E70C2F316A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 007300836D09C31F396592D4A5387110;
-			remoteInfo = "Pods-TouchingMyBar";
-		};
-		D836AB170FDEF46763C431CA238C5F8F /* PBXContainerItemProxy */ = {
+		F7F8D64E6E714B333533A53E3A3C637D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
 			remoteInfo = SwiftLint;
 		};
+		FBA91C879F7E46F5EA27A2F53D31FE78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 007300836D09C31F396592D4A5387110;
+			remoteInfo = "Pods-TouchingMyBar";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0175BE84A9AE0075ED782AF19DBADBC5 /* Pods-TouchingMyBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBar.release.xcconfig"; sourceTree = "<group>"; };
-		16F20055487463AD39C0E3D4B70958BE /* Pods-TouchingMyBarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		11D3C62F3492BCB83A2A7CA3844596EB /* Pods-TouchingMyBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TouchingMyBar-dummy.m"; sourceTree = "<group>"; };
+		1E5D755AF79159898D1D9AA7F86A467E /* Pods-TouchingMyBar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TouchingMyBar-acknowledgements.plist"; sourceTree = "<group>"; };
+		3C7B614AC397EE6F2263B72274DE77E1 /* Pods-TouchingMyBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBar.debug.xcconfig"; sourceTree = "<group>"; };
 		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
-		679C749E8B951DF817675BB34C8435B7 /* Pods-TouchingMyBarTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TouchingMyBarTests.modulemap"; sourceTree = "<group>"; };
-		6A163A47C51A60860AE52C8E79C0FB31 /* Pods-TouchingMyBar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TouchingMyBar-acknowledgements.markdown"; sourceTree = "<group>"; };
-		71A13969D95ABE0875020BFA24330E39 /* Pods-TouchingMyBarTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TouchingMyBarTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		74C4022F2A6B1837DC714D62EEFE4FC9 /* Pods-TouchingMyBarTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TouchingMyBarTests-dummy.m"; sourceTree = "<group>"; };
-		7D3E9D51A5AAA2BA7ED70826698988EA /* Pods-TouchingMyBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBar.debug.xcconfig"; sourceTree = "<group>"; };
+		7EA7B8447B9A40C725244BD403901DE9 /* Pods-TouchingMyBarTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TouchingMyBarTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
-		87C7C3EC07EF1B8735952E5D273BBFA3 /* Pods-TouchingMyBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TouchingMyBar-dummy.m"; sourceTree = "<group>"; };
-		90964F6F571F359ED9B69E7AB6F95290 /* Pods-TouchingMyBarTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TouchingMyBarTests-umbrella.h"; sourceTree = "<group>"; };
+		89F6AC6ED029920A61733B6F7564F5A9 /* Pods-TouchingMyBarTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TouchingMyBarTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		94972397A7CB6610E9F9C5668135761D /* Pods-TouchingMyBarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		96948982EC18CFB295C964B2C91516D2 /* Pods-TouchingMyBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBar.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AA2AE47B2765DF7706234BC9576AF06B /* Pods-TouchingMyBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBarTests.release.xcconfig"; sourceTree = "<group>"; };
-		B0CF02018F2ECCFC1F782FD062BC3876 /* Pods-TouchingMyBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TouchingMyBar.modulemap"; sourceTree = "<group>"; };
-		B8BDB538B696DBEFF345D98E4DDD3734 /* Pods-TouchingMyBarTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TouchingMyBarTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C318A876F003CBC38C462FF749A0B843 /* Pods-TouchingMyBarTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TouchingMyBarTests-Info.plist"; sourceTree = "<group>"; };
-		D1F1B9E6CBA889E5F3BA460A386CADB2 /* Pods-TouchingMyBar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TouchingMyBar-acknowledgements.plist"; sourceTree = "<group>"; };
-		D6DA21100505DE38A293CFF887DE4A98 /* Pods-TouchingMyBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TouchingMyBar-Info.plist"; sourceTree = "<group>"; };
-		D72D16C3F0F6A1A3995DC37483BB4693 /* Pods-TouchingMyBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TouchingMyBar-umbrella.h"; sourceTree = "<group>"; };
-		D750620B9192F03D0F4C553EA988C357 /* Pods_TouchingMyBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TouchingMyBar.framework; path = "Pods-TouchingMyBar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8FBC9A7C08F9ECB9049A2ECC06DDBC1 /* Pods_TouchingMyBarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TouchingMyBarTests.framework; path = "Pods-TouchingMyBarTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		A203363813D1B4AECEAB543D875FDFA9 /* Pods-TouchingMyBar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TouchingMyBar-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D750620B9192F03D0F4C553EA988C357 /* libPods-TouchingMyBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TouchingMyBar.a"; path = "libPods-TouchingMyBar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8FBC9A7C08F9ECB9049A2ECC06DDBC1 /* libPods-TouchingMyBarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TouchingMyBarTests.a"; path = "libPods-TouchingMyBarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB639E960EA96B6566AB7C7706802383 /* Pods-TouchingMyBarTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TouchingMyBarTests-dummy.m"; sourceTree = "<group>"; };
+		DD39C58BAA017AB1E059A2F99528F00B /* Pods-TouchingMyBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBarTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7D6D32C9A3D250775E4AF4EE991276FF /* Frameworks */ = {
+		B38753903694D57020B7D964D76640DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F90928F413DEFF7D7604212A3B4A841 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FDEDF34F29597D1EDE127A8F54269AD4 /* Frameworks */ = {
+		C7B64E1E2B765938D798BF192E94D933 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB42347ACA2B14EB0B552D1F6A2720AA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B386D6901F3F7079A8104325963AFC8 /* Pods-TouchingMyBar */ = {
+		07A24ADDB55983CCA252278B2C191EA8 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B0CF02018F2ECCFC1F782FD062BC3876 /* Pods-TouchingMyBar.modulemap */,
-				6A163A47C51A60860AE52C8E79C0FB31 /* Pods-TouchingMyBar-acknowledgements.markdown */,
-				D1F1B9E6CBA889E5F3BA460A386CADB2 /* Pods-TouchingMyBar-acknowledgements.plist */,
-				87C7C3EC07EF1B8735952E5D273BBFA3 /* Pods-TouchingMyBar-dummy.m */,
-				D6DA21100505DE38A293CFF887DE4A98 /* Pods-TouchingMyBar-Info.plist */,
-				D72D16C3F0F6A1A3995DC37483BB4693 /* Pods-TouchingMyBar-umbrella.h */,
-				7D3E9D51A5AAA2BA7ED70826698988EA /* Pods-TouchingMyBar.debug.xcconfig */,
-				0175BE84A9AE0075ED782AF19DBADBC5 /* Pods-TouchingMyBar.release.xcconfig */,
+				29708524D5AA9F362DD9EAFCB778C562 /* Pods-TouchingMyBar */,
+				B54B06F6D8E59CF88B22E3DF41A5763C /* Pods-TouchingMyBarTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		29708524D5AA9F362DD9EAFCB778C562 /* Pods-TouchingMyBar */ = {
+			isa = PBXGroup;
+			children = (
+				A203363813D1B4AECEAB543D875FDFA9 /* Pods-TouchingMyBar-acknowledgements.markdown */,
+				1E5D755AF79159898D1D9AA7F86A467E /* Pods-TouchingMyBar-acknowledgements.plist */,
+				11D3C62F3492BCB83A2A7CA3844596EB /* Pods-TouchingMyBar-dummy.m */,
+				3C7B614AC397EE6F2263B72274DE77E1 /* Pods-TouchingMyBar.debug.xcconfig */,
+				96948982EC18CFB295C964B2C91516D2 /* Pods-TouchingMyBar.release.xcconfig */,
 			);
 			name = "Pods-TouchingMyBar";
 			path = "Target Support Files/Pods-TouchingMyBar";
 			sourceTree = "<group>";
 		};
-		7428D7A57AC275FB82EDBAC53D03B83A /* Products */ = {
+		2B73B71A72DEBA2E937F5A2DAFF3E757 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D750620B9192F03D0F4C553EA988C357 /* Pods_TouchingMyBar.framework */,
-				D8FBC9A7C08F9ECB9049A2ECC06DDBC1 /* Pods_TouchingMyBarTests.framework */,
+				D750620B9192F03D0F4C553EA988C357 /* libPods-TouchingMyBar.a */,
+				D8FBC9A7C08F9ECB9049A2ECC06DDBC1 /* libPods-TouchingMyBarTests.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,23 +125,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CBD43E0947D94E318A0ED1350CFF29ED /* OS X */ = {
+		B54B06F6D8E59CF88B22E3DF41A5763C /* Pods-TouchingMyBarTests */ = {
 			isa = PBXGroup;
 			children = (
-				F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */,
+				7EA7B8447B9A40C725244BD403901DE9 /* Pods-TouchingMyBarTests-acknowledgements.markdown */,
+				89F6AC6ED029920A61733B6F7564F5A9 /* Pods-TouchingMyBarTests-acknowledgements.plist */,
+				DB639E960EA96B6566AB7C7706802383 /* Pods-TouchingMyBarTests-dummy.m */,
+				94972397A7CB6610E9F9C5668135761D /* Pods-TouchingMyBarTests.debug.xcconfig */,
+				DD39C58BAA017AB1E059A2F99528F00B /* Pods-TouchingMyBarTests.release.xcconfig */,
 			);
-			name = "OS X";
+			name = "Pods-TouchingMyBarTests";
+			path = "Target Support Files/Pods-TouchingMyBarTests";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				965877409E01FB3D85D85E90E6B30185 /* Pods */,
-				7428D7A57AC275FB82EDBAC53D03B83A /* Products */,
-				EA8BBDE0D2F562F27D8EB8BC980211F6 /* Targets Support Files */,
+				2B73B71A72DEBA2E937F5A2DAFF3E757 /* Products */,
+				07A24ADDB55983CCA252278B2C191EA8 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D96179D43A67C5D5323B0682D32C133C /* SwiftLint */ = {
@@ -160,55 +165,20 @@
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
-		E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CBD43E0947D94E318A0ED1350CFF29ED /* OS X */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EA843B9A1A273061CDEEF187139DA0A6 /* Pods-TouchingMyBarTests */ = {
-			isa = PBXGroup;
-			children = (
-				679C749E8B951DF817675BB34C8435B7 /* Pods-TouchingMyBarTests.modulemap */,
-				71A13969D95ABE0875020BFA24330E39 /* Pods-TouchingMyBarTests-acknowledgements.markdown */,
-				B8BDB538B696DBEFF345D98E4DDD3734 /* Pods-TouchingMyBarTests-acknowledgements.plist */,
-				74C4022F2A6B1837DC714D62EEFE4FC9 /* Pods-TouchingMyBarTests-dummy.m */,
-				C318A876F003CBC38C462FF749A0B843 /* Pods-TouchingMyBarTests-Info.plist */,
-				90964F6F571F359ED9B69E7AB6F95290 /* Pods-TouchingMyBarTests-umbrella.h */,
-				16F20055487463AD39C0E3D4B70958BE /* Pods-TouchingMyBarTests.debug.xcconfig */,
-				AA2AE47B2765DF7706234BC9576AF06B /* Pods-TouchingMyBarTests.release.xcconfig */,
-			);
-			name = "Pods-TouchingMyBarTests";
-			path = "Target Support Files/Pods-TouchingMyBarTests";
-			sourceTree = "<group>";
-		};
-		EA8BBDE0D2F562F27D8EB8BC980211F6 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3B386D6901F3F7079A8104325963AFC8 /* Pods-TouchingMyBar */,
-				EA843B9A1A273061CDEEF187139DA0A6 /* Pods-TouchingMyBarTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		78DE10D1CA803DC60436594DE20B0D76 /* Headers */ = {
+		2651ACF20F78AFDB576D00574AE8241B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87C4CA60E34ADC25273EA6D49DA5E8A1 /* Pods-TouchingMyBar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D9E3841D594FBE87929CCAD920A8DF02 /* Headers */ = {
+		D9C94109208E10C3B404CA945DD071C9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F592E7076E66C887E3C832C9E98F83 /* Pods-TouchingMyBarTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,41 +187,39 @@
 /* Begin PBXNativeTarget section */
 		007300836D09C31F396592D4A5387110 /* Pods-TouchingMyBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F880C3A8747F359283D64B2F4D52883 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBar" */;
+			buildConfigurationList = 653AB8679EFD04BBD6A56A058B514B86 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBar" */;
 			buildPhases = (
-				78DE10D1CA803DC60436594DE20B0D76 /* Headers */,
-				89DAE15AEFB7BF2C984569D494D61DC4 /* Sources */,
-				7D6D32C9A3D250775E4AF4EE991276FF /* Frameworks */,
-				07C59EA413A455CE22ABDBEE78C39304 /* Resources */,
+				2651ACF20F78AFDB576D00574AE8241B /* Headers */,
+				979322A4F1BCBD25053F6029A0B39111 /* Sources */,
+				B38753903694D57020B7D964D76640DA /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3B3021D59A84A853AD672A3309368A26 /* PBXTargetDependency */,
+				FDA1FC7D443E39CFA8A213F94A11B827 /* PBXTargetDependency */,
 			);
 			name = "Pods-TouchingMyBar";
 			productName = "Pods-TouchingMyBar";
-			productReference = D750620B9192F03D0F4C553EA988C357 /* Pods_TouchingMyBar.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = D750620B9192F03D0F4C553EA988C357 /* libPods-TouchingMyBar.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		F60B26EA9F1B1FA134D28571121FDB77 /* Pods-TouchingMyBarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A13E3E18C5ED28B19835D8E6C1771995 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBarTests" */;
+			buildConfigurationList = EECDF72377E57647F25552934FCD9127 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBarTests" */;
 			buildPhases = (
-				D9E3841D594FBE87929CCAD920A8DF02 /* Headers */,
-				B6445776C35C34F8EA299B9E31CF2267 /* Sources */,
-				FDEDF34F29597D1EDE127A8F54269AD4 /* Frameworks */,
-				2C146B0865BA8D5BB071C72254409E04 /* Resources */,
+				D9C94109208E10C3B404CA945DD071C9 /* Headers */,
+				25EE30A0CBEF4428DC2F5E311BAF5AFA /* Sources */,
+				C7B64E1E2B765938D798BF192E94D933 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2067E4930AA94C43F6875408316D8981 /* PBXTargetDependency */,
+				ABAC4632D800C007C56101A5A24CC307 /* PBXTargetDependency */,
 			);
 			name = "Pods-TouchingMyBarTests";
 			productName = "Pods-TouchingMyBarTests";
-			productReference = D8FBC9A7C08F9ECB9049A2ECC06DDBC1 /* Pods_TouchingMyBarTests.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = D8FBC9A7C08F9ECB9049A2ECC06DDBC1 /* libPods-TouchingMyBarTests.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -271,7 +239,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 7428D7A57AC275FB82EDBAC53D03B83A /* Products */;
+			productRefGroup = 2B73B71A72DEBA2E937F5A2DAFF3E757 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -282,54 +250,37 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		07C59EA413A455CE22ABDBEE78C39304 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C146B0865BA8D5BB071C72254409E04 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		89DAE15AEFB7BF2C984569D494D61DC4 /* Sources */ = {
+		25EE30A0CBEF4428DC2F5E311BAF5AFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34AB9636EB4B34A47BFC4F1E760984D3 /* Pods-TouchingMyBar-dummy.m in Sources */,
+				B09EEC712B16A729350D2280AE3D91FB /* Pods-TouchingMyBarTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6445776C35C34F8EA299B9E31CF2267 /* Sources */ = {
+		979322A4F1BCBD25053F6029A0B39111 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000E665D04EED7E66E23E3A79DB03E89 /* Pods-TouchingMyBarTests-dummy.m in Sources */,
+				A37E041E7618486983DCAA66464F9FB3 /* Pods-TouchingMyBar-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2067E4930AA94C43F6875408316D8981 /* PBXTargetDependency */ = {
+		ABAC4632D800C007C56101A5A24CC307 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-TouchingMyBar";
 			target = 007300836D09C31F396592D4A5387110 /* Pods-TouchingMyBar */;
-			targetProxy = 34A06B00E1D2FF0097C7C7E70C2F316A /* PBXContainerItemProxy */;
+			targetProxy = FBA91C879F7E46F5EA27A2F53D31FE78 /* PBXContainerItemProxy */;
 		};
-		3B3021D59A84A853AD672A3309368A26 /* PBXTargetDependency */ = {
+		FDA1FC7D443E39CFA8A213F94A11B827 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLint;
 			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = D836AB170FDEF46763C431CA238C5F8F /* PBXContainerItemProxy */;
+			targetProxy = F7F8D64E6E714B333533A53E3A3C637D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -412,125 +363,51 @@
 			};
 			name = Release;
 		};
-		110155D53F99FDDD83A58FC924B92502 /* Release */ = {
+		50DD2C22D29A159012F23D2D1D01AB76 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0175BE84A9AE0075ED782AF19DBADBC5 /* Pods-TouchingMyBar.release.xcconfig */;
+			baseConfigurationReference = 94972397A7CB6610E9F9C5668135761D /* Pods-TouchingMyBarTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-TouchingMyBar/Pods-TouchingMyBar-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MODULEMAP_FILE = "Target Support Files/Pods-TouchingMyBar/Pods-TouchingMyBar.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2D49C08C3EB1949B82E296F22254B2C2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA2AE47B2765DF7706234BC9576AF06B /* Pods-TouchingMyBarTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-TouchingMyBarTests/Pods-TouchingMyBarTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MODULEMAP_FILE = "Target Support Files/Pods-TouchingMyBarTests/Pods-TouchingMyBarTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		45F0B4739F2EAD05F61629E8685B4787 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16F20055487463AD39C0E3D4B70958BE /* Pods-TouchingMyBarTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-TouchingMyBarTests/Pods-TouchingMyBarTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MODULEMAP_FILE = "Target Support Files/Pods-TouchingMyBarTests/Pods-TouchingMyBarTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		6C9B568F4B2E13E5F246D168C27D24DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96948982EC18CFB295C964B2C91516D2 /* Pods-TouchingMyBar.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		6DC6BBF7D2A721A4E91A75A28EEB8E83 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -596,43 +473,26 @@
 			};
 			name = Debug;
 		};
-		79C13926342F3F487D846CE60C63C52C /* Debug */ = {
+		7B07BD51359D5536C75346D630F08626 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D3E9D51A5AAA2BA7ED70826698988EA /* Pods-TouchingMyBar.debug.xcconfig */;
+			baseConfigurationReference = 3C7B614AC397EE6F2263B72274DE77E1 /* Pods-TouchingMyBar.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-TouchingMyBar/Pods-TouchingMyBar-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MODULEMAP_FILE = "Target Support Files/Pods-TouchingMyBar/Pods-TouchingMyBar.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -654,18 +514,32 @@
 			};
 			name = Debug;
 		};
+		D410DDFA431040BC95576C855AAA3635 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD39C58BAA017AB1E059A2F99528F00B /* Pods-TouchingMyBarTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F880C3A8747F359283D64B2F4D52883 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBar" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				79C13926342F3F487D846CE60C63C52C /* Debug */,
-				110155D53F99FDDD83A58FC924B92502 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -675,11 +549,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A13E3E18C5ED28B19835D8E6C1771995 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBarTests" */ = {
+		653AB8679EFD04BBD6A56A058B514B86 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45F0B4739F2EAD05F61629E8685B4787 /* Debug */,
-				2D49C08C3EB1949B82E296F22254B2C2 /* Release */,
+				7B07BD51359D5536C75346D630F08626 /* Debug */,
+				6C9B568F4B2E13E5F246D168C27D24DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -689,6 +563,15 @@
 			buildConfigurations = (
 				C58C9D16B93F5A16ABCC3D064725954E /* Debug */,
 				02B37FD027A1BAF89CC8F8FC486471A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EECDF72377E57647F25552934FCD9127 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50DD2C22D29A159012F23D2D1D01AB76 /* Debug */,
+				D410DDFA431040BC95576C855AAA3635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
