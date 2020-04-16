@@ -21,7 +21,6 @@ enum KeyModifier {
 
 #warning("TODO: Figure out if ok.")
 /// This is enum which maps the keys on the keyboard to the address which calls the action on key press.
-/// ``Not ASCII / Unicode representation!! `
 /// Does this work universally? Or just on some keyboards?
 /// Will this stay the same in future versions of MacOS?
 /// See: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
