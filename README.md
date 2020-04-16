@@ -13,3 +13,4 @@ Making proper use of Touchbar inside Xcode.
 - [ ] Bonus, should go with previous point: Custom Xcode extensions.
 - [ ] Impossible bonus -> Create someUI that user can drag'n'drop items into XTouchBar
 - [ ] Clear up unused headers and refactor, and restructurize the app so it's readable.
+- [x] Add Swiftlint to format a style a bit :) 
