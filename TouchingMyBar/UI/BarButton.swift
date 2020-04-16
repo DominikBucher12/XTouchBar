@@ -21,8 +21,7 @@ fileprivate struct CustomButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .background(
                 RoundedRectangle(cornerRadius: 5)
-                    .foregroundColor(self.color)
-                    .scaleEffect(configuration.isPressed ? 0.95 : 1)
+                    .foregroundColor(configuration.isPressed ? Colors.buttonUnselected : Colors.buttonSelected)
                 )
                 .padding(.horizontal, 2)
     }
@@ -33,16 +32,23 @@ struct BarButton: View {
 //     @Binding var identifier: String
     #warning("swap for real icons when we have them")
     @Binding var icon: String
-    @Binding var color: Color
     @Binding var size: Constants.BarElementWidth
     @Binding var shortcut: Shortcut
 
     var body: some View {
-        Button(action: { try? PListProcessor.process() /*MasterMind().perform(self.shortcut)*/ }) {
+        Button(
+            action: {
+                IDECommandManager.initialize()
+                IDECommandManager.cacheCommandDefinitionsAndHandlers()
+                let commands = IDEApplicationCommands()
+                commands.exposedBindings
+            /*try? MasterMind().perform(self.shortcut)*/
+
+            }
+        ) {
             Text(self.icon)
                 .font(.callout)
                 .frame(width: self.size.rawValue, height: Constants.TouchBar.height, alignment: .center)
         }
-        .buttonStyle(CustomButtonStyle(color: self.color))
     }
 }

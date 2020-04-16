@@ -8,13 +8,14 @@
 
 /// Protocol which has only one thing to do -> Perform shortcut command.
 /// This should be responsible only to call the shortcut.
-protocol KeyPresser {
+protocol KeyPresser: class {
     /// Performs  given shortcut on input with propriate modifiers like `cmd`, `shift`...
     /// - Parameter shortcut: `Shortcut` instance.
     func perform(_ shortcut: Shortcut)
 }
 
-struct MasterMind: KeyPresser {
+class MasterMind: KeyPresser {
+
     func perform(_ shortcut: Shortcut) {
         let keyCode = shortcut.key.rawValue
         // Did try to do some googling, this should never fail unless we really fuckup.

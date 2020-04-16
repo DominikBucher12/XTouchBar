@@ -87,6 +87,12 @@
 		E78FF298243F5DB300EBA80D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E7A17BE42448CB0D00884F18 /* IDEDocumentationWindowCommands.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEDocumentationWindowCommands.h; sourceTree = "<group>"; };
+		E7A17BE52448CBBC00884F18 /* IDEApplicationCommands.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEApplicationCommands.h; sourceTree = "<group>"; };
+		E7A17BE62448CBD800884F18 /* IDECommandHandler-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IDECommandHandler-Protocol.h"; sourceTree = "<group>"; };
+		E7A17BE72448CBE800884F18 /* IDECommandHandlerVendor-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IDECommandHandlerVendor-Protocol.h"; sourceTree = "<group>"; };
+		E7A17BE82448CCA900884F18 /* NSUserInterfaceValidations-protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserInterfaceValidations-protocol.h"; sourceTree = "<group>"; };
+		E7A17BE92448CE4B00884F18 /* IDECommandManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDECommandManager.h; sourceTree = "<group>"; };
 		E7CC787B2447D31E0092AAFF /* ShortcutObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutObject.swift; sourceTree = "<group>"; };
 		E7CC787D2447E59D0092AAFF /* KeyPresser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPresser.swift; sourceTree = "<group>"; };
 		E7F7CB052442225E0012FF6A /* KeyBindingsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBindingsParser.swift; sourceTree = "<group>"; };
@@ -160,6 +166,12 @@
 			children = (
 				E796044724367CE400F39215 /* README.md */,
 				E72CE3C524103EE800B9283D /* Bridging.h */,
+				E7A17BE42448CB0D00884F18 /* IDEDocumentationWindowCommands.h */,
+				E7A17BE52448CBBC00884F18 /* IDEApplicationCommands.h */,
+				E7A17BE62448CBD800884F18 /* IDECommandHandler-Protocol.h */,
+				E7A17BE82448CCA900884F18 /* NSUserInterfaceValidations-protocol.h */,
+				E7A17BE92448CE4B00884F18 /* IDECommandManager.h */,
+				E7A17BE72448CBE800884F18 /* IDECommandHandlerVendor-Protocol.h */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E7CC78802448A9AA0092AAFF /* Constants */,
 				E7CC787F2448A98F0092AAFF /* UserPreferences */,

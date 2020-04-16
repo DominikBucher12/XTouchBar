@@ -2,6 +2,12 @@
 #define Bridging_h
 
 #import "TouchBarPrivateApi.h"
+#import "IDEDocumentationWindowCommands.h"
+#import "IDEApplicationCommands.h"
+#import "IDECommandHandlerVendor-Protocol.h"
+#import "IDECommandHandler-Protocol.h"
+#import "NSUserInterfaceValidations-protocol.h"
+#import "IDECommandManager.h"
 
 #endif /* Bridging_h */
 

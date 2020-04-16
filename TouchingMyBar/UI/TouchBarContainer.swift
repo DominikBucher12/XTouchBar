@@ -10,14 +10,17 @@ import CoreGraphics
 import SwiftUI
 
 struct TouchBarContainer: View {
-    @State private var unselectedButtonColor = Colors.buttonUnselected
     @State private var mediumButtonSize = Constants.BarElementWidth.medium
-    @State private var shortcut = Shortcut.openFileQuickly
+    @State private var openQuicklyShortcut = Shortcut.openQuickly
+
+    @State private var addDocumentationShortcut = Shortcut.addDocumentation
 
     @State private var openFile = "Open"
+    @State private var addDocumentation = "D"
     var body: some View {
         HStack {
-            BarButton(icon: $openFile, color: $unselectedButtonColor, size: $mediumButtonSize, shortcut: $shortcut)
+            BarButton(icon: $openFile, size: $mediumButtonSize, shortcut: $openQuicklyShortcut)
+            BarButton(icon: $addDocumentation, size: $mediumButtonSize, shortcut: $addDocumentationShortcut)
         }
     }
 }

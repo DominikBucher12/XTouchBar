@@ -19,13 +19,15 @@ struct Shortcut {
     /// Set because it's fancy and doesn't contain duplicates
     let modifiers: Set<KeyModifier>
 
-    public static var openFileQuickly: Shortcut {
-        #warning("FIX ME!!!")
-        return Shortcut(id: "BOGUS_ID", key: .O, modifiers: [.command, .shift])
+    public static var openQuickly: Shortcut {
+        return Shortcut(id: "openQuickly", key: .O, modifiers: [.command, .shift])
     }
-    public static var openFile: Shortcut {
-        #warning("FIX ME!!!")
-        return Shortcut(id: "BOGUS_ID", key: .O, modifiers: [.command])
+    public static var openDocument: Shortcut {
+        return Shortcut(id: "openDocument:", key: .O, modifiers: [.command])
+    }
+
+    public static var addDocumentation: Shortcut {
+        return Shortcut(id: "addDocumentation:", key: .slash, modifiers: [.option, .command])
     }
 //    static let showDataModelInspector = Shortcut(id: "showInspectorWithChoiceFromSender:", key: .O, modifiers: [.command])
 //    static let showMappingModelInspector = Shortcut(id: "showInspectorWithChoiceFromSender:", key: .O, modifiers: [.command])
