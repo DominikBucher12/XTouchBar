@@ -64,33 +64,43 @@ struct PListProcessor {
         }
         
         // We found .idekeybindings file, parse it.
-        guard let dict = Parser().parse(atPath: "\(pathToFolder)\(keyBindingsFileName)") as? [String: [String: Any]],
-              let array = dict["Menu Key Bindings"]?["Key Bindings"] as? [[String: Any]] // Really fuck you XML
-        else { return }
+        guard let dict = Parser().parse(atPath: "\(pathToFolder)\(keyBindingsFileName)") as? [String: [String: Any]] else { return }
 
-        let result = array.compactMap { element -> ShortcutObject? in
-            // We do really care about action, commandID, keyboard shortcut and title :D
-            // Dunno why I added the other stuff around :D :D
-            guard let action = element[ShortcutObject.DecodingKey.action.rawValue] as? String,
-                  let commandID = element[ShortcutObject.DecodingKey.commandID.rawValue] as? String,
-                  let title = element[ShortcutObject.DecodingKey.title.rawValue] as? String
-            else { return nil }
+        if let menuKeyBindingsArray = dict["Menu Key Bindings"]?["Key Bindings"] as? [[String: Any]] {
+            let result = menuKeyBindingsArray.compactMap { element -> MenuKeyBinding? in
+                // We do really care about action, commandID, keyboard shortcut and title :D
+                // Dunno why I added the other stuff around :D :D
+                guard let action = element[MenuKeyBinding.DecodingKey.action.rawValue] as? String,
+                      let commandID = element[MenuKeyBinding.DecodingKey.commandID.rawValue] as? String,
+                      let title = element[MenuKeyBinding.DecodingKey.title.rawValue] as? String
+                else { return nil }
 
-            return ShortcutObject(
-                action: action,
-                alternate: false, //element[ShortcutObject.DecodingKey.alternate.rawValue] as! Bool,
-                commandID: commandID,
-                group: element[ShortcutObject.DecodingKey.group.rawValue] as? String,
-                groupID: element[ShortcutObject.DecodingKey.groupID.rawValue] as? String,
-                groupedAlternate: false, //element[ShortcutObject.DecodingKey.groupedAlternate.rawValue] as! Bool,
-                keyboardShortcut: element[ShortcutObject.DecodingKey.keyboardShortcut.rawValue] as? String,
-                navigation: false, //element[ShortcutObject.DecodingKey.navigation.rawValue] as! Bool,
-                title: title
-            )
+                return MenuKeyBinding(
+                    action: action,
+                    alternate: false, //element[MenuKeyBinding.DecodingKey.alternate.rawValue] as! Bool,
+                    commandID: commandID,
+                    group: element[MenuKeyBinding.DecodingKey.group.rawValue] as? String,
+                    groupID: element[MenuKeyBinding.DecodingKey.groupID.rawValue] as? String,
+                    groupedAlternate: false, //element[MenuKeyBinding.DecodingKey.groupedAlternate.rawValue] as! Bool,
+                    keyboardShortcut: element[MenuKeyBinding.DecodingKey.keyboardShortcut.rawValue] as? String,
+                    navigation: false, //element[MenuKeyBinding.DecodingKey.navigation.rawValue] as! Bool,
+                    title: title
+                )
+            }
+            print(result)
         }
-        result.forEach { object in
-            print("static let \(object.title.lowerCamelCased) = Shortcut(id: \"\(object.action)\", key: .O, modifiers: [.command])")
+
+        if let textKeyBinding = dict["Text Key Bindings"]?["Key Bindings"] as? [String: Any] {
+            let nextResult = textKeyBinding.map { key, value -> TextKeyBinding in
+                // swiftlint:disable:next force_cast
+                TextKeyBinding(shortcut: key, action: value as! String)
+            }
         }
+
+        // YOLO Hacks
+//        result.forEach { object in
+//            print("static let \(object.title.lowerCamelCased) = Shortcut(id: \"\(object.action)\", key: .O, modifiers: [.command])")
+//        }
     }
 }
 

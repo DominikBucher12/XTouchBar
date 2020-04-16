@@ -16,11 +16,10 @@ protocol KeyPresser {
 
 struct MasterMind: KeyPresser {
     func perform(_ shortcut: Shortcut) {
-
-        let keyCode: UInt16 = shortcut.key.rawValue
+        let keyCode = shortcut.key.rawValue
+        // Did try to do some googling, this should never fail unless we really fuckup.
         guard let keyDownEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: true) else {
-            #warning("TODO: Do we just crash or handle this somehow? 🤔")
-            fatalError("Messed something up...")
+            fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
         }
 
         for modifier in shortcut.modifiers {

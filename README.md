@@ -39,8 +39,8 @@ potentional problems. I haven't try this approach because I don't believe in it'
 However I plan overwrite the shortcuts into the `IDEKit` way. 
 
 ## TODO:
-- [ ] Finish the PropertyListParser (handle "<key>Text Key Bindings</key>" as well)
-- [ ] Transform Strings received from the parser into our Shortcut data model
+- [x] Finish the PropertyListParser (handle "<key>Text Key Bindings</key>" as well)
+- [x] Transform Strings received from the parser into our Shortcut data model
 - [x] Detect when Xcode is topmost application (focused), probably AppleScript is our friend :D
 - [ ] Create some mechanism that users can change to shortcuts on go.
 - [ ] Create some intuitive icon-set for the shortcuts etc like add documentation...

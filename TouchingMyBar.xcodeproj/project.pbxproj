@@ -161,8 +161,8 @@
 				E796044724367CE400F39215 /* README.md */,
 				E72CE3C524103EE800B9283D /* Bridging.h */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
-				E796044924367E3100F39215 /* Constants.swift */,
-				E78FF298243F5DB300EBA80D /* Colors.swift */,
+				E7CC78802448A9AA0092AAFF /* Constants */,
+				E7CC787F2448A98F0092AAFF /* UserPreferences */,
 				E7CC787A2447D2E90092AAFF /* KeyBindingsParser */,
 				E76CBC5C2442002D002349DC /* Keys */,
 				E779DF4D2437DE4600A70379 /* TouchBarSupport */,
@@ -222,6 +222,22 @@
 				E7CC787B2447D31E0092AAFF /* ShortcutObject.swift */,
 			);
 			path = KeyBindingsParser;
+			sourceTree = "<group>";
+		};
+		E7CC787F2448A98F0092AAFF /* UserPreferences */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserPreferences;
+			sourceTree = "<group>";
+		};
+		E7CC78802448A9AA0092AAFF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E796044924367E3100F39215 /* Constants.swift */,
+				E78FF298243F5DB300EBA80D /* Colors.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

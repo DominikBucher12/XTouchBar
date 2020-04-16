@@ -33,7 +33,7 @@ public enum Constants {
 
             guard let modelData = IORegistryEntryCreateCFProperty(service, "model" as CFString, kCFAllocatorDefault, 0).takeRetainedValue() as? Data,
                   let modelIdentifierCString = String(data: modelData, encoding: .utf8)?.cString(using: .utf8)
-            else { return "Unknown mac model?" }
+            else { return "Unknown mac model? Ain't ya using some 👽 device?" }
 
             defer { IOObjectRelease(service) } // See documentation on the method why I need to do this.
             return String(cString: modelIdentifierCString)
@@ -42,7 +42,7 @@ public enum Constants {
         /// I know, naming got me bad :D
         private static func isShorterTouchBar() -> Bool {
             let supportedModel = TouchBarSupportingMacs(rawValue: Constants.TouchBar.getMacModel())
-            guard let model = supportedModel else { fatalError("Macbook not supporting touchbar 🤯") }
+            guard let model = supportedModel else { fatalError("Macbook not supporting touchbar :( ") }
 
             return model == .sixteenInch2019NormalKeyboard ? true : false
         }

@@ -1,5 +1,5 @@
 //
-//  ShortcutObject.swift
+//  MenuKeyBinding.swift
 //  TouchingMyBar
 //
 //  Created by Dominik Bucher on 16/04/2020.
@@ -8,7 +8,7 @@
 
 /// Object representing the shortcut in the plist.
 /// We need to fetch this
-struct ShortcutObject: Codable {
+struct MenuKeyBinding: Codable {
     let action: String
     let alternate: Bool
     let commandID: String
@@ -52,4 +52,9 @@ struct ShortcutObject: Codable {
         self.navigation = navigation
         self.title = title
     }
+}
+
+struct TextKeyBinding {
+    let shortcut: String
+    let action: String
 }
