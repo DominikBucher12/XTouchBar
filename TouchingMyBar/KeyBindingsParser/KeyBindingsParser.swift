@@ -68,15 +68,15 @@ struct PListProcessor {
               let array = dict["Menu Key Bindings"]?["Key Bindings"] as? [[String: Any]] // Really fuck you XML
         else { return }
 
-        let result = array.map { element in
+        let result = array.compactMap { element -> ShortcutObject? in
             // We do really care about action, commandID, keyboard shortcut and title :D
             // Dunno why I added the other stuff around :D :D
             guard let action = element[ShortcutObject.DecodingKey.action.rawValue] as? String,
                   let commandID = element[ShortcutObject.DecodingKey.commandID.rawValue] as? String,
                   let title = element[ShortcutObject.DecodingKey.title.rawValue] as? String
-            else { return }
+            else { return nil }
 
-            ShortcutObject(
+            return ShortcutObject(
                 action: action,
                 alternate: false, //element[ShortcutObject.DecodingKey.alternate.rawValue] as! Bool,
                 commandID: commandID,
