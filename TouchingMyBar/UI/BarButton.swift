@@ -35,10 +35,10 @@ struct BarButton: View {
     @Binding var icon: String
     @Binding var color: Color
     @Binding var size: Constants.BarElementWidth
-    @Binding var action: () -> Void
+    @Binding var shortcut: Shortcut
 
     var body: some View {
-        Button(action: { self.action() }) {
+        Button(action: { try? PListProcessor.process() /*MasterMind().perform(self.shortcut)*/ }) {
             Text(self.icon)
                 .font(.callout)
                 .frame(width: self.size.rawValue, height: Constants.TouchBar.height, alignment: .center)

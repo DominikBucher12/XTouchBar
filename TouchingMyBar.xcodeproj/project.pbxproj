@@ -24,6 +24,7 @@
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
 		E796044A24367E3100F39215 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044924367E3100F39215 /* Constants.swift */; };
 		E7CC787C2447D31E0092AAFF /* ShortcutObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC787B2447D31E0092AAFF /* ShortcutObject.swift */; };
+		E7CC787E2447E59D0092AAFF /* KeyPresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC787D2447E59D0092AAFF /* KeyPresser.swift */; };
 		E7DAC10E2437DD17002A1DD9 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; };
 		E7DAC10F2437DD17002A1DD9 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7DAC1112437DD18002A1DD9 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -87,6 +88,7 @@
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7CC787B2447D31E0092AAFF /* ShortcutObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutObject.swift; sourceTree = "<group>"; };
+		E7CC787D2447E59D0092AAFF /* KeyPresser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPresser.swift; sourceTree = "<group>"; };
 		E7F7CB052442225E0012FF6A /* KeyBindingsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBindingsParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 			children = (
 				38C2BCE2243E5C330009A015 /* Shortcut.swift */,
 				38C2BCE4243E5C4B0009A015 /* Key.swift */,
+				E7CC787D2447E59D0092AAFF /* KeyPresser.swift */,
 			);
 			path = Keys;
 			sourceTree = "<group>";
@@ -233,7 +236,7 @@
 				E72CE39924103A9D00B9283D /* Frameworks */,
 				E72CE39A24103A9D00B9283D /* Resources */,
 				E7DAC1102437DD17002A1DD9 /* Embed Frameworks */,
-				E7CC78792447CDB90092AAFF /* ŠwiftLint */,
+				E7CC78792447CDB90092AAFF /* ŠwiftLint */,
 			);
 			buildRules = (
 			);
@@ -366,7 +369,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E7CC78792447CDB90092AAFF /* ŠwiftLint */ = {
+		E7CC78792447CDB90092AAFF /* ŠwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -402,6 +405,7 @@
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
 				E7CC787C2447D31E0092AAFF /* ShortcutObject.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
+				E7CC787E2447E59D0092AAFF /* KeyPresser.swift in Sources */,
 				38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
