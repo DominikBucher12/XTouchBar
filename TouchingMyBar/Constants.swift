@@ -12,6 +12,9 @@ import SwiftUI
 
 public enum Constants {
     public enum TouchBar {
+        public static var hasPhysicalEscape: Bool {
+            return Constants.TouchBar.isShorterTouchBar()
+        }
         /// The height of touchbar. Until Apple gets crazy, this never needs to be more than 30 points.
         public static let height: CGFloat = 30
         
@@ -20,10 +23,7 @@ public enum Constants {
         /// To clarify and quote Apple developer documentation:
         /// `There is no API for you to obtain the current available display width.`
         public static var width: CGFloat {
-            let supportedModel = TouchBarSupportingMacs(rawValue: Constants.TouchBar.getMacModel())
-            guard let model = supportedModel else { fatalError("Macbook not supporting touchbar 🤯") }
-
-            return model == .sixteenInch2019NormalKeyboard ? 1004 : 1085
+            return Constants.TouchBar.isShorterTouchBar() ? 1004 : 1085
         }
 
         /// This is really funny way to figure out the Touchbar width :D But here we go :D
@@ -38,6 +38,15 @@ public enum Constants {
             defer { IOObjectRelease(service) } // See documentation on the method why I need to do this.
             return String(cString: modelIdentifierCString)
         }
+
+        /// I know, naming got me bad :D
+        private static func isShorterTouchBar() -> Bool {
+            let supportedModel = TouchBarSupportingMacs(rawValue: Constants.TouchBar.getMacModel())
+            guard let model = supportedModel else { fatalError("Macbook not supporting touchbar 🤯") }
+
+            return model == .sixteenInch2019NormalKeyboard ? true : false
+        }
+
     }
 
     // MARK: - Touchbar elements

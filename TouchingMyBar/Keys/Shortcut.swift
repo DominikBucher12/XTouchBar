@@ -57,4 +57,5 @@ struct Shortcut {
         #warning("FIX ME!!!")
         return Shortcut(id: "BOGUS_ID", key: .O, modifiers: [.command])
     }
+    
 }
