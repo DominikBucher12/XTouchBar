@@ -21,7 +21,7 @@ struct MasterMind: KeyPresser {
         guard let keyDownEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: true) else {
             fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
         }
-
+        
         for modifier in shortcut.modifiers {
             switch modifier {
             case .shift:   keyDownEvent.flags.insert(.maskShift)
@@ -31,5 +31,16 @@ struct MasterMind: KeyPresser {
             }
         }
         keyDownEvent.post(tap: .cghidEventTap)
+        
+        // Don't forget to be a good platform citizen
+        // and "lift the fingers" of the virtual keyboard.
+        let flags = keyDownEvent.flags
+        
+        guard let keyUpEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: false) else {
+            fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
+        }
+        
+        keyUpEvent.flags.insert(flags)
+        keyUpEvent.post(tap: .cghidEventTap)
     }
 }
