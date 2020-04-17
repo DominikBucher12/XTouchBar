@@ -6,6 +6,8 @@
 //  Copyright © 2020 Dominik Bucher. All rights reserved.
 //
 
+import AppKit
+
 /// Protocol which has only one thing to do -> Perform shortcut command.
 /// This should be responsible only to call the shortcut.
 protocol KeyPresser {
@@ -16,6 +18,21 @@ protocol KeyPresser {
 
 struct MasterMind: KeyPresser {
     func perform(_ shortcut: Shortcut) {
+        // Hacks on top of hacks...
+        // What's going on here?
+        // We need to load what keyboard layout is the user using,
+        // hence these 3 lines:
+        let dummyViewToGetTheContext = NSTextView()
+        let context = NSTextInputContext(client: dummyViewToGetTheContext)
+        guard let usrLayout = context.selectedKeyboardInputSource else {
+            #warning("What if this fails for some reason?")
+            preconditionFailure("FECK")
+        }
+        // Then we change the keyboard layout to the "standart" ANSI US keyboard,
+        // so our shortcuts (based on ANSI Key Codes) work properly.
+        context.selectedKeyboardInputSource = "com.apple.keylayout.USInternational-PC"
+        
+        // Then we execute the shortcut:
         let keyCode = shortcut.key.rawValue
         // Did try to do some googling, this should never fail unless we really fuckup.
         guard let keyDownEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: true) else {
@@ -42,5 +59,11 @@ struct MasterMind: KeyPresser {
         
         keyUpEvent.flags.insert(flags)
         keyUpEvent.post(tap: .cghidEventTap)
+        
+        // And finally we change the keyboard layout back to whatever the user is using.
+        // (and of course we need to do it a bit later, because reasons... Probably some race-condition somewhere)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            context.selectedKeyboardInputSource = usrLayout
+        }
     }
 }

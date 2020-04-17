@@ -27,6 +27,9 @@ struct Shortcut {
         #warning("FIX ME!!!")
         return Shortcut(id: "BOGUS_ID", key: .O, modifiers: [.command])
     }
+
+    public static var addDocumentation = Shortcut(id: "addDocumentation:", key: .slash, modifiers: [.shift, .option])
+    
 //    static let showDataModelInspector = Shortcut(id: "showInspectorWithChoiceFromSender:", key: .O, modifiers: [.command])
 //    static let showMappingModelInspector = Shortcut(id: "showInspectorWithChoiceFromSender:", key: .O, modifiers: [.command])
 //    static let exportGpuCounters… = Shortcut(id: "GPUDebugger_exportCounters:", key: .O, modifiers: [.command])
