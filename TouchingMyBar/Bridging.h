@@ -8,6 +8,7 @@
 #import "IDECommandHandler-Protocol.h"
 #import "NSUserInterfaceValidations-protocol.h"
 #import "IDECommandManager.h"
+#import "XCSourceEditorServiceProtocol.h"
 
 #endif /* Bridging_h */
 

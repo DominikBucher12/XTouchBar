@@ -93,6 +93,7 @@
 		E7A17BE72448CBE800884F18 /* IDECommandHandlerVendor-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IDECommandHandlerVendor-Protocol.h"; sourceTree = "<group>"; };
 		E7A17BE82448CCA900884F18 /* NSUserInterfaceValidations-protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserInterfaceValidations-protocol.h"; sourceTree = "<group>"; };
 		E7A17BE92448CE4B00884F18 /* IDECommandManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDECommandManager.h; sourceTree = "<group>"; };
+		E7A17BEA2448D22A00884F18 /* XCSourceEditorServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSourceEditorServiceProtocol.h; sourceTree = "<group>"; };
 		E7CC787B2447D31E0092AAFF /* ShortcutObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutObject.swift; sourceTree = "<group>"; };
 		E7CC787D2447E59D0092AAFF /* KeyPresser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPresser.swift; sourceTree = "<group>"; };
 		E7F7CB052442225E0012FF6A /* KeyBindingsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBindingsParser.swift; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 				E7A17BE42448CB0D00884F18 /* IDEDocumentationWindowCommands.h */,
 				E7A17BE52448CBBC00884F18 /* IDEApplicationCommands.h */,
 				E7A17BE62448CBD800884F18 /* IDECommandHandler-Protocol.h */,
+				E7A17BEA2448D22A00884F18 /* XCSourceEditorServiceProtocol.h */,
 				E7A17BE82448CCA900884F18 /* NSUserInterfaceValidations-protocol.h */,
 				E7A17BE92448CE4B00884F18 /* IDECommandManager.h */,
 				E7A17BE72448CBE800884F18 /* IDECommandHandlerVendor-Protocol.h */,
