@@ -19,7 +19,7 @@ enum KeyModifier {
     // TODO: Add more???
 }
 
-#warning("TODO: Figure out if ok.")
+#warning("TODO: Figure out if ok. (Run KeyCodes app on your machine and manually check all the codes assuming US layout!)")
 /// This is enum which maps the keys on the keyboard to the address which calls the action on key press.
 /// Does this work universally? Or just on some keyboards?
 /// Will this stay the same in future versions of MacOS?
@@ -87,6 +87,56 @@ enum Key: UInt16 {
     case period = 0x2F
     case grave = 0x32 // WTF is grave???
     
+    case returnKey = 0x24
+    case tab = 0x30
+    case space = 0x31
+    case delete = 0x33
+    case escape = 0x35
+    // 	case command = 0x37
+    // 	case shift = 0x38
+    case capsLock = 0x39
+    // 	case option = 0x3A
+    // 	case control = 0x3B
+    // 	case rightCommand = 0x36
+    // 	case rightShift = 0x3C
+    // 	case rightOption = 0x3D
+    // 	case rightControl = 0x3E
+    case function = 0x3F
+    case F17 = 0x40
+    case volumeUp = 0x48
+    case volumeDown = 0x49
+    case mute = 0x4A
+    case F18 = 0x4F
+    case F19 = 0x50
+    case F20 = 0x5A
+    case F5 = 0x60
+    case F6 = 0x61
+    case F7 = 0x62
+    case F3 = 0x63
+    case F8 = 0x64
+    case F9 = 0x65
+    case F11 = 0x67
+    case F13 = 0x69
+    case F16 = 0x6A
+    case F14 = 0x6B
+    case F10 = 0x6D
+    case F12 = 0x6F
+    case F15 = 0x71
+    case help = 0x72
+    case home = 0x73
+    case pageUp = 0x74
+    case forwardDelete = 0x75
+    case F4 = 0x76
+    case end = 0x77
+    case F2 = 0x78
+    case pageDown = 0x79
+    case F1 = 0x7A
+    case leftArrow = 0x7B
+    case rightArrow = 0x7C
+    case downArrow = 0x7D
+    case upArrow = 0x7E
+    
+    #warning("Guess we won't be needing this anymore?")
     public init?(character: Character) {
         switch character {
         case "a", "A": self = .A
@@ -128,14 +178,14 @@ enum Key: UInt16 {
         case "9": self = .keypad9
         
         #warning("Is there a difference between keypad = and 'normal' = ???")
-// 		case "=": self = .keypadEqual
-// 		case "-": self = .keypadMinus
-// 		case "+": self = .keypadPlus
-// 		case "*": self = .keypadMultiply
-// 		case "/": self = .keypadDivide
-// 		case "": self = .keypadDecimal
-// 		case "": self = .keypadClear
-// 		case "": self = .keypadEnter
+            // 		case "=": self = .keypadEqual
+            // 		case "-": self = .keypadMinus
+            // 		case "+": self = .keypadPlus
+            // 		case "*": self = .keypadMultiply
+            // 		case "/": self = .keypadDivide
+            // 		case "": self = .keypadDecimal
+            // 		case "": self = .keypadClear
+            // 		case "": self = .keypadEnter
             
         case ")": self  = .rightBracket
         case "(": self  = .leftBracket
@@ -145,7 +195,7 @@ enum Key: UInt16 {
         case ",": self  = .comma
         case "/": self  = .slash
         case ".": self  = .period
-// 		case "": self = .grave
+            // 		case "": self = .grave
             
         default:
             preconditionFailure("Couldn't read character '\(character)'.")
