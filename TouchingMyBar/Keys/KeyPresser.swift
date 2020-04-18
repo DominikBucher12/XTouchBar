@@ -34,7 +34,7 @@ struct MasterMind: KeyPresser {
         
         // Then we execute the shortcut:
         let keyCode = shortcut.key.rawValue
-        // Did try to do some googling, this should never fail unless we really fuckup.
+        // (Did try to do some googling, this should never fail unless we really fuckup.)
         guard let keyDownEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: true) else {
             fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
         }
@@ -47,10 +47,10 @@ struct MasterMind: KeyPresser {
             case .command: keyDownEvent.flags.insert(.maskCommand)
             }
         }
-        keyDownEvent.post(tap: .cghidEventTap)
+        keyDownEvent.post(tap: .cgAnnotatedSessionEventTap)
         
         // Don't forget to be a good platform citizen
-        // and "lift the fingers" of the virtual keyboard.
+        // and "lift the fingers" of the virtual keyboard!
         let flags = keyDownEvent.flags
         
         guard let keyUpEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: false) else {
@@ -58,11 +58,12 @@ struct MasterMind: KeyPresser {
         }
         
         keyUpEvent.flags.insert(flags)
-        keyUpEvent.post(tap: .cghidEventTap)
+        keyUpEvent.post(tap: .cgAnnotatedSessionEventTap)
         
         // And finally we change the keyboard layout back to whatever the user is using.
-        // (and of course we need to do it a bit later, because reasons... Probably some race-condition somewhere)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        // (and of course we need to do it a bit later, because otherwise there's a possibility of wrong shortcut
+        // being executed because of a race condition)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             context.selectedKeyboardInputSource = usrLayout
         }
     }
