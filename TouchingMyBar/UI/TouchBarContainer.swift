@@ -12,7 +12,7 @@ import SwiftUI
 struct TouchBarContainer: View {
     @State private var unselectedButtonColor = Colors.buttonUnselected
     @State private var mediumButtonSize = Constants.BarElementWidth.medium
-    @State private var openFileShortcut = Shortcut.openFileQuickly
+    @State private var openFileShortcut = Shortcut.openQuickly
     @State private var addDocsShortcut = Shortcut.addDocumentation
 
     @State private var openFile = "Open"
