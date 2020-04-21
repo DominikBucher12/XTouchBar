@@ -40,7 +40,6 @@ private extension MenuCreatorImpl {
          button.title = "XTouchBar"
          button.target = self
          button.action = #selector(displayMenu)
-        button.bind(NSBindingName(rawValue: #keyPath(touchBar)), to: self, withKeyPath: #keyPath(touchBar), options: nil)
     }
 
     @objc
