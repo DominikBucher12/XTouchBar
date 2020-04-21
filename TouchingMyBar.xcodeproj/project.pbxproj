@@ -19,6 +19,10 @@
 		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
 		E72CE3B324103AA100B9283D /* TouchingMyBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */; };
 		E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7557607243BAC2800441B69 /* TouchBarPresenter.swift */; };
+		E771847B244F5677000DE4EC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771847A244F5677000DE4EC /* Configuration.swift */; };
+		E771847F244F5812000DE4EC /* ConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771847E244F5812000DE4EC /* ConfigurationStore.swift */; };
+		E7718481244F6040000DE4EC /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718480244F6040000DE4EC /* UserDefaults+Codable.swift */; };
+		E7718484244F630F000DE4EC /* Shortcut+Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718482244F62B1000DE4EC /* Shortcut+Deprecated.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E78FF299243F5DB300EBA80D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FF298243F5DB300EBA80D /* Colors.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
@@ -83,6 +87,10 @@
 		E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchBarPrivateApi.h; sourceTree = "<group>"; };
 		E72CE3C524103EE800B9283D /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		E7557607243BAC2800441B69 /* TouchBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarPresenter.swift; sourceTree = "<group>"; };
+		E771847A244F5677000DE4EC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		E771847E244F5812000DE4EC /* ConfigurationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStore.swift; sourceTree = "<group>"; };
+		E7718480244F6040000DE4EC /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
+		E7718482244F62B1000DE4EC /* Shortcut+Deprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shortcut+Deprecated.swift"; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
 		E78FF298243F5DB300EBA80D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -162,11 +170,12 @@
 			children = (
 				E796044724367CE400F39215 /* README.md */,
 				E72CE3C524103EE800B9283D /* Bridging.h */,
+				E7718480244F6040000DE4EC /* UserDefaults+Codable.swift */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E7CC78802448A9AA0092AAFF /* Constants */,
 				E7CC787F2448A98F0092AAFF /* UserPreferences */,
 				E7CC787A2447D2E90092AAFF /* KeyBindingsParser */,
-				E76CBC5C2442002D002349DC /* Keys */,
+				E76CBC5C2442002D002349DC /* Shortcut */,
 				E779DF4D2437DE4600A70379 /* TouchBarSupport */,
 				384DE4F9243B7A5A00885559 /* UI */,
 				E72CE3A324103AA000B9283D /* Assets.xcassets */,
@@ -197,14 +206,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E76CBC5C2442002D002349DC /* Keys */ = {
+		E76CBC5C2442002D002349DC /* Shortcut */ = {
 			isa = PBXGroup;
 			children = (
 				38C2BCE2243E5C330009A015 /* Shortcut.swift */,
+				E7718482244F62B1000DE4EC /* Shortcut+Deprecated.swift */,
 				38C2BCE4243E5C4B0009A015 /* Key.swift */,
 				E7CC787D2447E59D0092AAFF /* KeyPresser.swift */,
 			);
-			path = Keys;
+			path = Shortcut;
 			sourceTree = "<group>";
 		};
 		E779DF4D2437DE4600A70379 /* TouchBarSupport */ = {
@@ -229,6 +239,8 @@
 		E7CC787F2448A98F0092AAFF /* UserPreferences */ = {
 			isa = PBXGroup;
 			children = (
+				E771847A244F5677000DE4EC /* Configuration.swift */,
+				E771847E244F5812000DE4EC /* ConfigurationStore.swift */,
 			);
 			path = UserPreferences;
 			sourceTree = "<group>";
@@ -413,12 +425,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E78FF299243F5DB300EBA80D /* Colors.swift in Sources */,
+				E7718481244F6040000DE4EC /* UserDefaults+Codable.swift in Sources */,
 				384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */,
+				E771847B244F5677000DE4EC /* Configuration.swift in Sources */,
 				38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */,
 				384DE4FB243B7A7F00885559 /* TouchBarContainer.swift in Sources */,
+				E7718484244F630F000DE4EC /* Shortcut+Deprecated.swift in Sources */,
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
 				384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */,
 				E7F7CB062442225E0012FF6A /* KeyBindingsParser.swift in Sources */,
+				E771847F244F5812000DE4EC /* ConfigurationStore.swift in Sources */,
 				E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
 				E7CC787C2447D31E0092AAFF /* ShortcutObject.swift in Sources */,
@@ -580,7 +596,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E8938J75P7;
+				DEVELOPMENT_TEAM = X2MB65427X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -620,7 +636,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E8938J75P7;
+				DEVELOPMENT_TEAM = X2MB65427X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
