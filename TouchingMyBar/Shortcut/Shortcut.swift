@@ -65,6 +65,5 @@ extension Shortcut: Codable {
         try container.encode(id, forKey: .id)
         try container.encode(key.rawValue, forKey: .key)
         try container.encode(modifiers, forKey: .modifiers)
-
     }
 }

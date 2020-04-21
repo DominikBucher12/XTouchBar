@@ -21,7 +21,6 @@
 		E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7557607243BAC2800441B69 /* TouchBarPresenter.swift */; };
 		E771847B244F5677000DE4EC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771847A244F5677000DE4EC /* Configuration.swift */; };
 		E771847F244F5812000DE4EC /* ConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771847E244F5812000DE4EC /* ConfigurationStore.swift */; };
-		E7718481244F6040000DE4EC /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718480244F6040000DE4EC /* UserDefaults+Codable.swift */; };
 		E7718484244F630F000DE4EC /* Shortcut+Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718482244F62B1000DE4EC /* Shortcut+Deprecated.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E78FF299243F5DB300EBA80D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FF298243F5DB300EBA80D /* Colors.swift */; };
@@ -89,7 +88,6 @@
 		E7557607243BAC2800441B69 /* TouchBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarPresenter.swift; sourceTree = "<group>"; };
 		E771847A244F5677000DE4EC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		E771847E244F5812000DE4EC /* ConfigurationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStore.swift; sourceTree = "<group>"; };
-		E7718480244F6040000DE4EC /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
 		E7718482244F62B1000DE4EC /* Shortcut+Deprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shortcut+Deprecated.swift"; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
 		E78FF298243F5DB300EBA80D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 			children = (
 				E796044724367CE400F39215 /* README.md */,
 				E72CE3C524103EE800B9283D /* Bridging.h */,
-				E7718480244F6040000DE4EC /* UserDefaults+Codable.swift */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E7CC78802448A9AA0092AAFF /* Constants */,
 				E7CC787F2448A98F0092AAFF /* UserPreferences */,
@@ -425,7 +422,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E78FF299243F5DB300EBA80D /* Colors.swift in Sources */,
-				E7718481244F6040000DE4EC /* UserDefaults+Codable.swift in Sources */,
 				384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */,
 				E771847B244F5677000DE4EC /* Configuration.swift in Sources */,
 				38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */,

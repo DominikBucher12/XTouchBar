@@ -6,12 +6,14 @@
 //  Copyright © 2020 Dominik Bucher. All rights reserved.
 //
 
+// swiftlint:disable line_length
+
 /// These are special keys among others, usually used to invoke shortcuts :)
 /// - shift
 /// - control
 /// - option
 /// - command
-enum KeyModifier {
+enum KeyModifier: String, Codable {
     case shift
     case control
     case option
@@ -28,7 +30,7 @@ enum KeyModifier {
 /// Note from @buchedom: This is probably pretty retarded. But try youreslf debug `Xcode`
 ///  in instruments with SIP disabled or figure out from `IDEKit` private headers how the menu items are called.
 /// I bet you will find this solution pretty awesome afterwards. :D
-enum Key: UInt16 {
+enum Key: UInt16, Codable {
     case A = 0x00
     case B = 0x0B
     case C = 0x08
@@ -137,6 +139,7 @@ enum Key: UInt16 {
     case upArrow = 0x7E
     
     #warning("Guess we won't be needing this anymore?")
+    // swiftlint:disable:next cyclomatic_complexity
     public init?(character: Character) {
         switch character {
         case "a", "A": self = .A

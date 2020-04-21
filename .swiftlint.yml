@@ -51,6 +51,7 @@ excluded:
  - TouchingMyBar/Keys/Key.swift
  - TouchingMyBar/TouchBarSupport/NSTouchbarSupport.swift
  - TouchingMyBar/Keys/Shortcut.swift
+ - TouchingMyBar/Shortcut/Shortcut+Deprecated.swift
 
 custom_rules:
     maximum_one_space:
