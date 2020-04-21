@@ -22,17 +22,16 @@
 		E771847B244F5677000DE4EC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771847A244F5677000DE4EC /* Configuration.swift */; };
 		E771847F244F5812000DE4EC /* ConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771847E244F5812000DE4EC /* ConfigurationStore.swift */; };
 		E7718484244F630F000DE4EC /* Shortcut+Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718482244F62B1000DE4EC /* Shortcut+Deprecated.swift */; };
+		E7718486244FAC39000DE4EC /* MenuCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718485244FAC39000DE4EC /* MenuCreator.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E78FF299243F5DB300EBA80D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FF298243F5DB300EBA80D /* Colors.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
 		E796044A24367E3100F39215 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044924367E3100F39215 /* Constants.swift */; };
-		E7CC787C2447D31E0092AAFF /* ShortcutObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC787B2447D31E0092AAFF /* ShortcutObject.swift */; };
 		E7CC787E2447E59D0092AAFF /* KeyPresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC787D2447E59D0092AAFF /* KeyPresser.swift */; };
 		E7DAC10E2437DD17002A1DD9 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; };
 		E7DAC10F2437DD17002A1DD9 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7DAC1112437DD18002A1DD9 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E7DAC1122437DD18002A1DD9 /* IDEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E7F7CB062442225E0012FF6A /* KeyBindingsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7CB052442225E0012FF6A /* KeyBindingsParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,13 +88,12 @@
 		E771847A244F5677000DE4EC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		E771847E244F5812000DE4EC /* ConfigurationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStore.swift; sourceTree = "<group>"; };
 		E7718482244F62B1000DE4EC /* Shortcut+Deprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shortcut+Deprecated.swift"; sourceTree = "<group>"; };
+		E7718485244FAC39000DE4EC /* MenuCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCreator.swift; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
 		E78FF298243F5DB300EBA80D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E7CC787B2447D31E0092AAFF /* ShortcutObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutObject.swift; sourceTree = "<group>"; };
 		E7CC787D2447E59D0092AAFF /* KeyPresser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPresser.swift; sourceTree = "<group>"; };
-		E7F7CB052442225E0012FF6A /* KeyBindingsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBindingsParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +167,9 @@
 				E796044724367CE400F39215 /* README.md */,
 				E72CE3C524103EE800B9283D /* Bridging.h */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
+				E7718485244FAC39000DE4EC /* MenuCreator.swift */,
 				E7CC78802448A9AA0092AAFF /* Constants */,
 				E7CC787F2448A98F0092AAFF /* UserPreferences */,
-				E7CC787A2447D2E90092AAFF /* KeyBindingsParser */,
 				E76CBC5C2442002D002349DC /* Shortcut */,
 				E779DF4D2437DE4600A70379 /* TouchBarSupport */,
 				384DE4F9243B7A5A00885559 /* UI */,
@@ -222,15 +220,6 @@
 				E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */,
 			);
 			path = TouchBarSupport;
-			sourceTree = "<group>";
-		};
-		E7CC787A2447D2E90092AAFF /* KeyBindingsParser */ = {
-			isa = PBXGroup;
-			children = (
-				E7F7CB052442225E0012FF6A /* KeyBindingsParser.swift */,
-				E7CC787B2447D31E0092AAFF /* ShortcutObject.swift */,
-			);
-			path = KeyBindingsParser;
 			sourceTree = "<group>";
 		};
 		E7CC787F2448A98F0092AAFF /* UserPreferences */ = {
@@ -429,11 +418,10 @@
 				E7718484244F630F000DE4EC /* Shortcut+Deprecated.swift in Sources */,
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
 				384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */,
-				E7F7CB062442225E0012FF6A /* KeyBindingsParser.swift in Sources */,
 				E771847F244F5812000DE4EC /* ConfigurationStore.swift in Sources */,
 				E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */,
+				E7718486244FAC39000DE4EC /* MenuCreator.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
-				E7CC787C2447D31E0092AAFF /* ShortcutObject.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
 				E7CC787E2447E59D0092AAFF /* KeyPresser.swift in Sources */,
 				38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */,

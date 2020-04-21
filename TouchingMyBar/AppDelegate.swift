@@ -13,12 +13,14 @@ import SwiftUI
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    var menuHolder = MenuCreatorImpl()
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+
         TouchBarPresenter.shared.clearUpTouchBar()
 		TouchBarPresenter.shared.makeButton()
-
+        menuHolder.start()
         tryFuckingShit()
-        
+
         RegisterXcodeAppearanceObservers()
     }
 }
@@ -71,6 +73,6 @@ private extension AppDelegate {
             ]
         )
 
-        ConfigurationStorageImpl().store(configuration: config)
+        try? ConfigurationStorageImpl().store(configuration: config)
     }
 }

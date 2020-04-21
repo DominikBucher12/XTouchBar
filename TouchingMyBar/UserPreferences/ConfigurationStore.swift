@@ -8,54 +8,25 @@
 
 enum DecodingError: Error {
     case couldntFetchEncodedData
-    case moreThanOneKeyBindingsFileFound
+    case couldntEncodeConfiguration(configuration: Configuration)
 }
 
 protocol ConfigrationStorage {
-    func store(configuration: Configuration)
+    func store(configuration: Configuration) throws
     func loadConfiguration(with name: String) throws -> Configuration
 }
 
 /// Implementation. FTW
 class ConfigurationStorageImpl: ConfigrationStorage {
-    func store(configuration: Configuration) {
-        let data = try? JSONEncoder().encode(configuration)
-        UserDefaults.standard.set(data, forKey: configuration.name)
+    func store(configuration: Configuration) throws {
+        // Finally, I am not writing Showmax code, so my codestyle is fresh with ```{ command(); anotherOne() }``` Oneliners, FTW!! 🤟🏻
+        // swiftlint:disable:next statement_position
+        do { let data = try JSONEncoder().encode(configuration); UserDefaults.standard.set(data, forKey: configuration.name) }
+        catch { throw DecodingError.couldntEncodeConfiguration(configuration: configuration) }
     }
 
     func loadConfiguration(with name: String) throws -> Configuration {
         guard let encodedData = UserDefaults.standard.data(forKey: name) else { throw DecodingError.couldntFetchEncodedData }
-
         return try! JSONDecoder().decode(Configuration.self, from: encodedData) // swiftlint:disable:this force_try
     }
 }
-//
-//
-//extension UserDefaults {
-//    open func setStruct<T: Codable>(_ value: T?, forKey defaultName: String){
-//        let data = try? JSONEncoder().encode(value)
-//        set(data, forKey: defaultName)
-//    }
-//
-//    open func structData<T>(_ type: T.Type, forKey defaultName: String) -> T? where T : Decodable {
-//        guard let encodedData = data(forKey: defaultName) else {
-//            return nil
-//        }
-//
-//        return try! JSONDecoder().decode(type, from: encodedData)
-//    }
-//
-//    open func setStructArray<T: Codable>(_ value: [T], forKey defaultName: String){
-//        let data = value.map { try? JSONEncoder().encode($0) }
-//
-//        set(data, forKey: defaultName)
-//    }
-//
-//    open func structArrayData<T>(_ type: T.Type, forKey defaultName: String) -> [T] where T : Decodable {
-//        guard let encodedData = array(forKey: defaultName) as? [Data] else {
-//            return []
-//        }
-//
-//        return encodedData.map { try! JSONDecoder().decode(type, from: $0) }
-//    }
-//}

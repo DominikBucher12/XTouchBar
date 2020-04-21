@@ -38,6 +38,8 @@ instead of the default one.
 potentional problems. I haven't try this approach because I don't believe in it's sustainbility. I think the shortcuts is the golden way between Too hard and too easy implementation.
 However I plan overwrite the shortcuts into the `IDEKit` way.
 
+
+
 ## TODO:
 - [ ] Add missing "virtual keys" (like arrow keys) to Key.swift
 - [x] Finish the PropertyListParser (handle "<key>Text Key Bindings</key>" as well)
@@ -45,7 +47,7 @@ However I plan overwrite the shortcuts into the `IDEKit` way.
 - [x] Detect when Xcode is topmost application (focused), probably AppleScript is our friend :D
 - [ ] Create some mechanism that users can change to shortcuts on go.
 - [ ] Create some intuitive icon-set for the shortcuts etc like add documentation...
-- [ ] Create collection for the buttons and assign to the buttons the given shortcuts.
+- [x] Create collection for the buttons and assign to the buttons the given shortcuts.
 - [x] Figure out how to call shortcuts to desired Xcode features
 - [ ] Bonus, should go with previous point: Custom Xcode extensions.
 - [ ] Impossible bonus -> Create someUI that user can drag'n'drop items into XTouchBar
