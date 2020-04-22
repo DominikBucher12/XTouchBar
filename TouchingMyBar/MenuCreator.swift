@@ -93,11 +93,11 @@ extension MenuCreatorImpl {
 
     @objc
     func preferences() {
+        guard window == nil else { return }
         let window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 640, height: 480),
             styleMask: [
                 .titled,
-                .unifiedTitleAndToolbar,
                 .closable,
                 .miniaturizable,
                 .resizable,
@@ -107,9 +107,9 @@ extension MenuCreatorImpl {
             defer: false
         )
         window.center()
-        window.title = "Draft Sport"
+        window.title = "Preference"
         window.titleVisibility = .hidden
-        window.setFrameAutosaveName("Draft Sport")
+        window.setFrameAutosaveName("Preference")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
     }
