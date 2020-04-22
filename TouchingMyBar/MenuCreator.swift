@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol MenuCreator {
     func start()
@@ -20,6 +21,9 @@ class MenuCreatorImpl: MenuCreator {
         NSMenuItem(title: "About", action: #selector(about), keyEquivalent: ""),
         NSMenuItem(title: "Preferences", action: #selector(preferences), keyEquivalent: "")
     ]
+
+    private var window: NSWindow?
+    private var contentView = PreferencesUI()
     
     func start() {
         createMenuItems()
@@ -89,7 +93,25 @@ extension MenuCreatorImpl {
 
     @objc
     func preferences() {
-        // Show Preferences and show
+        let window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 640, height: 480),
+            styleMask: [
+                .titled,
+                .unifiedTitleAndToolbar,
+                .closable,
+                .miniaturizable,
+                .resizable,
+                .fullSizeContentView
+            ],
+            backing: .buffered,
+            defer: false
+        )
+        window.center()
+        window.title = "Draft Sport"
+        window.titleVisibility = .hidden
+        window.setFrameAutosaveName("Draft Sport")
+        window.contentView = NSHostingView(rootView: contentView)
+        window.makeKeyAndOrderFront(nil)
     }
 
     @objc

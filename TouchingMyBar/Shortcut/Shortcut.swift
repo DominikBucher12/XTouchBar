@@ -50,7 +50,7 @@ extension Shortcut: Codable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        iconData = try values.decode(Data.self, forKey: .iconData)
+        iconData = try? values.decode(Data.self, forKey: .iconData)
         id = try values.decode(String.self, forKey: .id)
         key = try values.decode(Key.self, forKey: .key)
         modifiers = try values.decode(Set<KeyModifier>.self, forKey: .modifiers)
