@@ -22,6 +22,8 @@ struct MasterMind: KeyPresser {
         // What's going on here?
         // We need to load what keyboard layout is the user using,
         // hence these 3 lines:
+
+        NSTextInputContext.current?.selectedKeyboardInputSource = "com.apple.keylayout.USInternational-PC"
         let dummyViewToGetTheContext = NSTextView()
         let context = NSTextInputContext(client: dummyViewToGetTheContext)
         guard let usrLayout = context.selectedKeyboardInputSource else {
@@ -31,7 +33,7 @@ struct MasterMind: KeyPresser {
         // Then we change the keyboard layout to the "standart" ANSI US keyboard,
         // so our shortcuts (based on ANSI Key Codes) work properly.
         context.selectedKeyboardInputSource = "com.apple.keylayout.USInternational-PC"
-        
+
         // Then we execute the shortcut:
         let keyCode = shortcut.key.rawValue
         // (Did try to do some googling, this should never fail unless we really fuckup.)

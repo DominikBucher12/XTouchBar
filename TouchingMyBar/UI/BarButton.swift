@@ -21,29 +21,20 @@ fileprivate struct CustomButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .background(
                 RoundedRectangle(cornerRadius: 5)
-                    .foregroundColor(self.color)
-                    .scaleEffect(configuration.isPressed ? 0.95 : 1)
+                    .foregroundColor(configuration.isPressed ? Colors.buttonSelected : Colors.buttonUnselected)
                 )
-                .padding(.horizontal, 2)
+                .padding(.horizontal, 4)
     }
 }
 
 struct BarButton: View {
-
-//     @Binding var identifier: String
-    #warning("swap for real icons when we have them")
-    @Binding var icon: String
     @Binding var color: Color
     @Binding var size: Constants.BarElementWidth
     @Binding var shortcut: Shortcut
 
     var body: some View {
-        Button(
-            action: {
-                try! ConfigurationStorageImpl().loadConfiguration(with: "Awesome") //swiftlint:disable:this force_try
-            }
-        ) {
-            Text(self.icon)
+        Button(action: { MasterMind().perform(self.shortcut) }) {
+            Text(shortcut.id)
                 .font(.callout)
                 .frame(width: self.size.rawValue, height: Constants.TouchBar.height, alignment: .center)
         }

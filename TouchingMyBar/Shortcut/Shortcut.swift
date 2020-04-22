@@ -10,14 +10,17 @@
 /// In real life, shortcut consists of some keys (like `cmd + a`, or `cmd + shift + o`)
 /// In here, we divide the shortcut into actual pure keys (like letters, numbers, commas...)
 /// and modifiers (The fancy keys like `cmd`, `control`, `shift`, `alt`)
-struct Shortcut {
+struct Shortcut: Identifiable {
 
     /// Icon for the shortcut to present on touchbar.
+    /// is being made from the data of the image
     lazy var icon: NSImage? = {
         guard let data = self.iconData else { return nil }
         return NSImage(data: data)
     }()
 
+    /// We want to store the icon inside `UserDefaults`, that's why we use this "hack"
+    /// to store and fetch data of the image.
     private let iconData: Data?
     /// The shortcuts identifier. Pretty self-explanatory.
     let id: String
@@ -36,6 +39,8 @@ struct Shortcut {
     }
 
 }
+
+// MARK: - Codable
 
 extension Shortcut: Codable {
 

@@ -19,11 +19,12 @@
 		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
 		E72CE3B324103AA100B9283D /* TouchingMyBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* TouchingMyBarTests.swift */; };
 		E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7557607243BAC2800441B69 /* TouchBarPresenter.swift */; };
-		E771847B244F5677000DE4EC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771847A244F5677000DE4EC /* Configuration.swift */; };
 		E771847F244F5812000DE4EC /* ConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771847E244F5812000DE4EC /* ConfigurationStore.swift */; };
 		E7718484244F630F000DE4EC /* Shortcut+Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718482244F62B1000DE4EC /* Shortcut+Deprecated.swift */; };
 		E7718486244FAC39000DE4EC /* MenuCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718485244FAC39000DE4EC /* MenuCreator.swift */; };
 		E7718488244FC473000DE4EC /* PreferencesUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718487244FC473000DE4EC /* PreferencesUI.swift */; };
+		E771848A245055BA000DE4EC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718489245055BA000DE4EC /* Configuration.swift */; };
+		E771848C24505966000DE4EC /* ConfigurationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771848B24505966000DE4EC /* ConfigurationMapper.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E78FF299243F5DB300EBA80D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FF298243F5DB300EBA80D /* Colors.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
@@ -86,11 +87,12 @@
 		E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchBarPrivateApi.h; sourceTree = "<group>"; };
 		E72CE3C524103EE800B9283D /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		E7557607243BAC2800441B69 /* TouchBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarPresenter.swift; sourceTree = "<group>"; };
-		E771847A244F5677000DE4EC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		E771847E244F5812000DE4EC /* ConfigurationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStore.swift; sourceTree = "<group>"; };
 		E7718482244F62B1000DE4EC /* Shortcut+Deprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shortcut+Deprecated.swift"; sourceTree = "<group>"; };
 		E7718485244FAC39000DE4EC /* MenuCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCreator.swift; sourceTree = "<group>"; };
 		E7718487244FC473000DE4EC /* PreferencesUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesUI.swift; sourceTree = "<group>"; };
+		E7718489245055BA000DE4EC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		E771848B24505966000DE4EC /* ConfigurationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationMapper.swift; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
 		E78FF298243F5DB300EBA80D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -228,8 +230,9 @@
 		E7CC787F2448A98F0092AAFF /* UserPreferences */ = {
 			isa = PBXGroup;
 			children = (
-				E771847A244F5677000DE4EC /* Configuration.swift */,
 				E771847E244F5812000DE4EC /* ConfigurationStore.swift */,
+				E7718489245055BA000DE4EC /* Configuration.swift */,
+				E771848B24505966000DE4EC /* ConfigurationMapper.swift */,
 			);
 			path = UserPreferences;
 			sourceTree = "<group>";
@@ -413,13 +416,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E771848C24505966000DE4EC /* ConfigurationMapper.swift in Sources */,
 				E78FF299243F5DB300EBA80D /* Colors.swift in Sources */,
 				384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */,
-				E771847B244F5677000DE4EC /* Configuration.swift in Sources */,
 				38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */,
 				384DE4FB243B7A7F00885559 /* TouchBarContainer.swift in Sources */,
 				E7718484244F630F000DE4EC /* Shortcut+Deprecated.swift in Sources */,
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
+				E771848A245055BA000DE4EC /* Configuration.swift in Sources */,
 				384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */,
 				E771847F244F5812000DE4EC /* ConfigurationStore.swift in Sources */,
 				E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */,

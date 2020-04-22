@@ -10,21 +10,18 @@ import CoreGraphics
 import SwiftUI
 
 struct TouchBarContainer: View {
-    @State private var unselectedButtonColor = Colors.buttonUnselected
-    @State private var mediumButtonSize = Constants.BarElementWidth.medium
-    @State private var openFileShortcut = Shortcut.openQuickly
-    @State private var addDocsShortcut = Shortcut.addDocumentation
-
-    @State private var openFile = "Open"
-    @State private var addDocs  = "///"
     var body: some View {
-        HStack {
-            BarButton(icon: $openFile, color: $unselectedButtonColor, size: $mediumButtonSize, shortcut: $openFileShortcut)
-            BarButton(icon: $addDocs, color: $unselectedButtonColor, size: $mediumButtonSize, shortcut: $addDocsShortcut)
+        HStack(alignment: .center, spacing: 10) {
+            ForEach(Configuration.default.shortcuts) { shortcut in
+                Button(action: { MasterMind().perform(shortcut) }) {
+                    Text(shortcut.id)
+                        .font(.callout)
+                        .frame(width: Constants.BarElementWidth.small.rawValue, height: Constants.TouchBar.height, alignment: .center)
+                }
+            }
         }
     }
 }
-
 struct TouchBarContainer_Previews: PreviewProvider {
     static var previews: some View {
         TouchBarContainer()

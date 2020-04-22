@@ -11,5 +11,5 @@ import SwiftUI
 
 public enum Colors {
     static let buttonUnselected = Color.white.opacity(0.2)
-    static let buttonSelected = Color.white.opacity(0.7)
+    static let buttonSelected = Color.white.opacity(0.5)
 }
