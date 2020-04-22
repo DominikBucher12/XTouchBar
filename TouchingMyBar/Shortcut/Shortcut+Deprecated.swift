@@ -298,7 +298,11 @@ extension Shortcut {
        //    static let jumpTo… = Shortcut(id: "jumpToLine:", key: .O, modifiers: [.command])
        //    static let jumpTo… = Shortcut(id: "jumpToLine:", key: .O, modifiers: [.command])
        //    static let jumpTo… = Shortcut(id: "jumpToLine:", key: .O, modifiers: [.command])
-       //    static let jumpToDefinition = Shortcut(id: "editorContext_jumpToDefinition:", key: .O, modifiers: [.command])
+           static let jumpToDefinition = Shortcut(
+            iconData: NSImage(named: "Jump To Definition")?.tiffRepresentation,
+            id: "editorContext_jumpToDefinition:",
+            key: .J, modifiers: [.command, .control]
+            )
        //    static let jumpToDefinition(option) = Shortcut(id: "editorContext_jumpToDefinitionWithAlternate:", key: .O, modifiers: [.command])
        //    static let jumpToDefinition(shift+option) = Shortcut(id: "editorContext_jumpToDefinitionWithShiftPlusAlternate:", key: .O, modifiers: [.command])
        //    static let jumpToInstructionPointer = Shortcut(id: "jumpToInstructionPointer:", key: .O, modifiers: [.command])

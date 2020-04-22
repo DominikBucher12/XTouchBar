@@ -20,7 +20,8 @@ struct Configuration: Codable {
         .openQuickly,
         .commentSelection,
         .fixAllIssues,
-        .editAllInScope
+        .editAllInScope,
+        .jumpToDefinition
         ]
     )
 }
