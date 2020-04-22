@@ -42,6 +42,7 @@ However I plan overwrite the shortcuts into the `IDEKit` way.
 
 ## TODO:
 - [ ] Add missing "virtual keys" (like arrow keys) to Key.swift
+- [ ] Add more sophisticated handling of setting the keyboard back to its default layout
 - [x] Finish the PropertyListParser (handle "<key>Text Key Bindings</key>" as well)
 - [x] Transform Strings received from the parser into our Shortcut data model
 - [x] Detect when Xcode is topmost application (focused), probably AppleScript is our friend :D
@@ -51,5 +52,5 @@ However I plan overwrite the shortcuts into the `IDEKit` way.
 - [x] Figure out how to call shortcuts to desired Xcode features
 - [ ] Bonus, should go with previous point: Custom Xcode extensions.
 - [ ] Impossible bonus -> Create someUI that user can drag'n'drop items into XTouchBar
-- [ ] Clear up unused headers and refactor, and restructurize the app so it's readable.
+- [ ] Restructurize the app so it's readable.
 - [x] Add Swiftlint to format a style a bit :)
