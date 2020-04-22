@@ -14,8 +14,10 @@ struct TouchBarContainer: View {
         HStack(alignment: .center, spacing: 10) {
             ForEach(Configuration.default.shortcuts) { shortcut in
                 Button(action: { MasterMind().perform(shortcut) }) {
-                    Text(shortcut.id)
-                        .font(.callout)
+                    Image(nsImage: shortcut.icon ?? NSImage(named: "Support")!)//swiftlint:disable:this force_unwrapping
+                        .renderingMode(.original)
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
                         .frame(width: Constants.BarElementWidth.small.rawValue, height: Constants.TouchBar.height, alignment: .center)
                 }
             }
@@ -26,4 +28,5 @@ struct TouchBarContainer_Previews: PreviewProvider {
     static var previews: some View {
         TouchBarContainer()
     }
+
 }

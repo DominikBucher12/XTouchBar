@@ -12,14 +12,15 @@
 struct Configuration: Codable {
     var name: String
     var shortcuts: [Shortcut]
-
+    
     static let `default` = Configuration(
         name: "default",
         shortcuts: [
         .addDocumentation,
         .openQuickly,
         .commentSelection,
-        .fixAllIssues
+        .fixAllIssues,
+        .editAllInScope
         ]
     )
 }

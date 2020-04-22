@@ -34,9 +34,8 @@ struct BarButton: View {
 
     var body: some View {
         Button(action: { MasterMind().perform(self.shortcut) }) {
-            Text(shortcut.id)
-                .font(.callout)
-                .frame(width: self.size.rawValue, height: Constants.TouchBar.height, alignment: .center)
+            Image(nsImage: shortcut.icon!) //swiftlint:disable:this force_unwrapping
+            .frame(width: self.size.rawValue, height: Constants.TouchBar.height, alignment: .center)
         }
         .buttonStyle(CustomButtonStyle(color: self.color))
     }

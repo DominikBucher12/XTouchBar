@@ -14,10 +14,12 @@ struct Shortcut: Identifiable {
 
     /// Icon for the shortcut to present on touchbar.
     /// is being made from the data of the image
-    lazy var icon: NSImage? = {
+    var icon: NSImage? {
         guard let data = self.iconData else { return nil }
-        return NSImage(data: data)
-    }()
+        let image = NSImage(data: data)
+        image?.resizingMode = .stretch
+        return image
+    }
 
     /// We want to store the icon inside `UserDefaults`, that's why we use this "hack"
     /// to store and fetch data of the image.

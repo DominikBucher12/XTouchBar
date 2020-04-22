@@ -51,7 +51,7 @@ public enum Constants {
 
     // MARK: - Touchbar elements
     public enum BarElementWidth: CGFloat {
-        case small = 60
+        case small = 50
         case medium = 70
         case big = 120
     }

@@ -617,7 +617,12 @@ extension Shortcut {
 
        // there are 4 different "addDocumentation:" shortcuts: one for playgrounds, one for asset catalog comparison etc.
        // how do we handle that???
-       static let addDocumentation = Shortcut(id: "addDocumentation:", key: .slash, modifiers: [.option, .command])
+       static let addDocumentation = Shortcut(
+         iconData: NSImage(named: "Add Documentation")?.tiffRepresentation,
+         id: "addDocumentation:",
+         key: .slash,
+         modifiers: [.option, .command]
+    )
        //     static let addDocumentation = Shortcut(id: "addDocumentation:", key: .slash, modifiers: [.option, .command])
        //     static let addDocumentation = Shortcut(id: "addDocumentation:", key: .slash, modifiers: [.option, .command])
        //     static let addDocumentation = Shortcut(id: "addDocumentation:", key: .slash, modifiers: [.option, .command])
@@ -630,14 +635,24 @@ extension Shortcut {
        //    static let balanceDelimiters = Shortcut(id: "balance:", key: .O, modifiers: [.command])
        //    static let balanceDelimiters = Shortcut(id: "balance:", key: .O, modifiers: [.command])
        //    static let balanceDelimiters = Shortcut(id: "balance:", key: .O, modifiers: [.command])
-       static let commentSelection = Shortcut(id: "toggleComments:", key: .slash, modifiers: [.command])
+       static let commentSelection = Shortcut(
+        iconData: NSImage(named: "Comment")?.tiffRepresentation,
+        id: "toggleComments:",
+        key: .slash,
+        modifiers: [.command]
+    )
        //    static let commentSelection = Shortcut(id: "toggleComments:", key: .O, modifiers: [.command])
        //    static let commentSelection = Shortcut(id: "toggleComments:", key: .O, modifiers: [.command])
        //    static let commentSelection = Shortcut(id: "toggleComments:", key: .O, modifiers: [.command])
        //    static let decrease = Shortcut(id: "decreaseFontSize:", key: .O, modifiers: [.command])
        //    static let decrease = Shortcut(id: "decreaseFontSize:", key: .O, modifiers: [.command])
        //    static let decrease = Shortcut(id: "decreaseFontSize:", key: .O, modifiers: [.command])
-    static let editAllInScope = Shortcut(id: "toggleTokenizedEditing:", key: .E, modifiers: [.command, .control])
+    static let editAllInScope = Shortcut(
+        iconData: NSImage(named: "Edit All In Scope")?.tiffRepresentation,
+        id: "toggleTokenizedEditing:",
+        key: .E,
+        modifiers: [.command, .control]
+    )
        //    static let editAllInScope = Shortcut(id: "toggleTokenizedEditing:", key: .O, modifiers: [.command])
        //    static let editAllInScope = Shortcut(id: "toggleTokenizedEditing:", key: .O, modifiers: [.command])
        //    static let editAllInScope = Shortcut(id: "toggleTokenizedEditing:", key: .O, modifiers: [.command])
@@ -645,7 +660,12 @@ extension Shortcut {
        //    static let errorsOnly = Shortcut(id: "showErrorsOnly:", key: .O, modifiers: [.command])
        //    static let errorsOnly = Shortcut(id: "showErrorsOnly:", key: .O, modifiers: [.command])
        //    static let errorsOnly = Shortcut(id: "showErrorsOnly:", key: .O, modifiers: [.command])
-    static let fixAllIssues = Shortcut(id: "fixAllIssues:", key: .F, modifiers: [.command,.control,.option])
+    static let fixAllIssues = Shortcut(
+        iconData: NSImage(named: "Fix All In Scope")?.tiffRepresentation,
+        id: "fixAllIssues:",
+        key: .F,
+        modifiers: [.command,.control,.option]
+    )
        //    static let fixAllIssues = Shortcut(id: "fixAllIssues:", key: .O, modifiers: [.command])
        //    static let fixAllIssues = Shortcut(id: "fixAllIssues:", key: .O, modifiers: [.command])
        //    static let fixAllIssues = Shortcut(id: "fixAllIssues:", key: .O, modifiers: [.command])

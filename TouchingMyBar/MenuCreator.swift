@@ -14,6 +14,9 @@ protocol MenuCreator {
 }
 
 class MenuCreatorImpl: MenuCreator {
+    private var window: NSWindow?
+    private var contentView = PreferencesUI()
+
     private var appMenu: NSMenu! // swiftlint:disable:this implicitly_unwrapped_optional
     private var statusItem: NSStatusItem! // swiftlint:disable:this implicitly_unwrapped_optional
     private let menuItems: [NSMenuItem] = [
@@ -22,9 +25,6 @@ class MenuCreatorImpl: MenuCreator {
         NSMenuItem(title: "Preferences", action: #selector(preferences), keyEquivalent: "")
     ]
 
-    private var window: NSWindow?
-    private var contentView = PreferencesUI()
-    
     func start() {
         createMenuItems()
         setupMenuIcon()
