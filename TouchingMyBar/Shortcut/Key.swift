@@ -18,19 +18,25 @@ enum KeyModifier: String, Codable {
     case control
     case option
     case command
-    // TODO: Add more???
 }
 
-#warning("TODO: Figure out if ok. (Run KeyCodes app on your machine and manually check all the codes assuming US layout!)")
-/// This is enum which maps the keys on the keyboard to the address which calls the action on key press.
-/// Does this work universally? Or just on some keyboards?
-/// Will this stay the same in future versions of MacOS?
+/// This enum maps the keys on the keyboard to their corresponding CGKeyEvent values.
+/// Most of the keys assume US keyboard layout (qwerty). There are only few exceptions, like return, tab, "numRowBackTick" etc.
+/// We assume these key codes stay the same in the future versions of MacOS.
 /// See: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
 ///
 /// Note from @buchedom: This is probably pretty retarded. But try youreslf debug `Xcode`
 ///  in instruments with SIP disabled or figure out from `IDEKit` private headers how the menu items are called.
 /// I bet you will find this solution pretty awesome afterwards. :D
 enum Key: UInt16, Codable {
+
+/*
+For more info, see:
+1) /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
+2) https://stackoverflow.com/questions/3202629/where-can-i-find-a-list-of-mac-virtual-key-codes
+3) use app "Key Codes" (Mac App Store)
+*/
+
     case A = 0x00
     case B = 0x0B
     case C = 0x08
@@ -57,7 +63,21 @@ enum Key: UInt16, Codable {
     case X = 0x07
     case Y = 0x10
     case Z = 0x06
-    
+
+	case numRowBackTick = 0xA // It seems like this key is present only on european layouts. On US layout, it's "grave" (0x32).
+	case numRow1 = 0x12
+	case numRow2 = 0x13
+	case numRow3 = 0x14
+	case numRow4 = 0x15
+	case numRow5 = 0x17
+	case numRow6 = 0x16
+	case numRow7 = 0x1A
+	case numRow8 = 0x1C
+	case numRow9 = 0x19
+	case numRow0 = 0x1D
+	case numRowDash = 0x1B
+	case numRowEquals = 0x18
+
     case keypad0 = 0x52
     case keypad1 = 0x53
     case keypad2 = 0x54
@@ -68,17 +88,17 @@ enum Key: UInt16, Codable {
     case keypad7 = 0x59
     case keypad8 = 0x5B
     case keypad9 = 0x5C
-    
-    case keypadEqual = 0x18
-    case keypadMinus = 0x1B
+
+//     case keypadEqual = 0x18 // Does this even exist on some keyboard nowadays?
+    case keypadMinus = 0x4E
     case keypadPlus = 0x45
     case keypadMultiply = 0x43
     case keypadDivide = 0x4B
-    
-    case keypadDecimal = 0x41
-    case keypadClear = 0x47
+
+    case keypadPeriod = 0x41 // .
+    case keypadClear = 0x47 // probably "num lock"
     case keypadEnter = 0x4C
-    
+
     case rightBracket = 0x1E
     case leftBracket = 0x21
     case quote = 0x27
@@ -87,57 +107,49 @@ enum Key: UInt16, Codable {
     case comma = 0x2B
     case slash = 0x2C
     case period = 0x2F
-    case grave = 0x32 // WTF is grave???
-    
+    case grave = 0x32 // on US keyboard, it's the "tilde" key (on the left of "1" above "tab"), on Czech layout, it's "\"
+
     case returnKey = 0x24
     case tab = 0x30
     case space = 0x31
     case delete = 0x33
     case escape = 0x35
-    // 	case command = 0x37
-    // 	case shift = 0x38
     case capsLock = 0x39
-    // 	case option = 0x3A
-    // 	case control = 0x3B
-    // 	case rightCommand = 0x36
-    // 	case rightShift = 0x3C
-    // 	case rightOption = 0x3D
-    // 	case rightControl = 0x3E
-    case function = 0x3F
-    case F17 = 0x40
+//     case function = 0x3F
+//     case F17 = 0x40
     case volumeUp = 0x48
     case volumeDown = 0x49
     case mute = 0x4A
-    case F18 = 0x4F
-    case F19 = 0x50
-    case F20 = 0x5A
-    case F5 = 0x60
-    case F6 = 0x61
-    case F7 = 0x62
-    case F3 = 0x63
-    case F8 = 0x64
-    case F9 = 0x65
-    case F11 = 0x67
-    case F13 = 0x69
-    case F16 = 0x6A
-    case F14 = 0x6B
-    case F10 = 0x6D
-    case F12 = 0x6F
-    case F15 = 0x71
+//     case F18 = 0x4F
+//     case F19 = 0x50
+//     case F20 = 0x5A
+//     case F5 = 0x60
+//     case F6 = 0x61
+//     case F7 = 0x62
+//     case F3 = 0x63
+//     case F8 = 0x64
+//     case F9 = 0x65
+//     case F11 = 0x67
+//     case F13 = 0x69
+//     case F16 = 0x6A
+//     case F14 = 0x6B
+//     case F10 = 0x6D
+//     case F12 = 0x6F
+//     case F15 = 0x71
     case help = 0x72
     case home = 0x73
     case pageUp = 0x74
     case forwardDelete = 0x75
-    case F4 = 0x76
+//     case F4 = 0x76
     case end = 0x77
-    case F2 = 0x78
+//     case F2 = 0x78
     case pageDown = 0x79
-    case F1 = 0x7A
+//     case F1 = 0x7A
     case leftArrow = 0x7B
     case rightArrow = 0x7C
     case downArrow = 0x7D
     case upArrow = 0x7E
-    
+
     #warning("Guess we won't be needing this anymore?")
     // swiftlint:disable:next cyclomatic_complexity
     public init?(character: Character) {
@@ -168,19 +180,19 @@ enum Key: UInt16, Codable {
         case "x", "X": self = .X
         case "y", "Y": self = .Y
         case "z", "Z": self = .Z
-            
-        case "0": self = .keypad0
-        case "1": self = .keypad1
-        case "2": self = .keypad2
-        case "3": self = .keypad3
-        case "4": self = .keypad4
-        case "5": self = .keypad5
-        case "6": self = .keypad6
-        case "7": self = .keypad7
-        case "8": self = .keypad8
-        case "9": self = .keypad9
-        
-        #warning("Is there a difference between keypad = and 'normal' = ???")
+
+        case "0": self = .numRow0
+        case "1": self = .numRow1
+        case "2": self = .numRow2
+        case "3": self = .numRow3
+        case "4": self = .numRow4
+        case "5": self = .numRow5
+        case "6": self = .numRow6
+        case "7": self = .numRow7
+        case "8": self = .numRow8
+        case "9": self = .numRow9
+
+//      #warning("Is there a difference between keypad = and 'normal' = ???") // oh you bet there is. FIXME
             // 		case "=": self = .keypadEqual
             // 		case "-": self = .keypadMinus
             // 		case "+": self = .keypadPlus
@@ -189,7 +201,7 @@ enum Key: UInt16, Codable {
             // 		case "": self = .keypadDecimal
             // 		case "": self = .keypadClear
             // 		case "": self = .keypadEnter
-            
+
         case ")": self  = .rightBracket
         case "(": self  = .leftBracket
         case "'": self  = .quote
@@ -199,7 +211,7 @@ enum Key: UInt16, Codable {
         case "/": self  = .slash
         case ".": self  = .period
             // 		case "": self = .grave
-            
+
         default:
             preconditionFailure("Couldn't read character '\(character)'.")
             return nil

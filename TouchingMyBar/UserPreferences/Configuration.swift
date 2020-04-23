@@ -24,4 +24,16 @@ struct Configuration: Codable {
         .jumpToDefinition
         ]
     )
+    
+    static let krossConfig = Configuration(
+        name: "krossConfig",
+        shortcuts: [
+        .addDocumentation,
+        .commentSelection,
+        .fixAllIssues,
+        .editAllInScope,
+        .jumpToDefinition,
+        .findInWorkspace
+        ]
+    )
 }

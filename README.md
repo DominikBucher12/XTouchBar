@@ -41,7 +41,7 @@ However I plan overwrite the shortcuts into the `IDEKit` way.
 
 
 ## TODO:
-- [ ] Add missing "virtual keys" (like arrow keys) to Key.swift
+- [x] Add missing "virtual keys" (like arrow keys) to Key.swift
 - [ ] Add more sophisticated handling of setting the keyboard back to its default layout
 - [x] Finish the PropertyListParser (handle "<key>Text Key Bindings</key>" as well)
 - [x] Transform Strings received from the parser into our Shortcut data model

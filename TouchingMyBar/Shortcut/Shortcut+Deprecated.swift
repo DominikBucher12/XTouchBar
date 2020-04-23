@@ -269,7 +269,9 @@ extension Shortcut {
        //    static let findAndReplaceInWorkspace… = Shortcut(id: "findAndReplaceInWorkspace:", key: .O, modifiers: [.command])
        //    static let findAndSelectNext = Shortcut(id: "findAndSelectNext:", key: .O, modifiers: [.command])
        //    static let findAndSelectPrevious = Shortcut(id: "findAndSelectPrevious:", key: .O, modifiers: [.command])
-       //    static let findInWorkspace… = Shortcut(id: "findInWorkspace:", key: .O, modifiers: [.command])
+    
+    static let findInWorkspace = Shortcut(iconData: nil, id: "findInWorkspace:", key: .F, modifiers: [.shift, .command])
+
        //    static let findNext = Shortcut(id: "findNext:", key: .O, modifiers: [.command])
        //    static let findPrevious = Shortcut(id: "findPrevious:", key: .O, modifiers: [.command])
        //    static let findSelectedSymbolInWorkspace = Shortcut(id: "findSelectedSymbolInWorkspace:", key: .O, modifiers: [.command])
