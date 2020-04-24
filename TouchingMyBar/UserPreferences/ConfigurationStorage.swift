@@ -9,13 +9,13 @@
 /// Interface for Storage.
 /// It has 2 basic functions, load and store the configuration.
 /// Nothing else matters ♫
-protocol ConfigrationStorage {
+protocol ConfigurationStorage {
     func store(configuration: Configuration) throws
     func loadConfiguration(with name: String) throws -> Configuration
 }
 
 /// Implementation. FTW
-class ConfigurationStorageImpl: ConfigrationStorage {
+class ConfigurationStorageImpl: ConfigurationStorage {
     private enum Errors: Error {
         case couldntFetchEncodedData
         case couldntEncodeConfiguration(configuration: Configuration)

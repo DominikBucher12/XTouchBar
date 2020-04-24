@@ -9,12 +9,15 @@
 import Cocoa
 import AppKit
 import SwiftUI
+import Carbon
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var menuHolder = MenuCreatorImpl(environmentObject: TouchBarPresenter.shared.tbMasterController)
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        storeCurrentKeyboardLayout()
 
         TouchBarPresenter.shared.clearUpTouchBar()
 		TouchBarPresenter.shared.makeButton()
@@ -57,6 +60,14 @@ private extension AppDelegate {
             TouchBarPresenter.shared.clearUpTouchBar()
         } else {
             TouchBarPresenter.shared.hideXTouchBar()
+        }
+    }
+
+    func storeCurrentKeyboardLayout() {
+        let source = TISCopyCurrentKeyboardInputSource()
+        let id: UnsafeMutableRawPointer = TISGetInputSourceProperty(source?.takeRetainedValue(), kTISPropertyInputSourceID)
+        if let keyboardLayout = Unmanaged<AnyObject>.fromOpaque(id).takeUnretainedValue() as? String {
+            UserDefaults.standard.set(keyboardLayout, forKey: "UserKeyboardLayout")
         }
     }
 }

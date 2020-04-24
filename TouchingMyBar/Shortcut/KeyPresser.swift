@@ -14,25 +14,27 @@ import Carbon // Such Carbon, very Fiber
 protocol KeyPresser {
     /// Performs  given shortcut on input with propriate modifiers like `cmd`, `shift`...
     /// - Parameter shortcut: `Shortcut` instance.
-    func perform(_ shortcut: Shortcut)
+//    func perform(_ shortcut: Shortcut)
 }
 
-struct MasterMind: KeyPresser {
+class MasterMind: KeyPresser {
+
+    private lazy var funnyContext: NSTextInputContext = {
+        let textView = NSTextView()
+        let context = NSTextInputContext(client: textView)
+        return context
+    }()
 
     func perform(_ shortcut: Shortcut) {
+         let group = DispatchGroup()
         // Hacks on top of hacks...
         // What's going on here?
         // We need to load what keyboard layout is the user using,
         // hence these 3 lines:
-        let dummyViewToGetTheContext = NSTextView()
-        let context = NSTextInputContext(client: dummyViewToGetTheContext)
 
-        // Should never fail. That's what capitalism is built on.
-        guard let usrLayout = context.selectedKeyboardInputSource else { return }
-
+        funnyContext.selectedKeyboardInputSource = "com.apple.keylayout.USInternational-PC"
         // Then we change the keyboard layout to the "standart" ANSI US keyboard,
         // so our shortcuts (based on ANSI Key Codes) work properly.
-        context.selectedKeyboardInputSource = "com.apple.keylayout.USInternational-PC"
 
         // Then we execute the shortcut:
         let keyCode = shortcut.key.rawValue
@@ -43,31 +45,31 @@ struct MasterMind: KeyPresser {
 
         for modifier in shortcut.modifiers {
             switch modifier {
-                case .shift:   keyDownEvent.flags.insert(.maskShift)
-                case .control: keyDownEvent.flags.insert(.maskControl)
-                case .option:  keyDownEvent.flags.insert(.maskAlternate)
-                case .command: keyDownEvent.flags.insert(.maskCommand)
+            case .shift: keyDownEvent.flags.insert(.maskShift)
+            case .control: keyDownEvent.flags.insert(.maskControl)
+            case .option: keyDownEvent.flags.insert(.maskAlternate)
+            case .command: keyDownEvent.flags.insert(.maskCommand)
             }
         }
-        keyDownEvent.post(tap: .cgAnnotatedSessionEventTap)
 
         // Don't forget to be a good platform citizen
         // and "lift the fingers" of the virtual keyboard!
-        let flags = keyDownEvent.flags
-
         guard let keyUpEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: false) else {
             fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
         }
 
-        keyUpEvent.flags.insert(flags)
-        keyUpEvent.post(tap: .cgAnnotatedSessionEventTap)
+        group.enter()
+        DispatchQueue.global().async {
+            let flags = keyDownEvent.flags
+            keyDownEvent.post(tap: .cgAnnotatedSessionEventTap)
 
-        // And finally we change the keyboard layout back to whatever the user is using.
-        // (and of course we need to do it a bit later, because otherwise there's a possibility of wrong shortcut
-        // being executed because of a race condition)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
-            context.selectedKeyboardInputSource = usrLayout
+            keyUpEvent.flags.insert(flags)
+            keyUpEvent.post(tap: .cgAnnotatedSessionEventTap)
+
+            group.leave()
         }
 
+        group.wait()
+        self.funnyContext.selectedKeyboardInputSource = UserDefaults.standard.string(forKey: "UserKeyboardLayout")
     }
 }
