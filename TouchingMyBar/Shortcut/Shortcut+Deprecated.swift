@@ -625,6 +625,7 @@ extension Shortcut {
        // how do we handle that???
        static let addDocumentation = Shortcut(
          iconData: NSImage(named: "Add Documentation")?.tiffRepresentation,
+         backgroundColor: .blue,
          id: "addDocumentation:",
          key: .slash,
          modifiers: [.option, .command]

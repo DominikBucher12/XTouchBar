@@ -11,6 +11,7 @@
 		384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FE243B8DF300885559 /* BarSpacer.swift */; };
 		38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE2243E5C330009A015 /* Shortcut.swift */; };
 		38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE4243E5C4B0009A015 /* Key.swift */; };
+		38E0A7C724534E400087E077 /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0A7C624534E400087E077 /* BarButton.swift */; };
 		836866AAD0A319CAF6D9ABC2 /* libPods-TouchingMyBarTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4B37778A74C33CCCB608EE /* libPods-TouchingMyBarTests.a */; };
 		BE5B7AA65D85EB6EE701E2B2 /* libPods-TouchingMyBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3837500A5F3AAEE5A34A1935 /* libPods-TouchingMyBar.a */; };
 		E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE39F24103A9D00B9283D /* AppDelegate.swift */; };
@@ -68,6 +69,7 @@
 		385EA4162437D6E30064C23D /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
 		38C2BCE2243E5C330009A015 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		38C2BCE4243E5C4B0009A015 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		38E0A7C624534E400087E077 /* BarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
 		499194A10AFF54D4344A2343 /* Pods-TouchingMyBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchingMyBarTests.release.xcconfig"; path = "Target Support Files/Pods-TouchingMyBarTests/Pods-TouchingMyBarTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F5403DEEDE196A7E62D6453 /* Pods-TouchingMyBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchingMyBar.debug.xcconfig"; path = "Target Support Files/Pods-TouchingMyBar/Pods-TouchingMyBar.debug.xcconfig"; sourceTree = "<group>"; };
 		6AB216570A2349A353488882 /* Pods-TouchingMyBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchingMyBar.release.xcconfig"; path = "Target Support Files/Pods-TouchingMyBar/Pods-TouchingMyBar.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,11 +122,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		384DE4F9243B7A5A00885559 /* UI */ = {
+		3847A8E5245342C900A6BCCE /* TouchBar */ = {
 			isa = PBXGroup;
 			children = (
 				384DE4FE243B8DF300885559 /* BarSpacer.swift */,
 				384DE4FA243B7A7F00885559 /* TouchBarContainer.swift */,
+				38E0A7C624534E400087E077 /* BarButton.swift */,
+			);
+			path = TouchBar;
+			sourceTree = "<group>";
+		};
+		384DE4F9243B7A5A00885559 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E7718487244FC473000DE4EC /* PreferencesUI.swift */,
+				3847A8E5245342C900A6BCCE /* TouchBar */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -169,7 +181,6 @@
 				E72CE3C524103EE800B9283D /* Bridging.h */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E7718485244FAC39000DE4EC /* MenuCreator.swift */,
-				E7718487244FC473000DE4EC /* PreferencesUI.swift */,
 				E7CC78802448A9AA0092AAFF /* Constants */,
 				E7CC787F2448A98F0092AAFF /* UserPreferences */,
 				E76CBC5C2442002D002349DC /* Shortcut */,
@@ -416,6 +427,7 @@
 				E771848C24505966000DE4EC /* ConfigurationMapper.swift in Sources */,
 				E78FF299243F5DB300EBA80D /* Colors.swift in Sources */,
 				384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */,
+				38E0A7C724534E400087E077 /* BarButton.swift in Sources */,
 				38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */,
 				384DE4FB243B7A7F00885559 /* TouchBarContainer.swift in Sources */,
 				E7718484244F630F000DE4EC /* Shortcut+Deprecated.swift in Sources */,

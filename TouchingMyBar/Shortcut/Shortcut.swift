@@ -10,7 +10,7 @@
 /// In real life, shortcut consists of some keys (like `cmd + a`, or `cmd + shift + o`)
 /// In here, we divide the shortcut into actual pure keys (like letters, numbers, commas...)
 /// and modifiers (The fancy keys like `cmd`, `control`, `shift`, `alt`)
-struct Shortcut: Identifiable {
+struct Shortcut: Identifiable, Hashable {
 
     /// Icon for the shortcut to present on touchbar.
     /// is being made from the data of the image
