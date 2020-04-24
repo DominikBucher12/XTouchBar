@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TouchBar: View {
     @Binding var shortcuts: [Shortcut]
-    @Binding var selectedShortcut: Shortcut
+    @Binding var selectedShortcutID: String
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -20,7 +20,7 @@ struct TouchBar: View {
             
             HStack {
                 ForEach(shortcuts) { shortcut in
-                    Button(action: { self.selectedShortcut = shortcut }) {
+                    Button(action: { self.selectedShortcutID = shortcut.id }) {
                         Image(nsImage: shortcut.icon ?? NSImage(named: "Support")!)//swiftlint:disable:this force_unwrapping
                             .renderingMode(.original)
                             .resizable(resizingMode: .stretch)
@@ -31,7 +31,7 @@ struct TouchBar: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
                             .strokeBorder(lineWidth: 3)
-                            .foregroundColor(shortcut == self.selectedShortcut ? .white : .clear)
+                            .foregroundColor(shortcut.id == self.selectedShortcutID ? .white : .clear)
                             .frame(width: Constants.BarElementWidth.small.rawValue, height: Constants.TouchBar.height)
                     )
                 }
@@ -41,18 +41,41 @@ struct TouchBar: View {
 }
 
 struct PreferencesUI: View {
-    @EnvironmentObject var controller: TouchBarMasterController
-    @State private var selectedShortcut: Shortcut = .addDocumentation
+    @State private var shortcuts: [Shortcut] = Configuration.krossConfig.shortcuts
+    @State private var selectedShortcutID = ""
+    // This is nasty, just using hacks to prototype UI
+    @State private var shortcutsToPickFrom = Configuration.krossConfig.shortcuts
+    @State private var shortcutToAddIndex = 0
     
     var body: some View {
         VStack(alignment: .leading) {
+            HStack() {
+                Picker("Shortcuts:", selection: $shortcutToAddIndex) {
+                    ForEach(0..<shortcutsToPickFrom.count) {
+                        Text("\(self.shortcutsToPickFrom[$0].id)")
+                    }
+                }
+                .frame(width: 300)
+                
+                Button(action: { self.shortcuts.append(self.shortcutsToPickFrom[self.shortcutToAddIndex]) }) {
+                    Text("Add")
+                }
+            }
+            
             Button(action: {
-                self.controller.shortcuts.removeAll { $0.id == self.selectedShortcut.id }
+                for i in 0..<self.shortcuts.count {
+                    if self.shortcuts[i].id == self.selectedShortcutID {
+                        self.shortcuts.remove(at: i)
+                        self.selectedShortcutID = ""
+                        break
+                    } else {
+                        continue // FIXME: SwiftLint complains
+                    }
+                }
             }) {
                 Text("Remove shortcut")
             }
-            
-            TouchBar(shortcuts: $controller.shortcuts, selectedShortcut: $selectedShortcut)
+            TouchBar(shortcuts: $shortcuts, selectedShortcutID: $selectedShortcutID)
         }
         .padding(10)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -14,14 +14,9 @@ import Carbon
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-<<<<<<< HEAD
     var menuHolder = MenuCreatorImpl(environmentObject: TouchBarPresenter.shared.tbMasterController)
-    
-=======
-    var menuHolder: MenuCreator = MenuCreatorImpl()
     var currentConfiguration: Configuration?
 
->>>>>>> 05e1c71... Fix documentation and add scrollView
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         storeCurrentKeyboardLayout()
 
