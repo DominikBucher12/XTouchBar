@@ -643,6 +643,7 @@ extension Shortcut {
        //    static let balanceDelimiters = Shortcut(id: "balance:", key: .O, modifiers: [.command])
        static let commentSelection = Shortcut(
         iconData: NSImage(named: "Comment")?.tiffRepresentation,
+        backgroundColor: .green,
         id: "toggleComments:",
         key: .slash,
         modifiers: [.command]

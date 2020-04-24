@@ -7,9 +7,12 @@
 //
 
 import Foundation
-import SwiftUI
 
-public enum Colors {
-    static let buttonUnselected = Color.white.opacity(0.2)
-    static let buttonSelected = Color.white.opacity(0.5)
+public enum Colors: Int, Codable {
+    case gray = 0
+    case red
+    case green
+    case blue
+    case yellow
+    case purple
 }

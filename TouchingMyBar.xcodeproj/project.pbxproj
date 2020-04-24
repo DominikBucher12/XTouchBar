@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		384DE4FB243B7A7F00885559 /* TouchBarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FA243B7A7F00885559 /* TouchBarContainer.swift */; };
-		384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FC243B7ACC00885559 /* BarButton.swift */; };
 		384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FE243B8DF300885559 /* BarSpacer.swift */; };
 		38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE2243E5C330009A015 /* Shortcut.swift */; };
 		38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE4243E5C4B0009A015 /* Key.swift */; };
@@ -64,7 +63,6 @@
 /* Begin PBXFileReference section */
 		3837500A5F3AAEE5A34A1935 /* libPods-TouchingMyBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TouchingMyBar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		384DE4FA243B7A7F00885559 /* TouchBarContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarContainer.swift; sourceTree = "<group>"; };
-		384DE4FC243B7ACC00885559 /* BarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
 		384DE4FE243B8DF300885559 /* BarSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarSpacer.swift; sourceTree = "<group>"; };
 		385EA4122437D68B0064C23D /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		385EA4162437D6E30064C23D /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 		384DE4F9243B7A5A00885559 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				384DE4FC243B7ACC00885559 /* BarButton.swift */,
 				384DE4FE243B8DF300885559 /* BarSpacer.swift */,
 				384DE4FA243B7A7F00885559 /* TouchBarContainer.swift */,
 			);
@@ -424,7 +421,6 @@
 				E7718484244F630F000DE4EC /* Shortcut+Deprecated.swift in Sources */,
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
 				E771848A245055BA000DE4EC /* Configuration.swift in Sources */,
-				384DE4FD243B7ACC00885559 /* BarButton.swift in Sources */,
 				E771847F244F5812000DE4EC /* ConfigurationStore.swift in Sources */,
 				E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */,
 				E7718486244FAC39000DE4EC /* MenuCreator.swift in Sources */,

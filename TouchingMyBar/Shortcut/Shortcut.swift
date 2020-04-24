@@ -24,6 +24,9 @@ struct Shortcut: Identifiable {
     /// We want to store the icon inside `UserDefaults`, that's why we use this "hack"
     /// to store and fetch data of the image.
     private let iconData: Data?
+    /// Background color of the button in the TouchBar.
+    /// Default is gray.
+    let backgroundColor: Colors
     /// The shortcuts identifier. Pretty self-explanatory.
     let id: String
     /// Just simple key -> `a`, `y`, `,`, `=`, `+`, `/`
@@ -33,8 +36,9 @@ struct Shortcut: Identifiable {
     let modifiers: Set<KeyModifier>
 
     /// Why Swift cannot handle optional property in structs with default initializer? Very sad times.
-    public init(iconData: Data? = nil, id: String, key: Key, modifiers: Set<KeyModifier>) {
+    public init(iconData: Data? = nil, backgroundColor: Colors = .gray, id: String, key: Key, modifiers: Set<KeyModifier>) {
         self.iconData = iconData
+        self.backgroundColor = backgroundColor
         self.id = id
         self.key = key
         self.modifiers = modifiers
@@ -48,6 +52,7 @@ extension Shortcut: Codable {
 
     enum CodingKeys: String, CodingKey {
         case iconData
+        case backgroundColor
         case id
         case key
         case modifiers
@@ -58,6 +63,7 @@ extension Shortcut: Codable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         iconData = try? values.decode(Data.self, forKey: .iconData)
+        backgroundColor = try values.decode(Colors.self, forKey: .backgroundColor)
         id = try values.decode(String.self, forKey: .id)
         key = try values.decode(Key.self, forKey: .key)
         modifiers = try values.decode(Set<KeyModifier>.self, forKey: .modifiers)
@@ -69,6 +75,7 @@ extension Shortcut: Codable {
         var container = encoder.container(keyedBy: CodingKeys.self)
 
         try container.encode(iconData, forKey: .iconData)
+        try container.encode(backgroundColor, forKey: .backgroundColor)
         try container.encode(id, forKey: .id)
         try container.encode(key.rawValue, forKey: .key)
         try container.encode(modifiers, forKey: .modifiers)
