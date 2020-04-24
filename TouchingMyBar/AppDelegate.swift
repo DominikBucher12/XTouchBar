@@ -19,7 +19,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         TouchBarPresenter.shared.clearUpTouchBar()
 		TouchBarPresenter.shared.makeButton()
         menuHolder.start()
-        tryFuckingShit()
 
         RegisterXcodeAppearanceObservers()
     }
@@ -59,20 +58,5 @@ private extension AppDelegate {
         } else {
             TouchBarPresenter.shared.hideXTouchBar()
         }
-    }
-
-    func tryFuckingShit() {
-        let config = Configuration(
-            name: "Awesome",
-            shortcuts: [
-                Shortcut.addDocumentation,
-                Shortcut.open,
-                Shortcut.openQuickly,
-                Shortcut.focusSelection,
-                Shortcut.showMappingModelInspector
-            ]
-        )
-
-        try? ConfigurationStorageImpl().store(configuration: config)
     }
 }
