@@ -25,6 +25,7 @@ struct Configuration: Codable {
         ]
     )
     
+    #warning("Delete before release! :D")
     static let krossConfig = Configuration(
         name: "krossConfig",
         shortcuts: [

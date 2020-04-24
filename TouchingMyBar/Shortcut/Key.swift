@@ -29,14 +29,14 @@ enum KeyModifier: String, Codable {
 ///  in instruments with SIP disabled or figure out from `IDEKit` private headers how the menu items are called.
 /// I bet you will find this solution pretty awesome afterwards. :D
 enum Key: UInt16, Codable {
-
-/*
-For more info, see:
-1) /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
-2) https://stackoverflow.com/questions/3202629/where-can-i-find-a-list-of-mac-virtual-key-codes
-3) use app "Key Codes" (Mac App Store)
-*/
-
+    
+    /*
+     For more info, see:
+     1) /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
+     2) https://stackoverflow.com/questions/3202629/where-can-i-find-a-list-of-mac-virtual-key-codes
+     3) use app "Key Codes" (Mac App Store)
+     */
+    
     case A = 0x00
     case B = 0x0B
     case C = 0x08
@@ -63,21 +63,21 @@ For more info, see:
     case X = 0x07
     case Y = 0x10
     case Z = 0x06
-
-	case numRowBackTick = 0xA // It seems like this key is present only on european layouts. On US layout, it's "grave" (0x32).
-	case numRow1 = 0x12
-	case numRow2 = 0x13
-	case numRow3 = 0x14
-	case numRow4 = 0x15
-	case numRow5 = 0x17
-	case numRow6 = 0x16
-	case numRow7 = 0x1A
-	case numRow8 = 0x1C
-	case numRow9 = 0x19
-	case numRow0 = 0x1D
-	case numRowDash = 0x1B
-	case numRowEquals = 0x18
-
+    
+    case numRowBackTick = 0xA // It seems like this key is present only on european layouts. On US layout, it's "grave" (0x32).
+    case numRow1 = 0x12
+    case numRow2 = 0x13
+    case numRow3 = 0x14
+    case numRow4 = 0x15
+    case numRow5 = 0x17
+    case numRow6 = 0x16
+    case numRow7 = 0x1A
+    case numRow8 = 0x1C
+    case numRow9 = 0x19
+    case numRow0 = 0x1D
+    case numRowDash = 0x1B
+    case numRowEquals = 0x18
+    
     case keypad0 = 0x52
     case keypad1 = 0x53
     case keypad2 = 0x54
@@ -88,17 +88,17 @@ For more info, see:
     case keypad7 = 0x59
     case keypad8 = 0x5B
     case keypad9 = 0x5C
-
+    
 //     case keypadEqual = 0x18 // Does this even exist on some keyboard nowadays?
     case keypadMinus = 0x4E
     case keypadPlus = 0x45
     case keypadMultiply = 0x43
     case keypadDivide = 0x4B
-
+    
     case keypadPeriod = 0x41 // .
     case keypadClear = 0x47 // probably "num lock"
     case keypadEnter = 0x4C
-
+    
     case rightBracket = 0x1E
     case leftBracket = 0x21
     case quote = 0x27
@@ -108,7 +108,7 @@ For more info, see:
     case slash = 0x2C
     case period = 0x2F
     case grave = 0x32 // on US keyboard, it's the "tilde" key (on the left of "1" above "tab"), on Czech layout, it's "\"
-
+    
     case returnKey = 0x24
     case tab = 0x30
     case space = 0x31
@@ -149,7 +149,7 @@ For more info, see:
     case rightArrow = 0x7C
     case downArrow = 0x7D
     case upArrow = 0x7E
-
+    
     #warning("Guess we won't be needing this anymore?")
     // swiftlint:disable:next cyclomatic_complexity
     public init?(character: Character) {
@@ -180,7 +180,7 @@ For more info, see:
         case "x", "X": self = .X
         case "y", "Y": self = .Y
         case "z", "Z": self = .Z
-
+            
         case "0": self = .numRow0
         case "1": self = .numRow1
         case "2": self = .numRow2
@@ -191,17 +191,17 @@ For more info, see:
         case "7": self = .numRow7
         case "8": self = .numRow8
         case "9": self = .numRow9
-
+            
 //      #warning("Is there a difference between keypad = and 'normal' = ???") // oh you bet there is. FIXME
-            // 		case "=": self = .keypadEqual
-            // 		case "-": self = .keypadMinus
-            // 		case "+": self = .keypadPlus
-            // 		case "*": self = .keypadMultiply
-            // 		case "/": self = .keypadDivide
-            // 		case "": self = .keypadDecimal
-            // 		case "": self = .keypadClear
-            // 		case "": self = .keypadEnter
-
+// 		case "=": self = .keypadEqual
+// 		case "-": self = .keypadMinus
+// 		case "+": self = .keypadPlus
+// 		case "*": self = .keypadMultiply
+// 		case "/": self = .keypadDivide
+// 		case "": self = .keypadDecimal
+// 		case "": self = .keypadClear
+// 		case "": self = .keypadEnter
+            
         case ")": self  = .rightBracket
         case "(": self  = .leftBracket
         case "'": self  = .quote
@@ -211,7 +211,7 @@ For more info, see:
         case "/": self  = .slash
         case ".": self  = .period
             // 		case "": self = .grave
-
+            
         default:
             preconditionFailure("Couldn't read character '\(character)'.")
             return nil
