@@ -42,7 +42,7 @@ private extension MenuCreatorImpl {
 
         let statusBar = NSStatusBar.system
         statusItem = statusBar.statusItem(withLength: NSStatusItem.squareLength)
-        statusItem.button?.title = "🌯"
+        statusItem.button?.title = "🆇"
 
         let menu = NSMenu(title: "XTouchBar")
 
