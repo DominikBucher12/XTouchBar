@@ -56,9 +56,6 @@ struct MasterMind: KeyPresser {
                    }
         }
     }
-
-    /// <#Description#>
-    /// - Parameter completion: <#completion description#>
     func changeKeyboardLayout(completion: (NSTextInputContext, NSTextInputSourceIdentifier) -> Void ) {
         // Hacks on top of hacks...
         // What's going on here?
@@ -67,9 +64,8 @@ struct MasterMind: KeyPresser {
         let dummyViewToGetTheContext = NSTextView()
         let context = NSTextInputContext(client: dummyViewToGetTheContext)
 
-        guard let usrLayout = context.selectedKeyboardInputSource else {
-            preconditionFailure("FECK")
-        }
+        // Should never fail. That's what capitalism is built on.
+        guard let usrLayout = context.selectedKeyboardInputSource else { return }
 
         // Then we change the keyboard layout to the "standart" ANSI US keyboard,
         // so our shortcuts (based on ANSI Key Codes) work properly.

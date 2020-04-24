@@ -31,7 +31,6 @@ class MenuCreatorImpl: MenuCreator {
     }
 
     func start() {
-        createMenuItems()
         setupMenuIcon()
     }
 }
@@ -41,43 +40,13 @@ private extension MenuCreatorImpl {
     private func setupMenuIcon() {
         statusItem = NSStatusBar.system.statusItem(withLength: -1)
 
-         guard let button = statusItem?.button else {
-             NSApp.terminate(nil)
-             return
-         }
+        let statusBar = NSStatusBar.system
+        statusItem = statusBar.statusItem(withLength: NSStatusItem.squareLength)
+        statusItem.button?.title = "🌯"
 
-         button.title = "XTouchBar"
-         button.target = self
-         button.action = #selector(displayMenu)
-    }
-
-    @objc
-    private func displayMenu() {
-        guard let button = statusItem?.button else { return }
-        let x = button.frame.origin.x
-        let y = button.frame.origin.y - 5
-
-        guard let location = button.superview?.convert(NSPoint(x: x, y: y), to: nil),
-              let niceWindow = button.window,
-              let appMenu = appMenu,
-              let event = NSEvent.mouseEvent(
-                   with: .leftMouseUp,
-                   location: location,
-                   modifierFlags: NSEvent.ModifierFlags(rawValue: 0),
-                   timestamp: 0,
-                   windowNumber: niceWindow.windowNumber,
-                   context: niceWindow.graphicsContext,
-                   eventNumber: 0,
-                   clickCount: 1,
-                   pressure: 0
-               )
-        else { return }
-
-        NSMenu.popUpContextMenu(appMenu, with: event, for: button)
-    }
-
-    private func createMenuItems() {
         let menu = NSMenu(title: "XTouchBar")
+
+        statusItem.menu = menu
 
         menuItems.forEach { item in
             item.target = self
