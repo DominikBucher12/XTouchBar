@@ -10,11 +10,11 @@ import CoreGraphics
 import SwiftUI
 
 struct TouchBarContainer: View {
-    @State private var shortcuts = Configuration.krossConfig.shortcuts
+    @EnvironmentObject var controller: TouchBarMasterController
     
     var body: some View {
         HStack(alignment: .center, spacing: 10) {
-            ForEach(shortcuts) { shortcut in
+            ForEach(controller.shortcuts) { shortcut in
                 BarButton(shortcut: shortcut)
             }
         }
