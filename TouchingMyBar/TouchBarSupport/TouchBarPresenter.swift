@@ -11,6 +11,7 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate {
 
     static let shared = TouchBarPresenter()
     let touchBar = NSTouchBar()
+    let tbMasterController = TouchBarMasterController()
 
     func clearUpTouchBar() {
         // Note, if you want the touchbar to cover just part of the screen and not hide the right control strip,
@@ -24,7 +25,7 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate {
 
     func makeButton() {
         let item = NSCustomTouchBarItem(identifier: NSTouchBarItem.Identifier(rawValue: "HelloWorld"))
-        item.view = NSHostingView(rootView: TouchBarContainer())
+        item.view = NSHostingView(rootView: TouchBarContainer().environmentObject(tbMasterController))
 
         TouchBarPresenter.shared.touchBar.defaultItemIdentifiers = [item.identifier]
         TouchBarPresenter.shared.touchBar.templateItems = [item]

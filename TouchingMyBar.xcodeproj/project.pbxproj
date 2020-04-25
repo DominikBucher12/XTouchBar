@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		384DE4FB243B7A7F00885559 /* TouchBarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FA243B7A7F00885559 /* TouchBarContainer.swift */; };
 		384DE4FF243B8DF300885559 /* BarSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384DE4FE243B8DF300885559 /* BarSpacer.swift */; };
+		386A8D3924543F2600324D22 /* TouchBarMasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386A8D3824543F2600324D22 /* TouchBarMasterController.swift */; };
 		38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE2243E5C330009A015 /* Shortcut.swift */; };
 		38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE4243E5C4B0009A015 /* Key.swift */; };
 		38E0A7C724534E400087E077 /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0A7C624534E400087E077 /* BarButton.swift */; };
@@ -67,6 +68,7 @@
 		384DE4FE243B8DF300885559 /* BarSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarSpacer.swift; sourceTree = "<group>"; };
 		385EA4122437D68B0064C23D /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		385EA4162437D6E30064C23D /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
+		386A8D3824543F2600324D22 /* TouchBarMasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarMasterController.swift; sourceTree = "<group>"; };
 		38C2BCE2243E5C330009A015 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		38C2BCE4243E5C4B0009A015 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		38E0A7C624534E400087E077 /* BarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				E72CE3C524103EE800B9283D /* Bridging.h */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E7718485244FAC39000DE4EC /* MenuCreator.swift */,
+				386A8D3824543F2600324D22 /* TouchBarMasterController.swift */,
 				E7CC78802448A9AA0092AAFF /* Constants */,
 				E7CC787F2448A98F0092AAFF /* UserPreferences */,
 				E76CBC5C2442002D002349DC /* Shortcut */,
@@ -439,6 +442,7 @@
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
 				E7CC787E2447E59D0092AAFF /* KeyPresser.swift in Sources */,
+				386A8D3924543F2600324D22 /* TouchBarMasterController.swift in Sources */,
 				E7718488244FC473000DE4EC /* PreferencesUI.swift in Sources */,
 				38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */,
 			);

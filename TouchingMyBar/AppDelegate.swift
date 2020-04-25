@@ -13,7 +13,7 @@ import SwiftUI
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var menuHolder = MenuCreatorImpl()
+    var menuHolder = MenuCreatorImpl(environmentObject: TouchBarPresenter.shared.tbMasterController)
     func applicationDidFinishLaunching(_ aNotification: Notification) {
 
         TouchBarPresenter.shared.clearUpTouchBar()

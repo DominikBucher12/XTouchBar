@@ -16,6 +16,7 @@ protocol MenuCreator {
 class MenuCreatorImpl: MenuCreator {
     private var window: NSWindow?
     private var contentView = PreferencesUI()
+    private let tbMasterController: TouchBarMasterController
 
     private var appMenu: NSMenu! // swiftlint:disable:this implicitly_unwrapped_optional
     private var statusItem: NSStatusItem! // swiftlint:disable:this implicitly_unwrapped_optional
@@ -24,6 +25,10 @@ class MenuCreatorImpl: MenuCreator {
         NSMenuItem(title: "About", action: #selector(about), keyEquivalent: ""),
         NSMenuItem(title: "Preferences", action: #selector(preferences), keyEquivalent: "")
     ]
+    
+    public init(environmentObject: TouchBarMasterController) {
+        self.tbMasterController = environmentObject
+    }
 
     func start() {
         createMenuItems()
@@ -110,7 +115,7 @@ extension MenuCreatorImpl {
         window.title = "Preference"
         window.titleVisibility = .hidden
         window.setFrameAutosaveName("Preference")
-        window.contentView = NSHostingView(rootView: contentView)
+        window.contentView = NSHostingView(rootView: contentView.environmentObject(self.tbMasterController))
         window.makeKeyAndOrderFront(nil)
     }
 
