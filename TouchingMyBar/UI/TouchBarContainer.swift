@@ -31,5 +31,4 @@ struct TouchBarContainer_Previews: PreviewProvider {
     static var previews: some View {
         TouchBarContainer()
     }
-
 }

@@ -19,13 +19,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
 =======
     var menuHolder: MenuCreator = MenuCreatorImpl()
+    var currentConfiguration: Configuration?
 
 >>>>>>> 05e1c71... Fix documentation and add scrollView
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         storeCurrentKeyboardLayout()
 
         TouchBarPresenter.shared.clearUpTouchBar()
-		TouchBarPresenter.shared.makeButton()
+		TouchBarPresenter.shared.makeXTouchBar()
 
         menuHolder.start()
 

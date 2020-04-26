@@ -16,14 +16,14 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate {
     func clearUpTouchBar() {
         // Note, if you want the touchbar to cover just part of the screen and not hide the right control strip,
         // Use the other implementation which has the dafault parameter of `placement: 0` :)
-        presentSystemModal(TouchBarPresenter.shared.touchBar, systemTrayItemIdentifier: .controlStripItem)
+        presentSystemModal(TouchBarPresenter.shared.touchBar, placement: 0, systemTrayItemIdentifier: .controlStripItem)
     }
 
     func hideXTouchBar() {
         minimizeSystemModal(TouchBarPresenter.shared.touchBar)
     }
 
-    func makeButton() {
+    func makeXTouchBar() {
         let item = NSCustomTouchBarItem(identifier: NSTouchBarItem.Identifier(rawValue: "XTouchBar"))
 	item.view = NSHostingView(rootView: TouchBarContainer().environmentObject(tbMasterController))
 

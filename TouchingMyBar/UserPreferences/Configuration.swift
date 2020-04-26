@@ -31,7 +31,8 @@ struct Configuration: Codable {
         .commentSelection,
         .fixAllIssues,
         .editAllInScope,
-        .jumpToDefinition
+        .jumpToDefinition,
+        .findAndReplaceInWorkspace
         ]
     )
     

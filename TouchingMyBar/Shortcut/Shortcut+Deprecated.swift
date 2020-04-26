@@ -24,6 +24,7 @@ extension Shortcut {
     static let openQuickly = Shortcut(id: "openQuickly:", key: .O, modifiers: [.command, .shift])
     static let open = Shortcut(id: "openDocument:", key: .O, modifiers: [.command])
     static let showCodeReview = Shortcut(id: "_toggleShowCodeReviewForEditor:", key: .returnKey, modifiers: [.command,.shift,.option])
+    static let findAndReplaceInWorkspace = Shortcut(id: "findAndReplaceInWorkspace:", key: .F, modifiers: [.command, .shift, .option])
 
 
     // there are 4 different "addDocumentation:" shortcuts: one for playgrounds, one for asset catalog comparison etc.
@@ -305,7 +306,6 @@ extension Shortcut {
        //    static let filterInNavigator = Shortcut(id: "filterInNavigator:", key: .O, modifiers: [.command])
        //    static let find… = Shortcut(id: "find:", key: .O, modifiers: [.command])
        //    static let findAndReplace… = Shortcut(id: "findAndReplace:", key: .O, modifiers: [.command])
-       //    static let findAndReplaceInWorkspace… = Shortcut(id: "findAndReplaceInWorkspace:", key: .O, modifiers: [.command])
        //    static let findAndSelectNext = Shortcut(id: "findAndSelectNext:", key: .O, modifiers: [.command])
        //    static let findAndSelectPrevious = Shortcut(id: "findAndSelectPrevious:", key: .O, modifiers: [.command])
        //    static let findNext = Shortcut(id: "findNext:", key: .O, modifiers: [.command])
