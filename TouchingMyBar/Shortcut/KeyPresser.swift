@@ -98,7 +98,7 @@ enum MasterMind: KeyPresser {
         guard let keyUpEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: false) else {
             fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
         }
-        
+
         funnyContext.selectedKeyboardInputSource = Constants.Configuration.usKeyboardLayout
         Thread.sleep(forTimeInterval: 1.0e-2) // See this enum description.
 
