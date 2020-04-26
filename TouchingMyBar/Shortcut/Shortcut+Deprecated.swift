@@ -8,13 +8,55 @@
 
 import Foundation
 
+/// Xcode's default shortcuts, as static constants.
+/// (Is it a good idea to have them as static constants? Wouldn't something like JSON be better? Or static 'Dictionary[String : Shortcut]'?)
+/// Lines that are commented out don't have default shortcuts.
+/// (OR HAVEN'T BEEN MANUALLY ASSIGNED YET!!! Delete this once we're finished with the manual labor)
 extension Shortcut {
-    /// Xcode's default shortcuts, as static constants.
-       // (Is it a good idea to have them as static constants? Wouldn't something like JSON be better? Or static 'Dictionary[String : Shortcut]'?)
-       // Lines that are commented out don't have default shortcuts.
-       // (OR HAVEN'T BEEN MANUALLY ASSIGNED YET!!! Delete this once we're finished with the manual labor)
-       static let showDataModelInspector = Shortcut(id: "showInspectorWithChoiceFromSender:", key: .keypad4, modifiers: [.option, .command])
-       static let showMappingModelInspector = Shortcut(id: "showInspectorWithChoiceFromSender:", key: .keypad4, modifiers: [.option, .command])
+
+    static let showDataModelInspector = Shortcut(id: "showInspectorWithChoiceFromSender:", key: .keypad4, modifiers: [.option, .command])
+    static let showMappingModelInspector = Shortcut(id: "showInspectorWithChoiceFromSender:", key: .keypad4, modifiers: [.option, .command])
+    static let zoomIn = Shortcut(id: "GPUDebugger_zoomInCounterGraph:", key: .keypadPlus, modifiers: [.command])
+    static let zoomOut = Shortcut(id: "GPUDebugger_zoomOutCounterGraph:", key: .keypadMinus, modifiers: [.command])
+    static let focusSelection = Shortcut(id: "focusSelectedNodeAction:", key: .F, modifiers: [.option])
+    static let showComponentsInspector = Shortcut(id: "showInspectorWithChoiceFromSender:", key: .keypad6, modifiers: [.option, .command])
+    static let findInWorkspace = Shortcut(iconData: nil, id: "findInWorkspace:", key: .F, modifiers: [.shift, .command])
+    static let openQuickly = Shortcut(id: "openQuickly:", key: .O, modifiers: [.command, .shift])
+    static let open = Shortcut(id: "openDocument:", key: .O, modifiers: [.command])
+    static let showCodeReview = Shortcut(id: "_toggleShowCodeReviewForEditor:", key: .returnKey, modifiers: [.command,.shift,.option])
+
+
+    // there are 4 different "addDocumentation:" shortcuts: one for playgrounds, one for asset catalog comparison etc.
+    // how do we handle that???
+    static let addDocumentation = Shortcut(
+        iconData: NSImage(named: "Add Documentation")?.tiffRepresentation,
+        id: "addDocumentation:",
+        key: .slash,
+        modifiers: [.option, .command]
+    )
+    static let commentSelection = Shortcut(
+        iconData: NSImage(named: "Comment")?.tiffRepresentation,
+        id: "toggleComments:",
+        key: .slash,
+        modifiers: [.command]
+    )
+    static let editAllInScope = Shortcut(
+        iconData: NSImage(named: "Edit All In Scope")?.tiffRepresentation,
+        id: "toggleTokenizedEditing:",
+        key: .E,
+        modifiers: [.command, .control]
+    )
+    static let fixAllIssues = Shortcut(
+        iconData: NSImage(named: "Fix All In Scope")?.tiffRepresentation,
+        id: "fixAllIssues:",
+        key: .F,
+        modifiers: [.command,.control,.option]
+    )
+    static let jumpToDefinition = Shortcut(
+        iconData: NSImage(named: "Jump To Definition")?.tiffRepresentation,
+        id: "editorContext_jumpToDefinition:",
+        key: .J, modifiers: [.command, .control]
+    )
        // NO_DEFAULT    static let exportGpuCounters = Shortcut(id: "GPUDebugger_exportCounters:", key: /*NO_DEFAULT*/, modifiers: [])
        // NO_DEFAULT    static let hideEmptyCounters = Shortcut(id: "GPUDebugger_hideEmptyCounters:", key: .O, modifiers: [.command])
        // NO_DEFAULT    static let scaleToFit = Shortcut(id: "GPUDebugger_scaleToFit:", key: .O, modifiers: [.command])
@@ -23,14 +65,12 @@ extension Shortcut {
        //   static let selectPrevDrawEncoder = Shortcut(id: "GPUDebugger_selectPrevItem:", key: .leftArrow, modifiers: [.control, .option]) ADD MISSING KEYS TO KEY
 
        // NO_DEFAULT    static let showEmptyCounters = Shortcut(id: "GPUDebugger_showEmptyCounters:", key: .O, modifiers: [.command])
-       static let zoomIn = Shortcut(id: "GPUDebugger_zoomInCounterGraph:", key: .keypadPlus, modifiers: [.command])
-       static let zoomOut = Shortcut(id: "GPUDebugger_zoomOutCounterGraph:", key: .keypadMinus, modifiers: [.command])
+
        // NO_DEFAULT    static let exportMemoryReport… = Shortcut(id: "GPUDebugger_exportMemoryReport:", key: .O, modifiers: [.command])
        // NO_DEFAULT    static let xAxis = Shortcut(id: "alignX:", key: .O, modifiers: [.command])
        // NO_DEFAULT    static let yAxis = Shortcut(id: "alignY:", key: .O, modifiers: [.command])
        // NO_DEFAULT    static let zAxis = Shortcut(id: "alignZ:", key: .O, modifiers: [.command])
        // NO_DEFAULT    static let clearRoll = Shortcut(id: "clearRoll:", key: .O, modifiers: [.command])
-       static let focusSelection = Shortcut(id: "focusSelectedNodeAction:", key: .F, modifiers: [.option])
        // NO_DEFAULT    static let toggleIntertia = Shortcut(id: "toggleIntertia:", key: .O, modifiers: [.command])
        // NO_DEFAULT    static let orthographic = Shortcut(id: "createOrthographicCamera:", key: .O, modifiers: [.command])
        // NO_DEFAULT    static let perspective = Shortcut(id: "createPerspectiveCamera:", key: .O, modifiers: [.command])
@@ -71,7 +111,6 @@ extension Shortcut {
        // NO_DEFAULT   static let hideSelection = Shortcut(id: "hideNodes:", key: .O, modifiers: [.command])
        // NO_DEFAULT   static let flattenSelection = Shortcut(id: "flattenNodes:", key: .O, modifiers: [.command])
        // NO_DEFAULT   static let convertToScenekitFileFormat(.scn) = Shortcut(id: "upgradeToArchivedSceneKitDocumentFileTypeAction:", key: .O, modifiers: [.command])
-       static let showComponentsInspector = Shortcut(id: "showInspectorWithChoiceFromSender:", key: .keypad6, modifiers: [.option, .command])
 
        /* CONTINUE HERE */
 
@@ -269,9 +308,6 @@ extension Shortcut {
        //    static let findAndReplaceInWorkspace… = Shortcut(id: "findAndReplaceInWorkspace:", key: .O, modifiers: [.command])
        //    static let findAndSelectNext = Shortcut(id: "findAndSelectNext:", key: .O, modifiers: [.command])
        //    static let findAndSelectPrevious = Shortcut(id: "findAndSelectPrevious:", key: .O, modifiers: [.command])
-    
-    static let findInWorkspace = Shortcut(iconData: nil, id: "findInWorkspace:", key: .F, modifiers: [.shift, .command])
-
        //    static let findNext = Shortcut(id: "findNext:", key: .O, modifiers: [.command])
        //    static let findPrevious = Shortcut(id: "findPrevious:", key: .O, modifiers: [.command])
        //    static let findSelectedSymbolInWorkspace = Shortcut(id: "findSelectedSymbolInWorkspace:", key: .O, modifiers: [.command])
@@ -300,11 +336,6 @@ extension Shortcut {
        //    static let jumpTo… = Shortcut(id: "jumpToLine:", key: .O, modifiers: [.command])
        //    static let jumpTo… = Shortcut(id: "jumpToLine:", key: .O, modifiers: [.command])
        //    static let jumpTo… = Shortcut(id: "jumpToLine:", key: .O, modifiers: [.command])
-           static let jumpToDefinition = Shortcut(
-            iconData: NSImage(named: "Jump To Definition")?.tiffRepresentation,
-            id: "editorContext_jumpToDefinition:",
-            key: .J, modifiers: [.command, .control]
-            )
        //    static let jumpToDefinition(option) = Shortcut(id: "editorContext_jumpToDefinitionWithAlternate:", key: .O, modifiers: [.command])
        //    static let jumpToDefinition(shift+option) = Shortcut(id: "editorContext_jumpToDefinitionWithShiftPlusAlternate:", key: .O, modifiers: [.command])
        //    static let jumpToInstructionPointer = Shortcut(id: "jumpToInstructionPointer:", key: .O, modifiers: [.command])
@@ -363,12 +394,12 @@ extension Shortcut {
        //    static let workspace… = Shortcut(id: "newWorkspace:", key: .O, modifiers: [.command])
        //    static let selectNextDestination = Shortcut(id: "selectNextDestination:", key: .O, modifiers: [.command])
        //    static let selectNextScheme = Shortcut(id: "selectNextRunContext:", key: .O, modifiers: [.command])
-       static let open = Shortcut(id: "openDocument:", key: .O, modifiers: [.command])
+
        //    static let openIn… = Shortcut(id: "openInAdjacentEditorWithAlternate:", key: .O, modifiers: [.command])
        //    static let openIn… = Shortcut(id: "openInAdjacentEditorWithShiftPlusAlternate:", key: .O, modifiers: [.command])
        //    static let openInNewTab = Shortcut(id: "openInNewTab:", key: .O, modifiers: [.command])
        //    static let openInNewWindow = Shortcut(id: "openInNewWindow:", key: .O, modifiers: [.command])
-       static let openQuickly = Shortcut(id: "openQuickly:", key: .O, modifiers: [.command, .shift])
+
        //    static let openWithExternalEditor = Shortcut(id: "openWithExternalEditor:", key: .O, modifiers: [.command])
        //    static let outline = Shortcut(id: "outline:", key: .O, modifiers: [.command])
        //    static let paragraph = Shortcut(id: "nullParagraph:", key: .O, modifiers: [.command])
@@ -620,16 +651,6 @@ extension Shortcut {
        //    static let showAllResults = Shortcut(id: "menuCmd_showAllResults:", key: .O, modifiers: [.command])
        //    static let showErrorsOnly = Shortcut(id: "menuCmd_showErrorsOnly:", key: .O, modifiers: [.command])
        //    static let showRecentResults = Shortcut(id: "menuCmd_showRecentResults:", key: .O, modifiers: [.command])
-
-       // there are 4 different "addDocumentation:" shortcuts: one for playgrounds, one for asset catalog comparison etc.
-       // how do we handle that???
-       static let addDocumentation = Shortcut(
-         iconData: NSImage(named: "Add Documentation")?.tiffRepresentation,
-         backgroundColor: .blue,
-         id: "addDocumentation:",
-         key: .slash,
-         modifiers: [.option, .command]
-    )
        //     static let addDocumentation = Shortcut(id: "addDocumentation:", key: .slash, modifiers: [.option, .command])
        //     static let addDocumentation = Shortcut(id: "addDocumentation:", key: .slash, modifiers: [.option, .command])
        //     static let addDocumentation = Shortcut(id: "addDocumentation:", key: .slash, modifiers: [.option, .command])
@@ -642,25 +663,13 @@ extension Shortcut {
        //    static let balanceDelimiters = Shortcut(id: "balance:", key: .O, modifiers: [.command])
        //    static let balanceDelimiters = Shortcut(id: "balance:", key: .O, modifiers: [.command])
        //    static let balanceDelimiters = Shortcut(id: "balance:", key: .O, modifiers: [.command])
-       static let commentSelection = Shortcut(
-        iconData: NSImage(named: "Comment")?.tiffRepresentation,
-        backgroundColor: .green,
-        id: "toggleComments:",
-        key: .slash,
-        modifiers: [.command]
-    )
        //    static let commentSelection = Shortcut(id: "toggleComments:", key: .O, modifiers: [.command])
        //    static let commentSelection = Shortcut(id: "toggleComments:", key: .O, modifiers: [.command])
        //    static let commentSelection = Shortcut(id: "toggleComments:", key: .O, modifiers: [.command])
        //    static let decrease = Shortcut(id: "decreaseFontSize:", key: .O, modifiers: [.command])
        //    static let decrease = Shortcut(id: "decreaseFontSize:", key: .O, modifiers: [.command])
        //    static let decrease = Shortcut(id: "decreaseFontSize:", key: .O, modifiers: [.command])
-    static let editAllInScope = Shortcut(
-        iconData: NSImage(named: "Edit All In Scope")?.tiffRepresentation,
-        id: "toggleTokenizedEditing:",
-        key: .E,
-        modifiers: [.command, .control]
-    )
+
        //    static let editAllInScope = Shortcut(id: "toggleTokenizedEditing:", key: .O, modifiers: [.command])
        //    static let editAllInScope = Shortcut(id: "toggleTokenizedEditing:", key: .O, modifiers: [.command])
        //    static let editAllInScope = Shortcut(id: "toggleTokenizedEditing:", key: .O, modifiers: [.command])
@@ -668,12 +677,7 @@ extension Shortcut {
        //    static let errorsOnly = Shortcut(id: "showErrorsOnly:", key: .O, modifiers: [.command])
        //    static let errorsOnly = Shortcut(id: "showErrorsOnly:", key: .O, modifiers: [.command])
        //    static let errorsOnly = Shortcut(id: "showErrorsOnly:", key: .O, modifiers: [.command])
-    static let fixAllIssues = Shortcut(
-        iconData: NSImage(named: "Fix All In Scope")?.tiffRepresentation,
-        id: "fixAllIssues:",
-        key: .F,
-        modifiers: [.command,.control,.option]
-    )
+
        //    static let fixAllIssues = Shortcut(id: "fixAllIssues:", key: .O, modifiers: [.command])
        //    static let fixAllIssues = Shortcut(id: "fixAllIssues:", key: .O, modifiers: [.command])
        //    static let fixAllIssues = Shortcut(id: "fixAllIssues:", key: .O, modifiers: [.command])
@@ -1079,13 +1083,12 @@ extension Shortcut {
        //    static let addConditionalSetting = Shortcut(id: "addConditionalBuildProperty:", key: .O, modifiers: [.command])
        //    static let addCopyBundleResourcesBuildPhase = Shortcut(id: "Xcode3Support_newCopyBundleResourcesBuildPhase:", key: .O, modifiers: [.command])
        //    static let addCopyFilesBuildPhase = Shortcut(id: "Xcode3Support_newCopyFilesBuildPhase:", key: .O, modifiers: [.command])
+       //    static let addRunScriptBuildPhase = Shortcut(id: "Xcode3Support_newRunScriptBuildPhase:", key: .O, modifiers: [.command])
        //    static let addHeadersBuildPhase = Shortcut(id: "Xcode3Support_newCopyHeadersBuildPhase:", key: .O, modifiers: [.command])
        //    static let addLinkBinaryWithLibrariesBuildPhase = Shortcut(id: "Xcode3Support_newLinkBinaryWithLibrariesBuildPhase:", key: .O, modifiers: [.command])
-       //    static let addRunScriptBuildPhase = Shortcut(id: "Xcode3Support_newRunScriptBuildPhase:", key: .O, modifiers: [.command])
        //    static let addTarget… = Shortcut(id: "addTargetToProject:", key: .O, modifiers: [.command])
        //    static let addUser-definedSetting = Shortcut(id: "addUserDefinedBuildProperty:", key: .O, modifiers: [.command])
        //    static let showSettingNames = Shortcut(id: "toggleBuildPropertyNameDisplayMode:", key: .O, modifiers: [.command])
        //    static let showDefinitions = Shortcut(id: "toggleBuildPropertyValueDisplayMode:", key: .O, modifiers: [.command])
        //    static let validateSettings... = Shortcut(id: "showUpgradeProjectSheet:", key: .O, modifiers: [.command])
-       
 }

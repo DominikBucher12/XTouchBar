@@ -21,7 +21,7 @@ protocol KeyPresser {
 /// There goes my darkest developer moment in my 5 year history. After going through about 50 resources how to wait for
 /// `CGEvent.post` to complete yes it does some nasty Async stuff instead, probably queing somewhere in the dark macOS world
 /// I just gave up and put briliant `Thread.sleep(forTimeInterval:)` because spending more than 3 weekends on almost-ready thing
-/// is against my believes (even though I spend much more sometimes when I don't wanna achieve something in a hacky way)
+/// is against my believes (even though I spend much more sometimes when I don't wanna achieve something in a non hacky way)
 /// Anyway this whole project is just hack.
 /// The best way to create this project would be class-dumping the `IDEKit`, `DVTKit` and `IDEFoundation`, Implement almost all the headers
 /// Simulate `IDEApplication` run from there get the `EditorMenuDelegate` instance,
@@ -60,9 +60,6 @@ protocol KeyPresser {
 /// https://lists.apple.com/archives/cocoa-dev/2009/Jun/msg01008.html
 /// https://stackoverflow.com/questions/48588808/waiting-for-an-programmatic-key-press-to-be-processed
 ///
-///
-///
-///
 /// And my thanks goes to this unknown guy https://gist.github.com/osnr/23eb05b4e0bcd335c06361c4fabadd6f
 /// and this one https://github.com/naru-jpn/KeyboardSimulator/blob/master/KeyboardSimulator/Classes/KeyboardSimulator.swift
 /// Also this project helped me as a great documentation https://github.com/shpakovski/MASShortcut
@@ -70,18 +67,19 @@ protocol KeyPresser {
 enum MasterMind: KeyPresser {
 
     /// This is our dummy for Getting `NSTextInputContext`. `NSTextInputContext` is a great way to change users
-    /// input without them knowing (For fun, you can create some macOS app with textField, set them keyboard layout to `Kana` and then watch the
-    /// reactions of the ppl
+    /// input without them knowing (For fun, you can create some macOS app with textField, set them keyboard layout to `QWERTY JIS Layout` to use
+    /// Kana` and then watch the reactions of the ppl 🦹🏼‍♂️
     private static var funnyContext: NSTextInputContext = {
-        let textView = NSTextView()
+        let textView = NSTextView() // Probably too heavy, could only just be object implementing `NSTextInputClient`
         let context = NSTextInputContext(client: textView)
         return context
     }()
 
+    /// Performs a shurtcut.
+    /// - Parameter shortcut: Shortcut instance to get :) Take a look at Shortcut.swift
     static func perform(_ shortcut: Shortcut) {
-        // Then we execute the shortcut:
         let keyCode = shortcut.key.rawValue
-        // (Did try to do some googling, this should never fail unless we really fuckup.)
+
         guard let keyDownEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: true) else {
             fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
         }
@@ -100,8 +98,9 @@ enum MasterMind: KeyPresser {
         guard let keyUpEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: false) else {
             fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
         }
-        self.funnyContext.selectedKeyboardInputSource = "com.apple.keylayout.USInternational-PC"
-        Thread.sleep(forTimeInterval: 1.0e-2) // See this file header. I don't have time to fuck around.
+
+        funnyContext.selectedKeyboardInputSource = Constants.Configuration.usKeyboardLayout
+        Thread.sleep(forTimeInterval: 1.0e-2) // See this enum description.
 
         let flags = keyDownEvent.flags
         keyDownEvent.post(tap: .cgAnnotatedSessionEventTap)
@@ -109,7 +108,7 @@ enum MasterMind: KeyPresser {
         keyUpEvent.flags.insert(flags)
         keyUpEvent.post(tap: .cgAnnotatedSessionEventTap)
 
-        Thread.sleep(forTimeInterval: 1.0e-2) // See this file header. I don't have time to fuck around.
-        self.funnyContext.selectedKeyboardInputSource = UserDefaults.standard.string(forKey: "UserKeyboardLayout")
+        Thread.sleep(forTimeInterval: 1.0e-2) // See this enum description.
+        funnyContext.selectedKeyboardInputSource = UserDefaults.standard.string(forKey: Constants.Configuration.keyboardLayoutKey)
     }
 }

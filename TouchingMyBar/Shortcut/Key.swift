@@ -20,23 +20,16 @@ enum KeyModifier: String, Codable {
     case command
 }
 
+///  !! US keyboard layout (qwerty) by the IDEAL standart.
 /// This enum maps the keys on the keyboard to their corresponding CGKeyEvent values.
-/// Most of the keys assume US keyboard layout (qwerty). There are only few exceptions, like return, tab, "numRowBackTick" etc.
+/// NOTE: There are few exceptions, like return, tab, "numRowBackTick" etc. which are layout-independent.
 /// We assume these key codes stay the same in the future versions of MacOS.
-/// See: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
-///
-/// Note from @buchedom: This is probably pretty retarded. But try youreslf debug `Xcode`
-///  in instruments with SIP disabled or figure out from `IDEKit` private headers how the menu items are called.
-/// I bet you will find this solution pretty awesome afterwards. :D
+/// 
+/// For more info, see:
+///   1) /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
+///   2) https://stackoverflow.com/questions/3202629/where-can-i-find-a-list-of-mac-virtual-key-codes
+///   3) use app "Key Codes" (Mac App Store)
 enum Key: UInt16, Codable {
-    
-    /*
-     For more info, see:
-     1) /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
-     2) https://stackoverflow.com/questions/3202629/where-can-i-find-a-list-of-mac-virtual-key-codes
-     3) use app "Key Codes" (Mac App Store)
-     */
-    
     case A = 0x00
     case B = 0x0B
     case C = 0x08

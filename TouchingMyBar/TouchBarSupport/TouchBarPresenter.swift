@@ -24,8 +24,8 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate {
     }
 
     func makeButton() {
-        let item = NSCustomTouchBarItem(identifier: NSTouchBarItem.Identifier(rawValue: "HelloWorld"))
-        item.view = NSHostingView(rootView: TouchBarContainer().environmentObject(tbMasterController))
+        let item = NSCustomTouchBarItem(identifier: NSTouchBarItem.Identifier(rawValue: "XTouchBar"))
+	item.view = NSHostingView(rootView: TouchBarContainer().environmentObject(tbMasterController))
 
         TouchBarPresenter.shared.touchBar.defaultItemIdentifiers = [item.identifier]
         TouchBarPresenter.shared.touchBar.templateItems = [item]

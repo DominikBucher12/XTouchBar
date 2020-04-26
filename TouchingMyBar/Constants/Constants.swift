@@ -11,6 +11,11 @@ import IOKit
 import SwiftUI
 
 public enum Constants {
+    public enum Configuration {
+        static let keyboardLayoutKey = "UserKeyboardLayout"
+        static let usKeyboardLayout = "com.apple.keylayout.USInternational-PC"
+        static let `default` = "default"
+    }
     public enum TouchBar {
         public static var hasPhysicalEscape: Bool {
             return Constants.TouchBar.isShorterTouchBar()
@@ -24,6 +29,11 @@ public enum Constants {
         /// `There is no API for you to obtain the current available display width.`
         public static var width: CGFloat {
             return Constants.TouchBar.isShorterTouchBar() ? 1004 : 1085
+        }
+
+        /// via https://developer.apple.com/design/human-interface-guidelines/macos/touch-bar/touch-bar-visual-design/
+        public static var youWishMaximumAppRegion: CGFloat {
+            return 685
         }
 
         /// This is really funny way to figure out the Touchbar width :D But here we go :D
@@ -46,7 +56,6 @@ public enum Constants {
 
             return model == .sixteenInch2019NormalKeyboard ? true : false
         }
-
     }
 
     // MARK: - Touchbar elements
@@ -65,6 +74,9 @@ public enum Constants {
 
 // MARK: - TouchBar Support
 
+/// I don't like doing pointer magic, so let's do it more wrong yaay :D
+/// To clarify and quote Apple developer documentation:
+/// `There is no API for you to obtain the current available display width.`
 private enum TouchBarSupportingMacs: String, CaseIterable {
     case thirteenInch2016 = "MacBookPro13,2"
     case thirteenInch2017 = "MacBookPro14,2"

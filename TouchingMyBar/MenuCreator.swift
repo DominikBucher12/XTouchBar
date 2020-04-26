@@ -9,10 +9,14 @@
 import Foundation
 import SwiftUI
 
+/// Always start with a protocol they said.
 protocol MenuCreator {
     func start()
 }
 
+/// Implementation of the Menu
+/// This instance holds everything about the menu
+/// and is present whole time the AppDelegate is present (I am just poor iOS Dev, am I doing it right?)
 class MenuCreatorImpl: MenuCreator {
     private var window: NSWindow?
     private var contentView = PreferencesUI()

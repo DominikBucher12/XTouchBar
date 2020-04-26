@@ -14,13 +14,19 @@ import Carbon
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+<<<<<<< HEAD
     var menuHolder = MenuCreatorImpl(environmentObject: TouchBarPresenter.shared.tbMasterController)
     
+=======
+    var menuHolder: MenuCreator = MenuCreatorImpl()
+
+>>>>>>> 05e1c71... Fix documentation and add scrollView
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         storeCurrentKeyboardLayout()
 
         TouchBarPresenter.shared.clearUpTouchBar()
 		TouchBarPresenter.shared.makeButton()
+
         menuHolder.start()
 
         RegisterXcodeAppearanceObservers()
@@ -63,11 +69,14 @@ private extension AppDelegate {
         }
     }
 
+    /// It's good practice to store this all the time the application is starting up.
+    /// Feature requests for this is welcome. I don't know how much people change the input methods. :)
     func storeCurrentKeyboardLayout() {
         let source = TISCopyCurrentKeyboardInputSource()
         let id: UnsafeMutableRawPointer = TISGetInputSourceProperty(source?.takeRetainedValue(), kTISPropertyInputSourceID)
-        if let keyboardLayout = Unmanaged<AnyObject>.fromOpaque(id).takeUnretainedValue() as? String {
-            UserDefaults.standard.set(keyboardLayout, forKey: "UserKeyboardLayout")
+        guard let keyboardLayout = Unmanaged<AnyObject>.fromOpaque(id).takeUnretainedValue() as? String else {
+            fatalError("You 👽? Cannot get the current keyboard layout. Either you have no keyboard or Apple f'd up.")
         }
+        UserDefaults.standard.set(keyboardLayout, forKey: Constants.Configuration.keyboardLayoutKey)
     }
 }

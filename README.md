@@ -36,7 +36,7 @@ instead of the default one.
 3. Applescript way AKA Legacy way
 - I enjoy writing AppleScript a lot. I would find it most suitable, however I want to keep this clean and consistent and when Xcode changes some menu items, this could lead to
 potentional problems. I haven't try this approach because I don't believe in it's sustainbility. I think the shortcuts is the golden way between Too hard and too easy implementation.
-However I plan overwrite the shortcuts into the `IDEKit` way.
+However I plan overwrite the shortcuts into the `IDEKit` way someday.
 
 
 
