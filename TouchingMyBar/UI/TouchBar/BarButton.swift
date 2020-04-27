@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BarButton: View {
     let shortcut: Shortcut
-    
+
     var body: some View {
         Button(action: { MasterMind.perform(self.shortcut) }) {
             Image(nsImage: shortcut.icon ?? NSImage(named: "Support")!)//swiftlint:disable:this force_unwrapping

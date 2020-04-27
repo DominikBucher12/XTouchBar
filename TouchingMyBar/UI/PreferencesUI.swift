@@ -11,13 +11,13 @@ import SwiftUI
 struct TouchBar: View {
     @Binding var shortcuts: [Shortcut]
     @Binding var selectedShortcut: Shortcut
-    
+
     var body: some View {
         ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 5)
                 .foregroundColor(.black)
                 .frame(height: 40)
-            
+
             HStack {
                 ForEach(shortcuts) { shortcut in
                     Button(action: { self.selectedShortcut = shortcut }) {
@@ -43,7 +43,7 @@ struct TouchBar: View {
 struct PreferencesUI: View {
     @EnvironmentObject var controller: TouchBarMasterController
     @State private var selectedShortcut: Shortcut = .addDocumentation
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Button(action: { self.controller.shortcuts.removeAll { $0.id == self.selectedShortcut.id } }) {
