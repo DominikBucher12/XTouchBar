@@ -17,7 +17,7 @@ struct BarButton: View {
                 .renderingMode(.original)
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fit)
-                .frame(width: Constants.BarElementWidth.small.rawValue, height: Constants.TouchBar.height, alignment: .center)
+                .frame(width: Constants.BarElementWidth.medium.rawValue, height: Constants.TouchBar.height, alignment: .center)
         }
         .buttonStyle(BarButtonStyle(color: shortcut.backgroundColor))
     }

@@ -14,7 +14,7 @@ struct TouchBarContainer: View {
     
     var body: some View {
         ScrollView(.horizontal) {
-            HStack(alignment: .center, spacing: 10) {
+            HStack(alignment: .center, spacing: 2) {
                 ForEach(controller.shortcuts) { shortcut in
                     BarButton(shortcut: shortcut)
                 }
