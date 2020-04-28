@@ -71,8 +71,7 @@ extension MenuCreatorImpl {
 
     @objc
     func preferences() {
-        guard window == nil else { return }
-        let window = NSWindow(
+        window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 640, height: 480),
             styleMask: [
                 .titled,
@@ -84,12 +83,12 @@ extension MenuCreatorImpl {
             backing: .buffered,
             defer: false
         )
-        window.center()
-        window.title = "Preference"
-        window.titleVisibility = .hidden
-        window.setFrameAutosaveName("Preference")
-        window.contentView = NSHostingView(rootView: contentView.environmentObject(self.tbMasterController))
-        window.makeKeyAndOrderFront(nil)
+        window?.center()
+        window?.title = "Preference"
+        window?.titleVisibility = .hidden
+        window?.setFrameAutosaveName("Preference")
+        window?.contentView = NSHostingView(rootView: contentView.environmentObject(self.tbMasterController))
+        window?.makeKeyAndOrderFront(nil)
     }
 
     @objc
