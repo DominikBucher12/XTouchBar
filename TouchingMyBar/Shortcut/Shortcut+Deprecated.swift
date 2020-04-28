@@ -21,11 +21,17 @@ extension Shortcut {
     static let focusSelection = Shortcut(id: "focusSelectedNodeAction:", key: .F, modifiers: [.option])
     static let showComponentsInspector = Shortcut(id: "showInspectorWithChoiceFromSender:", key: .keypad6, modifiers: [.option, .command])
     static let findInWorkspace = Shortcut(iconData: nil, id: "findInWorkspace:", key: .F, modifiers: [.shift, .command])
-    static let openQuickly = Shortcut(id: "openQuickly:", key: .O, modifiers: [.command, .shift])
+
     static let open = Shortcut(id: "openDocument:", key: .O, modifiers: [.command])
     static let showCodeReview = Shortcut(id: "_toggleShowCodeReviewForEditor:", key: .returnKey, modifiers: [.command,.shift,.option])
     static let findAndReplaceInWorkspace = Shortcut(id: "findAndReplaceInWorkspace:", key: .F, modifiers: [.command, .shift, .option])
 
+    static let openQuickly = Shortcut(
+        iconData: NSImage(named: "Open Quickly")?.tiffRepresentation,
+        id: "openQuickly:",
+        key: .O,
+        modifiers: [.command, .shift]
+    )
 
     // there are 4 different "addDocumentation:" shortcuts: one for playgrounds, one for asset catalog comparison etc.
     // how do we handle that???
