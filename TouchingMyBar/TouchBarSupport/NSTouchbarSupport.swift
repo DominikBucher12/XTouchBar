@@ -7,7 +7,9 @@
 //
 
 extension NSTouchBarItem.Identifier {
+    #warning("Identify problem with identifiers 😓")
     static let controlStripItem = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.controlStrip")
+    static let someItem = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.controlStrip")
 }
 
 /// This function replaces the current touchbar with custom implementation, keep in mind it should be the same touchbar as
@@ -19,6 +21,11 @@ func presentSystemModal(_ touchBar: NSTouchBar!, systemTrayItemIdentifier identi
     NSTouchBar.presentSystemModalTouchBar(touchBar, systemTrayItemIdentifier: identifier)
 }
 
+/// This function replaces the current touchbar with custom implementation, keep in mind it should be the same touchbar as
+/// `TouchBarController.shared.touchbar` otherwise you will have a bad time.
+/// - Parameters:
+///   - touchBar: Touchbar instance which to present
+///   - identifier: The touchbar identifier, should be no other than the app identifier revers dns+touchbar 👮🏻‍♂️
 func presentSystemModal(_ touchBar: NSTouchBar!, placement: Int64, systemTrayItemIdentifier identifier: NSTouchBarItem.Identifier!) {
     NSTouchBar.presentSystemModalTouchBar(touchBar, placement: placement, systemTrayItemIdentifier: identifier)
 }
