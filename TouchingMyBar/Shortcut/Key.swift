@@ -20,7 +20,7 @@ enum KeyModifier: String, Codable {
     case command
 }
 
-///  !! US keyboard layout (qwerty) by the IDEAL standart.
+/// !! US keyboard layout (qwerty) by the IDEAL standart.
 /// This enum maps the keys on the keyboard to their corresponding CGKeyEvent values.
 /// NOTE: There are few exceptions, like return, tab, "numRowBackTick" etc. which are layout-independent.
 /// We assume these key codes stay the same in the future versions of MacOS.

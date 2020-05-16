@@ -19,8 +19,6 @@ struct Configuration: Codable {
     /// `coversFullTouchBar ? [[XTB]] : [[XTB]] [CONTROL STRIP]]`
     var coversFullTouchBar: Bool = false
 
-    #warning("Do not delete before release, let's give @buchedom some credit 😁")
-
     /// Default configuration of the XTouchBar
     /// It should contain all you need and maybe more :)
     static let `default` = Configuration(
@@ -35,8 +33,7 @@ struct Configuration: Codable {
         .findAndReplaceInWorkspace
         ]
     )
-    
-    #warning("Do not delete before release, let's give @jk_kross some credit 😁")
+
     static let krossConfig = Configuration(
         name: "krossConfig",
         shortcuts: [
