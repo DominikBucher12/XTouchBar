@@ -49,7 +49,6 @@ private extension MenuCreatorImpl {
         statusItem.button?.title = "🆇"
 
         let menu = NSMenu(title: "XTouchBar")
-
         statusItem.menu = menu
 
         menuItems.forEach { item in

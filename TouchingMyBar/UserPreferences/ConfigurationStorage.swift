@@ -24,7 +24,6 @@ class ConfigurationStorageImpl: ConfigurationStorage {
     }
 
     func store(configuration: Configuration) throws {
-        // Finally, I am not writing Showmax code, so my codestyle is fresh with ```{ command(); anotherOne() }``` Oneliners, FTW!! 🤟🏻
         // swiftlint:disable:next statement_position
         do { let data = try JSONEncoder().encode(configuration); UserDefaults.standard.set(data, forKey: configuration.name) }
         catch { throw Errors.encodeConfigurationFailure(configuration: configuration) }
