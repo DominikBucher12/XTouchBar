@@ -6,12 +6,6 @@
 //  Copyright © 2020 Dominik Bucher. All rights reserved.
 //
 
-extension NSTouchBarItem.Identifier {
-    #warning("Identify problem with identifiers 😓")
-    static let controlStripItem = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.controlStrip")
-    static let someItem = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.controlStrip")
-}
-
 /// This function replaces the current touchbar with custom implementation, keep in mind it should be the same touchbar as
 /// `TouchBarController.shared.touchbar` otherwise you will have a bad time.
 /// - Parameters:

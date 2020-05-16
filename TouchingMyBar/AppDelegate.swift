@@ -14,14 +14,15 @@ import Carbon
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var menuHolder = MenuCreatorImpl(environmentObject: TouchBarPresenter.shared.tbMasterController)
-    var currentConfiguration: Configuration?
+  var menuHolder = MenuCreatorImpl()
+  var currentConfiguration: Configuration?
+  var touchbarPresenter = TouchBarPresenter()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         storeCurrentKeyboardLayout()
 
-        TouchBarPresenter.shared.clearUpTouchBar()
-		TouchBarPresenter.shared.makeXTouchBar()
+        touchbarPresenter.clearUpTouchBar()
+		touchbarPresenter.makeXTouchBar()
 
         menuHolder.start()
 
@@ -55,15 +56,15 @@ private extension AppDelegate {
     func hideOrShowXTouchBar() {
         DFRSystemModalShowsCloseBoxWhenFrontMost(false)
         guard let appID = NSWorkspace.shared.frontmostApplication?.bundleIdentifier else {
-            TouchBarPresenter.shared.hideXTouchBar()
+            touchbarPresenter.hideXTouchBar()
             return
         }
 
         if appID == Constants.AppIDs.xcode || appID == Constants.AppIDs.xTouchBar {
-            TouchBarPresenter.shared.clearUpTouchBar()
+            touchbarPresenter.clearUpTouchBar()
             
         } else {
-            TouchBarPresenter.shared.hideXTouchBar()
+            touchbarPresenter.hideXTouchBar()
         }
     }
 
