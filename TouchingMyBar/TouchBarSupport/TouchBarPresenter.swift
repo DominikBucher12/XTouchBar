@@ -16,6 +16,21 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     return item
   }()
 
+  static var touchBarIdentifiers: [NSTouchBarItem.Identifier] = [
+       .editorContextJumpToDefinition,
+       .fixAllIssues,
+       .toggleTokenizedEditing,
+       .toggleComments,
+       .addDocumentation,
+       .openQuickly,
+       .findAndReplaceInWorkspace,
+       .showInspectorWithChoiceFromSender,
+       .focusSelectedNodeAction,
+       .GPUDebuggerZoomInCounterGraph,
+       .GPUDebuggerZoomOutCounterGraph,
+       .toggleShowCodeReviewForEditor
+  ]
+
   func clearUpTouchBar() {
     // Note, if you want the touchbar to cover just part of the screen and not hide the right control strip,
     // Use the other implementation which has the dafault parameter of `placement: 0` :)
@@ -32,9 +47,6 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     NSApp.isAutomaticCustomizeTouchBarMenuItemEnabled = true
     #warning("Identify problem with identifiers 😓")
     touchBar?.customizationIdentifier = .xTouchBar
-    //        let item = NSCustomTouchBarItem(identifier: NSTouchBarItem.Identifier(rawValue: "XTouchBar"))
-    //        TouchBarPresenter.shared.touchBar.defaultItemIdentifiers = [item.identifier]
-    //        TouchBarPresenter.shared.touchBar.templateItems = [item]
   }
 
   func addButtonToControlStrip() {
@@ -52,34 +64,8 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     super.init()
     touchBar?.delegate = self
     touchBar?.customizationIdentifier = .xTouchBar
-    touchBar?.customizationAllowedItemIdentifiers =  [
-         .editorContextJumpToDefinition,
-         .fixAllIssues,
-         .toggleTokenizedEditing,
-         .toggleComments,
-         .addDocumentation,
-         .openQuickly,
-         .findAndReplaceInWorkspace,
-         .showInspectorWithChoiceFromSender,
-         .focusSelectedNodeAction,
-         .GPUDebuggerZoomInCounterGraph,
-         .GPUDebuggerZoomOutCounterGraph,
-         .toggleShowCodeReviewForEditor
-    ]
-    touchBar?.defaultItemIdentifiers =  [
-      .editorContextJumpToDefinition,
-      .fixAllIssues,
-      .toggleTokenizedEditing,
-      .toggleComments,
-      .addDocumentation,
-      .openQuickly,
-      .findAndReplaceInWorkspace,
-      .showInspectorWithChoiceFromSender,
-      .focusSelectedNodeAction,
-      .GPUDebuggerZoomInCounterGraph,
-      .GPUDebuggerZoomOutCounterGraph,
-      .toggleShowCodeReviewForEditor
-    ]
+    touchBar?.customizationAllowedItemIdentifiers = TouchBarPresenter.touchBarIdentifiers
+    touchBar?.defaultItemIdentifiers = TouchBarPresenter.touchBarIdentifiers
   }
 }
 
@@ -88,20 +74,13 @@ extension TouchBarPresenter {
 
           switch identifier {
           default:
-            let popoverItem = NSPopoverTouchBarItem(identifier: identifier)
-            popoverItem.customizationLabel = "Something"
-            popoverItem.collapsedRepresentationLabel = "Something"
+            let popoverItem = NSButtonTouchBarItem(identifier: identifier)
+            popoverItem.customizationLabel = "Button swag"
+            popoverItem.title = "My Button"
 
             let secondaryTouchBar = NSTouchBar()
             secondaryTouchBar.delegate = self
-            secondaryTouchBar.defaultItemIdentifiers = [.fixAllIssues]
-
-            // We can setup a different NSTouchBar instance for popoverTouchBar and pressAndHoldTouchBar property
-            // Here we just use the same instance.
-            //
-            popoverItem.pressAndHoldTouchBar = secondaryTouchBar
-            popoverItem.popoverTouchBar = secondaryTouchBar
-
+            secondaryTouchBar.defaultItemIdentifiers = TouchBarPresenter.touchBarIdentifiers
             return popoverItem
           }
       }
