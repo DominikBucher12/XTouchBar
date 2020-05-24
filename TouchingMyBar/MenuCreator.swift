@@ -8,29 +8,25 @@
 
 import Foundation
 import SwiftUI
-
-/// Always start with a protocol they said.
-protocol MenuCreator {
-    func start()
-}
-
 /// Implementation of the Menu
 /// This instance holds everything about the menu
 /// and is present whole time the AppDelegate is present (I am just poor iOS Dev, am I doing it right?)
-class MenuCreatorImpl: MenuCreator {
-    private var window: NSWindow?
+class MenuCreatorImpl {
+  private var window: NSWindow?
+  var presenter: TouchBarPresenter?
 
-    private var appMenu: NSMenu! // swiftlint:disable:this implicitly_unwrapped_optional
-    private var statusItem: NSStatusItem! // swiftlint:disable:this implicitly_unwrapped_optional
-    private let menuItems: [NSMenuItem] = [
-        NSMenuItem(title: "Exit application", action: #selector(exit), keyEquivalent: ""),
-        NSMenuItem(title: "About", action: #selector(about), keyEquivalent: ""),
-        NSMenuItem(title: "Preferences", action: #selector(preferences), keyEquivalent: "")
-    ]
+  private var appMenu: NSMenu! // swiftlint:disable:this implicitly_unwrapped_optional
+  private var statusItem: NSStatusItem! // swiftlint:disable:this implicitly_unwrapped_optional
+  private let menuItems: [NSMenuItem] = [
+    NSMenuItem(title: "Exit application", action: #selector(exit), keyEquivalent: ""),
+    NSMenuItem(title: "About", action: #selector(about), keyEquivalent: ""),
+    NSMenuItem(title: "Preferences", action: #selector(preferences), keyEquivalent: "")
+  ]
 
-    func start() {
-        setupMenuIcon()
-    }
+  func start(with presenter: TouchBarPresenter) {
+    setupMenuIcon()
+    self.presenter = presenter
+  }
 }
 
 // MARK: Setting up menu.
@@ -64,27 +60,12 @@ extension MenuCreatorImpl {
 
     @objc
     func preferences() {
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 640, height: 480),
-            styleMask: [
-                .titled,
-                .closable,
-                .miniaturizable,
-                .resizable,
-                .fullSizeContentView
-            ],
-            backing: .buffered,
-            defer: false
-        )
-        window?.center()
-        window?.title = "Preference"
-        window?.titleVisibility = .hidden
-        window?.setFrameAutosaveName("Preference")
-        window?.makeKeyAndOrderFront(nil)
+      NSApp.touchBar = presenter?.touchBar
+      NSApplication.shared.toggleTouchBarCustomizationPalette(presenter)
     }
 
     @objc
     func exit() {
-        NSApplication.shared.terminate(nil)
+      NSApplication.shared.terminate(nil)
     }
 }

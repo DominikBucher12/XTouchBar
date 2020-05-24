@@ -19,14 +19,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   var touchbarPresenter = TouchBarPresenter()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        storeCurrentKeyboardLayout()
+      storeCurrentKeyboardLayout()
+      touchbarPresenter.clearUpTouchBar()
+      touchbarPresenter.makeTouchBar()
+      menuHolder.start(with: touchbarPresenter)
 
-        touchbarPresenter.clearUpTouchBar()
-		touchbarPresenter.makeXTouchBar()
-
-        menuHolder.start()
-
-        RegisterXcodeAppearanceObservers()
+      RegisterXcodeAppearanceObservers()
     }
 }
 // MARK: - Xcode observations

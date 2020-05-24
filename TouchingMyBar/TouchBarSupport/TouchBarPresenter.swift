@@ -5,10 +5,9 @@
 //  Created by Dominik Bucher on 06/04/2020.
 //  Copyright © 2020 Dominik Bucher. All rights reserved.
 //
-import SwiftUI
 
-class TouchBarPresenter: NSObject, NSTouchBarDelegate {
-  public let touchBar = NSTouchBar()
+class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
+  public var touchBar: NSTouchBar? = NSTouchBar()
 
   private lazy var item: NSTouchBarItem = {
     let item = NSCustomTouchBarItem(identifier: .controlStripItem)
@@ -25,12 +24,14 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate {
   }
 
   func hideXTouchBar() {
-    dismissSystemModal(touchBar)
+    dismissSystemModal(touchBar ?? NSTouchBar())
   }
 
-  func makeXTouchBar() {
+  func makeTouchBar() {
+    // To make native-like customization, we need to enable this.
+    NSApp.isAutomaticCustomizeTouchBarMenuItemEnabled = true
     #warning("Identify problem with identifiers 😓")
-    touchBar.customizationIdentifier = .xTouchBar
+    touchBar?.customizationIdentifier = .xTouchBar
     //        let item = NSCustomTouchBarItem(identifier: NSTouchBarItem.Identifier(rawValue: "XTouchBar"))
     //        TouchBarPresenter.shared.touchBar.defaultItemIdentifiers = [item.identifier]
     //        TouchBarPresenter.shared.touchBar.templateItems = [item]
@@ -49,8 +50,23 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate {
   }
   public override init() {
     super.init()
-    touchBar.delegate = self
-    touchBar.defaultItemIdentifiers = [
+    touchBar?.delegate = self
+    touchBar?.customizationIdentifier = .xTouchBar
+    touchBar?.customizationAllowedItemIdentifiers =  [
+         .editorContextJumpToDefinition,
+         .fixAllIssues,
+         .toggleTokenizedEditing,
+         .toggleComments,
+         .addDocumentation,
+         .openQuickly,
+         .findAndReplaceInWorkspace,
+         .showInspectorWithChoiceFromSender,
+         .focusSelectedNodeAction,
+         .GPUDebuggerZoomInCounterGraph,
+         .GPUDebuggerZoomOutCounterGraph,
+         .toggleShowCodeReviewForEditor
+    ]
+    touchBar?.defaultItemIdentifiers =  [
       .editorContextJumpToDefinition,
       .fixAllIssues,
       .toggleTokenizedEditing,
@@ -65,4 +81,28 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate {
       .toggleShowCodeReviewForEditor
     ]
   }
+}
+
+extension TouchBarPresenter {
+ func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
+
+          switch identifier {
+          default:
+            let popoverItem = NSPopoverTouchBarItem(identifier: identifier)
+            popoverItem.customizationLabel = "Something"
+            popoverItem.collapsedRepresentationLabel = "Something"
+
+            let secondaryTouchBar = NSTouchBar()
+            secondaryTouchBar.delegate = self
+            secondaryTouchBar.defaultItemIdentifiers = [.fixAllIssues]
+
+            // We can setup a different NSTouchBar instance for popoverTouchBar and pressAndHoldTouchBar property
+            // Here we just use the same instance.
+            //
+            popoverItem.pressAndHoldTouchBar = secondaryTouchBar
+            popoverItem.popoverTouchBar = secondaryTouchBar
+
+            return popoverItem
+          }
+      }
 }
