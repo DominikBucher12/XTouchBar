@@ -8,5 +8,5 @@
 
 import Foundation
 protocol ConfigurationMapper {
-    func map(configuration: Configuration) -> Any?
+  func map(configuration: Configuration) -> Any?
 }

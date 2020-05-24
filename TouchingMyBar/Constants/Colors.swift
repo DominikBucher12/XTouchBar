@@ -9,10 +9,10 @@
 import Foundation
 
 public enum Colors: Int, Codable {
-    case gray = 0
-    case red
-    case green
-    case blue
-    case yellow
-    case purple
+  case gray = 0
+  case red
+  case green
+  case blue
+  case yellow
+  case purple
 }

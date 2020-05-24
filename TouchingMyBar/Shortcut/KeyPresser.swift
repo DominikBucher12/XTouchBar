@@ -9,9 +9,9 @@
 /// Protocol which has only one thing to do -> Perform shortcut command.
 /// This should be responsible only to call the shortcut.
 protocol KeyPresser {
-    /// Performs  given shortcut on input with propriate modifiers like `cmd`, `shift`...
-    /// - Parameter shortcut: `Shortcut` instance.
-    static func perform(_ shortcut: Shortcut)
+  /// Performs  given shortcut on input with propriate modifiers like `cmd`, `shift`...
+  /// - Parameter shortcut: `Shortcut` instance.
+  static func perform(_ shortcut: Shortcut)
 }
 
 #warning("Before release go through history and probably make some list of articles to thank.")
@@ -66,49 +66,49 @@ protocol KeyPresser {
 ///
 enum MasterMind: KeyPresser {
 
-    /// This is our dummy for Getting `NSTextInputContext`. `NSTextInputContext` is a great way to change users
-    /// input without them knowing (For fun, you can create some macOS app with textField, set them keyboard layout to `QWERTY JIS Layout` to use
-    /// Kana` and then watch the reactions of the ppl 🦹🏼‍♂️
-    private static var funnyContext: NSTextInputContext = {
-        let textView = NSTextView() // Probably too heavy, could only just be object implementing `NSTextInputClient`
-        let context = NSTextInputContext(client: textView)
-        return context
-    }()
+  /// This is our dummy for Getting `NSTextInputContext`. `NSTextInputContext` is a great way to change users
+  /// input without them knowing (For fun, you can create some macOS app with textField, set them keyboard layout to `QWERTY JIS Layout` to use
+  /// Kana` and then watch the reactions of the ppl 🦹🏼‍♂️
+  private static var funnyContext: NSTextInputContext = {
+    let textView = NSTextView() // Probably too heavy, could only just be object implementing `NSTextInputClient`
+    let context = NSTextInputContext(client: textView)
+    return context
+  }()
 
-    /// Performs a shurtcut.
-    /// - Parameter shortcut: Shortcut instance to get :) Take a look at Shortcut.swift
-    static func perform(_ shortcut: Shortcut) {
-        let keyCode = shortcut.key.rawValue
+  /// Performs a shurtcut.
+  /// - Parameter shortcut: Shortcut instance to get :) Take a look at Shortcut.swift
+  static func perform(_ shortcut: Shortcut) {
+    let keyCode = shortcut.key.rawValue
 
-        guard let keyDownEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: true) else {
-            fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
-        }
-
-        for modifier in shortcut.modifiers {
-            switch modifier {
-            case .shift: keyDownEvent.flags.insert(.maskShift)
-            case .control: keyDownEvent.flags.insert(.maskControl)
-            case .option: keyDownEvent.flags.insert(.maskAlternate)
-            case .command: keyDownEvent.flags.insert(.maskCommand)
-            }
-        }
-
-        // Don't forget to be a good platform citizen
-        // and "lift the fingers" of the virtual keyboard!
-        guard let keyUpEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: false) else {
-            fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
-        }
-
-        funnyContext.selectedKeyboardInputSource = Constants.Configuration.usKeyboardLayout
-        Thread.sleep(forTimeInterval: 1.0e-2) // See this enum description.
-
-        let flags = keyDownEvent.flags
-        keyDownEvent.post(tap: .cgAnnotatedSessionEventTap)
-
-        keyUpEvent.flags.insert(flags)
-        keyUpEvent.post(tap: .cgAnnotatedSessionEventTap)
-
-        Thread.sleep(forTimeInterval: 1.0e-2) // See this enum description.
-        funnyContext.selectedKeyboardInputSource = UserDefaults.standard.string(forKey: Constants.Configuration.keyboardLayoutKey)
+    guard let keyDownEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: true) else {
+      fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
     }
+
+    for modifier in shortcut.modifiers {
+      switch modifier {
+      case .shift: keyDownEvent.flags.insert(.maskShift)
+      case .control: keyDownEvent.flags.insert(.maskControl)
+      case .option: keyDownEvent.flags.insert(.maskAlternate)
+      case .command: keyDownEvent.flags.insert(.maskCommand)
+      }
+    }
+
+    // Don't forget to be a good platform citizen
+    // and "lift the fingers" of the virtual keyboard!
+    guard let keyUpEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: false) else {
+      fatalError("\(#function) ducked up. Somehow Creating CGEvent failed. Check the keyCode: \(keyCode)")
+    }
+
+    funnyContext.selectedKeyboardInputSource = Constants.Configuration.usKeyboardLayout
+    Thread.sleep(forTimeInterval: 1.0e-2) // See this enum description.
+
+    let flags = keyDownEvent.flags
+    keyDownEvent.post(tap: .cgAnnotatedSessionEventTap)
+
+    keyUpEvent.flags.insert(flags)
+    keyUpEvent.post(tap: .cgAnnotatedSessionEventTap)
+
+    Thread.sleep(forTimeInterval: 1.0e-2) // See this enum description.
+    funnyContext.selectedKeyboardInputSource = UserDefaults.standard.string(forKey: Constants.Configuration.keyboardLayoutKey)
+  }
 }

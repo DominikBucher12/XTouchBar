@@ -12,7 +12,7 @@
 ///   - touchBar: Touchbar instance which to present
 ///   - identifier: The touchbar identifier, should be no other than the app identifier revers dns+touchbar 👮🏻‍♂️
 func presentSystemModal(_ touchBar: NSTouchBar!, systemTrayItemIdentifier identifier: NSTouchBarItem.Identifier!) {
-    NSTouchBar.presentSystemModalTouchBar(touchBar, systemTrayItemIdentifier: identifier)
+  NSTouchBar.presentSystemModalTouchBar(touchBar, systemTrayItemIdentifier: identifier)
 }
 
 /// This function replaces the current touchbar with custom implementation, keep in mind it should be the same touchbar as
@@ -21,15 +21,15 @@ func presentSystemModal(_ touchBar: NSTouchBar!, systemTrayItemIdentifier identi
 ///   - touchBar: Touchbar instance which to present
 ///   - identifier: The touchbar identifier, should be no other than the app identifier revers dns+touchbar 👮🏻‍♂️
 func presentSystemModal(_ touchBar: NSTouchBar!, placement: Int64, systemTrayItemIdentifier identifier: NSTouchBarItem.Identifier!) {
-    NSTouchBar.presentSystemModalTouchBar(touchBar, placement: placement, systemTrayItemIdentifier: identifier)
+  NSTouchBar.presentSystemModalTouchBar(touchBar, placement: placement, systemTrayItemIdentifier: identifier)
 }
 
 func dismissSystemModal(_ touchBar: NSTouchBar) {
-    NSTouchBar.dismissSystemModalTouchBar(touchBar)
+  NSTouchBar.dismissSystemModalTouchBar(touchBar)
 }
 
 /// Minimize the system touchbar, make it go away, you don't want this :D
 /// - Parameter touchBar: The touchbar to minimize.
 func minimizeSystemModal(_ touchBar: NSTouchBar!) {
-    NSTouchBar.minimizeSystemModalTouchBar(touchBar)
+  NSTouchBar.minimizeSystemModalTouchBar(touchBar)
 }

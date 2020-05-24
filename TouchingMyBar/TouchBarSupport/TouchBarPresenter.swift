@@ -17,16 +17,16 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
   }()
 
   static var touchBarIdentifiers: [NSTouchBarItem.Identifier] = [
-       .editorContextJumpToDefinition,
-       .fixAllIssues,
-       .toggleTokenizedEditing,
-       .toggleComments,
-       .addDocumentation,
-       .openQuickly,
-       .findAndReplaceInWorkspace,
-       .GPUDebuggerZoomInCounterGraph,
-       .GPUDebuggerZoomOutCounterGraph,
-       .toggleShowCodeReviewForEditor
+    .editorContextJumpToDefinition,
+    .fixAllIssues,
+    .toggleTokenizedEditing,
+    .toggleComments,
+    .addDocumentation,
+    .openQuickly,
+    .findAndReplaceInWorkspace,
+    .GPUDebuggerZoomInCounterGraph,
+    .GPUDebuggerZoomOutCounterGraph,
+    .toggleShowCodeReviewForEditor
   ]
 
   static var itemsDictionary: [NSTouchBarItem.Identifier: Shortcut] = [
@@ -46,7 +46,7 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     // Note, if you want the touchbar to cover just part of the screen and not hide the right control strip,
     // Use the other implementation which has the dafault parameter of `placement: 0` :)
     presentSystemModal(touchBar, placement: 0, systemTrayItemIdentifier: .controlStripItem)
-//    addButtonToControlStrip()
+    //    addButtonToControlStrip()
   }
 
   func hideXTouchBar() {

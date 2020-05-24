@@ -2,7 +2,7 @@
 //  Shortcut.swift
 //  TouchingMyBar
 //
-//  Created by Jan Kříž on 08/04/2020.
+//  Created by Dominik Bucher on 08/04/2020.
 //  Copyright © 2020 Dominik Bucher. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 /// In here, we divide the shortcut into actual pure keys (like letters, numbers, commas...)
 /// and modifiers (The fancy keys like `cmd`, `control`, `shift`, `alt`)
 class Shortcut: NSObject, Identifiable {
-
+  
   /// Icon for the shortcut to present on touchbar.
   /// is being made from the data of the image
   var icon: NSImage? {
@@ -20,7 +20,7 @@ class Shortcut: NSObject, Identifiable {
     image?.resizingMode = .stretch
     return image
   }
-
+  
   /// We want to store the icon inside `UserDefaults`, that's why we use this "hack"
   /// to store and fetch data of the image.
   private let iconData: Data?
@@ -36,7 +36,7 @@ class Shortcut: NSObject, Identifiable {
   let modifiers: Set<KeyModifier>
   /// Description used for Customization pallete used by touchbar. :)
   let itemDescription: String
-
+  
   /// Why Swift cannot handle optional property in structs with default initializer? Very sad times.
   public init(
     iconData: Data? = nil,
@@ -53,9 +53,9 @@ class Shortcut: NSObject, Identifiable {
     self.modifiers = modifiers
     self.itemDescription = itemDescription
   }
-
+  
   // MARK: Decodable
-
+  
   required init(from decoder: Decoder) throws {
     let values = try decoder.container(keyedBy: CodingKeys.self)
     iconData = try? values.decode(Data.self, forKey: .iconData)
@@ -65,12 +65,12 @@ class Shortcut: NSObject, Identifiable {
     modifiers = try values.decode(Set<KeyModifier>.self, forKey: .modifiers)
     itemDescription = try values.decode(String.self, forKey: .itemDescription)
   }
-
+  
   // MARK: Encodable
-
+  
   func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: CodingKeys.self)
-
+    
     try container.encode(iconData, forKey: .iconData)
     try container.encode(backgroundColor, forKey: .backgroundColor)
     try container.encode(id, forKey: .id)
@@ -78,7 +78,7 @@ class Shortcut: NSObject, Identifiable {
     try container.encode(modifiers, forKey: .modifiers)
     try container.encode(description, forKey: .itemDescription)
   }
-
+  
   @objc
   public func runSelf() {
     MasterMind.perform(self)
@@ -88,7 +88,7 @@ class Shortcut: NSObject, Identifiable {
 // MARK: - Codable
 
 extension Shortcut: Codable {
-
+  
   enum CodingKeys: String, CodingKey {
     case iconData
     case backgroundColor

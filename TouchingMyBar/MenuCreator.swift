@@ -40,7 +40,7 @@ private extension MenuCreatorImpl {
 
     let menu = NSMenu(title: "XTouchBar")
     statusItem.menu = menu
-    
+
     menuItems.forEach { item in
       item.target = self
       menu.addItem(item)
