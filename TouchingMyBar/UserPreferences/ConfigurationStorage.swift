@@ -10,6 +10,7 @@
 /// It has 2 basic functions, load and store the configuration.
 /// I guess no documentation to this is needed :)
 /// Nothing else matters ♫
+#warning("Probably not needed? Touchbar private API handles this for us somehow.")
 protocol ConfigurationStorage {
   func store(configuration: Configuration) throws
   func loadConfiguration(with name: String) throws -> Configuration

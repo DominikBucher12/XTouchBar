@@ -7,6 +7,7 @@
 //
 
 import Foundation
+#warning("Probably not needed? Touchbar private API handles this for us somehow.")
 protocol ConfigurationMapper {
   func map(configuration: Configuration) -> Any?
 }

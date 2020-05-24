@@ -9,6 +9,7 @@
 /// User-defined configuration
 /// Consists of name and the shortcuts which the user wants to use
 /// on his beautiful touchbar.
+#warning("Probably not needed? Touchbar private API handles this for us somehow.")
 struct Configuration: Codable {
   /// Name of the config
   var name: String
