@@ -38,14 +38,14 @@ private extension AppDelegate {
       NSWorkspace.didLaunchApplicationNotification,
       NSWorkspace.didTerminateApplicationNotification,
       NSWorkspace.didActivateApplicationNotification
-      ]
-      .forEach {
-        NSWorkspace.shared.notificationCenter.addObserver(
-          self,
-          selector: #selector(hideOrShowXTouchBar),
-          name: $0,
-          object: nil
-        )
+    ]
+    .forEach {
+      NSWorkspace.shared.notificationCenter.addObserver(
+        self,
+        selector: #selector(hideOrShowXTouchBar),
+        name: $0,
+        object: nil
+      )
     }
   }
 
