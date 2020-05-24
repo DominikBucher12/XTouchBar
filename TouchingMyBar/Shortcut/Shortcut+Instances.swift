@@ -18,69 +18,69 @@ extension Shortcut {
     id: "showInspectorWithChoiceFromSender:",
     key: .keypad4,
     modifiers: [.option, .command],
-    description: "Shows data model inspector"
+    itemDescription: "Shows data model inspector"
   )
   static let showMappingModelInspector = Shortcut(
     id: "showInspectorWithChoiceFromSender:",
     key: .keypad4,
     modifiers: [.option, .command],
-    description: "Shows mapping model inspector"
+    itemDescription: "Shows mapping model inspector"
   )
   static let zoomIn = Shortcut(
     id: "GPUDebugger_zoomInCounterGraph:",
     key: .keypadPlus,
     modifiers: [.command],
-    description: "Zooms in"
+    itemDescription: "Zooms in"
   )
   static let zoomOut = Shortcut(
     id: "GPUDebugger_zoomOutCounterGraph:",
     key: .keypadMinus,
     modifiers: [.command],
-    description: "Zooms out"
+    itemDescription: "Zooms out"
   )
   static let focusSelection = Shortcut(
     id: "focusSelectedNodeAction:",
     key: .F,
     modifiers: [.option],
-    description: "Focuses selection "
+    itemDescription: "Focuses selection "
   )
   static let showComponentsInspector = Shortcut(
     id: "showInspectorWithChoiceFromSender:",
     key: .keypad6,
     modifiers: [.option, .command],
-    description: "Shows components inspector"
+    itemDescription: "Shows components inspector"
   )
   static let findInWorkspace = Shortcut(
     iconData: nil,
     id: "findInWorkspace:",
     key: .F,
     modifiers: [.shift, .command],
-    description: "Find in workspace"
+    itemDescription: "Find in workspace"
   )
   static let open = Shortcut(
     id: "openDocument:",
     key: .O,
     modifiers: [.command],
-    description: "Open document (slowly)"
+    itemDescription: "Open document (slowly)"
   )
   static let showCodeReview = Shortcut(
     id: "_toggleShowCodeReviewForEditor:",
     key: .returnKey,
-    modifiers: [.command,.shift,.option],
-    description: "Show code review"
+    modifiers: [.command, .shift, .option],
+    itemDescription: "Show code review"
   )
   static let findAndReplaceInWorkspace = Shortcut(
     id: "findAndReplaceInWorkspace:",
     key: .F,
     modifiers: [.command, .shift, .option],
-    description: "Find and replace in workspace"
+    itemDescription: "Find and replace in workspace"
   )
   static let openQuickly = Shortcut(
     iconData: NSImage(named: "Open Quickly")?.tiffRepresentation,
     id: "openQuickly:",
     key: .O,
     modifiers: [.command, .shift],
-    description: "Open quickly document"
+    itemDescription: "Open quickly document"
   )
   // there are 4 different "addDocumentation:" shortcuts: one for playgrounds, one for asset catalog comparison etc.
   // how do we handle that???
@@ -89,34 +89,34 @@ extension Shortcut {
     id: "addDocumentation:",
     key: .slash,
     modifiers: [.option, .command],
-    description: "Add documentation"
+    itemDescription: "Add documentation"
   )
   static let commentSelection = Shortcut(
     iconData: NSImage(named: "Comment")?.tiffRepresentation,
     id: "toggleComments:",
     key: .slash,
     modifiers: [.command],
-    description: "Comment selection"
+    itemDescription: "Comment selection"
   )
   static let editAllInScope = Shortcut(
     iconData: NSImage(named: "Edit All In Scope")?.tiffRepresentation,
     id: "toggleTokenizedEditing:",
     key: .E,
     modifiers: [.command, .control],
-    description: "Edit all in scope"
+    itemDescription: "Edit all in scope"
   )
   static let fixAllIssues = Shortcut(
     iconData: NSImage(named: "Fix All In Scope")?.tiffRepresentation,
     id: "fixAllIssues:",
     key: .F,
     modifiers: [.command,.control,.option],
-    description: "Fix all in scope"
+    itemDescription: "Fix all in scope"
   )
   static let jumpToDefinition = Shortcut(
     iconData: NSImage(named: "Jump To Definition")?.tiffRepresentation,
     id: "editorContext_jumpToDefinition:",
     key: .J, modifiers: [.command, .control],
-    description: "Jump to definition"
+    itemDescription: "Jump to definition"
   )
 
   // NO_DEFAULT    static let exportGpuCounters = Shortcut(id: "GPUDebugger_exportCounters:", key: /*NO_DEFAULT*/, modifiers: [])

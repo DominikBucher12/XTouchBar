@@ -10,7 +10,7 @@
 /// In real life, shortcut consists of some keys (like `cmd + a`, or `cmd + shift + o`)
 /// In here, we divide the shortcut into actual pure keys (like letters, numbers, commas...)
 /// and modifiers (The fancy keys like `cmd`, `control`, `shift`, `alt`)
-struct Shortcut: Identifiable, Hashable {
+class Shortcut: NSObject, Identifiable {
 
   /// Icon for the shortcut to present on touchbar.
   /// is being made from the data of the image
@@ -35,7 +35,7 @@ struct Shortcut: Identifiable, Hashable {
   /// Set because it's fancy and doesn't contain duplicates
   let modifiers: Set<KeyModifier>
   /// Description used for Customization pallete used by touchbar. :)
-  let description: String
+  let itemDescription: String
 
   /// Why Swift cannot handle optional property in structs with default initializer? Very sad times.
   public init(
@@ -44,41 +44,26 @@ struct Shortcut: Identifiable, Hashable {
     id: String,
     key: Key,
     modifiers: Set<KeyModifier>,
-    description: String
+    itemDescription: String
   ) {
     self.iconData = iconData
     self.backgroundColor = backgroundColor
     self.id = id
     self.key = key
     self.modifiers = modifiers
-    self.description = description
-  }
-
-}
-
-// MARK: - Codable
-
-extension Shortcut: Codable {
-
-  enum CodingKeys: String, CodingKey {
-    case iconData
-    case backgroundColor
-    case id
-    case key
-    case modifiers
-    case description
+    self.itemDescription = itemDescription
   }
 
   // MARK: Decodable
 
-  init(from decoder: Decoder) throws {
+  required init(from decoder: Decoder) throws {
     let values = try decoder.container(keyedBy: CodingKeys.self)
     iconData = try? values.decode(Data.self, forKey: .iconData)
     backgroundColor = try values.decode(Colors.self, forKey: .backgroundColor)
     id = try values.decode(String.self, forKey: .id)
     key = try values.decode(Key.self, forKey: .key)
     modifiers = try values.decode(Set<KeyModifier>.self, forKey: .modifiers)
-    description = try values.decode(String.self, forKey: .description)
+    itemDescription = try values.decode(String.self, forKey: .itemDescription)
   }
 
   // MARK: Encodable
@@ -91,6 +76,25 @@ extension Shortcut: Codable {
     try container.encode(id, forKey: .id)
     try container.encode(key.rawValue, forKey: .key)
     try container.encode(modifiers, forKey: .modifiers)
-    try container.encode(description, forKey: .description)
+    try container.encode(description, forKey: .itemDescription)
+  }
+
+  @objc
+  public func runSelf() {
+    MasterMind.perform(self)
+  }
+}
+
+// MARK: - Codable
+
+extension Shortcut: Codable {
+
+  enum CodingKeys: String, CodingKey {
+    case iconData
+    case backgroundColor
+    case id
+    case key
+    case modifiers
+    case itemDescription
   }
 }

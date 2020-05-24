@@ -31,41 +31,41 @@ class MenuCreatorImpl {
 
 // MARK: Setting up menu.
 private extension MenuCreatorImpl {
-    private func setupMenuIcon() {
-        statusItem = NSStatusBar.system.statusItem(withLength: -1)
+  private func setupMenuIcon() {
+    statusItem = NSStatusBar.system.statusItem(withLength: -1)
 
-        let statusBar = NSStatusBar.system
-        statusItem = statusBar.statusItem(withLength: NSStatusItem.squareLength)
-        statusItem.button?.title = "🆇"
+    let statusBar = NSStatusBar.system
+    statusItem = statusBar.statusItem(withLength: NSStatusItem.squareLength)
+    statusItem.button?.title = "🆇"
 
-        let menu = NSMenu(title: "XTouchBar")
-        statusItem.menu = menu
-
-        menuItems.forEach { item in
-            item.target = self
-            menu.addItem(item)
-        }
-        appMenu = menu
+    let menu = NSMenu(title: "XTouchBar")
+    statusItem.menu = menu
+    
+    menuItems.forEach { item in
+      item.target = self
+      menu.addItem(item)
     }
+    appMenu = menu
+  }
 }
 
 // MARK: Actions
 
 extension MenuCreatorImpl {
 
-    @objc
-    func about() {
-        // Show Support
-    }
+  @objc
+  func about() {
+    // Show Support
+  }
 
-    @objc
-    func preferences() {
-      NSApp.touchBar = presenter?.touchBar
-      NSApplication.shared.toggleTouchBarCustomizationPalette(presenter)
-    }
+  @objc
+  func preferences() {
+    NSApp.touchBar = presenter?.touchBar
+    NSApplication.shared.toggleTouchBarCustomizationPalette(presenter)
+  }
 
-    @objc
-    func exit() {
-      NSApplication.shared.terminate(nil)
-    }
+  @objc
+  func exit() {
+    NSApplication.shared.terminate(nil)
+  }
 }

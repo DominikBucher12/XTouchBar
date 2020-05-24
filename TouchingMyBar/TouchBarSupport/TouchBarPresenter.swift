@@ -9,9 +9,9 @@
 class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
   public var touchBar: NSTouchBar? = NSTouchBar()
 
+  #warning("This functionality is a bit hacky. Use at your own risk.")
   private lazy var item: NSTouchBarItem = {
     let item = NSCustomTouchBarItem(identifier: .controlStripItem)
-    #warning("Figure out the icon for this, I like cats :D")
     item.view = NSButton(title: "🐈", target: self, action: #selector(presentTouchBarOverFullContext))
     return item
   }()
@@ -24,18 +24,29 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
        .addDocumentation,
        .openQuickly,
        .findAndReplaceInWorkspace,
-       .showInspectorWithChoiceFromSender,
-       .focusSelectedNodeAction,
        .GPUDebuggerZoomInCounterGraph,
        .GPUDebuggerZoomOutCounterGraph,
        .toggleShowCodeReviewForEditor
+  ]
+
+  static var itemsDictionary: [NSTouchBarItem.Identifier: Shortcut] = [
+    .editorContextJumpToDefinition: Shortcut.jumpToDefinition,
+    .fixAllIssues: Shortcut.fixAllIssues,
+    .toggleTokenizedEditing: Shortcut.editAllInScope,
+    .toggleComments: Shortcut.commentSelection,
+    .addDocumentation: Shortcut.addDocumentation,
+    .openQuickly: Shortcut.openQuickly,
+    .findAndReplaceInWorkspace: Shortcut.findAndReplaceInWorkspace,
+    .GPUDebuggerZoomInCounterGraph: Shortcut.zoomIn,
+    .GPUDebuggerZoomOutCounterGraph: Shortcut.zoomOut,
+    .toggleShowCodeReviewForEditor: Shortcut.showCodeReview
   ]
 
   func clearUpTouchBar() {
     // Note, if you want the touchbar to cover just part of the screen and not hide the right control strip,
     // Use the other implementation which has the dafault parameter of `placement: 0` :)
     presentSystemModal(touchBar, placement: 0, systemTrayItemIdentifier: .controlStripItem)
-    addButtonToControlStrip()
+//    addButtonToControlStrip()
   }
 
   func hideXTouchBar() {
@@ -44,8 +55,8 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
 
   func makeTouchBar() {
     // To make native-like customization, we need to enable this.
+    // Really works 2 times out of 5, but we have to live with that I guess...
     NSApp.isAutomaticCustomizeTouchBarMenuItemEnabled = true
-    #warning("Identify problem with identifiers 😓")
     touchBar?.customizationIdentifier = .xTouchBar
   }
 
@@ -70,18 +81,19 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
 }
 
 extension TouchBarPresenter {
- func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
+  func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
 
-          switch identifier {
-          default:
-            let popoverItem = NSButtonTouchBarItem(identifier: identifier)
-            popoverItem.customizationLabel = "Button swag"
-            popoverItem.title = "My Button"
+    guard let shortcut = TouchBarPresenter.itemsDictionary[identifier] else { return nil }
 
-            let secondaryTouchBar = NSTouchBar()
-            secondaryTouchBar.delegate = self
-            secondaryTouchBar.defaultItemIdentifiers = TouchBarPresenter.touchBarIdentifiers
-            return popoverItem
-          }
-      }
+    let touchbarItem = NSButtonTouchBarItem(identifier: identifier)
+    touchbarItem.customizationLabel = shortcut.itemDescription
+    touchbarItem.image = shortcut.icon
+    touchbarItem.target = shortcut
+    touchbarItem.action = #selector(shortcut.runSelf)
+
+    let touchBarToReplace = NSTouchBar()
+    touchBarToReplace.delegate = self
+    touchBarToReplace.defaultItemIdentifiers = TouchBarPresenter.touchBarIdentifiers
+    return touchbarItem
+  }
 }
