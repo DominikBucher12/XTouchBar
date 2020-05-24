@@ -52,7 +52,6 @@ private extension AppDelegate {
   /// Pretty self-explanatory. Hides or shows Xtouchbar, see `RegisterXcodeAppearanceObservers()`'s documentations for more info.
   @objc
   func hideOrShowXTouchBar() {
-    DFRSystemModalShowsCloseBoxWhenFrontMost(false)
     guard let appID = NSWorkspace.shared.frontmostApplication?.bundleIdentifier else {
       touchbarPresenter.hideXTouchBar()
       return

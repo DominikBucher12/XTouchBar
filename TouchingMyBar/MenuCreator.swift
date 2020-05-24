@@ -8,12 +8,15 @@
 
 import Foundation
 import SwiftUI
+
 /// Implementation of the Menu
 /// This instance holds everything about the menu
 /// and is present whole time the AppDelegate is present (I am just poor iOS Dev, am I doing it right?)
 class MenuCreatorImpl {
   private var window: NSWindow?
-  var presenter: TouchBarPresenter?
+
+  private var presenter: TouchBarPresenter?
+  private var touchbarIsVisible = false
 
   private var appMenu: NSMenu! // swiftlint:disable:this implicitly_unwrapped_optional
   private var statusItem: NSStatusItem! // swiftlint:disable:this implicitly_unwrapped_optional
@@ -61,11 +64,57 @@ extension MenuCreatorImpl {
   @objc
   func preferences() {
     NSApp.touchBar = presenter?.touchBar
-    NSApplication.shared.toggleTouchBarCustomizationPalette(presenter)
+    addCustomizationObservers()
+    // WTF is with this :D :D
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
+      NSApplication.shared.toggleTouchBarCustomizationPalette(self.presenter)
+    }
   }
 
   @objc
   func exit() {
     NSApplication.shared.terminate(nil)
+  }
+
+  // MARK: - Black magic
+  // don't ask me how this works, spent too much time searching for documentation which doesn't exist.
+  @objc
+  func willEnterCustomization(_ notification: NSNotification) {
+    if let touchbar = presenter?.touchBar,
+       touchbarIsVisible {
+      dismissSystemModal(touchbar)
+      touchbarIsVisible = false
+    }
+  }
+
+  @objc
+  func didExitCustomization(_ notification: NSNotification) {
+    NSApp.touchBar = nil
+    removeCustomizationObservers()
+    presenter?.clearUpTouchBar()
+    presenter?.makeTouchBar()
+    touchbarIsVisible = true
+  }
+}
+
+private extension MenuCreatorImpl {
+  private func addCustomizationObservers() {
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(willEnterCustomization(_:)),
+                                           name: NSNotification.Name("NSTouchBarWillEnterCustomization"),
+                                           object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(didExitCustomization(_:)),
+                                           name: NSNotification.Name("NSTouchBarDidExitCustomization"),
+                                           object: nil)
+  }
+
+  private func removeCustomizationObservers() {
+    NotificationCenter.default.removeObserver(self,
+                                              name: NSNotification.Name("NSTouchBarWillEnterCustomization"),
+                                              object: nil)
+    NotificationCenter.default.removeObserver(self,
+                                              name: NSNotification.Name("NSTouchBarDidExitCustomization"),
+                                              object: nil)
   }
 }
