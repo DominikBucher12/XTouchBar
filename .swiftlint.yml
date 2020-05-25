@@ -47,11 +47,11 @@ opt_in_rules:
 
 excluded:
  - Pods
- - TouchingMyBarTests
- - TouchingMyBar/Keys/Key.swift
- - TouchingMyBar/TouchBarSupport/NSTouchbarSupport.swift
- - TouchingMyBar/Keys/Shortcut.swift
- - TouchingMyBar/Shortcut/Shortcut+Instances.swift
+ - XTouchBarTests
+ - XTouchBar/Keys/Key.swift
+ - XTouchBar/TouchBarSupport/NSTouchbarSupport.swift
+ - XTouchBar/Keys/Shortcut.swift
+ - XTouchBar/Shortcut/Shortcut+Instances.swift
 
 custom_rules:
     maximum_one_space:
