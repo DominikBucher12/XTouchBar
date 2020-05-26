@@ -25,4 +25,6 @@ public extension NSTouchBarItem.Identifier {
   static let GPUDebuggerZoomInCounterGraph = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.GPUDebugger_zoomInCounterGraph:")
   static let GPUDebuggerZoomOutCounterGraph = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.GPUDebugger_zoomOutCounterGraph:")
   static let toggleShowCodeReviewForEditor = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar._toggleShowCodeReviewForEditor:")
+  static let foldCode = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.fold:")
+  static let unfoldCode = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.unfold:")
 }

@@ -119,6 +119,20 @@ extension Shortcut {
     itemDescription: "Jump to definition"
   )
 
+  static let fold = Shortcut(
+    id: "fold:",
+    key: .leftArrow,
+    modifiers: [.command, .option],
+    itemDescription: "Fold code"
+  )
+
+  static let unfold = Shortcut(
+    id: "unfold:",
+    key: .rightArrow,
+    modifiers: [.command, .option],
+    itemDescription: "Unfold code"
+  )
+
   // NO_DEFAULT    static let exportGpuCounters = Shortcut(id: "GPUDebugger_exportCounters:", key: /*NO_DEFAULT*/, modifiers: [])
   // NO_DEFAULT    static let hideEmptyCounters = Shortcut(id: "GPUDebugger_hideEmptyCounters:", key: .O, modifiers: [.command])
   // NO_DEFAULT    static let scaleToFit = Shortcut(id: "GPUDebugger_scaleToFit:", key: .O, modifiers: [.command])
@@ -746,7 +760,6 @@ extension Shortcut {
   //    static let fold = Shortcut(id: "fold:", key: .O, modifiers: [.command])
   //    static let fold = Shortcut(id: "fold:", key: .O, modifiers: [.command])
   //    static let fold = Shortcut(id: "fold:", key: .O, modifiers: [.command])
-  //    static let fold = Shortcut(id: "fold:", key: .O, modifiers: [.command])
   //    static let foldCommentBlocks = Shortcut(id: "foldAllComments:", key: .O, modifiers: [.command])
   //    static let foldCommentBlocks = Shortcut(id: "foldAllComments:", key: .O, modifiers: [.command])
   //    static let foldCommentBlocks = Shortcut(id: "foldAllComments:", key: .O, modifiers: [.command])
@@ -905,7 +918,6 @@ extension Shortcut {
   //    static let showIssue = Shortcut(id: "toggleIssueShown:", key: .O, modifiers: [.command])
   //    static let showIssue = Shortcut(id: "toggleIssueShown:", key: .O, modifiers: [.command])
   //    static let showIssue = Shortcut(id: "toggleIssueShown:", key: .O, modifiers: [.command])
-  //    static let unfold = Shortcut(id: "unfold:", key: .O, modifiers: [.command])
   //    static let unfold = Shortcut(id: "unfold:", key: .O, modifiers: [.command])
   //    static let unfold = Shortcut(id: "unfold:", key: .O, modifiers: [.command])
   //    static let unfold = Shortcut(id: "unfold:", key: .O, modifiers: [.command])

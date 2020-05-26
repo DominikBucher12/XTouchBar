@@ -22,7 +22,6 @@ class MenuCreatorImpl {
   private var statusItem: NSStatusItem! // swiftlint:disable:this implicitly_unwrapped_optional
   private let menuItems: [NSMenuItem] = [
     NSMenuItem(title: "Exit application", action: #selector(exit), keyEquivalent: ""),
-    NSMenuItem(title: "About", action: #selector(about), keyEquivalent: ""),
     NSMenuItem(title: "Preferences", action: #selector(preferences), keyEquivalent: "")
   ]
 
@@ -55,11 +54,6 @@ private extension MenuCreatorImpl {
 // MARK: Actions
 
 extension MenuCreatorImpl {
-
-  @objc
-  func about() {
-    // Show Support
-  }
 
   @objc
   func preferences() {

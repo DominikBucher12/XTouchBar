@@ -1,14 +1,82 @@
 # XTouchBar
 Making proper use of Touchbar inside Xcode.
 
-# How this works?
+# How to use this
 
-## TL;DR
-Basically keylogger which wil blow up your macbook. and call shortcuts on fly.
+**Before everything, if you are using any other keyboard than the one with American-US layout, add this keyboard as secondary inside you keyboard options**
+
+Go to:
+Settings -> Keyboard -> Input Sources -> click on plus and ADD  `American international - PC`.
+After you added this keyboard you should be able to use this app.
+
+The reason why this is needed is that I was only able to get the  `US keyboard layout (qwerty) GOLDEN STANDART KEY ADDRESSES`
+(Look at `Key.swift`) from where I call the shortcut. Look down at `TL;DR` section if you wanna learn more.
+
+### Now to the use...
+Just run the application and... Let it work for you. For the first time you might need to enable something in accessibility to let this app press the keys.
+I won't tell you to enable it, but I recommend you to do so :D But it's up to you now.
+This application has build in system which observes which application is currently on foreground and according to it, 
+it sets the touchbar application on foreground. So whenever you need
+some shortcut which you don't remember, this touchbar tool is there for you :) Also if you don't like it and rather use the native 
+debug touchbar screen, you can always dismiss it. Whenever you come back to the application, it will pop right back to be presented again.
+If you don't find any of the given shortcut on the list, feel free to add it inside `Shortcut+Instances.swift`
+
+## How to add shortcut
+1. Uncomment it in `Shortcut+Instances.swift` (Don't worry, I dumped all the shortcuts with script, not manually :D )
+2. When you uncomment it, put it below the active shortcuts which are at the top of the file
+3. Optionally, you can add item 
+4. After that add some `itemDescription` for `TouchBarCustomizationPallete` and assign it the right shortcut (Probably from Xcode Settings)
+5. Add custom `NSTouchBarItem.Identifier` in `TouchBar+Identifiers.swift` (Follow for example add documentation)
+6. Add the identifier together with the shortcut to `touchBarIdentifiers` and `itemsDictionary` inside `TouchBar+Identifiers`
+7. You can now use this shortcut in the `TouchBarCustomizationPallete`!
+
 
 ## TS;WM
+Basically keylogger which wil blow up your macbook, call shortcuts on fly and help you more with your workflow :) 
 
-It's really simple. The first thing to do is to class-dump private Touchbar API from `AppKit` I really would love to know what `DFR` Prefix means, but let's put that aside :D
+## Known limitations:
+- Is useless for macs without touchbar 🤪
+- The UI For Touchbar customization is not working properly and I know it. Working on a fix.
+- There are missing icons for some touchbar items. Work in progress I guess ¯\_(ツ)_/¯
+- A lot of shortcuts is missing. but **YOU** can help me with that. :) 
+- No tests. This is very sad, but eventually I will get into that when this is fully working. 
+
+## Special thanks to
+There goes my special thanks to [JK_Kross](https://twitter.com/JK_Kross) who at that time wasn't employed as iOS Dev but music teacher and did a great job by acompanying me in this project :) 
+
+Guys at [MTMR](https://github.com/Toxblh/MTMR) from which I took inspiration, but not the code :)
+
+[Megg](http://instagram.com/meggi_lindova) on Instagram for providing me some icons for some actions. :)   
+
+This would be great honor to me because I never tought it is possible to make some return at least at money for the time I spend on
+some tool.
+
+## TODO:
+- [x] Add missing "virtual keys" (like arrow keys) to Key.swift
+- [ ] Add more sophisticated handling of setting the keyboard back to its default layout (Multithreading wtf??)
+- [x] Finish the PropertyListParser (handle "<key>Text Key Bindings</key>" as well)
+- [x] Transform Strings received from the parser into our Shortcut data model
+- [x] Detect when Xcode is topmost application (focused), probably AppleScript is our friend :D
+- [X] Create some mechanism that users can change to shortcuts on go.
+- [ ] Create some intuitive icon-set for the shortcuts etc like add documentation...
+- [x] Create collection for the buttons and assign to the buttons the given shortcuts.
+- [x] Figure out how to call shortcuts to desired Xcode features
+- [ ] Bonus, should go with previous point: Custom Xcode extensions. (Shouldn't be too hard since it's just dumb shortcut-caller)
+- [ ] Impossible bonus -> Create someUI that user can drag'n'drop items into XTouchBar
+- [ ] Restructurize the app so it's readable.
+- [ ] Add tests for the components
+- [ ] Figure out wtf is with `NSApplication.shared.toggleTouchBarCustomizationPalette(self.presenter)` so it is smoother UX.
+- [x] Add Swiftlint to format a style a bit :)
+
+If you want to support this project, feel free to send some coffee money to [this link](https://www.paypal.me/develodom) 
+If you don't want to spend money, you can still support me if you will share this tool with your colleagues and tell them how nice it is :D 
+
+Oh yeah and, take a look at [guys at Showmax](https://tech.showmax.com), they are doing really cool stuff in a great way :) 
+
+## TL;DR
+
+### How this project works.
+The first thing to do is to class-dump private Touchbar API from `AppKit` I really would love to know what `DFR` Prefix means, but let's put that aside :D
 After we got this API, we can do pretty much what we want with the touchbar. We can replace the whole touchbar screen, or just the part we are supposed to, replace the
 control buttons, add Nyan cat etc. You can read more inside `TouchBarPresenter`, `TouchBarPrivateAPI.h` and `AppDelegate`.
 
@@ -44,24 +112,3 @@ keys and their addresses. There is this nice object `KeyPresser` which virtually
 by `KeyPresser`.  Things get pretty interesting when user has his custom keybindings defined at `~/Library/Developer/Xcode/UserData/KeyBindings/`.
 Then we need to parse the `idekeybinding` file and map the identifiers with different keys into our system and override the default ones. After we do that, we just call the overriden shortcut
 instead of the default one.
-
-
-## Special thanks to
-There goes my special thanks to [JK_Kross](https://twitter.com/JK_Kross) who at that time wasn't employed as iOS Dev but music teacher and did a great job on this project :)
-Guys at [MTMR](https://github.com/Toxblh/MTMR) from which I took inspiration, but not the code :)
-[Megg](http://instagram.com/meggi_lindova) on Instagram for providing me some icons for some actions. :)   
-
-## TODO:
-- [x] Add missing "virtual keys" (like arrow keys) to Key.swift
-- [ ] Add more sophisticated handling of setting the keyboard back to its default layout (Multithreading wtf??)
-- [x] Finish the PropertyListParser (handle "<key>Text Key Bindings</key>" as well)
-- [x] Transform Strings received from the parser into our Shortcut data model
-- [x] Detect when Xcode is topmost application (focused), probably AppleScript is our friend :D
-- [ ] Create some mechanism that users can change to shortcuts on go.
-- [ ] Create some intuitive icon-set for the shortcuts etc like add documentation...
-- [x] Create collection for the buttons and assign to the buttons the given shortcuts.
-- [x] Figure out how to call shortcuts to desired Xcode features
-- [ ] Bonus, should go with previous point: Custom Xcode extensions.
-- [ ] Impossible bonus -> Create someUI that user can drag'n'drop items into XTouchBar
-- [ ] Restructurize the app so it's readable.
-- [x] Add Swiftlint to format a style a bit :)

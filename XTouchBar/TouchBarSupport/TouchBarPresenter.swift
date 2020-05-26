@@ -26,7 +26,9 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     .findAndReplaceInWorkspace,
     .GPUDebuggerZoomInCounterGraph,
     .GPUDebuggerZoomOutCounterGraph,
-    .toggleShowCodeReviewForEditor
+    .toggleShowCodeReviewForEditor,
+    .unfoldCode,
+    .foldCode
   ]
 
   static var itemsDictionary: [NSTouchBarItem.Identifier: Shortcut] = [
@@ -39,7 +41,9 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     .findAndReplaceInWorkspace: Shortcut.findAndReplaceInWorkspace,
     .GPUDebuggerZoomInCounterGraph: Shortcut.zoomIn,
     .GPUDebuggerZoomOutCounterGraph: Shortcut.zoomOut,
-    .toggleShowCodeReviewForEditor: Shortcut.showCodeReview
+    .toggleShowCodeReviewForEditor: Shortcut.showCodeReview,
+    .foldCode: Shortcut.fold,
+    .unfoldCode: Shortcut.unfold
   ]
 
   func clearUpTouchBar() {
