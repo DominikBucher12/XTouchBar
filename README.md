@@ -1,7 +1,11 @@
 # XTouchBar
+
 Making proper use of Touchbar inside Xcode.
 
 # How to use this
+
+**Disclaimer**: 
+This tool uses the default shortcuts, if you customized some of your shortcuts, you can customize this easily to your desires.
 
 **Before everything, if you are using any other keyboard than the one with American-US layout, add this keyboard as secondary inside you keyboard options**
 
@@ -52,21 +56,20 @@ This would be great honor to me because I never tought it is possible to make so
 some tool.
 
 ## TODO:
-- [x] Add missing "virtual keys" (like arrow keys) to Key.swift
+- [ ] Create some intuitive icon-set for the shortcuts.
 - [ ] Add more sophisticated handling of setting the keyboard back to its default layout (Multithreading wtf??)
-- [x] Finish the PropertyListParser (handle "<key>Text Key Bindings</key>" as well)
-- [x] Transform Strings received from the parser into our Shortcut data model
-- [x] Detect when Xcode is topmost application (focused), probably AppleScript is our friend :D
-- [X] Create some mechanism that users can change to shortcuts on go.
-- [ ] Create some intuitive icon-set for the shortcuts etc like add documentation...
-- [x] Create collection for the buttons and assign to the buttons the given shortcuts.
-- [x] Figure out how to call shortcuts to desired Xcode features
 - [ ] Bonus, should go with previous point: Custom Xcode extensions. (Shouldn't be too hard since it's just dumb shortcut-caller)
-- [ ] Impossible bonus -> Create someUI that user can drag'n'drop items into XTouchBar
 - [ ] Restructurize the app so it's readable.
-- [ ] Add tests for the components
+- [ ] Add tests for the components and run CI on this.
 - [ ] Figure out wtf is with `NSApplication.shared.toggleTouchBarCustomizationPalette(self.presenter)` so it is smoother UX.
-- [x] Add Swiftlint to format a style a bit :)
+- [X] Add missing "virtual keys" (like arrow keys) to Key.swift
+- [X] Finish the PropertyListParser (handle "<key>Text Key Bindings</key>" as well)
+- [X] Transform Strings received from the parser into our Shortcut data model
+- [X] Detect when Xcode is topmost application (focused), probably AppleScript is our friend :D
+- [X] Create some mechanism that users can change to shortcuts on go.
+- [X] Create collection for the buttons and assign to the buttons the given shortcuts.
+- [X] Figure out how to call shortcuts to desired Xcode features
+- [X] Add Swiftlint to format a style a bit :)
 
 If you want to support this project, feel free to send some coffee money to [this link](https://www.paypal.me/develodom) 
 If you don't want to spend money, you can still support me if you will share this tool with your colleagues and tell them how nice it is :D 
@@ -112,3 +115,5 @@ keys and their addresses. There is this nice object `KeyPresser` which virtually
 by `KeyPresser`.  Things get pretty interesting when user has his custom keybindings defined at `~/Library/Developer/Xcode/UserData/KeyBindings/`.
 Then we need to parse the `idekeybinding` file and map the identifiers with different keys into our system and override the default ones. After we do that, we just call the overriden shortcut
 instead of the default one.
+
+PS. I Hate `IDEKit`.

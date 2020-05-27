@@ -27,4 +27,5 @@ public extension NSTouchBarItem.Identifier {
   static let toggleShowCodeReviewForEditor = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar._toggleShowCodeReviewForEditor:")
   static let foldCode = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.fold:")
   static let unfoldCode = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.unfold:")
+  static let findInSelectedGroups = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.findInSelectedGroups:")
 }

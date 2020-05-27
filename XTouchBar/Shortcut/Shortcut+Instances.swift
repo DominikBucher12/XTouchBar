@@ -133,6 +133,14 @@ extension Shortcut {
     itemDescription: "Unfold code"
   )
 
+  /// Somehow Apple say this is find in selected groups even it's search :D
+  static let findInSelectedGroups = Shortcut(
+  id: "searchInSelectedGroups:",
+  key: .F,
+  modifiers: [.control, .shift],
+  itemDescription: "Search in selected groups"
+  )
+
   // NO_DEFAULT    static let exportGpuCounters = Shortcut(id: "GPUDebugger_exportCounters:", key: /*NO_DEFAULT*/, modifiers: [])
   // NO_DEFAULT    static let hideEmptyCounters = Shortcut(id: "GPUDebugger_hideEmptyCounters:", key: .O, modifiers: [.command])
   // NO_DEFAULT    static let scaleToFit = Shortcut(id: "GPUDebugger_scaleToFit:", key: .O, modifiers: [.command])
@@ -526,7 +534,6 @@ extension Shortcut {
   //    static let save = Shortcut(id: "ide_saveDocument:", key: .O, modifiers: [.command])
   //    static let saveAs… = Shortcut(id: "ide_saveDocumentAs:", key: .O, modifiers: [.command])
   //    static let searchDocumentationForSelectedText = Shortcut(id: "searchDocumentationForSelectedText:", key: .O, modifiers: [.command])
-  //    static let findInSelectedGroups… = Shortcut(id: "searchInSelectedGroups:", key: .O, modifiers: [.command])
   //    static let selectAll = Shortcut(id: "selectAll:", key: .O, modifiers: [.command])
   //    static let selectAllFindMatches = Shortcut(id: "selectAllFindMatches:", key: .O, modifiers: [.command])
   //    static let selectFindMatchesInSelection = Shortcut(id: "selectFindMatchesInSelection:", key: .O, modifiers: [.command])

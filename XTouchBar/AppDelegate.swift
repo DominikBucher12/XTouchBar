@@ -64,10 +64,12 @@ private extension AppDelegate {
       touchbarPresenter.hideXTouchBar()
     }
   }
+  
+  // MARK: - Other stuff
 
   /// It's good practice to store this all the time the application is starting up.
   /// Feature requests for this is welcome. I don't know how much people change the input methods. :)
-  private func storeCurrentKeyboardLayout() {
+  func storeCurrentKeyboardLayout() {
     let source = TISCopyCurrentKeyboardInputSource()
     let id: UnsafeMutableRawPointer = TISGetInputSourceProperty(source?.takeRetainedValue(), kTISPropertyInputSourceID)
     guard let keyboardLayout = Unmanaged<AnyObject>.fromOpaque(id).takeUnretainedValue() as? String else {
