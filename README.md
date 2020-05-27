@@ -55,6 +55,14 @@ Guys at [MTMR](https://github.com/Toxblh/MTMR) from which I took inspiration, bu
 This would be great honor to me because I never tought it is possible to make some return at least at money for the time I spend on
 some tool.
 
+## SUPPORT
+
+If you want to support this project, feel free to send some coffee money to [this link](https://www.paypal.me/develodom) 
+If you don't want to spend money, you can still support me if you will share this tool with your colleagues and tell them how nice it is and
+how it improved your workflow. I personally love to use the documentation button :D:D
+
+Oh yeah and, take a look at [guys at Showmax](https://tech.showmax.com), they are doing really cool stuff in a great way :) 
+
 ## TODO:
 - [ ] Create some intuitive icon-set for the shortcuts.
 - [ ] Add more sophisticated handling of setting the keyboard back to its default layout (Multithreading wtf??)
@@ -71,10 +79,6 @@ some tool.
 - [X] Figure out how to call shortcuts to desired Xcode features
 - [X] Add Swiftlint to format a style a bit :)
 
-If you want to support this project, feel free to send some coffee money to [this link](https://www.paypal.me/develodom) 
-If you don't want to spend money, you can still support me if you will share this tool with your colleagues and tell them how nice it is :D 
-
-Oh yeah and, take a look at [guys at Showmax](https://tech.showmax.com), they are doing really cool stuff in a great way :) 
 
 ## TL;DR
 
