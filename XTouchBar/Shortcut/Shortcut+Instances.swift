@@ -12,27 +12,20 @@ import Foundation
 /// (Is it a good idea to have them as static constants? Wouldn't something like JSON be better? Or static 'Dictionary[String : Shortcut]'?)
 /// Lines that are commented out don't have default shortcuts.
 /// (OR HAVEN'T BEEN MANUALLY ASSIGNED YET!!! Delete this once we're finished with the manual labor)
+/// Or make pull request 🤪
 extension Shortcut {
 
-  static let showDataModelInspector = Shortcut(
-    id: "showInspectorWithChoiceFromSender:",
-    key: .keypad4,
-    modifiers: [.option, .command],
-    itemDescription: "Shows data model inspector"
-  )
-  static let showMappingModelInspector = Shortcut(
-    id: "showInspectorWithChoiceFromSender:",
-    key: .keypad4,
-    modifiers: [.option, .command],
-    itemDescription: "Shows mapping model inspector"
-  )
+  // MARK: - Useful
+
   static let zoomIn = Shortcut(
+    iconData: NSImage(named: "Zoom In")?.tiffRepresentation,
     id: "GPUDebugger_zoomInCounterGraph:",
     key: .keypadPlus,
     modifiers: [.command],
     itemDescription: "Zooms in"
   )
   static let zoomOut = Shortcut(
+    iconData: NSImage(named: "Zoom Out")?.tiffRepresentation,
     id: "GPUDebugger_zoomOutCounterGraph:",
     key: .keypadMinus,
     modifiers: [.command],
@@ -64,6 +57,7 @@ extension Shortcut {
     itemDescription: "Open document (slowly)"
   )
   static let showCodeReview = Shortcut(
+    iconData: NSImage(named: "Show Code Review")?.tiffRepresentation,
     id: "_toggleShowCodeReviewForEditor:",
     key: .returnKey,
     modifiers: [.command, .shift, .option],
@@ -120,6 +114,7 @@ extension Shortcut {
   )
 
   static let fold = Shortcut(
+    iconData: NSImage(named: "Fold Code")?.tiffRepresentation,
     id: "fold:",
     key: .leftArrow,
     modifiers: [.command, .option],
@@ -127,6 +122,7 @@ extension Shortcut {
   )
 
   static let unfold = Shortcut(
+    iconData: NSImage(named: "Unfold Code")?.tiffRepresentation,
     id: "unfold:",
     key: .rightArrow,
     modifiers: [.command, .option],
@@ -135,11 +131,28 @@ extension Shortcut {
 
   /// Somehow Apple say this is find in selected groups even it's search :D
   static let findInSelectedGroups = Shortcut(
-  id: "searchInSelectedGroups:",
-  key: .F,
-  modifiers: [.control, .shift],
-  itemDescription: "Search in selected groups"
+    iconData: NSImage(named: "Find In Selected Groups")?.tiffRepresentation,
+    id: "searchInSelectedGroups:",
+    key: .F,
+    modifiers: [.control, .shift],
+    itemDescription: "Search in selected groups"
   )
+
+
+  // MARK: - Probably useless.
+
+  //  static let showDataModelInspector = Shortcut(
+  //    id: "showInspectorWithChoiceFromSender:",
+  //    key: .keypad4,
+  //    modifiers: [.option, .command],
+  //    itemDescription: "Shows data model inspector"
+  //  )
+  //  static let showMappingModelInspector = Shortcut(
+  //    id: "showInspectorWithChoiceFromSender:",
+  //    key: .keypad4,
+  //    modifiers: [.option, .command],
+  //    itemDescription: "Shows mapping model inspector"
+  //  )
 
   // NO_DEFAULT    static let exportGpuCounters = Shortcut(id: "GPUDebugger_exportCounters:", key: /*NO_DEFAULT*/, modifiers: [])
   // NO_DEFAULT    static let hideEmptyCounters = Shortcut(id: "GPUDebugger_hideEmptyCounters:", key: .O, modifiers: [.command])

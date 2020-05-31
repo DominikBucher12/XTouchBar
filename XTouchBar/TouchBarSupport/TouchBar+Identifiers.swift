@@ -7,7 +7,7 @@
 //
 
 public extension NSTouchBar.CustomizationIdentifier {
-  static let xTouchBar = NSTouchBar.CustomizationIdentifier("com.dominikbucher.Xtouchbar")
+  static let xTouchBar = NSTouchBar.CustomizationIdentifier("com.dominikbucher.XTouchBar.CustomizationIdentifier")
 }
 
 public extension NSTouchBarItem.Identifier {

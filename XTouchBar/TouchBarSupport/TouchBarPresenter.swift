@@ -16,6 +16,17 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     return item
   }()
 
+  static var defaultTouchBarIdentifiers: [NSTouchBarItem.Identifier] = [
+    .fixAllIssues,
+    .toggleTokenizedEditing,
+    .toggleComments,
+    .addDocumentation,
+    .toggleShowCodeReviewForEditor,
+    .unfoldCode,
+    .foldCode,
+    .findInSelectedGroups
+  ]
+
   static var touchBarIdentifiers: [NSTouchBarItem.Identifier] = [
     .editorContextJumpToDefinition,
     .fixAllIssues,
@@ -28,7 +39,8 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     .GPUDebuggerZoomOutCounterGraph,
     .toggleShowCodeReviewForEditor,
     .unfoldCode,
-    .foldCode
+    .foldCode,
+    .findInSelectedGroups
   ]
 
   static var itemsDictionary: [NSTouchBarItem.Identifier: Shortcut] = [
@@ -43,7 +55,8 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     .GPUDebuggerZoomOutCounterGraph: Shortcut.zoomOut,
     .toggleShowCodeReviewForEditor: Shortcut.showCodeReview,
     .foldCode: Shortcut.fold,
-    .unfoldCode: Shortcut.unfold
+    .unfoldCode: Shortcut.unfold,
+    .findInSelectedGroups: Shortcut.findInSelectedGroups
   ]
 
   func clearUpTouchBar() {
@@ -80,13 +93,12 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     touchBar?.delegate = self
     touchBar?.customizationIdentifier = .xTouchBar
     touchBar?.customizationAllowedItemIdentifiers = TouchBarPresenter.touchBarIdentifiers
-    touchBar?.defaultItemIdentifiers = TouchBarPresenter.touchBarIdentifiers
+    touchBar?.defaultItemIdentifiers = TouchBarPresenter.defaultTouchBarIdentifiers
   }
 }
 
 extension TouchBarPresenter {
   func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
-
     guard let shortcut = TouchBarPresenter.itemsDictionary[identifier] else { return nil }
 
     let touchbarItem = NSButtonTouchBarItem(identifier: identifier)
@@ -97,7 +109,7 @@ extension TouchBarPresenter {
 
     let touchBarToReplace = NSTouchBar()
     touchBarToReplace.delegate = self
-    touchBarToReplace.defaultItemIdentifiers = TouchBarPresenter.touchBarIdentifiers
+    touchBarToReplace.defaultItemIdentifiers = TouchBarPresenter.defaultTouchBarIdentifiers
     return touchbarItem
   }
 }

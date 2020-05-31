@@ -6,10 +6,8 @@
 //  Copyright © 2020 Dominik Bucher. All rights reserved.
 //
 
-import Cocoa
-import AppKit
-import SwiftUI
 import Carbon
+import AppKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

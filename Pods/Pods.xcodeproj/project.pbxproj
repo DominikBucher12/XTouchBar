@@ -20,54 +20,54 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		A37E041E7618486983DCAA66464F9FB3 /* Pods-TouchingMyBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D3C62F3492BCB83A2A7CA3844596EB /* Pods-TouchingMyBar-dummy.m */; };
-		B09EEC712B16A729350D2280AE3D91FB /* Pods-TouchingMyBarTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB639E960EA96B6566AB7C7706802383 /* Pods-TouchingMyBarTests-dummy.m */; };
+		B08575DDA352CB3215C5547C9314DC12 /* Pods-XTouchBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C74FBA0603F49CAD71A9DDAC2682 /* Pods-XTouchBar-dummy.m */; };
+		FEFB9E2CA8CD7B730B44B0BA766615C7 /* Pods-XTouchBarTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A700AE83D70F189ECB62C82FE9798F77 /* Pods-XTouchBarTests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F7F8D64E6E714B333533A53E3A3C637D /* PBXContainerItemProxy */ = {
+		3A79241CB1205EC8AD670C96D171AB59 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
 			remoteInfo = SwiftLint;
 		};
-		FBA91C879F7E46F5EA27A2F53D31FE78 /* PBXContainerItemProxy */ = {
+		DC016A228CA2419A62FEA2079396D0A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 007300836D09C31F396592D4A5387110;
-			remoteInfo = "Pods-TouchingMyBar";
+			remoteGlobalIDString = 56E856DCD5E41823E37E98E08566946B;
+			remoteInfo = "Pods-XTouchBar";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11D3C62F3492BCB83A2A7CA3844596EB /* Pods-TouchingMyBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TouchingMyBar-dummy.m"; sourceTree = "<group>"; };
-		1E5D755AF79159898D1D9AA7F86A467E /* Pods-TouchingMyBar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TouchingMyBar-acknowledgements.plist"; sourceTree = "<group>"; };
-		3C7B614AC397EE6F2263B72274DE77E1 /* Pods-TouchingMyBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBar.debug.xcconfig"; sourceTree = "<group>"; };
+		36989BD1411F0C81EDAFC5E43CFF218D /* Pods-XTouchBarTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XTouchBarTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		39065176E91322462EE2A162BCE185F1 /* Pods-XTouchBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTouchBar.release.xcconfig"; sourceTree = "<group>"; };
 		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
-		7EA7B8447B9A40C725244BD403901DE9 /* Pods-TouchingMyBarTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TouchingMyBarTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		49715A1F97FFD4200066B43BE9CB1CA9 /* Pods-XTouchBar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XTouchBar-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5D82B7D93A770485C6FCF4C3FD1EB129 /* Pods-XTouchBar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XTouchBar-acknowledgements.plist"; sourceTree = "<group>"; };
+		73547F150176A840AC45A157ADBF88CE /* libPods-XTouchBarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XTouchBarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		784DCE5723443BE7DD2425B2B5807A58 /* Pods-XTouchBarTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XTouchBarTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
-		89F6AC6ED029920A61733B6F7564F5A9 /* Pods-TouchingMyBarTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TouchingMyBarTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		94972397A7CB6610E9F9C5668135761D /* Pods-TouchingMyBarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBarTests.debug.xcconfig"; sourceTree = "<group>"; };
-		96948982EC18CFB295C964B2C91516D2 /* Pods-TouchingMyBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBar.release.xcconfig"; sourceTree = "<group>"; };
+		8364994B85800C65862E2FADD4F375F3 /* Pods-XTouchBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTouchBarTests.release.xcconfig"; sourceTree = "<group>"; };
+		908B50C6C4CF9B05168C033724A6F1FC /* Pods-XTouchBarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTouchBarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A203363813D1B4AECEAB543D875FDFA9 /* Pods-TouchingMyBar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TouchingMyBar-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D750620B9192F03D0F4C553EA988C357 /* libPods-TouchingMyBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TouchingMyBar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8FBC9A7C08F9ECB9049A2ECC06DDBC1 /* libPods-TouchingMyBarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TouchingMyBarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB639E960EA96B6566AB7C7706802383 /* Pods-TouchingMyBarTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TouchingMyBarTests-dummy.m"; sourceTree = "<group>"; };
-		DD39C58BAA017AB1E059A2F99528F00B /* Pods-TouchingMyBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TouchingMyBarTests.release.xcconfig"; sourceTree = "<group>"; };
+		A700AE83D70F189ECB62C82FE9798F77 /* Pods-XTouchBarTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XTouchBarTests-dummy.m"; sourceTree = "<group>"; };
+		AA65932780D87D8FC27A280A0109D391 /* Pods-XTouchBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTouchBar.debug.xcconfig"; sourceTree = "<group>"; };
+		AEC6C74FBA0603F49CAD71A9DDAC2682 /* Pods-XTouchBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XTouchBar-dummy.m"; sourceTree = "<group>"; };
+		C064338173D8705E0B71C824968CD15D /* libPods-XTouchBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XTouchBar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B38753903694D57020B7D964D76640DA /* Frameworks */ = {
+		39ADC497C23C5A85D209E6458C434646 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7B64E1E2B765938D798BF192E94D933 /* Frameworks */ = {
+		39B2CFB21115E94EA889BCA4AF98CDB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,35 +77,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07A24ADDB55983CCA252278B2C191EA8 /* Targets Support Files */ = {
+		3FBFDF16D1764CA6A5D60151191D9072 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				29708524D5AA9F362DD9EAFCB778C562 /* Pods-TouchingMyBar */,
-				B54B06F6D8E59CF88B22E3DF41A5763C /* Pods-TouchingMyBarTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		29708524D5AA9F362DD9EAFCB778C562 /* Pods-TouchingMyBar */ = {
-			isa = PBXGroup;
-			children = (
-				A203363813D1B4AECEAB543D875FDFA9 /* Pods-TouchingMyBar-acknowledgements.markdown */,
-				1E5D755AF79159898D1D9AA7F86A467E /* Pods-TouchingMyBar-acknowledgements.plist */,
-				11D3C62F3492BCB83A2A7CA3844596EB /* Pods-TouchingMyBar-dummy.m */,
-				3C7B614AC397EE6F2263B72274DE77E1 /* Pods-TouchingMyBar.debug.xcconfig */,
-				96948982EC18CFB295C964B2C91516D2 /* Pods-TouchingMyBar.release.xcconfig */,
-			);
-			name = "Pods-TouchingMyBar";
-			path = "Target Support Files/Pods-TouchingMyBar";
-			sourceTree = "<group>";
-		};
-		2B73B71A72DEBA2E937F5A2DAFF3E757 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D750620B9192F03D0F4C553EA988C357 /* libPods-TouchingMyBar.a */,
-				D8FBC9A7C08F9ECB9049A2ECC06DDBC1 /* libPods-TouchingMyBarTests.a */,
+				C064338173D8705E0B71C824968CD15D /* libPods-XTouchBar.a */,
+				73547F150176A840AC45A157ADBF88CE /* libPods-XTouchBarTests.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		68F8695C1ABC5FE787D5B9CC0D1F4759 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1A872087EDF5804079A641823950A11 /* Pods-XTouchBar */,
+				B3E1B61C672CF2B035F55D4234FEA710 /* Pods-XTouchBarTests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */ = {
@@ -126,17 +113,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B54B06F6D8E59CF88B22E3DF41A5763C /* Pods-TouchingMyBarTests */ = {
+		B1A872087EDF5804079A641823950A11 /* Pods-XTouchBar */ = {
 			isa = PBXGroup;
 			children = (
-				7EA7B8447B9A40C725244BD403901DE9 /* Pods-TouchingMyBarTests-acknowledgements.markdown */,
-				89F6AC6ED029920A61733B6F7564F5A9 /* Pods-TouchingMyBarTests-acknowledgements.plist */,
-				DB639E960EA96B6566AB7C7706802383 /* Pods-TouchingMyBarTests-dummy.m */,
-				94972397A7CB6610E9F9C5668135761D /* Pods-TouchingMyBarTests.debug.xcconfig */,
-				DD39C58BAA017AB1E059A2F99528F00B /* Pods-TouchingMyBarTests.release.xcconfig */,
+				49715A1F97FFD4200066B43BE9CB1CA9 /* Pods-XTouchBar-acknowledgements.markdown */,
+				5D82B7D93A770485C6FCF4C3FD1EB129 /* Pods-XTouchBar-acknowledgements.plist */,
+				AEC6C74FBA0603F49CAD71A9DDAC2682 /* Pods-XTouchBar-dummy.m */,
+				AA65932780D87D8FC27A280A0109D391 /* Pods-XTouchBar.debug.xcconfig */,
+				39065176E91322462EE2A162BCE185F1 /* Pods-XTouchBar.release.xcconfig */,
 			);
-			name = "Pods-TouchingMyBarTests";
-			path = "Target Support Files/Pods-TouchingMyBarTests";
+			name = "Pods-XTouchBar";
+			path = "Target Support Files/Pods-XTouchBar";
+			sourceTree = "<group>";
+		};
+		B3E1B61C672CF2B035F55D4234FEA710 /* Pods-XTouchBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				784DCE5723443BE7DD2425B2B5807A58 /* Pods-XTouchBarTests-acknowledgements.markdown */,
+				36989BD1411F0C81EDAFC5E43CFF218D /* Pods-XTouchBarTests-acknowledgements.plist */,
+				A700AE83D70F189ECB62C82FE9798F77 /* Pods-XTouchBarTests-dummy.m */,
+				908B50C6C4CF9B05168C033724A6F1FC /* Pods-XTouchBarTests.debug.xcconfig */,
+				8364994B85800C65862E2FADD4F375F3 /* Pods-XTouchBarTests.release.xcconfig */,
+			);
+			name = "Pods-XTouchBarTests";
+			path = "Target Support Files/Pods-XTouchBarTests";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -145,8 +145,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				965877409E01FB3D85D85E90E6B30185 /* Pods */,
-				2B73B71A72DEBA2E937F5A2DAFF3E757 /* Products */,
-				07A24ADDB55983CCA252278B2C191EA8 /* Targets Support Files */,
+				3FBFDF16D1764CA6A5D60151191D9072 /* Products */,
+				68F8695C1ABC5FE787D5B9CC0D1F4759 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,14 +168,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2651ACF20F78AFDB576D00574AE8241B /* Headers */ = {
+		645D7B806CEEA4B6F71259E222360C83 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D9C94109208E10C3B404CA945DD071C9 /* Headers */ = {
+		DBF2AF6FD6A11B30F34099AC6719F4BA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,40 +185,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		007300836D09C31F396592D4A5387110 /* Pods-TouchingMyBar */ = {
+		56E856DCD5E41823E37E98E08566946B /* Pods-XTouchBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 653AB8679EFD04BBD6A56A058B514B86 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBar" */;
+			buildConfigurationList = A4A9EC8F049C667EC7727B0630A9FDEF /* Build configuration list for PBXNativeTarget "Pods-XTouchBar" */;
 			buildPhases = (
-				2651ACF20F78AFDB576D00574AE8241B /* Headers */,
-				979322A4F1BCBD25053F6029A0B39111 /* Sources */,
-				B38753903694D57020B7D964D76640DA /* Frameworks */,
+				DBF2AF6FD6A11B30F34099AC6719F4BA /* Headers */,
+				6C9B485B98ED294737073229AF5A73F5 /* Sources */,
+				39ADC497C23C5A85D209E6458C434646 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FDA1FC7D443E39CFA8A213F94A11B827 /* PBXTargetDependency */,
+				C929395D09CEF8D3C86F0CF100B612B0 /* PBXTargetDependency */,
 			);
-			name = "Pods-TouchingMyBar";
-			productName = "Pods-TouchingMyBar";
-			productReference = D750620B9192F03D0F4C553EA988C357 /* libPods-TouchingMyBar.a */;
+			name = "Pods-XTouchBar";
+			productName = "Pods-XTouchBar";
+			productReference = C064338173D8705E0B71C824968CD15D /* libPods-XTouchBar.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		F60B26EA9F1B1FA134D28571121FDB77 /* Pods-TouchingMyBarTests */ = {
+		6F2FC581324FE7C03B08DC0E1B0D35AF /* Pods-XTouchBarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EECDF72377E57647F25552934FCD9127 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBarTests" */;
+			buildConfigurationList = 98E9637069AF86699EEA3809C23015A0 /* Build configuration list for PBXNativeTarget "Pods-XTouchBarTests" */;
 			buildPhases = (
-				D9C94109208E10C3B404CA945DD071C9 /* Headers */,
-				25EE30A0CBEF4428DC2F5E311BAF5AFA /* Sources */,
-				C7B64E1E2B765938D798BF192E94D933 /* Frameworks */,
+				645D7B806CEEA4B6F71259E222360C83 /* Headers */,
+				7E0CA7D1CC388D362A99B42EC82CD589 /* Sources */,
+				39B2CFB21115E94EA889BCA4AF98CDB7 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ABAC4632D800C007C56101A5A24CC307 /* PBXTargetDependency */,
+				F86D533D959CFA7D56BDFF5D4B3B0994 /* PBXTargetDependency */,
 			);
-			name = "Pods-TouchingMyBarTests";
-			productName = "Pods-TouchingMyBarTests";
-			productReference = D8FBC9A7C08F9ECB9049A2ECC06DDBC1 /* libPods-TouchingMyBarTests.a */;
+			name = "Pods-XTouchBarTests";
+			productName = "Pods-XTouchBarTests";
+			productReference = 73547F150176A840AC45A157ADBF88CE /* libPods-XTouchBarTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -228,7 +228,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -239,48 +239,48 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 2B73B71A72DEBA2E937F5A2DAFF3E757 /* Products */;
+			productRefGroup = 3FBFDF16D1764CA6A5D60151191D9072 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				007300836D09C31F396592D4A5387110 /* Pods-TouchingMyBar */,
-				F60B26EA9F1B1FA134D28571121FDB77 /* Pods-TouchingMyBarTests */,
+				56E856DCD5E41823E37E98E08566946B /* Pods-XTouchBar */,
+				6F2FC581324FE7C03B08DC0E1B0D35AF /* Pods-XTouchBarTests */,
 				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		25EE30A0CBEF4428DC2F5E311BAF5AFA /* Sources */ = {
+		6C9B485B98ED294737073229AF5A73F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B09EEC712B16A729350D2280AE3D91FB /* Pods-TouchingMyBarTests-dummy.m in Sources */,
+				B08575DDA352CB3215C5547C9314DC12 /* Pods-XTouchBar-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		979322A4F1BCBD25053F6029A0B39111 /* Sources */ = {
+		7E0CA7D1CC388D362A99B42EC82CD589 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A37E041E7618486983DCAA66464F9FB3 /* Pods-TouchingMyBar-dummy.m in Sources */,
+				FEFB9E2CA8CD7B730B44B0BA766615C7 /* Pods-XTouchBarTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ABAC4632D800C007C56101A5A24CC307 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-TouchingMyBar";
-			target = 007300836D09C31F396592D4A5387110 /* Pods-TouchingMyBar */;
-			targetProxy = FBA91C879F7E46F5EA27A2F53D31FE78 /* PBXContainerItemProxy */;
-		};
-		FDA1FC7D443E39CFA8A213F94A11B827 /* PBXTargetDependency */ = {
+		C929395D09CEF8D3C86F0CF100B612B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLint;
 			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = F7F8D64E6E714B333533A53E3A3C637D /* PBXContainerItemProxy */;
+			targetProxy = 3A79241CB1205EC8AD670C96D171AB59 /* PBXContainerItemProxy */;
+		};
+		F86D533D959CFA7D56BDFF5D4B3B0994 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-XTouchBar";
+			target = 56E856DCD5E41823E37E98E08566946B /* Pods-XTouchBar */;
+			targetProxy = DC016A228CA2419A62FEA2079396D0A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -349,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "-";
@@ -362,11 +363,12 @@
 			};
 			name = Release;
 		};
-		50DD2C22D29A159012F23D2D1D01AB76 /* Debug */ = {
+		3F14A5C403400BE9851D307C990A2345 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94972397A7CB6610E9F9C5668135761D /* Pods-TouchingMyBarTests.debug.xcconfig */;
+			baseConfigurationReference = 908B50C6C4CF9B05168C033724A6F1FC /* Pods-XTouchBarTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -383,28 +385,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
-		};
-		6C9B568F4B2E13E5F246D168C27D24DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96948982EC18CFB295C964B2C91516D2 /* Pods-TouchingMyBar.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
 		};
 		6DC6BBF7D2A721A4E91A75A28EEB8E83 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -470,13 +450,14 @@
 			};
 			name = Debug;
 		};
-		7B07BD51359D5536C75346D630F08626 /* Debug */ = {
+		AA578D325D757F431558CE7420AB50F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C7B614AC397EE6F2263B72274DE77E1 /* Pods-TouchingMyBar.debug.xcconfig */;
+			baseConfigurationReference = AA65932780D87D8FC27A280A0109D391 /* Pods-XTouchBar.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development: Dominik Bucher (6RKSQV6YN6)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -492,10 +473,34 @@
 			};
 			name = Debug;
 		};
+		C315378E2398445B9A4F65552A08DB4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8364994B85800C65862E2FADD4F375F3 /* Pods-XTouchBarTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		C58C9D16B93F5A16ABCC3D064725954E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "-";
@@ -509,13 +514,14 @@
 			};
 			name = Debug;
 		};
-		D410DDFA431040BC95576C855AAA3635 /* Release */ = {
+		C6FAA2F47A6A58FE5D15212CC06B6B93 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD39C58BAA017AB1E059A2F99528F00B /* Pods-TouchingMyBarTests.release.xcconfig */;
+			baseConfigurationReference = 39065176E91322462EE2A162BCE185F1 /* Pods-XTouchBar.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Dominik Bucher (X2MB65427X)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -543,11 +549,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		653AB8679EFD04BBD6A56A058B514B86 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBar" */ = {
+		98E9637069AF86699EEA3809C23015A0 /* Build configuration list for PBXNativeTarget "Pods-XTouchBarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7B07BD51359D5536C75346D630F08626 /* Debug */,
-				6C9B568F4B2E13E5F246D168C27D24DD /* Release */,
+				3F14A5C403400BE9851D307C990A2345 /* Debug */,
+				C315378E2398445B9A4F65552A08DB4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4A9EC8F049C667EC7727B0630A9FDEF /* Build configuration list for PBXNativeTarget "Pods-XTouchBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA578D325D757F431558CE7420AB50F7 /* Debug */,
+				C6FAA2F47A6A58FE5D15212CC06B6B93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -557,15 +572,6 @@
 			buildConfigurations = (
 				C58C9D16B93F5A16ABCC3D064725954E /* Debug */,
 				02B37FD027A1BAF89CC8F8FC486471A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EECDF72377E57647F25552934FCD9127 /* Build configuration list for PBXNativeTarget "Pods-TouchingMyBarTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				50DD2C22D29A159012F23D2D1D01AB76 /* Debug */,
-				D410DDFA431040BC95576C855AAA3635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

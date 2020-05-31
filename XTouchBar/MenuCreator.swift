@@ -74,7 +74,6 @@ extension MenuCreatorImpl {
   // don't ask me how this works, spent too much time searching for documentation which doesn't exist.
   @objc
   func willEnterCustomization(_ notification: NSNotification) {
-     print("Should be called only once??")
     if let touchbar = presenter?.touchBar,
        touchbarIsVisible {
       dismissSystemModal(touchbar)

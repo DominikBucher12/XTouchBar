@@ -8,7 +8,6 @@
 
 import Foundation
 import IOKit
-import SwiftUI
 
 public enum Constants {
   public enum Configuration {

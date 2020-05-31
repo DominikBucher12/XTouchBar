@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE2243E5C330009A015 /* Shortcut.swift */; };
 		38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE4243E5C4B0009A015 /* Key.swift */; };
-		836866AAD0A319CAF6D9ABC2 /* libPods-TouchingMyBarTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4B37778A74C33CCCB608EE /* libPods-TouchingMyBarTests.a */; };
-		BE5B7AA65D85EB6EE701E2B2 /* libPods-TouchingMyBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3837500A5F3AAEE5A34A1935 /* libPods-TouchingMyBar.a */; };
+		DA9155C1D92301000C308933 /* libPods-XTouchBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D2CA2E260FD1DF0ADC0E34 /* libPods-XTouchBar.a */; };
 		E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE39F24103A9D00B9283D /* AppDelegate.swift */; };
 		E72CE3A424103AA000B9283D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A324103AA000B9283D /* Assets.xcassets */; };
 		E72CE3A724103AA000B9283D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CE3A524103AA000B9283D /* Main.storyboard */; };
@@ -29,8 +28,7 @@
 		E7CC787E2447E59D0092AAFF /* KeyPresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC787D2447E59D0092AAFF /* KeyPresser.swift */; };
 		E7DAC10E2437DD17002A1DD9 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; };
 		E7DAC10F2437DD17002A1DD9 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4122437D68B0064C23D /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E7DAC1112437DD18002A1DD9 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		E7DAC1122437DD18002A1DD9 /* IDEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 385EA4162437D6E30064C23D /* IDEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FFEB044AFA6D7225CD1453B7 /* libPods-XTouchBarTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8749E3047755FCE1100C04BB /* libPods-XTouchBarTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +48,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E7DAC1122437DD18002A1DD9 /* IDEKit.framework in Embed Frameworks */,
 				E7DAC10F2437DD17002A1DD9 /* DFRFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -59,16 +56,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3837500A5F3AAEE5A34A1935 /* libPods-TouchingMyBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TouchingMyBar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08EAC9769BAEA2862342770F /* Pods-XTouchBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTouchBar.release.xcconfig"; path = "Target Support Files/Pods-XTouchBar/Pods-XTouchBar.release.xcconfig"; sourceTree = "<group>"; };
 		385EA4122437D68B0064C23D /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		385EA4162437D6E30064C23D /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
 		38C2BCE2243E5C330009A015 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		38C2BCE4243E5C4B0009A015 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		499194A10AFF54D4344A2343 /* Pods-TouchingMyBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchingMyBarTests.release.xcconfig"; path = "Target Support Files/Pods-TouchingMyBarTests/Pods-TouchingMyBarTests.release.xcconfig"; sourceTree = "<group>"; };
-		4F5403DEEDE196A7E62D6453 /* Pods-TouchingMyBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchingMyBar.debug.xcconfig"; path = "Target Support Files/Pods-TouchingMyBar/Pods-TouchingMyBar.debug.xcconfig"; sourceTree = "<group>"; };
-		6AB216570A2349A353488882 /* Pods-TouchingMyBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchingMyBar.release.xcconfig"; path = "Target Support Files/Pods-TouchingMyBar/Pods-TouchingMyBar.release.xcconfig"; sourceTree = "<group>"; };
-		8BBE2176228C717A30E74513 /* Pods-TouchingMyBarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchingMyBarTests.debug.xcconfig"; path = "Target Support Files/Pods-TouchingMyBarTests/Pods-TouchingMyBarTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9F4B37778A74C33CCCB608EE /* libPods-TouchingMyBarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TouchingMyBarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		471B4F47B60A01FB0A2FC13F /* Pods-XTouchBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTouchBar.debug.xcconfig"; path = "Target Support Files/Pods-XTouchBar/Pods-XTouchBar.debug.xcconfig"; sourceTree = "<group>"; };
+		545549BEFF5E2E7942168D63 /* Pods-XTouchBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTouchBarTests.release.xcconfig"; path = "Target Support Files/Pods-XTouchBarTests/Pods-XTouchBarTests.release.xcconfig"; sourceTree = "<group>"; };
+		64D2CA2E260FD1DF0ADC0E34 /* libPods-XTouchBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XTouchBar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8749E3047755FCE1100C04BB /* libPods-XTouchBarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XTouchBarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB8D748B373379DF8FB7DA0 /* Pods-XTouchBarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTouchBarTests.debug.xcconfig"; path = "Target Support Files/Pods-XTouchBarTests/Pods-XTouchBarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E72CE39C24103A9D00B9283D /* XTouchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTouchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72CE39F24103A9D00B9283D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E72CE3A324103AA000B9283D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,9 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7DAC1112437DD18002A1DD9 /* IDEKit.framework in Frameworks */,
 				E7DAC10E2437DD17002A1DD9 /* DFRFoundation.framework in Frameworks */,
-				BE5B7AA65D85EB6EE701E2B2 /* libPods-TouchingMyBar.a in Frameworks */,
+				DA9155C1D92301000C308933 /* libPods-XTouchBar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				836866AAD0A319CAF6D9ABC2 /* libPods-TouchingMyBarTests.a in Frameworks */,
+				FFEB044AFA6D7225CD1453B7 /* libPods-XTouchBarTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,10 +115,10 @@
 		901FDE3EB703680609389540 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4F5403DEEDE196A7E62D6453 /* Pods-TouchingMyBar.debug.xcconfig */,
-				6AB216570A2349A353488882 /* Pods-TouchingMyBar.release.xcconfig */,
-				8BBE2176228C717A30E74513 /* Pods-TouchingMyBarTests.debug.xcconfig */,
-				499194A10AFF54D4344A2343 /* Pods-TouchingMyBarTests.release.xcconfig */,
+				471B4F47B60A01FB0A2FC13F /* Pods-XTouchBar.debug.xcconfig */,
+				08EAC9769BAEA2862342770F /* Pods-XTouchBar.release.xcconfig */,
+				ADB8D748B373379DF8FB7DA0 /* Pods-XTouchBarTests.debug.xcconfig */,
+				545549BEFF5E2E7942168D63 /* Pods-XTouchBarTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -182,8 +178,8 @@
 			children = (
 				385EA4162437D6E30064C23D /* IDEKit.framework */,
 				385EA4122437D68B0064C23D /* DFRFoundation.framework */,
-				3837500A5F3AAEE5A34A1935 /* libPods-TouchingMyBar.a */,
-				9F4B37778A74C33CCCB608EE /* libPods-TouchingMyBarTests.a */,
+				64D2CA2E260FD1DF0ADC0E34 /* libPods-XTouchBar.a */,
+				8749E3047755FCE1100C04BB /* libPods-XTouchBarTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,7 +232,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E72CE3B724103AA100B9283D /* Build configuration list for PBXNativeTarget "XTouchBar" */;
 			buildPhases = (
-				5501ED63D51FF27CD854AF7A /* [CP] Check Pods Manifest.lock */,
+				A44BD0ACE2F3620193EFE158 /* [CP] Check Pods Manifest.lock */,
 				E72CE39824103A9D00B9283D /* Sources */,
 				E72CE39924103A9D00B9283D /* Frameworks */,
 				E72CE39A24103A9D00B9283D /* Resources */,
@@ -256,7 +252,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E72CE3BA24103AA100B9283D /* Build configuration list for PBXNativeTarget "XTouchBarTests" */;
 			buildPhases = (
-				868A23405C9F772361B20F4F /* [CP] Check Pods Manifest.lock */,
+				B564E5D8E712468F1A9A1A13 /* [CP] Check Pods Manifest.lock */,
 				E72CE3AA24103AA000B9283D /* Sources */,
 				E72CE3AB24103AA000B9283D /* Frameworks */,
 				E72CE3AC24103AA000B9283D /* Resources */,
@@ -330,7 +326,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5501ED63D51FF27CD854AF7A /* [CP] Check Pods Manifest.lock */ = {
+		A44BD0ACE2F3620193EFE158 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,14 +341,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TouchingMyBar-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-XTouchBar-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		868A23405C9F772361B20F4F /* [CP] Check Pods Manifest.lock */ = {
+		B564E5D8E712468F1A9A1A13 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,7 +363,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TouchingMyBarTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-XTouchBarTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -561,9 +557,11 @@
 		};
 		E72CE3B824103AA100B9283D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F5403DEEDE196A7E62D6453 /* Pods-TouchingMyBar.debug.xcconfig */;
+			baseConfigurationReference = 471B4F47B60A01FB0A2FC13F /* Pods-XTouchBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
+				CODE_SIGN_ENTITLEMENTS = XTouchBar/XTouchBar.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -601,11 +599,13 @@
 		};
 		E72CE3B924103AA100B9283D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AB216570A2349A353488882 /* Pods-TouchingMyBar.release.xcconfig */;
+			baseConfigurationReference = 08EAC9769BAEA2862342770F /* Pods-XTouchBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
+				CODE_SIGN_ENTITLEMENTS = XTouchBar/XTouchBar.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X2MB65427X;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -626,7 +626,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dominikbucher.XTouchBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "XTouchBar provisioning profile";
 				SWIFT_OBJC_BRIDGING_HEADER = XTouchBar/Bridging.h;
 				SWIFT_VERSION = 5.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
@@ -641,7 +641,7 @@
 		};
 		E72CE3BB24103AA100B9283D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BBE2176228C717A30E74513 /* Pods-TouchingMyBarTests.debug.xcconfig */;
+			baseConfigurationReference = ADB8D748B373379DF8FB7DA0 /* Pods-XTouchBarTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -664,10 +664,11 @@
 		};
 		E72CE3BC24103AA100B9283D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 499194A10AFF54D4344A2343 /* Pods-TouchingMyBarTests.release.xcconfig */;
+			baseConfigurationReference = 545549BEFF5E2E7942168D63 /* Pods-XTouchBarTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X2MB65427X;
