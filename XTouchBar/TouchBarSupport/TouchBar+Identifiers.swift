@@ -19,7 +19,6 @@ public extension NSTouchBarItem.Identifier {
   static let toggleComments = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.toggleComments:")
   static let addDocumentation = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.addDocumentation:")
   static let openQuickly = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.openQuickly:")
-  static let findAndReplaceInWorkspace = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.findAndReplaceInWorkspace:")
   static let showInspectorWithChoiceFromSender = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.showInspectorWithChoiceFromSender:")
   static let focusSelectedNodeAction = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.focusSelectedNodeAction:")
   static let GPUDebuggerZoomInCounterGraph = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.GPUDebugger_zoomInCounterGraph:")
@@ -28,4 +27,5 @@ public extension NSTouchBarItem.Identifier {
   static let foldCode = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.fold:")
   static let unfoldCode = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.unfold:")
   static let findInSelectedGroups = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.findInSelectedGroups:")
+  //  static let findAndReplaceInWorkspace = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.findAndReplaceInWorkspace:")
 }

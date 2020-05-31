@@ -63,12 +63,14 @@ extension Shortcut {
     modifiers: [.command, .shift, .option],
     itemDescription: "Show code review"
   )
+  #warning("No icon, so let's not use it 👌🏻")
   static let findAndReplaceInWorkspace = Shortcut(
     id: "findAndReplaceInWorkspace:",
     key: .F,
     modifiers: [.command, .shift, .option],
     itemDescription: "Find and replace in workspace"
   )
+
   static let openQuickly = Shortcut(
     iconData: NSImage(named: "Open Quickly")?.tiffRepresentation,
     id: "openQuickly:",
