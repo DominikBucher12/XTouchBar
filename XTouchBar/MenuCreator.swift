@@ -59,7 +59,8 @@ extension MenuCreatorImpl {
   func preferences() {
     NSApp.touchBar = presenter?.touchBar
     addCustomizationObservers()
-    // WTF is with this :D :D
+    // Need to activate XTouchBar application, otherwise funny stuff happens in Cusomization pallete.
+    NSApp.activate(ignoringOtherApps: true)
     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
       NSApplication.shared.toggleTouchBarCustomizationPalette(self.presenter)
     }
@@ -74,10 +75,8 @@ extension MenuCreatorImpl {
   // don't ask me how this works, spent too much time searching for documentation which doesn't exist.
   @objc
   func willEnterCustomization(_ notification: NSNotification) {
-    if let touchbar = presenter?.touchBar,
-       touchbarIsVisible {
+    if let touchbar = presenter?.touchBar {
       dismissSystemModal(touchbar)
-      touchbarIsVisible = false
     }
     NSApp.touchBar = presenter?.touchBar
   }
@@ -91,7 +90,6 @@ extension MenuCreatorImpl {
     removeCustomizationObservers()
     presenter?.clearUpTouchBar()
     presenter?.makeTouchBar()
-    touchbarIsVisible = true
   }
 }
 

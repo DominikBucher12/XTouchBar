@@ -72,7 +72,7 @@ Oh yeah and, take a look at [guys at Showmax](https://tech.showmax.com), they ar
 - [ ] Bonus, should go with previous point: Custom Xcode extensions. (Shouldn't be too hard since it's just dumb shortcut-caller)
 - [ ] Restructurize the app so it's readable.
 - [ ] Add tests for the components and run CI on this.
-- [ ] Figure out wtf is with `NSApplication.shared.toggleTouchBarCustomizationPalette(self.presenter)` so it is smoother UX.
+- [X] Figure out wtf is with `NSApplication.shared.toggleTouchBarCustomizationPalette(self.presenter)` so it is smoother UX. (Actually App needs to be active)
 - [X] Add missing "virtual keys" (like arrow keys) to Key.swift
 - [X] Finish the PropertyListParser (handle "<key>Text Key Bindings</key>" as well)
 - [X] Transform Strings received from the parser into our Shortcut data model
