@@ -13,7 +13,6 @@ import AppKit
 class AppDelegate: NSObject, NSApplicationDelegate {
 
   var menuHolder = MenuCreatorImpl()
-  var currentConfiguration: Configuration?
   var touchbarPresenter = TouchBarPresenter()
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {

@@ -42,10 +42,9 @@ Basically keylogger which wil blow up your macbook, call shortcuts on fly and he
 
 ## Known limitations:
 - Is useless for macs without touchbar 🤪
-- The UI For Touchbar customization is not working properly and I know it. Working on a fix.
 - There are missing icons for some touchbar items. Work in progress I guess ¯\_(ツ)_/¯
 - A lot of shortcuts is missing. but **YOU** can help me with that. :) 
-- No tests. This is very sad, but eventually I will get into that when this is fully working. 
+- No tests. This is very sad, but eventually I will get into that when this is fully working. (And I see you like it :) )
 
 ## Special thanks to
 There goes my special thanks to [JK_Kross](https://twitter.com/JK_Kross) who at that time wasn't employed as iOS Dev but music teacher and did a great job by acompanying me in this project :) 

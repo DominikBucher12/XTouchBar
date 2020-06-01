@@ -16,11 +16,8 @@
 		E72CE3B324103AA100B9283D /* XTouchBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* XTouchBarTests.swift */; };
 		E751310624701EC7003B7A54 /* TouchBar+Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751310524701EC7003B7A54 /* TouchBar+Identifiers.swift */; };
 		E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7557607243BAC2800441B69 /* TouchBarPresenter.swift */; };
-		E771847F244F5812000DE4EC /* ConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771847E244F5812000DE4EC /* ConfigurationStorage.swift */; };
 		E7718484244F630F000DE4EC /* Shortcut+Instances.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718482244F62B1000DE4EC /* Shortcut+Instances.swift */; };
 		E7718486244FAC39000DE4EC /* MenuCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718485244FAC39000DE4EC /* MenuCreator.swift */; };
-		E771848A245055BA000DE4EC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718489245055BA000DE4EC /* Configuration.swift */; };
-		E771848C24505966000DE4EC /* ConfigurationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771848B24505966000DE4EC /* ConfigurationMapper.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E78FF299243F5DB300EBA80D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FF298243F5DB300EBA80D /* Colors.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
@@ -79,11 +76,8 @@
 		E72CE3C524103EE800B9283D /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		E751310524701EC7003B7A54 /* TouchBar+Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TouchBar+Identifiers.swift"; sourceTree = "<group>"; };
 		E7557607243BAC2800441B69 /* TouchBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarPresenter.swift; sourceTree = "<group>"; };
-		E771847E244F5812000DE4EC /* ConfigurationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStorage.swift; sourceTree = "<group>"; };
 		E7718482244F62B1000DE4EC /* Shortcut+Instances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shortcut+Instances.swift"; sourceTree = "<group>"; };
 		E7718485244FAC39000DE4EC /* MenuCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCreator.swift; sourceTree = "<group>"; };
-		E7718489245055BA000DE4EC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		E771848B24505966000DE4EC /* ConfigurationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationMapper.swift; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
 		E78FF298243F5DB300EBA80D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -154,7 +148,6 @@
 				E7718485244FAC39000DE4EC /* MenuCreator.swift */,
 				E779DF4D2437DE4600A70379 /* TouchBarSupport */,
 				E7CC78802448A9AA0092AAFF /* Constants */,
-				E7CC787F2448A98F0092AAFF /* UserPreferences */,
 				E76CBC5C2442002D002349DC /* Shortcut */,
 				E72CE3A324103AA000B9283D /* Assets.xcassets */,
 				E72CE3A524103AA000B9283D /* Main.storyboard */,
@@ -204,16 +197,6 @@
 				E751310524701EC7003B7A54 /* TouchBar+Identifiers.swift */,
 			);
 			path = TouchBarSupport;
-			sourceTree = "<group>";
-		};
-		E7CC787F2448A98F0092AAFF /* UserPreferences */ = {
-			isa = PBXGroup;
-			children = (
-				E771847E244F5812000DE4EC /* ConfigurationStorage.swift */,
-				E7718489245055BA000DE4EC /* Configuration.swift */,
-				E771848B24505966000DE4EC /* ConfigurationMapper.swift */,
-			);
-			path = UserPreferences;
 			sourceTree = "<group>";
 		};
 		E7CC78802448A9AA0092AAFF /* Constants */ = {
@@ -395,14 +378,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E771848C24505966000DE4EC /* ConfigurationMapper.swift in Sources */,
 				E78FF299243F5DB300EBA80D /* Colors.swift in Sources */,
 				38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */,
 				E751310624701EC7003B7A54 /* TouchBar+Identifiers.swift in Sources */,
 				E7718484244F630F000DE4EC /* Shortcut+Instances.swift in Sources */,
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
-				E771848A245055BA000DE4EC /* Configuration.swift in Sources */,
-				E771847F244F5812000DE4EC /* ConfigurationStorage.swift in Sources */,
 				E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */,
 				E7718486244FAC39000DE4EC /* MenuCreator.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
