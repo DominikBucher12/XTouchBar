@@ -7,6 +7,8 @@ Making proper use of Touchbar inside Xcode.
 ![Touchbar Customization](Images/Customization.png)
 ![Touchbar](Images/Touchbar.png)
 
+You can [see it in action in here](https://vimeo.com/425121496) 
+
 
 # How to use this
 
