@@ -4,6 +4,10 @@
 
 Making proper use of Touchbar inside Xcode.
 
+![Touchbar Customization](Images/Customization.png)
+![Touchbar](Images/Touchbar.png)
+
+
 # How to use this
 
 **Disclaimer**: 
