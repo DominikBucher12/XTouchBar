@@ -47,7 +47,7 @@ Basically keylogger which wil blow up your macbook, call shortcuts on fly and he
 - No tests. This is very sad, but eventually I will get into that when this is fully working. (And I see you like it :) )
 
 ## Special thanks to
-There goes my special thanks to [JK_Kross](https://twitter.com/JK_Kross) who at that time wasn't employed as iOS Dev but music teacher and did a great job by acompanying me in this project :) 
+There goes my special thanks to [JK_Kross](https://twitter.com/JK_Kross) who at that time wasn't employed as iOS Dev but music teacher and did a great job by helping me with this project :) 
 
 Guys at [MTMR](https://github.com/Toxblh/MTMR) from which I took inspiration, but not the code :)
 
