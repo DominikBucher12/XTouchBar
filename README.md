@@ -99,8 +99,7 @@ Okay, so now we have control of touchbar, what we need now is to create some of 
 with multiple `NSTouchBarItems` and refresh the items every time there is some change in UI. Don't get me wrong, this approach is good. But I don't like it. I have seen MTMR
 (Project that inspired me to do this) and I tought I want to do this the other way. Basically the function `presentSystemModal(touchBar:position:identifier)` is called there every single
 milisecond because there is always something going on. I don't believe in this approach so I decided that we should probably use some view on it.
-We decided to be hipsters af and create SwiftUI View on the touchbar which contains the buttons to call our desired actions. This is probably the simplest approach and the most
-powerful one.
+After that we decided to be hipsters af and create SwiftUI View on the touchbar which contains the buttons to call our desired actions. However this would cause issues on drag'n'drop touchbar Items. So we went to classic native solution.
 
 The main problem in this project is handling of shortcuts / quick actions / menu actions.
 There came 3 ideas into my mind:
