@@ -62,7 +62,7 @@ extension MenuCreatorImpl {
     // Need to activate XTouchBar application, otherwise funny stuff happens in Cusomization pallete.
     NSApp.activate(ignoringOtherApps: true)
     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
-      NSApplication.shared.toggleTouchBarCustomizationPalette(self.presenter)
+      NSApp.toggleTouchBarCustomizationPalette(self.presenter)
     }
   }
 
