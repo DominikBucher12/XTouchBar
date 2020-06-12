@@ -72,6 +72,7 @@ how it improved your workflow. I personally love to use the documentation button
 Oh yeah and, take a look at [guys at Showmax](https://tech.showmax.com), they are doing really cool stuff in a great way :) 
 
 ## TODO:
+- [ ] Handle more shortcuts AKA use component which expend itselfs and has group of items.
 - [ ] Create some intuitive icon-set for the shortcuts.
 - [ ] Add more sophisticated handling of setting the keyboard back to its default layout (Multithreading wtf??)
 - [ ] Bonus, should go with previous point: Custom Xcode extensions. (Shouldn't be too hard since it's just dumb shortcut-caller)
