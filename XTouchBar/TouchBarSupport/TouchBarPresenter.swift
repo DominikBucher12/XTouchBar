@@ -39,7 +39,8 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     .toggleShowCodeReviewForEditor,
     .unfoldCode,
     .foldCode,
-    .findInSelectedGroups
+    .findInSelectedGroups,
+    .🎩
   ]
 
   static var itemsDictionary: [NSTouchBarItem.Identifier: Shortcut] = [
@@ -54,7 +55,8 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     .toggleShowCodeReviewForEditor: Shortcut.showCodeReview,
     .foldCode: Shortcut.fold,
     .unfoldCode: Shortcut.unfold,
-    .findInSelectedGroups: Shortcut.findInSelectedGroups
+    .findInSelectedGroups: Shortcut.findInSelectedGroups,
+    .🎩: Shortcut.mostUsefulButtonOnEarth
   ]
 
   func clearUpTouchBar() {
@@ -84,7 +86,7 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
   func presentTouchBarOverFullContext() {
     hideXTouchBar()
     NSTouchBarItem.removeSystemTrayItem(item)
-    presentSystemModal(touchBar, placement: 1, systemTrayItemIdentifier: .flexibleSpace)
+    presentSystemModal(touchBar, placement: 1, systemTrayItemIdentifier: .controlStripItem)
   }
   public override init() {
     super.init()

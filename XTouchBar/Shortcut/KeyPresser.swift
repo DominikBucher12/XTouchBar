@@ -14,7 +14,6 @@ protocol KeyPresser {
   static func perform(_ shortcut: Shortcut)
 }
 
-#warning("Before release go through history and probably make some list of articles to thank.")
 /// RANT AHEAD, read at your own risk. @dbucher
 ///
 ///

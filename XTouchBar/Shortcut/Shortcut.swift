@@ -11,7 +11,15 @@
 /// In here, we divide the shortcut into actual pure keys (like letters, numbers, commas...)
 /// and modifiers (The fancy keys like `cmd`, `control`, `shift`, `alt`)
 class Shortcut: NSObject, Identifiable {
-  
+
+  /// Kind of the button,
+  /// Should probably rename shortcut to something else,
+  /// but this Sprint has to be done by 6/13/2020 0:00 🏃‍♂️
+  enum Kind {
+    case realShortcut
+    case button(action: () -> Void)
+  }
+
   /// Icon for the shortcut to present on touchbar.
   /// is being made from the data of the image
   var icon: NSImage? {
@@ -36,7 +44,10 @@ class Shortcut: NSObject, Identifiable {
   let modifiers: Set<KeyModifier>
   /// Description used for Customization pallete used by touchbar. :)
   let itemDescription: String
-  
+
+  /// Kind of shortcut, if it's really shortcut or if it makes something else
+  let kind: Kind
+
   /// Why Swift cannot handle optional property in structs with default initializer? Very sad times.
   public init(
     iconData: Data? = nil,
@@ -44,7 +55,8 @@ class Shortcut: NSObject, Identifiable {
     id: String,
     key: Key,
     modifiers: Set<KeyModifier>,
-    itemDescription: String
+    itemDescription: String,
+    kind: Kind = .realShortcut
   ) {
     self.iconData = iconData
     self.backgroundColor = backgroundColor
@@ -52,6 +64,7 @@ class Shortcut: NSObject, Identifiable {
     self.key = key
     self.modifiers = modifiers
     self.itemDescription = itemDescription
+    self.kind = kind
   }
   
   // MARK: Decodable
@@ -64,6 +77,7 @@ class Shortcut: NSObject, Identifiable {
     key = try values.decode(Key.self, forKey: .key)
     modifiers = try values.decode(Set<KeyModifier>.self, forKey: .modifiers)
     itemDescription = try values.decode(String.self, forKey: .itemDescription)
+    self.kind = .realShortcut
   }
   
   // MARK: Encodable
@@ -81,7 +95,12 @@ class Shortcut: NSObject, Identifiable {
   
   @objc
   public func runSelf() {
-    MasterMind.perform(self)
+    switch kind {
+    case .realShortcut:
+      MasterMind.perform(self)
+    case .button(let action):
+      action()
+    }
   }
 }
 

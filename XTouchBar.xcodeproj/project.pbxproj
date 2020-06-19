@@ -18,6 +18,7 @@
 		E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7557607243BAC2800441B69 /* TouchBarPresenter.swift */; };
 		E7718484244F630F000DE4EC /* Shortcut+Instances.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718482244F62B1000DE4EC /* Shortcut+Instances.swift */; };
 		E7718486244FAC39000DE4EC /* MenuCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718485244FAC39000DE4EC /* MenuCreator.swift */; };
+		E7785EB92493DB850038B51E /* Shortcut+MostUsefulToolOnEarth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7785EB82493DB850038B51E /* Shortcut+MostUsefulToolOnEarth.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
 		E78FF299243F5DB300EBA80D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FF298243F5DB300EBA80D /* Colors.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
@@ -78,6 +79,7 @@
 		E7557607243BAC2800441B69 /* TouchBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarPresenter.swift; sourceTree = "<group>"; };
 		E7718482244F62B1000DE4EC /* Shortcut+Instances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shortcut+Instances.swift"; sourceTree = "<group>"; };
 		E7718485244FAC39000DE4EC /* MenuCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCreator.swift; sourceTree = "<group>"; };
+		E7785EB82493DB850038B51E /* Shortcut+MostUsefulToolOnEarth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shortcut+MostUsefulToolOnEarth.swift"; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
 		E78FF298243F5DB300EBA80D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -182,6 +184,7 @@
 			children = (
 				38C2BCE2243E5C330009A015 /* Shortcut.swift */,
 				E7718482244F62B1000DE4EC /* Shortcut+Instances.swift */,
+				E7785EB82493DB850038B51E /* Shortcut+MostUsefulToolOnEarth.swift */,
 				38C2BCE4243E5C4B0009A015 /* Key.swift */,
 				E7CC787D2447E59D0092AAFF /* KeyPresser.swift */,
 			);
@@ -382,6 +385,7 @@
 				38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */,
 				E751310624701EC7003B7A54 /* TouchBar+Identifiers.swift in Sources */,
 				E7718484244F630F000DE4EC /* Shortcut+Instances.swift in Sources */,
+				E7785EB92493DB850038B51E /* Shortcut+MostUsefulToolOnEarth.swift in Sources */,
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
 				E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */,
 				E7718486244FAC39000DE4EC /* MenuCreator.swift in Sources */,
