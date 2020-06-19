@@ -9,6 +9,10 @@ Making proper use of Touchbar inside Xcode.
 
 You can [see it in action in here](https://vimeo.com/425121496) 
 
+# How to install this
+
+If you don't wana bother with downloading the code and change the app to your needs, go to **release** section in this repo (one above the bar with programming language used) and download the binary :)
+
 
 # How to use this
 
