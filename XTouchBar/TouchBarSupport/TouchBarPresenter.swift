@@ -88,6 +88,7 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     NSTouchBarItem.removeSystemTrayItem(item)
     presentSystemModal(touchBar, placement: 1, systemTrayItemIdentifier: .controlStripItem)
   }
+
   public override init() {
     super.init()
     touchBar?.delegate = self
@@ -106,6 +107,7 @@ extension TouchBarPresenter {
     touchbarItem.image = shortcut.icon
     touchbarItem.target = shortcut
     touchbarItem.action = #selector(shortcut.runSelf)
+    touchbarItem.bezelColor = shortcut.bezelColor
 
     let touchBarToReplace = NSTouchBar()
     touchBarToReplace.delegate = self

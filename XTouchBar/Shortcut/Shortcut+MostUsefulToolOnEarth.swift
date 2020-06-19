@@ -10,8 +10,7 @@ import Foundation
 
 extension Shortcut {
   static let mostUsefulButtonOnEarth = Shortcut(
-    iconData: nil,
-    backgroundColor: .red,
+    iconData: "🧙🏻‍♂️".emojiImage()?.tiffRepresentation,
     id: "makeMagicHappen:",
     key: .escape, // 🏃‍♂️ Escape while you can
     modifiers: [],
@@ -23,8 +22,14 @@ extension Shortcut {
 /// Thefuck am I doing :D
 enum Actions {
   static let makeMagic: () -> Void = {
-//    let newTouchBar = NSTouchBar()
-//    presentSystemModal(NSTouchBar(), placement: 1, systemTrayItemIdentifier: .controlStripItem)
+    (NSApp.delegate as? AppDelegate)?.funnyTouchbarPresenter.createFunnyTouchBar()
   }
+}
 
+public extension NSTouchBarItem.Identifier {
+  static let magicControlStripItem = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.magicControlItem")
+  static let exitItem = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.exit")
+}
+public extension NSTouchBar.CustomizationIdentifier {
+  static let magicBar = NSTouchBar.CustomizationIdentifier("com.dominikbucher.xcodebar.magicControlItem")
 }

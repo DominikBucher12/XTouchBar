@@ -34,7 +34,7 @@ class Shortcut: NSObject, Identifiable {
   private let iconData: Data?
   /// Background color of the button in the TouchBar.
   /// Default is gray.
-  let backgroundColor: Colors
+  let bezelColor: NSColor?
   /// The shortcuts identifier. Pretty self-explanatory.
   let id: String
   /// Just simple key -> `a`, `y`, `,`, `=`, `+`, `/`
@@ -51,7 +51,7 @@ class Shortcut: NSObject, Identifiable {
   /// Why Swift cannot handle optional property in structs with default initializer? Very sad times.
   public init(
     iconData: Data? = nil,
-    backgroundColor: Colors = .gray,
+    bezelColor: NSColor? = nil,
     id: String,
     key: Key,
     modifiers: Set<KeyModifier>,
@@ -59,40 +59,13 @@ class Shortcut: NSObject, Identifiable {
     kind: Kind = .realShortcut
   ) {
     self.iconData = iconData
-    self.backgroundColor = backgroundColor
+    self.bezelColor = bezelColor
     self.id = id
     self.key = key
     self.modifiers = modifiers
     self.itemDescription = itemDescription
     self.kind = kind
   }
-  
-  // MARK: Decodable
-  
-  required init(from decoder: Decoder) throws {
-    let values = try decoder.container(keyedBy: CodingKeys.self)
-    iconData = try? values.decode(Data.self, forKey: .iconData)
-    backgroundColor = try values.decode(Colors.self, forKey: .backgroundColor)
-    id = try values.decode(String.self, forKey: .id)
-    key = try values.decode(Key.self, forKey: .key)
-    modifiers = try values.decode(Set<KeyModifier>.self, forKey: .modifiers)
-    itemDescription = try values.decode(String.self, forKey: .itemDescription)
-    self.kind = .realShortcut
-  }
-  
-  // MARK: Encodable
-  
-  func encode(to encoder: Encoder) throws {
-    var container = encoder.container(keyedBy: CodingKeys.self)
-    
-    try container.encode(iconData, forKey: .iconData)
-    try container.encode(backgroundColor, forKey: .backgroundColor)
-    try container.encode(id, forKey: .id)
-    try container.encode(key.rawValue, forKey: .key)
-    try container.encode(modifiers, forKey: .modifiers)
-    try container.encode(description, forKey: .itemDescription)
-  }
-  
   @objc
   public func runSelf() {
     switch kind {
@@ -101,19 +74,5 @@ class Shortcut: NSObject, Identifiable {
     case .button(let action):
       action()
     }
-  }
-}
-
-// MARK: - Codable
-
-extension Shortcut: Codable {
-  
-  enum CodingKeys: String, CodingKey {
-    case iconData
-    case backgroundColor
-    case id
-    case key
-    case modifiers
-    case itemDescription
   }
 }

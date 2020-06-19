@@ -16,11 +16,13 @@
 		E72CE3B324103AA100B9283D /* XTouchBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CE3B224103AA100B9283D /* XTouchBarTests.swift */; };
 		E751310624701EC7003B7A54 /* TouchBar+Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751310524701EC7003B7A54 /* TouchBar+Identifiers.swift */; };
 		E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7557607243BAC2800441B69 /* TouchBarPresenter.swift */; };
+		E756B531249D1996005930C6 /* String+NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E756B530249D1996005930C6 /* String+NSImage.swift */; };
+		E756B533249D1CD1005930C6 /* FunnyTouchBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E756B532249D1CD1005930C6 /* FunnyTouchBarPresenter.swift */; };
+		E756B535249D3240005930C6 /* FunnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E756B534249D3240005930C6 /* FunnyView.swift */; };
 		E7718484244F630F000DE4EC /* Shortcut+Instances.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718482244F62B1000DE4EC /* Shortcut+Instances.swift */; };
 		E7718486244FAC39000DE4EC /* MenuCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7718485244FAC39000DE4EC /* MenuCreator.swift */; };
 		E7785EB92493DB850038B51E /* Shortcut+MostUsefulToolOnEarth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7785EB82493DB850038B51E /* Shortcut+MostUsefulToolOnEarth.swift */; };
 		E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */; };
-		E78FF299243F5DB300EBA80D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FF298243F5DB300EBA80D /* Colors.swift */; };
 		E796044824367CE400F39215 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E796044724367CE400F39215 /* README.md */; };
 		E796044A24367E3100F39215 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796044924367E3100F39215 /* Constants.swift */; };
 		E7CC787E2447E59D0092AAFF /* KeyPresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC787D2447E59D0092AAFF /* KeyPresser.swift */; };
@@ -77,11 +79,13 @@
 		E72CE3C524103EE800B9283D /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		E751310524701EC7003B7A54 /* TouchBar+Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TouchBar+Identifiers.swift"; sourceTree = "<group>"; };
 		E7557607243BAC2800441B69 /* TouchBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarPresenter.swift; sourceTree = "<group>"; };
+		E756B530249D1996005930C6 /* String+NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSImage.swift"; sourceTree = "<group>"; };
+		E756B532249D1CD1005930C6 /* FunnyTouchBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyTouchBarPresenter.swift; sourceTree = "<group>"; };
+		E756B534249D3240005930C6 /* FunnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyView.swift; sourceTree = "<group>"; };
 		E7718482244F62B1000DE4EC /* Shortcut+Instances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shortcut+Instances.swift"; sourceTree = "<group>"; };
 		E7718485244FAC39000DE4EC /* MenuCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCreator.swift; sourceTree = "<group>"; };
 		E7785EB82493DB850038B51E /* Shortcut+MostUsefulToolOnEarth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shortcut+MostUsefulToolOnEarth.swift"; sourceTree = "<group>"; };
 		E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTouchbarSupport.swift; sourceTree = "<group>"; };
-		E78FF298243F5DB300EBA80D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E796044724367CE400F39215 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E796044924367E3100F39215 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7CC787D2447E59D0092AAFF /* KeyPresser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPresser.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 				E72CE3C524103EE800B9283D /* Bridging.h */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E7718485244FAC39000DE4EC /* MenuCreator.swift */,
+				E756B534249D3240005930C6 /* FunnyView.swift */,
 				E779DF4D2437DE4600A70379 /* TouchBarSupport */,
 				E7CC78802448A9AA0092AAFF /* Constants */,
 				E76CBC5C2442002D002349DC /* Shortcut */,
@@ -187,6 +192,7 @@
 				E7785EB82493DB850038B51E /* Shortcut+MostUsefulToolOnEarth.swift */,
 				38C2BCE4243E5C4B0009A015 /* Key.swift */,
 				E7CC787D2447E59D0092AAFF /* KeyPresser.swift */,
+				E756B530249D1996005930C6 /* String+NSImage.swift */,
 			);
 			path = Shortcut;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				E7557607243BAC2800441B69 /* TouchBarPresenter.swift */,
+				E756B532249D1CD1005930C6 /* FunnyTouchBarPresenter.swift */,
 				E72CE3C424103EE800B9283D /* TouchBarPrivateApi.h */,
 				E78F583C2413C6AC00420566 /* NSTouchbarSupport.swift */,
 				E751310524701EC7003B7A54 /* TouchBar+Identifiers.swift */,
@@ -206,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				E796044924367E3100F39215 /* Constants.swift */,
-				E78FF298243F5DB300EBA80D /* Colors.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -381,9 +387,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E78FF299243F5DB300EBA80D /* Colors.swift in Sources */,
 				38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */,
+				E756B533249D1CD1005930C6 /* FunnyTouchBarPresenter.swift in Sources */,
 				E751310624701EC7003B7A54 /* TouchBar+Identifiers.swift in Sources */,
+				E756B535249D3240005930C6 /* FunnyView.swift in Sources */,
 				E7718484244F630F000DE4EC /* Shortcut+Instances.swift in Sources */,
 				E7785EB92493DB850038B51E /* Shortcut+MostUsefulToolOnEarth.swift in Sources */,
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
@@ -392,6 +399,7 @@
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
 				E7CC787E2447E59D0092AAFF /* KeyPresser.swift in Sources */,
+				E756B531249D1996005930C6 /* String+NSImage.swift in Sources */,
 				38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

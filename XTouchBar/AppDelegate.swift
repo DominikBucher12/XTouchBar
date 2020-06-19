@@ -12,8 +12,9 @@ import AppKit
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-  var menuHolder = MenuCreatorImpl()
-  var touchbarPresenter = TouchBarPresenter()
+  public var menuHolder = MenuCreatorImpl()
+  public var touchbarPresenter = TouchBarPresenter()
+  public var funnyTouchbarPresenter = FunnyTouchBarPresenter()
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     storeCurrentKeyboardLayout()
