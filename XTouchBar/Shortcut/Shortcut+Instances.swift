@@ -140,6 +140,13 @@ extension Shortcut {
     itemDescription: "Search in selected groups"
   )
 
+   static let authors = Shortcut(
+    iconData: NSImage(named: "Authors")?.tiffRepresentation,
+    id: "toggleAuthorsShown:",
+    key: .A,
+    modifiers: [.control, .shift, .command],
+    itemDescription: "Git blame, but politically correct"
+   )
 
   // MARK: - Probably useless.
 
@@ -913,7 +920,6 @@ extension Shortcut {
   //    static let shiftRight = Shortcut(id: "shiftRight:", key: .O, modifiers: [.command])
   //    static let shiftRight = Shortcut(id: "shiftRight:", key: .O, modifiers: [.command])
   //    static let shiftRight = Shortcut(id: "shiftRight:", key: .O, modifiers: [.command])
-  //    static let authors = Shortcut(id: "toggleAuthorsShown:", key: .O, modifiers: [.command])
   //    static let authors = Shortcut(id: "toggleAuthorsShown:", key: .O, modifiers: [.command])
   //    static let showLastChangeForLine = Shortcut(id: "blameSelectedLine:", key: .O, modifiers: [.command])
   //    static let showLastChangeForLine = Shortcut(id: "blameSelectedLine:", key: .O, modifiers: [.command])

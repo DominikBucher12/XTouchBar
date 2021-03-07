@@ -27,6 +27,7 @@ public extension NSTouchBarItem.Identifier {
   static let foldCode = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.fold:")
   static let unfoldCode = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.unfold:")
   static let findInSelectedGroups = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.findInSelectedGroups:")
+  static let authors = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.authors")
   static let 🎩 = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.makeMagicHappen:")
   //  static let findAndReplaceInWorkspace = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.findAndReplaceInWorkspace:")
 }

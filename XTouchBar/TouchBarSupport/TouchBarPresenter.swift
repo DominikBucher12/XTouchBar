@@ -40,6 +40,7 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     .unfoldCode,
     .foldCode,
     .findInSelectedGroups,
+    .authors,
     .🎩
   ]
 
@@ -56,6 +57,7 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
     .foldCode: Shortcut.fold,
     .unfoldCode: Shortcut.unfold,
     .findInSelectedGroups: Shortcut.findInSelectedGroups,
+    .authors: Shortcut.authors,
     .🎩: Shortcut.mostUsefulButtonOnEarth
   ]
 
