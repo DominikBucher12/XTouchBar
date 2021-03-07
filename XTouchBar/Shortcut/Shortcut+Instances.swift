@@ -63,7 +63,7 @@ extension Shortcut {
     modifiers: [.command, .shift, .option],
     itemDescription: "Show code review"
   )
-  #warning("No icon, so let's not use it 👌🏻")
+
   static let findAndReplaceInWorkspace = Shortcut(
     id: "findAndReplaceInWorkspace:",
     key: .F,
@@ -78,8 +78,9 @@ extension Shortcut {
     modifiers: [.command, .shift],
     itemDescription: "Open quickly document"
   )
+
   // there are 4 different "addDocumentation:" shortcuts: one for playgrounds, one for asset catalog comparison etc.
-  // how do we handle that???
+  // but they are same shortcuts :)
   static let addDocumentation = Shortcut(
     iconData: NSImage(named: "Add Documentation")?.tiffRepresentation,
     id: "addDocumentation:",
