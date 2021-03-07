@@ -145,9 +145,17 @@ extension Shortcut {
     id: "toggleAuthorsShown:",
     key: .A,
     modifiers: [.control, .shift, .command],
-    itemDescription: "Git blame, but politically correct"
+    itemDescription: "Git blame, but politically correct ✍️"
    )
 
+   // TODO: Add proper image icon because we don't like emojis :D
+   static let minimap = Shortcut(
+    iconData: "🗺".emojiImage()?.tiffRepresentation,
+    id: "toggleMinimapShown:",
+    key: .M,
+    modifiers: [.control, .shift, .command],
+    itemDescription: "Show mini 🗺"
+    )
   // MARK: - Probably useless.
 
   //  static let showDataModelInspector = Shortcut(
