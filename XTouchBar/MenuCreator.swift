@@ -16,6 +16,7 @@ class MenuCreatorImpl {
   private var window: NSWindow?
 
   private var presenter: TouchBarPresenter?
+  private var commandsWindow: XcodeCommandsWindowController?
   private var touchbarIsVisible = false
 
   private var appMenu: NSMenu! // swiftlint:disable:this implicitly_unwrapped_optional
@@ -63,6 +64,9 @@ private extension MenuCreatorImpl {
     keyboardBackendItem = keyboardItem
     updateBackendItems()
     menu.addItem(backendItem)
+    let commands = NSMenuItem(title: "All Xcode Commands…", action: #selector(showCommands), keyEquivalent: "")
+    commands.target = self
+    menu.addItem(commands)
     let status = NSMenuItem(title: "Bridge Status…", action: #selector(showBridgeStatus), keyEquivalent: "")
     status.target = self
     menu.addItem(status)
@@ -89,6 +93,13 @@ extension MenuCreatorImpl {
   @objc
   func showBridgeStatus() {
     XcodeCommandDispatcher.shared.showBridgeStatus()
+  }
+
+  @objc
+  func showCommands() {
+    if commandsWindow == nil { commandsWindow = XcodeCommandsWindowController() }
+    commandsWindow?.showWindow(nil)
+    NSApp.activate(ignoringOtherApps: true)
   }
 
   private func updateBackendItems() {

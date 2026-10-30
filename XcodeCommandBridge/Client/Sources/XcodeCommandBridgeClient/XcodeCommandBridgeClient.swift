@@ -87,17 +87,22 @@ public struct XcodeCommandBridgeClient: Sendable {
             let apps = NSRunningApplication.runningApplications(withBundleIdentifier: "com.apple.dt.Xcode")
                 .filter { !$0.isTerminated }
             guard !apps.isEmpty else { throw XcodeBridgeError.xcodeNotRunning }
-            if let active = apps.first(where: { $0.isActive }) {
+            let ready = apps.filter { appHasBridge($0.processIdentifier) }
+            if let active = apps.first(where: { $0.isActive }),
+               ready.contains(where: { $0.processIdentifier == active.processIdentifier }) {
                 pid = active.processIdentifier
-            } else {
-                let ready = apps.filter {
-                    CFMessagePortCreateRemote(kCFAllocatorDefault, portName($0.processIdentifier)) != nil
-                }
-                if ready.count > 1 {
-                    throw XcodeBridgeError.ambiguousXcodeProcesses(ready.map(\.processIdentifier))
-                }
-                guard let app = ready.first ?? apps.first else { throw XcodeBridgeError.xcodeNotRunning }
+            } else if ready.count == 1, let connected = ready.first {
+                // XTouchBar commonly runs beside regular Xcode and an instrumented
+                // XcodeResearch copy. Prefer the sole process that actually hosts us.
+                pid = connected.processIdentifier
+            } else if ready.count > 1 {
+                throw XcodeBridgeError.ambiguousXcodeProcesses(ready.map(\.processIdentifier))
+            } else if let active = apps.first(where: { $0.isActive }) {
+                pid = active.processIdentifier
+            } else if let app = apps.first {
                 pid = app.processIdentifier
+            } else {
+                throw XcodeBridgeError.xcodeNotRunning
             }
         }
         guard let remote = CFMessagePortCreateRemote(kCFAllocatorDefault, portName(pid)) else {
@@ -123,5 +128,11 @@ public struct XcodeCommandBridgeClient: Sendable {
 
     private func portName(_ pid: pid_t) -> CFString {
         "com.xtouchbar.commandbridge.\(pid)" as CFString
+    }
+
+    private func appHasBridge(_ pid: pid_t) -> Bool {
+        guard let remote = CFMessagePortCreateRemote(kCFAllocatorDefault, portName(pid)) else { return false }
+        _ = remote
+        return true
     }
 }

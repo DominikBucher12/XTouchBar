@@ -23,8 +23,15 @@ There is no need to recreate IDEKit state or simulate keystrokes.
    This produces `XcodeCommandBridge/Host/build/libXcodeCommandBridge.dylib` for the
    current Mac architecture. Set `XCB_ARCH=x86_64` or `XCB_ARCH=arm64` to cross-compile;
    the library architecture must match the target Xcode process. Intel is tested.
-3. Start your previously prepared **XcodeResearch** copy with a project open and
-   attach LLDB to its PID. In LLDB, use the absolute path to the library you just built:
+3. Load the bridge into the prepared **XcodeResearch** copy and verify it in one step:
+
+   ```sh
+   bash XcodeCommandBridge/Host/load-into-research.sh
+   ```
+
+   The helper builds the library for this Mac, opens the workspace in XcodeResearch,
+   attaches LLDB, loads the library, and prints diagnostics. To do those steps manually,
+   attach LLDB to the XcodeResearch PID and use the absolute library path:
 
    ```lldb
    process attach --pid <XCODE_RESEARCH_PID>
@@ -41,6 +48,9 @@ There is no need to recreate IDEKit state or simulate keystrokes.
    **Command Backend → Direct Xcode Commands** routes the existing Touch Bar actions
    through the bridge. Build, Run, Test, Stop and Show in Navigator can be added using
    the Touch Bar customization palette.
+5. Select **All Xcode Commands…** to search the full 512-command snapshot by title,
+   menu path, selector, or identifier. Select a row and choose **Run in Xcode** (or
+   double-click it) to dispatch that command through the loaded bridge.
 
 **Keyboard Shortcuts (Legacy)** is an explicit alternative in that same menu.
 Direct-command failures never automatically retry as keyboard events: a timed-out
