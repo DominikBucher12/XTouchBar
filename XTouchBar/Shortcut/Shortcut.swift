@@ -37,6 +37,8 @@ class Shortcut: NSObject, Identifiable {
   let bezelColor: NSColor?
   /// The shortcuts identifier. Pretty self-explanatory.
   let id: String
+  /// Versioned command ID for the direct Xcode backend. Old action names remain usable.
+  let commandIdentifier: String?
   /// Just simple key -> `a`, `y`, `,`, `=`, `+`, `/`
   let key: Key
   /// Set of Modifier(s), the more fancier: `cmd`, `shift`, `control`, `alt`, ???
@@ -53,6 +55,7 @@ class Shortcut: NSObject, Identifiable {
     iconData: Data? = nil,
     bezelColor: NSColor? = nil,
     id: String,
+    commandIdentifier: String? = nil,
     key: Key,
     modifiers: Set<KeyModifier>,
     itemDescription: String,
@@ -61,6 +64,7 @@ class Shortcut: NSObject, Identifiable {
     self.iconData = iconData
     self.bezelColor = bezelColor
     self.id = id
+    self.commandIdentifier = commandIdentifier
     self.key = key
     self.modifiers = modifiers
     self.itemDescription = itemDescription
@@ -70,7 +74,7 @@ class Shortcut: NSObject, Identifiable {
   public func runSelf() {
     switch kind {
     case .realShortcut:
-      MasterMind.perform(self)
+      XcodeCommandDispatcher.shared.perform(self)
     case .button(let action):
       action()
     }

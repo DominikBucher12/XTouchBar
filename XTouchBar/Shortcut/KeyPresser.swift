@@ -6,6 +6,8 @@
 //  Copyright © 2020 Dominik Bucher. All rights reserved.
 //
 
+import Carbon
+
 /// Protocol which has only one thing to do -> Perform shortcut command.
 /// This should be responsible only to call the shortcut.
 protocol KeyPresser {
@@ -77,6 +79,12 @@ enum MasterMind: KeyPresser {
   /// Performs a shurtcut.
   /// - Parameter shortcut: Shortcut instance to get :) Take a look at Shortcut.swift
   static func perform(_ shortcut: Shortcut) {
+    // The legacy backend alone needs keyboard access. Direct commands never change layouts.
+    if let source = TISCopyCurrentKeyboardInputSource()?.takeRetainedValue(),
+       let pointer = TISGetInputSourceProperty(source, kTISPropertyInputSourceID),
+       let layout = Unmanaged<AnyObject>.fromOpaque(pointer).takeUnretainedValue() as? String {
+      UserDefaults.standard.set(layout, forKey: Constants.Configuration.keyboardLayoutKey)
+    }
     let keyCode = shortcut.key.rawValue
 
     guard let keyDownEvent = CGEvent(keyboardEventSource: nil, virtualKey: keyCode, keyDown: true) else {

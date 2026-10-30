@@ -16,10 +16,13 @@ class MenuCreatorImpl {
   private var window: NSWindow?
 
   private var presenter: TouchBarPresenter?
+  private var commandsWindow: XcodeCommandsWindowController?
   private var touchbarIsVisible = false
 
   private var appMenu: NSMenu! // swiftlint:disable:this implicitly_unwrapped_optional
   private var statusItem: NSStatusItem! // swiftlint:disable:this implicitly_unwrapped_optional
+  private var directBackendItem: NSMenuItem?
+  private var keyboardBackendItem: NSMenuItem?
   private let menuItems: [NSMenuItem] = [
     NSMenuItem(title: "Exit application", action: #selector(exit), keyEquivalent: ""),
     NSMenuItem(title: "Preferences", action: #selector(preferences), keyEquivalent: "")
@@ -47,6 +50,26 @@ private extension MenuCreatorImpl {
       item.target = self
       menu.addItem(item)
     }
+    menu.addItem(.separator())
+    let backendMenu = NSMenu(title: "Command Backend")
+    let backendItem = NSMenuItem(title: "Command Backend", action: nil, keyEquivalent: "")
+    backendItem.submenu = backendMenu
+    let directItem = NSMenuItem(title: "Direct Xcode Commands", action: #selector(useDirectCommands), keyEquivalent: "")
+    let keyboardItem = NSMenuItem(title: "Keyboard Shortcuts (Legacy)", action: #selector(useKeyboardShortcuts), keyEquivalent: "")
+    for item in [directItem, keyboardItem] {
+      item.target = self
+      backendMenu.addItem(item)
+    }
+    directBackendItem = directItem
+    keyboardBackendItem = keyboardItem
+    updateBackendItems()
+    menu.addItem(backendItem)
+    let commands = NSMenuItem(title: "All Xcode Commands…", action: #selector(showCommands), keyEquivalent: "")
+    commands.target = self
+    menu.addItem(commands)
+    let status = NSMenuItem(title: "Bridge Status…", action: #selector(showBridgeStatus), keyEquivalent: "")
+    status.target = self
+    menu.addItem(status)
     appMenu = menu
   }
 }
@@ -54,6 +77,36 @@ private extension MenuCreatorImpl {
 // MARK: Actions
 
 extension MenuCreatorImpl {
+
+  @objc
+  func useDirectCommands() {
+    XcodeCommandDispatcher.shared.backend = .direct
+    updateBackendItems()
+  }
+
+  @objc
+  func useKeyboardShortcuts() {
+    XcodeCommandDispatcher.shared.backend = .keyboard
+    updateBackendItems()
+  }
+
+  @objc
+  func showBridgeStatus() {
+    XcodeCommandDispatcher.shared.showBridgeStatus()
+  }
+
+  @objc
+  func showCommands() {
+    if commandsWindow == nil { commandsWindow = XcodeCommandsWindowController() }
+    commandsWindow?.showWindow(nil)
+    NSApp.activate(ignoringOtherApps: true)
+  }
+
+  private func updateBackendItems() {
+    let direct = XcodeCommandDispatcher.shared.backend == .direct
+    directBackendItem?.state = direct ? .on : .off
+    keyboardBackendItem?.state = direct ? .off : .on
+  }
 
   @objc
   func preferences() {

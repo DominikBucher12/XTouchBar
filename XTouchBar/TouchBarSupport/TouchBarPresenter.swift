@@ -28,6 +28,11 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
   ]
 
   static var touchBarIdentifiers: [NSTouchBarItem.Identifier] = [
+    .build,
+    .run,
+    .test,
+    .stop,
+    .showInNavigator,
     .editorContextJumpToDefinition,
     .fixAllIssues,
     .toggleTokenizedEditing,
@@ -46,6 +51,11 @@ class TouchBarPresenter: NSObject, NSTouchBarDelegate, NSTouchBarProvider {
   ]
 
   static var itemsDictionary: [NSTouchBarItem.Identifier: Shortcut] = [
+    .build: Shortcut.build,
+    .run: Shortcut.run,
+    .test: Shortcut.test,
+    .stop: Shortcut.stop,
+    .showInNavigator: Shortcut.showInNavigator,
     .editorContextJumpToDefinition: Shortcut.jumpToDefinition,
     .fixAllIssues: Shortcut.fixAllIssues,
     .toggleTokenizedEditing: Shortcut.editAllInScope,
