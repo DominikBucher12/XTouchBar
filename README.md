@@ -2,150 +2,64 @@
 
 # XTouchBar
 
-Making proper use of Touchbar inside Xcode.
+XTouchBar replaces the MacBook Touch Bar with shortcuts and Xcode commands. It runs
+as a menu bar app, so it does not appear in the Dock or in the app switcher.
 
-![Touchbar Customization](Images/Customization.png)
-![Touchbar](Images/Touchbar.png)
+![Touch Bar customization](Images/Customization.png)
+![Touch Bar](Images/Touchbar.png)
 
-You can [see it in action in here](https://vimeo.com/425121496) 
+## Use and customize
 
-# Direct Xcode commands (`feature/true_power`)
+- Click **🆇** in the macOS menu bar, then **Preferences** to open Apple's Touch Bar
+  customization palette. Drag commands into or out of the bar.
+- Choose **All Xcode Commands…** to search the bundled catalog of 512 Xcode commands.
+  Select a command and choose **Run in Xcode** to dispatch it.
+- Choose **Bridge Status…** to check whether XTouchBar is connected to Xcode.
+- To add or change a Touch Bar item in code, edit `Shortcut+Instances.swift`, then
+  register its identifier and `Shortcut` in `TouchBar+Identifiers.swift` and
+  `TouchBarPresenter.swift`.
 
-This branch integrates **XcodeCommandBridge v2** from the recovered GPT research.
-Touch Bar buttons now call the existing Xcode editor/workspace handlers through an
-in-process Objective-C host and a local Swift client. The snapshot contains 512
-command identifiers, with catalog inspection and a read-only handler audit.
+## Xcode command route
 
-Open `XTouchBar.xcworkspace` to build the app. The direct backend requires loading the
-host library into your prepared XcodeResearch process after each Xcode restart.
-See [setup, architecture and tests](XcodeCommandBridge/README.md) for the complete steps.
-Use **Bridge Status…** in the menu to check the connection. Build, Run, Test, Stop and
-Show in Navigator are also available in the Touch Bar customization palette.
+XTouchBar uses command identifiers and selectors discovered from Xcode's IDEKit
+command catalog. It sends the selected identifier to a small host library loaded inside
+XcodeResearch over a local `CFMessagePort`. The host finds a compatible handler in the
+active editor or workspace responder chain, checks its Objective-C method signature,
+and dispatches it on Xcode's main thread.
 
-The menu's **Command Backend** selects direct commands (default) or the original
-keyboard backend. Failed direct commands never retry automatically as keystrokes.
+This is the active IDEKit route. The older experiment using
+`IDECommandManager.cacheCommandDefinitionsAndHandlers()` and
+`sendActionForCommandWithIdentifier:from:` is **not** used by the bridge; that private,
+stateful API required additional command-cache setup. The current route uses the
+catalog's IDEKit identifiers to resolve existing handlers directly.
 
-# Original release installation
+The snapshot contains 512 identifiers from Xcode 26.5. A command can still be missing
+or disabled in a different Xcode version or editor context. A successful dispatch
+means Xcode accepted the action, not that the operation finished.
 
-If you don't wana bother with downloading the code and change the app to your needs, go to **release** section in this repo (one above the bar with programming language used) and download the binary :)
+## Build and connect
 
+Open `XTouchBar.xcworkspace` in Xcode and build the `XTouchBar` scheme. To build and
+load the bridge into the prepared `/Applications/XcodeResearch.app`, run this from the
+repository root:
 
-# Legacy keyboard backend setup
+```sh
+bash XcodeCommandBridge/Host/load-into-research.sh
+```
 
-**Disclaimer**: 
-This tool uses the default shortcuts, if you customized some of your shortcuts, you can customize this easily to your desires.
+Keep XcodeResearch open while using direct commands. The bridge is loaded into that
+process and must be loaded again after XcodeResearch restarts. The helper opens this
+workspace, attaches LLDB, loads the library, and verifies the connection.
 
-**Before everything, if you are using any other keyboard than the one with American-US layout, add this keyboard as secondary inside you keyboard options**
+The default **Command Backend → Direct Xcode Commands** uses the bridge. **Keyboard
+Shortcuts (Legacy)** sends keyboard shortcuts instead and may require Accessibility
+permission and a US keyboard layout. Direct command failures never retry as keystrokes.
 
-Go to:
-Settings -> Keyboard -> Input Sources -> click on plus and ADD  `American international - PC`.
-After you added this keyboard you should be able to use this app.
+For the CLI, architecture details, runtime discovery, and validation steps, see
+[XcodeCommandBridge/README.md](XcodeCommandBridge/README.md).
 
-The reason why this is needed is that I was only able to get the  `US keyboard layout (qwerty) GOLDEN STANDART KEY ADDRESSES`
-(Look at `Key.swift`) from where I call the shortcut. Look down at `TL;DR` section if you wanna learn more.
+## Credits
 
-### Now to the use...
-Just run the application and... Let it work for you. For the first time you might need to enable something in accessibility to let this app press the keys.
-I won't tell you to enable it, but I recommend you to do so :D But it's up to you now.
-This application has build in system which observes which application is currently on foreground and according to it, 
-it sets the touchbar application on foreground. So whenever you need
-some shortcut which you don't remember, this touchbar tool is there for you :) Also if you don't like it and rather use the native 
-debug touchbar screen, you can always dismiss it. Whenever you come back to the application, it will pop right back to be presented again.
-If you don't find any of the given shortcut on the list, feel free to add it inside `Shortcut+Instances.swift`
-
-## How to add shortcut
-1. Uncomment it in `Shortcut+Instances.swift` (Don't worry, I dumped all the shortcuts with script, not manually :D )
-2. When you uncomment it, put it below the active shortcuts which are at the top of the file
-3. Optionally, you can add item 
-4. After that add some `itemDescription` for `TouchBarCustomizationPallete` and assign it the right shortcut (Probably from Xcode Settings)
-5. Add custom `NSTouchBarItem.Identifier` in `TouchBar+Identifiers.swift` (Follow for example add documentation)
-6. Add the identifier together with the shortcut to `touchBarIdentifiers` and `itemsDictionary` inside `TouchBar+Identifiers`
-7. You can now use this shortcut in the `TouchBarCustomizationPallete`!
-
-
-## Original keyboard implementation
-Basically keylogger which wil blow up your macbook, call shortcuts on fly and help you more with your workflow :) 
-
-## Known limitations:
-- Is useless for macs without touchbar 🤪
-- There are missing icons for some touchbar items. Work in progress I guess ¯\_(ツ)_/¯
-- A lot of shortcuts is missing. but **YOU** can help me with that. :) 
-- No tests. This is very sad, but eventually I will get into that when this is fully working. (And I see you like it :) )
-
-## Special thanks to
-There goes my special thanks to [JK_Kross](https://twitter.com/JK_Kross) who at that time wasn't employed as iOS Dev but music teacher and did a great job by helping me with this project :) 
-
-Guys at [MTMR](https://github.com/Toxblh/MTMR) from which I took inspiration, but not the code :)
-
-[Megg](http://instagram.com/meggi_lindova) on Instagram for providing me some icons for some actions. :)   
-
-This would be great honor to me because I never tought it is possible to make some return at least at money for the time I spend on
-some tool.
-
-## SUPPORT
-
-If you want to support this project, feel free to send some coffee money to [this link](https://www.paypal.me/develodom) 
-
-If you don't want to spend money, you can still support me if you will share this tool with your colleagues and tell them how nice it is and
-how it improved your workflow. I personally love to use the documentation button :D:D
-
-Oh yeah and, take a look at [guys at Showmax](https://tech.showmax.com), they are doing really cool stuff in a great way :) 
-
-## TODO:
-- [ ] Handle more shortcuts AKA use component which expend itselfs and has group of items.
-- [ ] Create some intuitive icon-set for the shortcuts.
-- [ ] Add more sophisticated handling of setting the keyboard back to its default layout (Multithreading wtf??)
-- [ ] Bonus, should go with previous point: Custom Xcode extensions. (Shouldn't be too hard since it's just dumb shortcut-caller)
-- [ ] Restructurize the app so it's readable.
-- [ ] Add tests for the components and run CI on this.
-- [X] Figure out wtf is with `NSApplication.shared.toggleTouchBarCustomizationPalette(self.presenter)` so it is smoother UX. (Actually App needs to be active)
-- [X] Add missing "virtual keys" (like arrow keys) to Key.swift
-- [X] Finish the PropertyListParser (handle "<key>Text Key Bindings</key>" as well)
-- [X] Transform Strings received from the parser into our Shortcut data model
-- [X] Detect when Xcode is topmost application (focused), probably AppleScript is our friend :D
-- [X] Create some mechanism that users can change to shortcuts on go.
-- [X] Create collection for the buttons and assign to the buttons the given shortcuts.
-- [X] Figure out how to call shortcuts to desired Xcode features
-- [X] Add Swiftlint to format a style a bit :)
-
-
-## Historical implementation notes (keyboard backend)
-
-### How this project works.
-The first thing to do is to class-dump private Touchbar API from `AppKit` I really would love to know what `DFR` Prefix means, but let's put that aside :D
-After we got this API, we can do pretty much what we want with the touchbar. We can replace the whole touchbar screen, or just the part we are supposed to, replace the
-control buttons, add Nyan cat etc. You can read more inside `TouchBarPresenter`, `TouchBarPrivateAPI.h` and `AppDelegate`.
-
-Okay, so now we have control of touchbar, what we need now is to create some of our view. At first I had some nice approaches in mind, the first one was to use da native approach
-with multiple `NSTouchBarItems` and refresh the items every time there is some change in UI. Don't get me wrong, this approach is good. But I don't like it. I have seen MTMR
-(Project that inspired me to do this) and I tought I want to do this the other way. Basically the function `presentSystemModal(touchBar:position:identifier)` is called there every single
-milisecond because there is always something going on. I don't believe in this approach so I decided that we should probably use some view on it.
-After that we decided to be hipsters af and create SwiftUI View on the touchbar which contains the buttons to call our desired actions. However this would cause issues on drag'n'drop touchbar Items. So we went to classic native solution.
-
-The main problem in this project is handling of shortcuts / quick actions / menu actions.
-There came 3 ideas into my mind:
-
-1. Hacking `IDEKit` and figuring out how to call actions via some private API.
-- This seemed as cool idea, but after week of importing almost whole `IDEKit`  module I decided to gave up. If you look into my class-dump  -> https://github.com/DominikBucher12/IDEKit-Class-dump
-You will find there very nice class `IDECommandManager` which should be responsible for caling the actions from random menus. As I acknowledged from Xcode stack trace (SIP off :/)
-you need always to call `cacheCommandDefinitionsAndHandlers()` to buffer the commands into memory. Also I figured out I need to run Xcode AKA `IDEApplication` one more 
-to store all the commands and get them from different stables.
-However there is a lot of more steps to this to finally get `sendActionForCommandWithIdentifier(identifier:from:)` to work. I had a lot of fun with `IDEKeyBindingSet`
-and other stuff which is related to the calling of commands. If you are bored, hacking Xcode is great entertainment for you, but don't expect quick results.
-Note, if you don't know IDEKit, it's basically framework for Xcode and everything around it :) 
-Also for this project you probably don't want to run Xcode twice just to run some app that runs small portion of it.
-
-2. Applescript way AKA Legacy way
-- I enjoy writing AppleScript a lot. I would find it most suitable, however I want to keep this clean and consistent and when Xcode changes some menu items, this could lead to
-potentional problems. I haven't try this approach because I don't believe in it's sustainbility. I think the shortcuts is the golden way between Too hard and too easy implementation.
-However I plan overwrite the shortcuts into the `IDEKit` way someday.
-
-3. Call shortcut keys on the fly.
-- This was the second approach we tried after me losing patience with hacking. The whole process is pretty simple, we have some enum `Key` which represents the keys on
-the keyboard. Also there are some special keys like `cmd`,`shift`,`control`,`option`(called modifiers) which modify the key press. You can take a look at `Key.swift` for the list of
-keys and their addresses. There is this nice object `KeyPresser` which virtually presses the keys. The keys are wrapped in `Shortcut` object which holds the keys which should be pressed
-by `KeyPresser`.  Things get pretty interesting when user has his custom keybindings defined at `~/Library/Developer/Xcode/UserData/KeyBindings/`.
-Then we need to parse the `idekeybinding` file and map the identifiers with different keys into our system and override the default ones. After we do that, we just call the overriden shortcut
-instead of the default one.
-
-PS. I Hate `IDEKit`.
+Inspired by [MTMR](https://github.com/Toxblh/MTMR). Touch Bar icons were contributed by
+[Megg](https://www.instagram.com/meggi_lindova/). Original project video:
+[XTouchBar in action](https://vimeo.com/425121496).

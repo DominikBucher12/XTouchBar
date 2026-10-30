@@ -4,10 +4,16 @@ The direct-command backend for XTouchBar on `feature/true_power`. Restored from 
 [Xcode research conversation](https://chatgpt.com/share/6ae3d047-0590-83ed-a96c-333f689324b1)
 and its downloaded `XcodeCommandBridge-3.zip`, then integrated and tested on Intel macOS.
 
-The host runs **inside Xcode**. XTouchBar sends a command identifier over a local
-CFMessagePort; the host finds the existing editor responder or workspace controller,
-checks the Objective-C method signature, and calls the action on Xcode's main thread.
-There is no need to recreate IDEKit state or simulate keystrokes.
+The host runs **inside Xcode**. XTouchBar sends an identifier from the IDEKit command
+catalog over a local CFMessagePort. The host resolves that entry's selector against the
+active editor/workspace responder chain, checks the Objective-C method signature, and
+calls the handler on Xcode's main thread.
+
+This uses IDEKit's command identifiers and existing handlers; it does not call
+`IDECommandManager.sendActionForCommandWithIdentifier:from:`. That alternative was
+explored, but it depends on private command-cache state (`cacheCommandDefinitionsAndHandlers()`)
+that must be initialized inside Xcode. The bridge avoids that manager path and resolves
+the observed handler directly. It also avoids simulating keyboard shortcuts.
 
 ## Use with XTouchBar
 
