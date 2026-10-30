@@ -1,6 +1,7 @@
 # CUSTOM:
 
 .DS_Store
+XcodeCommandBridge/Host/build/
 
 # AUTO-GENERATED:
 

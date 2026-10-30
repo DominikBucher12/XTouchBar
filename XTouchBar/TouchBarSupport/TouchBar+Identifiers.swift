@@ -11,6 +11,11 @@ public extension NSTouchBar.CustomizationIdentifier {
 }
 
 public extension NSTouchBarItem.Identifier {
+  static let build = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.build")
+  static let run = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.run")
+  static let test = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.test")
+  static let stop = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.stop")
+  static let showInNavigator = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.showInNavigator")
   static let controlStripItem = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.controlStrip")
 
   static let editorContextJumpToDefinition = NSTouchBarItem.Identifier("com.dominikbucher.xcodebar.editorContext_jumpToDefinition:")

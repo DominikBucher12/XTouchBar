@@ -47,6 +47,7 @@ opt_in_rules:
 
 excluded:
  - Pods
+ - XcodeCommandBridge
  - XTouchBarTests
  - XTouchBar/Keys/Key.swift
  - XTouchBar/TouchBarSupport/NSTouchbarSupport.swift

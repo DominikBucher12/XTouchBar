@@ -1,0 +1,3590 @@
+{
+  "version": "26.5",
+  "build": "24943",
+  "entries": [
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.ClearConsole",
+      "selector": "clearConsole:",
+      "title": "Clear Console",
+      "path": "Debug > Console > Clear Console",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.CopyGroupWithAllMetadata",
+      "selector": "copyGroupWithAllMetadata:",
+      "title": "Copy Row With All Metadata",
+      "path": "Debug > Console > Copy Row With All Metadata",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.CopyGroupWithVisibleMetadata",
+      "selector": "copyGroupWithVisibleMetadata:",
+      "title": "Copy Row With Visible Metadata",
+      "path": "Debug > Console > Copy Row With Visible Metadata",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.CopyGroupWithoutMetadata",
+      "selector": "copyGroupWithoutMetadata:",
+      "title": "Copy Row Without Metadata",
+      "path": "Debug > Console > Copy Row Without Metadata",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.HideSimilarItems.Category",
+      "selector": "hideSimilarItemsCategory:",
+      "title": "Category",
+      "path": "Debug > Console > Hide Similar Items > Category",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.HideSimilarItems.Library",
+      "selector": "hideSimilarItemsLibrary:",
+      "title": "Library",
+      "path": "Debug > Console > Hide Similar Items > Library",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.HideSimilarItems.PID",
+      "selector": "hideSimilarItemsPID:",
+      "title": "PID",
+      "path": "Debug > Console > Hide Similar Items > PID",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.HideSimilarItems.ProcessName",
+      "selector": "hideSimilarItemsProcess:",
+      "title": "Process",
+      "path": "Debug > Console > Hide Similar Items > Process",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.HideSimilarItems.Subsystem",
+      "selector": "hideSimilarItemsSubsystem:",
+      "title": "Subsystem",
+      "path": "Debug > Console > Hide Similar Items > Subsystem",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.HideSimilarItems.TID",
+      "selector": "hideSimilarItemsTID:",
+      "title": "TID",
+      "path": "Debug > Console > Hide Similar Items > TID",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.HideSimilarItems.Type",
+      "selector": "hideSimilarItemsType:",
+      "title": "Type",
+      "path": "Debug > Console > Hide Similar Items > Type",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.JumpToSource",
+      "selector": "jumpToSource:",
+      "title": "Jump To Source",
+      "path": "Debug > Console > Jump To Source",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.ReloadConsole",
+      "selector": "reloadConsole:",
+      "title": "Reload Console",
+      "path": "Debug > Console > Reload Console",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.SelectLastOutput",
+      "selector": "selectLastOutput:",
+      "title": "Select Last Output",
+      "path": "Debug > Console > Select Last Output",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.ShowSimilarItems.Category",
+      "selector": "showSimilarItemsCategory:",
+      "title": "Category",
+      "path": "Debug > Console > Show Similar Items > Category",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.ShowSimilarItems.Library",
+      "selector": "showSimilarItemsLibrary:",
+      "title": "Library",
+      "path": "Debug > Console > Show Similar Items > Library",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.ShowSimilarItems.PID",
+      "selector": "showSimilarItemsPID:",
+      "title": "PID",
+      "path": "Debug > Console > Show Similar Items > PID",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.ShowSimilarItems.ProcessName",
+      "selector": "showSimilarItemsProcess:",
+      "title": "Process",
+      "path": "Debug > Console > Show Similar Items > Process",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.ShowSimilarItems.Subsystem",
+      "selector": "showSimilarItemsSubsystem:",
+      "title": "Subsystem",
+      "path": "Debug > Console > Show Similar Items > Subsystem",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.ShowSimilarItems.TID",
+      "selector": "showSimilarItemsTID:",
+      "title": "TID",
+      "path": "Debug > Console > Show Similar Items > TID",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.ConsoleKit.CmdDefinition.ShowSimilarItems.Type",
+      "selector": "showSimilarItemsType:",
+      "title": "Type",
+      "path": "Debug > Console > Show Similar Items > Type",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.AppearanceAuto",
+      "selector": "systemAppearanceAuto:",
+      "title": "System Appearance",
+      "path": "Debug > View Debugging > Appearance > System Appearance",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.AppearanceDark",
+      "selector": "systemAppearanceDark:",
+      "title": "Dark",
+      "path": "Debug > View Debugging > Appearance > Dark",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.AppearanceIncreasedContrastDark",
+      "selector": "systemAppearanceIncreasedContrastDark:",
+      "title": "High Contrast Dark",
+      "path": "Debug > View Debugging > Appearance > High Contrast Dark",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.AppearanceIncreasedContrastLight",
+      "selector": "systemAppearanceIncreasedContrastLight:",
+      "title": "High Contrast Light",
+      "path": "Debug > View Debugging > Appearance > High Contrast Light",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.AppearanceLight",
+      "selector": "systemAppearanceLight:",
+      "title": "Light",
+      "path": "Debug > View Debugging > Appearance > Light",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.CaptureViewHierarchy",
+      "selector": "captureViewHierarchy:",
+      "title": "Capture View Hierarchy",
+      "path": "Debug > View Debugging > Capture View Hierarchy",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ColorBlendedLayers",
+      "selector": "colorBlendedLayers:",
+      "title": "Color Blended Layers",
+      "path": "Debug > View Debugging > Rendering > Color Blended Layers",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ColorCached",
+      "selector": "colorCached:",
+      "title": "Color Hits Green and Misses Red",
+      "path": "Debug > View Debugging > Rendering > Color Hits Green and Misses Red",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ColorCopiedImages",
+      "selector": "colorCopiedImages:",
+      "title": "Color Copied Images",
+      "path": "Debug > View Debugging > Rendering > Color Copied Images",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ColorFormats",
+      "selector": "colorFormats:",
+      "title": "Color Layer Formats",
+      "path": "Debug > View Debugging > Rendering > Color Layer Formats",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ColorImmediately",
+      "selector": "colorImmediately:",
+      "title": "Color Immediately",
+      "path": "Debug > View Debugging > Rendering > Color Immediately",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ColorMisalignedImages",
+      "selector": "colorMisalignedImages:",
+      "title": "Color Misaligned Images",
+      "path": "Debug > View Debugging > Rendering > Color Misaligned Images",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ColorOffscreenRenderedYellow",
+      "selector": "colorOffscreenRenderedYellow:",
+      "title": "Color Offscreen-Rendered Yellow",
+      "path": "Debug > View Debugging > Rendering > Color Offscreen-Rendered Yellow",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ColorOpenGLFastPathBlue",
+      "selector": "colorOpenGLFastPathBlue:",
+      "title": "Color Compositing Fast-Path Blue",
+      "path": "Debug > View Debugging > Rendering > Color Compositing Fast-Path Blue",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ConfigureEnvironmentOverrides",
+      "selector": "configureEnvironmentOverrides:",
+      "title": "Configure Environment Overrides…",
+      "path": "Debug > View Debugging > Configure Environment Overrides…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.DisableAllEnvironmentOverrides",
+      "selector": "disableAllEnvironmentOverrides:",
+      "title": "Disable All Environment Overrides",
+      "path": "Debug > View Debugging > Disable All Environment Overrides",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.FlashUpdatedRegions",
+      "selector": "flashUpdatedRegions:",
+      "title": "Flash Updated Regions",
+      "path": "Debug > View Debugging > Rendering > Flash Updated Regions",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ShowAlignmentRects",
+      "selector": "showAlignmentRectangles:",
+      "title": "Show Alignment Rectangles",
+      "path": "Debug > View Debugging > Show Alignment Rectangles",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ShowDrawing",
+      "selector": "showDrawing:",
+      "title": "Show View Drawing",
+      "path": "Debug > View Debugging > Show View Drawing",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ShowResponsiveScrollingStatus",
+      "selector": "showResponsiveScrollingStatus:",
+      "title": "Show Responsive Scrolling Status",
+      "path": "Debug > View Debugging > Show Responsive Scrolling Status",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Debugger.CmdDefinition.ShowViewFrames",
+      "selector": "showFrames:",
+      "title": "Show View Frames",
+      "path": "Debug > View Debugging > Show View Frames",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEIntelligenceChat.CmdDefinition.CodingTools.ShowCodingTools",
+      "selector": "showCodingTools:",
+      "title": "Show Coding Tools…",
+      "path": "Editor > Show Coding Tools > Show Coding Tools…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AboutXcode",
+      "selector": "orderFrontAboutPanel:",
+      "title": "About Xcode",
+      "path": "Xcode > About Xcode",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ActivateConsole",
+      "selector": "activateConsole:",
+      "title": "Activate Console",
+      "path": "View > Debug Area > Activate Console",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AddCommand",
+      "selector": "addCommand:",
+      "title": "Add",
+      "path": "Integrate > Add",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AddFileBookmark",
+      "selector": "addSelectedFileLocationsToTray:",
+      "title": "Bookmark “XTouchBar”",
+      "path": "Edit > Bookmark “XTouchBar”",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AddFileBookmarkWithDialog",
+      "selector": "addSelectedFileLocationsToTrayWithDialog:",
+      "title": "Bookmark “XTouchBar”…",
+      "path": "Edit > Bookmark “XTouchBar”…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AddFiles",
+      "selector": "addFiles:",
+      "title": "Add Files to “XTouchBar”…",
+      "path": "File > Add Files to “XTouchBar”…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AddInnerDocumentLocationBookmark",
+      "selector": "addSelectedInnerDocumentLocationsToTray:",
+      "title": "Add Line Bookmark",
+      "path": "Edit > Add Line Bookmark",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AddInnerDocumentLocationBookmarkWithDialog",
+      "selector": "addSelectedInnerDocumentLocationsToTrayWithDialog:",
+      "title": "Add Line Bookmark…",
+      "path": "Edit > Add Line Bookmark…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AlignLeft",
+      "selector": "alignLeft:",
+      "title": "Align Left",
+      "path": "Edit > Format > Text > Align Left",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AlignRight",
+      "selector": "alignRight:",
+      "title": "Align Right",
+      "path": "Edit > Format > Text > Align Right",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Analyze",
+      "selector": "analyzeActiveRunContext:",
+      "title": "Analyze",
+      "path": "Product > Analyze",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AnalyzeFile",
+      "selector": "analyzeFile:",
+      "title": "Analyze “MasonryGrid.swift”",
+      "path": "Product > Perform Action > Analyze “MasonryGrid.swift”",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AppStoreConnectHelp",
+      "selector": "showAppStoreConnectHelp:",
+      "title": "App Store Connect Help",
+      "path": "Help > App Store Connect Help",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ArrangeInFront",
+      "selector": "alternateArrangeInFront:",
+      "title": "Arrange in Front",
+      "path": "Window > Arrange in Front",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.AttachByPIDOrName",
+      "selector": "attachByPIDOrName:",
+      "title": "Attach to Process by PID or Name…",
+      "path": "Debug > Attach to Process by PID or Name…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BackgroundFetchEvent",
+      "selector": "backgroundFetchEvent:",
+      "title": "Simulate Background Fetch",
+      "path": "Debug > Simulate Background Fetch",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BaselineLower",
+      "selector": "lowerBaseline:",
+      "title": "Lower",
+      "path": "Edit > Format > Font > Baseline > Lower",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BaselineRaise",
+      "selector": "raiseBaseline:",
+      "title": "Raise",
+      "path": "Edit > Format > Font > Baseline > Raise",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BaselineSubscript",
+      "selector": "subscript:",
+      "title": "Subscript",
+      "path": "Edit > Format > Font > Baseline > Subscript",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BaselineSuperscript",
+      "selector": "superscript:",
+      "title": "Superscript",
+      "path": "Edit > Format > Font > Baseline > Superscript",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BaselineUseDefault",
+      "selector": "unscript:",
+      "title": "Use Default",
+      "path": "Edit > Format > Font > Baseline > Use Default",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BringAllToFront",
+      "selector": "arrangeInFront:",
+      "title": "Bring All to Front",
+      "path": "Window > Bring All to Front",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Build",
+      "selector": "buildActiveRunContext:",
+      "title": "Build",
+      "path": "Product > Build",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BuildAndArchive",
+      "selector": "buildAndArchiveActiveRunContext:",
+      "title": "Archive",
+      "path": "Product > Archive",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BuildAndExportTestProducts",
+      "selector": "buildAndExportTestProducts:",
+      "title": "Build and Export Test Products",
+      "path": "Product > Perform Action > Build and Export Test Products",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BuildAndRunToGenerateOptimizationProfile",
+      "selector": "buildAndRunToGenerateOptimizationProfileActiveRunContext:",
+      "title": "Generate Optimization Profile…",
+      "path": "Product > Perform Action > Generate Optimization Profile…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BuildDocumentation",
+      "selector": "buildDocumentationForActiveRunContext:",
+      "title": "Build Documentation",
+      "path": "Product > Build Documentation",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BuildForProfile",
+      "selector": "buildForProfileActiveScheme:",
+      "title": "Profiling",
+      "path": "Product > Build For > Profiling",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BuildForRun",
+      "selector": "buildForRunActiveRunContext:",
+      "title": "Running",
+      "path": "Product > Build For > Running",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BuildForTest",
+      "selector": "buildForTestActiveRunContext:",
+      "title": "Testing",
+      "path": "Product > Build For > Testing",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.BuildWithTimingSummary",
+      "selector": "buildActiveRunContextWithTimingSummary:",
+      "title": "Build with Timing Summary",
+      "path": "Product > Perform Action > Build with Timing Summary",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CallHierarchy",
+      "selector": "showCallHierarchy:",
+      "title": "Find Call Hierarchy",
+      "path": "Find > Find Call Hierarchy",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Capitalize",
+      "selector": "capitalizeWord:",
+      "title": "Capitalize",
+      "path": "Edit > Format > Transformations > Capitalize",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Center",
+      "selector": "alignCenter:",
+      "title": "Center",
+      "path": "Edit > Format > Text > Center",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CheckDocumentNow",
+      "selector": "checkSpelling:",
+      "title": "Check Document Now",
+      "path": "Edit > Format > Spelling and Grammar > Check Document Now",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CheckGrammarWithSpelling",
+      "selector": "toggleGrammarChecking:",
+      "title": "Check Grammar With Spelling",
+      "path": "Edit > Format > Spelling and Grammar > Check Grammar With Spelling",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CheckSpellingWhileTyping",
+      "selector": "toggleContinuousSpellChecking:",
+      "title": "Check Spelling While Typing",
+      "path": "Edit > Format > Spelling and Grammar > Check Spelling While Typing",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CherryPickCommand",
+      "selector": "cherryPickCommand:",
+      "title": "Cherry-Pick…",
+      "path": "Integrate > Cherry-Pick…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ChooseDestination",
+      "selector": "chooseDestination:",
+      "title": "Choose Destination",
+      "path": "Product > Destination > Choose Destination",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ChooseScheme",
+      "selector": "chooseScheme:",
+      "title": "Choose Scheme",
+      "path": "Product > Scheme > Choose Scheme",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Clean",
+      "selector": "cleanActiveRunContext:",
+      "title": "Clean Build Folder…",
+      "path": "Product > Clean Build Folder…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CleanImmediately",
+      "selector": "cleanActiveRunContextImmediately:",
+      "title": "Clean Build Folder Immediately",
+      "path": "Product > Clean Build Folder Immediately",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ClearAllIssues",
+      "selector": "clearAllIssues:",
+      "title": "Clear All Issues",
+      "path": "Product > Clear All Issues",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ClearTestResults",
+      "selector": "clearTestResults:",
+      "title": "Clear Test Results",
+      "path": "Product > Clear Test Results",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CloseDocument",
+      "selector": "topLevelEditorContext_closeDocument:",
+      "title": "Close “Pods.xcodeproj”",
+      "path": "File > Close “Pods.xcodeproj”",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CloseEditor",
+      "selector": "_closeActiveEditor:",
+      "title": "Close Editor Pane",
+      "path": "File > Close Editor Pane",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CloseEditorTab",
+      "selector": "dvt_closeActiveEditorTab:",
+      "title": "Close Window",
+      "path": "File > Close Window",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CloseOtherEditorTabs",
+      "selector": "_closeOtherEditorTabs:",
+      "title": "Close Other Tabs",
+      "path": "File > Close Other Tabs",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CloseOtherEditors",
+      "selector": "closeOtherEditors:",
+      "title": "Close Other Editor Panes",
+      "path": "File > Close Other Editor Panes",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CloseOtherWindowTabs",
+      "selector": "closeOtherWindowTabs:",
+      "title": "Close Other Window Tabs",
+      "path": "File > Close Other Window Tabs",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CloseWindowTab",
+      "selector": "dvt_closeWindowAsWindowTab:",
+      "title": "Close Window",
+      "path": "File > Close Window",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CloseWorkspace",
+      "selector": "performCloseWorkspace:",
+      "title": "Close Workspace",
+      "path": "File > Close Workspace",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CommitCommand",
+      "selector": "commitCommand:",
+      "title": "Commit…",
+      "path": "Integrate > Commit…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CompileFile",
+      "selector": "compileFile:",
+      "title": "Compile “MasonryGrid.swift”",
+      "path": "Product > Perform Action > Compile “MasonryGrid.swift”",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ContinueToCurrentLine",
+      "selector": "continueToCurrentLine:",
+      "title": "Continue To Current Line",
+      "path": "Debug > Continue To Current Line",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ConvertToFolder",
+      "selector": "convertToFolder:",
+      "title": "To Folder",
+      "path": "Edit > Convert > To Folder",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ConvertToGroup",
+      "selector": "convertToGroup:",
+      "title": "To Group",
+      "path": "Edit > Convert > To Group",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Copy",
+      "selector": "copy:",
+      "title": "Copy",
+      "path": "Edit > Copy > Copy",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CopyBuildFolder",
+      "selector": "copyBuildFolderPath:",
+      "title": "Copy Build Folder Path",
+      "path": "Product > Copy Build Folder Path",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CopyFileAndLine",
+      "selector": "copyFileAndLine:",
+      "title": "Copy File and Line",
+      "path": "Edit > Copy > Copy File and Line",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CopyQualifiedSymbolName",
+      "selector": "copyQualifiedSymbolName:",
+      "title": "Copy Qualified Symbol Name",
+      "path": "Edit > Copy > Copy Qualified Symbol Name",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CopyRuler",
+      "selector": "copyRuler:",
+      "title": "Copy Ruler",
+      "path": "Edit > Format > Text > Copy Ruler",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CopyStyle",
+      "selector": "copyFont:",
+      "title": "Copy Style",
+      "path": "Edit > Format > Font > Copy Style",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CopySymbolName",
+      "selector": "copySymbolName:",
+      "title": "Copy Symbol Name",
+      "path": "Edit > Copy > Copy Symbol Name",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CorrectSpellingAutomatically",
+      "selector": "toggleAutomaticSpellingCorrection:",
+      "title": "Correct Spelling Automatically",
+      "path": "Edit > Format > Spelling and Grammar > Correct Spelling Automatically",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CreateCodeSnippet",
+      "selector": "createCodeSnippetFromSelection:",
+      "title": "Create Code Snippet…",
+      "path": "Editor > Create Code Snippet…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CreateExceptionBreakpoint",
+      "selector": "createExceptionBreakpoint:",
+      "title": "Create Exception Breakpoint…",
+      "path": "Debug > Breakpoints > Create Exception Breakpoint…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CreatePullRequestCommand",
+      "selector": "createPullRequestCommand:",
+      "title": "Create Pull Request…",
+      "path": "Integrate > Create Pull Request…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CreateSwiftErrorBreakpoint",
+      "selector": "createSwiftErrorBreakpoint:",
+      "title": "Create Swift Error Breakpoint",
+      "path": "Debug > Breakpoints > Create Swift Error Breakpoint",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CreateSymbolicBreakpoint",
+      "selector": "createSymbolicBreakpoint:",
+      "title": "Create Symbolic Breakpoint…",
+      "path": "Debug > Breakpoints > Create Symbolic Breakpoint…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CreateTestFailureBreakpoint",
+      "selector": "createTestFailureBreakpoint:",
+      "title": "Create Test Failure Breakpoint",
+      "path": "Debug > Breakpoints > Create Test Failure Breakpoint",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.CreateWorkingCopyCommand",
+      "selector": "createWorkingCopyCommand:",
+      "title": "New Git Repository…",
+      "path": "Integrate > New Git Repository…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Cut",
+      "selector": "cut:",
+      "title": "Cut",
+      "path": "Edit > Cut",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.DataDetectors",
+      "selector": "toggleAutomaticDataDetection:",
+      "title": "Data Detectors",
+      "path": "Edit > Format > Substitutions > Data Detectors",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.DebugExecutable",
+      "selector": "debugExecutable:",
+      "title": "Debug Executable…",
+      "path": "Debug > Debug Executable…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.DebuggerToggleVisibility",
+      "selector": "toggleDebuggerVisibility:",
+      "title": "Show Debug Area",
+      "path": "View > Debug Area > Show Debug Area",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Delete",
+      "selector": "delete:",
+      "title": "Delete",
+      "path": "Edit > Delete",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.DeleteAllBreakpoints",
+      "selector": "deleteAllBreakpoints:",
+      "title": "Delete All Breakpoints",
+      "path": "Debug > Breakpoints > Delete All Breakpoints",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.DeleteColumnBreakpointsAtCurrentLine",
+      "selector": "deleteColumnBreakpointsAtCurrentLine:",
+      "title": "Delete Column Breakpoints at Current Line",
+      "path": "Debug > Breakpoints > Delete Column Breakpoints at Current Line",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Detach",
+      "selector": "detach:",
+      "title": "Detach",
+      "path": "Debug > Detach",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.DeveloperAccountHelp",
+      "selector": "showDeveloperAccountHelp:",
+      "title": "Developer Account Help",
+      "path": "Help > Developer Account Help",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.DeveloperDocumentation",
+      "selector": "windowMenu_showDocumentation:",
+      "title": "Developer Documentation",
+      "path": "Help > Developer Documentation",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Devices",
+      "selector": "showDevicesWindow:",
+      "title": "Devices and Simulators",
+      "path": "Window > Devices and Simulators",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Duplicate",
+      "selector": "duplicate:",
+      "title": "Duplicate",
+      "path": "Edit > Duplicate",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.DuplicateActiveEditorTab",
+      "selector": "duplicateActiveEditorTab:",
+      "title": "Duplicate Editor Tab",
+      "path": "File > Duplicate Editor Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.DuplicateDocument",
+      "selector": "ide_duplicateDocument:",
+      "title": "Duplicate…",
+      "path": "File > Duplicate…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.EditActiveScheme",
+      "selector": "editActiveRunContext:",
+      "title": "Edit Scheme…",
+      "path": "Product > Scheme > Edit Scheme…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.EditAlerts",
+      "selector": "editAlerts:",
+      "title": "Edit Behaviors…",
+      "path": "Xcode > Behaviors > Edit Behaviors…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.EditAndAnalyze",
+      "selector": "editAndAnalyzeActiveRunContext:",
+      "title": "Analyze…",
+      "path": "Product > Analyze…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.EditAndProfile",
+      "selector": "editAndProfileActiveScheme:",
+      "title": "Profile…",
+      "path": "Product > Profile…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.EditAndRun",
+      "selector": "editAndRunActiveRunContext:",
+      "title": "Run…",
+      "path": "Product > Run…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.EditAndTest",
+      "selector": "editAndTestActiveRunContext:",
+      "title": "Test…",
+      "path": "Product > Test…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.EditBuildAndArchive",
+      "selector": "editBuildAndArchiveActiveRunContext:",
+      "title": "Archive…",
+      "path": "Product > Archive…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.EditWorkspaceUserSettings",
+      "selector": "editWorkspaceUserSettings:",
+      "title": "Workspace Settings…",
+      "path": "File > Workspace Settings…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.EnableDisableBreakpointAtCurrentLine",
+      "selector": "enableDisableBreakpointAtCurrentLine:",
+      "title": "Enable/Disable Breakpoint at Current Line",
+      "path": "Debug > Breakpoints > Enable/Disable Breakpoint at Current Line",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ExportDocument",
+      "selector": "exportDocument:",
+      "title": "Export…",
+      "path": "File > Export…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FetchChangesCommand",
+      "selector": "fetchChangesCommand:",
+      "title": "Fetch Changes",
+      "path": "Integrate > Fetch Changes",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FilterInNavigator",
+      "selector": "filterInNavigator:",
+      "title": "Filter in Navigator",
+      "path": "View > Navigators > Filter in Navigator",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Find",
+      "selector": "find:",
+      "title": "Find…",
+      "path": "Find > Find…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindAncestorTypes",
+      "selector": "findAncestorTypes:",
+      "title": "Find Ancestor Types",
+      "path": "Find > Find Ancestor Types",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindAndReplace",
+      "selector": "findAndReplace:",
+      "title": "Find and Replace…",
+      "path": "Find > Find and Replace…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindAndReplaceInWorkspace",
+      "selector": "findAndReplaceInWorkspace:",
+      "title": "Find and Replace in Workspace…",
+      "path": "Find > Find and Replace in Workspace…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindAndSelectNext",
+      "selector": "findAndSelectNext:",
+      "title": "Find and Select Next",
+      "path": "Find > Find and Select Next",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindAndSelectPrevious",
+      "selector": "findAndSelectPrevious:",
+      "title": "Find and Select Previous",
+      "path": "Find > Find and Select Previous",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindConformingTypes",
+      "selector": "findConformingTypes:",
+      "title": "Find Conforming Types",
+      "path": "Find > Find Conforming Types",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindDescendentTypes",
+      "selector": "findDescendentTypes:",
+      "title": "Find Descendent Types",
+      "path": "Find > Find Descendent Types",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindInWorkspace",
+      "selector": "findInWorkspace:",
+      "title": "Find in Workspace",
+      "path": "Find > Find in Workspace",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindNext",
+      "selector": "findNext:",
+      "title": "Find Next",
+      "path": "Find > Find Next",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindPrevious",
+      "selector": "findPrevious:",
+      "title": "Find Previous",
+      "path": "Find > Find Previous",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindSelectedKeywordsInWorkspace",
+      "selector": "findSelectedKeywordsInWorkspace:",
+      "title": "Find Selected Words in Workspace",
+      "path": "Find > Find Selected Words in Workspace",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindSelectedSymbolInWorkspace",
+      "selector": "findSelectedSymbolInWorkspace:",
+      "title": "Find Selected Symbol in Workspace",
+      "path": "Find > Find Selected Symbol in Workspace",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FindSelectedTextInWorkspace",
+      "selector": "findSelectedTextInWorkspace:",
+      "title": "Find Selected Text in Workspace",
+      "path": "Find > Find Selected Text in Workspace",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.FixAllIssuesInAllFiles",
+      "selector": "fixAllIssuesInAllFiles:",
+      "title": "fixAllIssuesInAllFiles:",
+      "path": "",
+      "source": "candidate"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.GenerateAssemblyFile",
+      "selector": "showAssemblyCodeForFile:",
+      "title": "Assemble “MasonryGrid.swift”",
+      "path": "Product > Perform Action > Assemble “MasonryGrid.swift”",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.GeneratePreprocessedFile",
+      "selector": "preprocessFile:",
+      "title": "Preprocess “MasonryGrid.swift”",
+      "path": "Product > Perform Action > Preprocess “MasonryGrid.swift”",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.GoBack",
+      "selector": "topLevelEditorContext_goBackInHistoryByCommand:",
+      "title": "Show Previous Location in History",
+      "path": "Navigate > Show Previous Location in History",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.GoBackWithAlternate",
+      "selector": "topLevelEditorContext_goBackInHistoryByCommandWithAlternate:",
+      "title": "Show Previous Location in History using Tab",
+      "path": "Navigate > Show Previous Location in History using Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.GoBackWithShiftPlusAlternate",
+      "selector": "topLevelEditorContext_goBackInHistoryByCommandWithShiftPlusAlternate:",
+      "title": "Show Previous Location in History in Next Editor Pane",
+      "path": "Navigate > Show Previous Location in History in Next Editor Pane",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.GoForward",
+      "selector": "topLevelEditorContext_goForwardInHistoryByCommand:",
+      "title": "Show Next Location in History",
+      "path": "Navigate > Show Next Location in History",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.GoForwardWithAlternate",
+      "selector": "topLevelEditorContext_goForwardInHistoryByCommandWithAlternate:",
+      "title": "Show Next Location in History using Tab",
+      "path": "Navigate > Show Next Location in History using Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.GoForwardWithShiftPlusAlternate",
+      "selector": "topLevelEditorContext_goForwardInHistoryByCommandWithShiftPlusAlternate:",
+      "title": "Show Next Location in History in Next Editor Pane",
+      "path": "Navigate > Show Next Location in History in Next Editor Pane",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Hide",
+      "selector": "hide:",
+      "title": "Hide Xcode",
+      "path": "Xcode > Hide Xcode",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.HideFindBar",
+      "selector": "hideFindBar:",
+      "title": "Hide Find Bar",
+      "path": "Find > Hide Find Bar",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.HideOthers",
+      "selector": "hideOtherApplications:",
+      "title": "Hide Others",
+      "path": "Xcode > Hide Others",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.HumanInterfaceGuidelines",
+      "selector": "showHumanInterfaceGuidelines:",
+      "title": "Human Interface Guidelines",
+      "path": "Help > Human Interface Guidelines",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.IDEQuickHelp",
+      "selector": "showQuickHelp:",
+      "title": "Show Quick Help for Selected Item",
+      "path": "Help > Show Quick Help for Selected Item",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Inspectors.ToggleVisibility",
+      "selector": "toggleInspectorArea:",
+      "title": "Show Inspector",
+      "path": "View > Inspectors > Show Inspector",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpBetweenSourceFileAndGeneratedFile",
+      "selector": "jumpBetweenSourceFileAndGeneratedFile:",
+      "title": "Jump to Original Source/Generated Interface",
+      "path": "Navigate > Jump to Original Source/Generated Interface",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpTo",
+      "selector": "jumpToLine:",
+      "title": "Jump to Line in “MenuCreator.swift”…",
+      "path": "Navigate > Jump to Line in “MenuCreator.swift”…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToDefinition",
+      "selector": "editorContext_jumpToDefinition:",
+      "title": "Jump to Definition",
+      "path": "Navigate > Jump to Definition",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToDefinitionWithAlternate",
+      "selector": "editorContext_jumpToDefinitionWithAlternate:",
+      "title": "Jump to Definition using Tab",
+      "path": "Navigate > Jump to Definition using Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToDefinitionWithShiftPlusAlternate",
+      "selector": "editorContext_jumpToDefinitionWithShiftPlusAlternate:",
+      "title": "Jump to Definition in Next Editor Pane",
+      "path": "Navigate > Jump to Definition in Next Editor Pane",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToInstructionPointer",
+      "selector": "topLevelEditorContext_jumpToInstructionPointer:",
+      "title": "Jump to Instruction Pointer",
+      "path": "Navigate > Jump to Instruction Pointer",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToLastDestination",
+      "selector": "topLevelEditorContext_jumpToLastDestination:",
+      "title": "Jump to Last Destination",
+      "path": "Navigate > Jump to Last Destination",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToNextBookmark",
+      "selector": "topLevelEditorContext_jumpToNextBookmark:",
+      "title": "Jump to Next Bookmark",
+      "path": "Navigate > Jump to Next Bookmark",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToNextBookmarkInWorkspace",
+      "selector": "topLevelEditorContext_jumpToNextBookmarkInWorkspace:",
+      "title": "Jump to Next Bookmark In Workspace",
+      "path": "Navigate > Jump to Next Bookmark In Workspace",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToNextIssue",
+      "selector": "topLevelEditorContext_jumpToNextIssue:",
+      "title": "Jump to Next Issue",
+      "path": "Navigate > Jump to Next Issue",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToPreviousBookmark",
+      "selector": "topLevelEditorContext_jumpToPreviousBookmark:",
+      "title": "Jump to Previous Bookmark",
+      "path": "Navigate > Jump to Previous Bookmark",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToPreviousBookmarkInWorkspace",
+      "selector": "topLevelEditorContext_jumpToPreviousBookmarkInWorkspace:",
+      "title": "Jump to Previous Bookmark In Workspace",
+      "path": "Navigate > Jump to Previous Bookmark In Workspace",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToPreviousIssue",
+      "selector": "topLevelEditorContext_jumpToPreviousIssue:",
+      "title": "Jump to Previous Issue",
+      "path": "Navigate > Jump to Previous Issue",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.JumpToSelection",
+      "selector": "jumpToSelection:",
+      "title": "Jump to Selection",
+      "path": "Navigate > Jump to Selection",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Justify",
+      "selector": "alignJustified:",
+      "title": "Justify",
+      "path": "Edit > Format > Text > Justify",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.KernLoosen",
+      "selector": "loosenKerning:",
+      "title": "Loosen",
+      "path": "Edit > Format > Font > Kern > Loosen",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.KernTighten",
+      "selector": "tightenKerning:",
+      "title": "Tighten",
+      "path": "Edit > Format > Font > Kern > Tighten",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.KernUseDefault",
+      "selector": "useStandardKerning:",
+      "title": "Use Default",
+      "path": "Edit > Format > Font > Kern > Use Default",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.KernUseNone",
+      "selector": "turnOffKerning:",
+      "title": "Use None",
+      "path": "Edit > Format > Font > Kern > Use None",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Libraries.OpenLibrary",
+      "selector": "openLibrary:",
+      "title": "Open Library",
+      "path": "View > Open Library",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Libraries.ShowLibrary",
+      "selector": "showLibrary:",
+      "title": "Show Library",
+      "path": "View > Show Library",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.LigatureUseAll",
+      "selector": "useAllLigatures:",
+      "title": "Use All",
+      "path": "Edit > Format > Font > Ligatures > Use All",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.LigatureUseDefault",
+      "selector": "useStandardLigatures:",
+      "title": "Use Default",
+      "path": "Edit > Format > Font > Ligatures > Use Default",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.LigatureUseNone",
+      "selector": "turnOffLigatures:",
+      "title": "Use None",
+      "path": "Edit > Format > Font > Ligatures > Use None",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.LoadSymbols",
+      "selector": "loadSymbols:",
+      "title": "Load Symbols…",
+      "path": "Debug > Debug Workflow > Load Symbols…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.LocalizationExport",
+      "selector": "localizationExport:",
+      "title": "Export Localizations…",
+      "path": "Product > Export Localizations…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.LocalizationImport",
+      "selector": "localizationImport:",
+      "title": "Import Localizations…",
+      "path": "Product > Import Localizations…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.MakeLowerCase",
+      "selector": "lowercaseWord:",
+      "title": "Make Lower Case",
+      "path": "Edit > Format > Transformations > Make Lower Case",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.MakeUpperCase",
+      "selector": "uppercaseWord:",
+      "title": "Make Upper Case",
+      "path": "Edit > Format > Transformations > Make Upper Case",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ManageSchemes",
+      "selector": "manageRunContexts:",
+      "title": "Manage Schemes…",
+      "path": "Product > Scheme > Manage Schemes…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.MergeAllWindows",
+      "selector": "mergeAllWindows:",
+      "title": "Merge All Windows",
+      "path": "Window > Merge All Windows",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Minimize",
+      "selector": "performMiniaturize:",
+      "title": "Minimize",
+      "path": "Window > Minimize",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.MinimizeAll",
+      "selector": "miniaturizeAll:",
+      "title": "Minimize All",
+      "path": "Window > Minimize All",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.MoveFocusToEditor",
+      "selector": "moveFocusToEditor:",
+      "title": "Move Focus to Editor Pane…",
+      "path": "Navigate > Move Focus to Editor Pane…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.MoveFocusToNextArea",
+      "selector": "moveKeyboardFocusToNextArea:",
+      "title": "Move Focus to Next Area",
+      "path": "Navigate > Move Focus to Next Area",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.MoveFocusToNextEditor",
+      "selector": "moveKeyboardFocusToNextEditor:",
+      "title": "Move Focus to Next Editor Pane",
+      "path": "Navigate > Move Focus to Next Editor Pane",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.MoveFocusToPreviousArea",
+      "selector": "moveKeyboardFocusToPreviousArea:",
+      "title": "Move Focus to Previous Area",
+      "path": "Navigate > Move Focus to Previous Area",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.MoveFocusToPreviousEditor",
+      "selector": "moveKeyboardFocusToPreviousEditor:",
+      "title": "Move Focus to Previous Editor Pane",
+      "path": "Navigate > Move Focus to Previous Editor Pane",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.MoveItemHere",
+      "selector": "moveItemHere:",
+      "title": "Move Item Here",
+      "path": "Edit > Paste > Move Item Here",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.MoveTabToNewWindow",
+      "selector": "moveTabToNewWindow:",
+      "title": "Move Tab to New Window",
+      "path": "Window > Move Tab to New Window",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigateToNextFindResult",
+      "selector": "navigateToNextFindResult:",
+      "title": "Find Next in Workspace",
+      "path": "Find > Find Next in Workspace",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigateToPreviousFindResult",
+      "selector": "navigateToPreviousFindResult:",
+      "title": "Find Previous in Workspace",
+      "path": "Find > Find Previous in Workspace",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigateToSourceFileOnPause",
+      "selector": "toggleNavigateToSourceFileOnPause:",
+      "title": "Navigate to Source File when Process Pauses",
+      "path": "Debug > Debug Workflow > Navigate to Source File when Process Pauses",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigatorsBookmarks",
+      "selector": "toggleBookmarksNavigator:",
+      "title": "Bookmarks",
+      "path": "View > Navigators > Bookmarks",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigatorsBreakpoints",
+      "selector": "toggleBreakpointsNavigator:",
+      "title": "Breakpoints",
+      "path": "View > Navigators > Breakpoints",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigatorsCodingAssistant",
+      "selector": "toggleCodingAssistantNavigator:",
+      "title": "Show Coding Assistant",
+      "path": "View > Navigators > Show Coding Assistant",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigatorsDebugger",
+      "selector": "toggleDebuggerNavigator:",
+      "title": "Debug",
+      "path": "View > Navigators > Debug",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigatorsFind",
+      "selector": "toggleFindNavigator:",
+      "title": "Find",
+      "path": "View > Navigators > Find",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigatorsIssues",
+      "selector": "toggleIssuesNavigator:",
+      "title": "Issues",
+      "path": "View > Navigators > Issues",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigatorsLogs",
+      "selector": "toggleLogsNavigator:",
+      "title": "Reports",
+      "path": "View > Navigators > Reports",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigatorsStructure",
+      "selector": "toggleStructureNavigator:",
+      "title": "Project",
+      "path": "View > Navigators > Project",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigatorsTest",
+      "selector": "toggleTestNavigator:",
+      "title": "Tests",
+      "path": "View > Navigators > Tests",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigatorsToggleVisibility",
+      "selector": "toggleNavigator:",
+      "title": "Show Navigator",
+      "path": "View > Navigators > Show Navigator",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NavigatorsWorkingCopies",
+      "selector": "toggleWorkingCopiesNavigator:",
+      "title": "Source Control",
+      "path": "View > Navigators > Source Control",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewEditorBelow",
+      "selector": "newEditorAreaSplitBelow:",
+      "title": "Editor Pane Below",
+      "path": "File > New > Editor Pane Below",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewEditorOnRight",
+      "selector": "newEditorAreaSplitOnRight:",
+      "title": "Editor Pane On Right",
+      "path": "File > New > Editor Pane On Right",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewEditorTab",
+      "selector": "newTab:",
+      "title": "Tab",
+      "path": "File > New > Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewEmptyFile",
+      "selector": "newEmptyFile:",
+      "title": "Empty File",
+      "path": "File > New > Empty File",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewFileFromClipboard",
+      "selector": "newFileFromPasteboard:",
+      "title": "New File from Clipboard",
+      "path": "File > New > New File from Clipboard",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewFileFromTemplate",
+      "selector": "newFileFromTemplate:",
+      "title": "File from Template…",
+      "path": "File > New > File from Template…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewFolder",
+      "selector": "newFolder:",
+      "title": "Folder",
+      "path": "File > New > Folder",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewFolderFromSelection",
+      "selector": "newFolderFromSelection:",
+      "title": "Folder from Selection",
+      "path": "File > New > Folder from Selection",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewGroupFromSelectionWithFolder",
+      "selector": "newGroupFromSelectionWithFolder:",
+      "title": "Group from Selection",
+      "path": "File > New > Group from Selection",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewGroupFromSelectionWithoutFolder",
+      "selector": "newGroupFromSelectionWithoutFolder:",
+      "title": "Group from Selection without Folder",
+      "path": "File > New > Group from Selection without Folder",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewGroupWithFolder",
+      "selector": "newGroupWithFolder:",
+      "title": "Group",
+      "path": "File > New > Group",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewGroupWithoutFolder",
+      "selector": "newGroupWithoutFolder:",
+      "title": "Group without Folder",
+      "path": "File > New > Group without Folder",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewPackage",
+      "selector": "newPackage:",
+      "title": "Package…",
+      "path": "File > New > Package…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewProject",
+      "selector": "newProject:",
+      "title": "Project…",
+      "path": "File > New > Project…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewScheme",
+      "selector": "newRunContext:",
+      "title": "New Scheme…",
+      "path": "Product > Scheme > New Scheme…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewTarget",
+      "selector": "newTarget:",
+      "title": "Target…",
+      "path": "File > New > Target…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewWindow",
+      "selector": "newWindow:",
+      "title": "Window",
+      "path": "File > New > Window",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewWindowTab",
+      "selector": "newWindowForTab:",
+      "title": "Window Tab",
+      "path": "File > New > Window Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NewWorkspace",
+      "selector": "newWorkspace:",
+      "title": "Workspace…",
+      "path": "File > New > Workspace…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NextDestination",
+      "selector": "selectNextDestination:",
+      "title": "Select Next Destination",
+      "path": "Product > Destination > Select Next Destination",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.NextScheme",
+      "selector": "selectNextRunContext:",
+      "title": "Select Next Scheme",
+      "path": "Product > Scheme > Select Next Scheme",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Open",
+      "selector": "openDocument:",
+      "title": "Open…",
+      "path": "File > Open…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.OpenInAdjacentEditorWithAlternate",
+      "selector": "openInAdjacentEditorWithAlternate:",
+      "title": "Open using Tab",
+      "path": "Navigate > Open using Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.OpenInAdjacentEditorWithShiftPlusAlternate",
+      "selector": "openInAdjacentEditorWithShiftPlusAlternate:",
+      "title": "Open in Next Editor Pane",
+      "path": "Navigate > Open in Next Editor Pane",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.OpenInEditorTabs",
+      "selector": "openInEditorTabs:",
+      "title": "Open in New Tabs",
+      "path": "File > Open in New Tabs",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.OpenInNewWindow",
+      "selector": "openInNewWindow:",
+      "title": "Open in New Window",
+      "path": "File > Open in New Window",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.OpenQuickly",
+      "selector": "openQuickly:",
+      "title": "Open Quickly…",
+      "path": "File > Open Quickly…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.OpenWithExternalEditor",
+      "selector": "openWithExternalEditor:",
+      "title": "Open with External Editor",
+      "path": "File > Open with External Editor",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Outline",
+      "selector": "outline:",
+      "title": "Outline",
+      "path": "Edit > Format > Font > Outline",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.PageSetup",
+      "selector": "runPageLayout:",
+      "title": "Page Setup…",
+      "path": "File > Page Setup…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Paragraph",
+      "selector": "nullParagraph:",
+      "title": "Paragraph",
+      "path": "Edit > Format > Text > Writing Direction > Paragraph",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ParagraphDefault",
+      "selector": "makeBaseWritingDirectionNatural:",
+      "title": "   Default",
+      "path": "Edit > Format > Text > Writing Direction >    Default",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ParagraphLeftToRight",
+      "selector": "makeBaseWritingDirectionLeftToRight:",
+      "title": "   Left to Right",
+      "path": "Edit > Format > Text > Writing Direction >    Left to Right",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ParagraphRightToLeft",
+      "selector": "makeBaseWritingDirectionRightToLeft:",
+      "title": "   Right to Left",
+      "path": "Edit > Format > Text > Writing Direction >    Right to Left",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Paste",
+      "selector": "paste:",
+      "title": "Paste",
+      "path": "Edit > Paste > Paste",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.PasteAndPreserveFormatting",
+      "selector": "pasteAndPreserveFormatting:",
+      "title": "Paste and Preserve Formatting",
+      "path": "Edit > Paste > Paste and Preserve Formatting",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.PasteRuler",
+      "selector": "pasteRuler:",
+      "title": "Paste Ruler",
+      "path": "Edit > Format > Text > Paste Ruler",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.PasteStyle",
+      "selector": "pasteFont:",
+      "title": "Paste Style",
+      "path": "Edit > Format > Font > Paste Style",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.PauseContinue",
+      "selector": "pauseOrContinue:",
+      "title": "Pause",
+      "path": "Debug > Pause",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Preferences",
+      "selector": "showPreferencesPanel:",
+      "title": "Settings…",
+      "path": "Xcode > Settings…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.PreflightConversionToFolder",
+      "selector": "preflightConversionToFolder:",
+      "title": "Preflight Conversion To Folder",
+      "path": "Edit > Convert > Preflight Conversion To Folder",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.PreviousDestination",
+      "selector": "selectPreviousDestination:",
+      "title": "Select Previous Destination",
+      "path": "Product > Destination > Select Previous Destination",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.PreviousScheme",
+      "selector": "selectPreviousRunContext:",
+      "title": "Select Previous Scheme",
+      "path": "Product > Scheme > Select Previous Scheme",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Print",
+      "selector": "printDocument:",
+      "title": "Print…",
+      "path": "File > Print…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Products",
+      "selector": "windowMenu_showProducts:",
+      "title": "Organizer",
+      "path": "Window > Organizer",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Products.Reload",
+      "selector": "productsWindow_reload:",
+      "title": "Reload Organizer",
+      "path": "View > Reload Organizer",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Profile",
+      "selector": "profileActiveScheme:",
+      "title": "Profile",
+      "path": "Product > Profile",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ProfileAgain",
+      "selector": "profileAgain:",
+      "title": "Profile Again",
+      "path": "Product > Perform Action > Profile Again",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ProfileSelectedItems",
+      "selector": "profileSelectedItems:",
+      "title": "Profile",
+      "path": "Product > Perform Action > Profile",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ProfileWithoutBuilding",
+      "selector": "profileActiveSchemeWithoutBuilding:",
+      "title": "Profile Without Building",
+      "path": "Product > Perform Action > Profile Without Building",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.PushCommand",
+      "selector": "pushCommand:",
+      "title": "Push…",
+      "path": "Integrate > Push…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.QuitXcode",
+      "selector": "terminate:",
+      "title": "Quit and Keep Windows",
+      "path": "Xcode > Quit and Keep Windows",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Redo",
+      "selector": "redo:",
+      "title": "Redo",
+      "path": "Edit > Redo",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.RefreshFileStatusCommand",
+      "selector": "refreshFileStatusCommand:",
+      "title": "Refresh File Status",
+      "path": "Integrate > Refresh File Status",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ReleaseNotes",
+      "selector": "showXcodeReleaseNotes:",
+      "title": "Release Notes",
+      "path": "Help > Release Notes",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.RenameCurrentWindowTab",
+      "selector": "renameCurrentTab:",
+      "title": "Rename Window Tab…",
+      "path": "Window > Rename Window Tab…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Replace",
+      "selector": "replace:",
+      "title": "Replace",
+      "path": "Find > Replace",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ReplaceAll",
+      "selector": "replaceAll:",
+      "title": "Replace All",
+      "path": "Find > Replace All",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ReplaceAndFindNext",
+      "selector": "replaceAndFindNext:",
+      "title": "Replace and Find Next",
+      "path": "Find > Replace and Find Next",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ReplaceAndFindPrevious",
+      "selector": "replaceAndFindPrevious:",
+      "title": "Replace and Find Previous",
+      "path": "Find > Replace and Find Previous",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ReportIssueToApple",
+      "selector": "reportIssueToApple:",
+      "title": "Provide Feedback…",
+      "path": "Help > Provide Feedback…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ResetAssistantEditorSelection",
+      "selector": "resetAssistantEditorSelection:",
+      "title": "Reset Assistant Selection",
+      "path": "View > Reset Assistant Selection",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ResetEditorSizes",
+      "selector": "resetEditorSizes:",
+      "title": "Reset Editor Sizes",
+      "path": "View > Reset Editor Sizes",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ResetPackageDependencyGraph",
+      "selector": "resetPackageDependencyGraph:",
+      "title": "Reset Package Caches",
+      "path": "File > Packages > Reset Package Caches",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ResolvePackageVersions",
+      "selector": "resolvePackageVersions:",
+      "title": "Resolve Package Versions",
+      "path": "File > Packages > Resolve Package Versions",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ResolvedCommand",
+      "selector": "resolvedCommand:",
+      "title": "Mark as Resolved",
+      "path": "Integrate > Mark as Resolved",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.RevealBuildFolder",
+      "selector": "revealBuildFolder:",
+      "title": "Show Build Folder in Finder",
+      "path": "Product > Show Build Folder in Finder",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.RevealInDebugNavigator",
+      "selector": "revealInDebugNavigator:",
+      "title": "Reveal in Debug Navigator",
+      "path": "Navigate > Reveal in Debug Navigator",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.RevealInProjectNavigator",
+      "selector": "revealInProjectNavigator:",
+      "title": "Reveal in Project Navigator",
+      "path": "Navigate > Reveal in Project Navigator",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.RevertDocumentToLastSaved",
+      "selector": "ide_revertDocumentToSaved:",
+      "title": "Revert to Saved…",
+      "path": "File > Revert to Saved…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.RevertSelectedFilesCommand",
+      "selector": "revertSelectedFilesCommand:",
+      "title": "Discard Changes in Selected Files…",
+      "path": "Integrate > Discard Changes in Selected Files…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.RevertWorkingCopiesCommand",
+      "selector": "revertWorkingCopiesCommand:",
+      "title": "Discard All Changes…",
+      "path": "Integrate > Discard All Changes…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Run",
+      "selector": "runActiveRunContext:",
+      "title": "Run",
+      "path": "Product > Run",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.RunWithoutBuilding",
+      "selector": "runActiveRunContextWithoutBuilding:",
+      "title": "Run Without Building",
+      "path": "Product > Perform Action > Run Without Building",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SCMDownload",
+      "selector": "scmDownload:",
+      "title": "Clone…",
+      "path": "Integrate > Clone…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SaveAllEditorDocuments",
+      "selector": "saveAllEditorDocuments:",
+      "title": "Save All",
+      "path": "File > Save All",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SaveAsWorkspace",
+      "selector": "saveAsWorkspace:",
+      "title": "Save As Workspace…",
+      "path": "File > Save As Workspace…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SaveDocument",
+      "selector": "ide_saveDocument:",
+      "title": "Save",
+      "path": "File > Save",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SaveDocumentAs",
+      "selector": "ide_saveDocumentAs:",
+      "title": "Save As…",
+      "path": "File > Save As…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SearchDocumentationForSelectedText",
+      "selector": "searchDocumentationForSelectedText:",
+      "title": "Search Documentation for Selected Text",
+      "path": "Help > Search Documentation for Selected Text",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SearchInSelectedItems",
+      "selector": "searchInSelectedItems:",
+      "title": "Find in Selected Group…",
+      "path": "Find > Find in Selected Group…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SelectAll",
+      "selector": "selectAll:",
+      "title": "Select All",
+      "path": "Edit > Select All",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SelectAllFindMatches",
+      "selector": "selectAllFindMatches:",
+      "title": "Select All Find Matches",
+      "path": "Find > Select All Find Matches",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SelectFindMatchesInSelection",
+      "selector": "selectFindMatchesInSelection:",
+      "title": "Select Find Matches in Selection",
+      "path": "Find > Select Find Matches in Selection",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SelectNextOccurrence",
+      "selector": "selectNextOccurrence:",
+      "title": "Select Next Occurrence",
+      "path": "Find > Select Next Occurrence",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SelectPreviousOccurrence",
+      "selector": "selectPreviousOccurrence:",
+      "title": "Select Previous Occurrence",
+      "path": "Find > Select Previous Occurrence",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Selection",
+      "selector": "nullSelection:",
+      "title": "Selection",
+      "path": "Edit > Format > Text > Writing Direction > Selection",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SelectionDefault",
+      "selector": "makeTextWritingDirectionNatural:",
+      "title": "   Default",
+      "path": "Edit > Format > Text > Writing Direction >    Default",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SelectionLeftToRight",
+      "selector": "makeTextWritingDirectionLeftToRight:",
+      "title": "   Left to Right",
+      "path": "Edit > Format > Text > Writing Direction >    Left to Right",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SelectionRightToLeft",
+      "selector": "makeTextWritingDirectionRightToLeft:",
+      "title": "   Right to Left",
+      "path": "Edit > Format > Text > Writing Direction >    Right to Left",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SendDebuggerInterrupt",
+      "selector": "sendDebuggerInterrupt:",
+      "title": "Interrupt Debugger Operation",
+      "path": "Debug > Debug Workflow > Interrupt Debugger Operation",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowAll",
+      "selector": "unhideAllApplications:",
+      "title": "Show All",
+      "path": "Xcode > Show All",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowAssistantEditor",
+      "selector": "_toggleShowAssistantMode:",
+      "title": "Assistant",
+      "path": "Editor > Assistant",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowColors",
+      "selector": "orderFrontColorPanel:",
+      "title": "Show Colors",
+      "path": "Edit > Format > Show Colors",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowDisassemblyWhenDebugging",
+      "selector": "setShowDisassemblyWhenDebugging:",
+      "title": "Always Show Disassembly",
+      "path": "Debug > Debug Workflow > Always Show Disassembly",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowDocumentItemsMenu",
+      "selector": "topLevelEditorContext_showDocumentItemsMenu:",
+      "title": "Show Document Items",
+      "path": "View > Editor > Show Document Items",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowDownloads",
+      "selector": "showDownloadsWindow:",
+      "title": "Downloads",
+      "path": "Window > Downloads",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowFonts",
+      "selector": "orderFrontFontPanel:",
+      "title": "Show Fonts",
+      "path": "Edit > Format > Show Fonts",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowGroupFilesMenu",
+      "selector": "topLevelEditorContext_showGroupFilesMenu:",
+      "title": "Show Group Files",
+      "path": "View > Editor > Show Group Files",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowInFinder",
+      "selector": "showInFinder:",
+      "title": "Show in Finder",
+      "path": "File > Show in Finder",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowLibraryInfo",
+      "selector": "showLibraryInfoPopUp:",
+      "title": "Show Library Info…",
+      "path": "Debug > Debug Workflow > Show Library Info…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowNextEditorTab",
+      "selector": "_showNextEditorTab:",
+      "title": "Show Next Tab",
+      "path": "Navigate > Show Next Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowNextFilesHistoryMenu",
+      "selector": "topLevelEditorContext_showNextFilesHistoryMenu:",
+      "title": "Show Next Files History",
+      "path": "View > Editor > Show Next Files History",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowNextHistoryMenu",
+      "selector": "topLevelEditorContext_showNextHistoryMenu:",
+      "title": "Show Next History",
+      "path": "View > Editor > Show Next History",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowNextWindowTab",
+      "selector": "selectNextTab:",
+      "title": "Show Next Window Tab",
+      "path": "Window > Show Next Window Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowPreviewEditor",
+      "selector": "_toggleShowPreviewMode:",
+      "title": "Canvas",
+      "path": "Editor > Canvas",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowPreviousEditorTab",
+      "selector": "_showPreviousEditorTab:",
+      "title": "Show Previous Tab",
+      "path": "Navigate > Show Previous Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowPreviousFilesHistoryMenu",
+      "selector": "topLevelEditorContext_showPreviousFilesHistoryMenu:",
+      "title": "Show Previous Files History",
+      "path": "View > Editor > Show Previous Files History",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowPreviousHistoryMenu",
+      "selector": "topLevelEditorContext_showPreviousHistoryMenu:",
+      "title": "Show Previous History",
+      "path": "View > Editor > Show Previous History",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowPreviousWindowTab",
+      "selector": "selectPreviousTab:",
+      "title": "Show Previous Window Tab",
+      "path": "Window > Show Previous Window Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowQuickActions",
+      "selector": "showQuickActions:",
+      "title": "Show Quick Actions…",
+      "path": "View > Show Quick Actions…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowRelatedItemsMenu",
+      "selector": "topLevelEditorContext_showRelatedItemsMenu:",
+      "title": "Show Related Items",
+      "path": "View > Editor > Show Related Items",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowRuler",
+      "selector": "toggleRuler:",
+      "title": "Show Ruler",
+      "path": "Edit > Format > Text > Show Ruler",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowSpellingAndGrammar",
+      "selector": "showGuessPanel:",
+      "title": "Show Spelling and Grammar",
+      "path": "Edit > Format > Spelling and Grammar > Show Spelling and Grammar",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowStandardEditor",
+      "selector": "_showEditorOnly:",
+      "title": "Show Editor Only",
+      "path": "Editor > Show Editor Only",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowSubstitutions",
+      "selector": "orderFrontSubstitutionsPanel:",
+      "title": "Show Substitutions",
+      "path": "Edit > Format > Substitutions > Show Substitutions",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ShowTopLevelItemsMenu",
+      "selector": "topLevelEditorContext_showTopLevelItemsMenu:",
+      "title": "Show Top Level Items",
+      "path": "View > Editor > Show Top Level Items",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SimulateMetricPayloads",
+      "selector": "simulateMetricPayloads:",
+      "title": "Simulate MetricKit Payloads",
+      "path": "Debug > Simulate MetricKit Payloads",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SimulateVehicularCrash",
+      "selector": "simulateVehicularCrash:",
+      "title": "Simulate Vehicular Crash",
+      "path": "Debug > Simulate Vehicular Crash",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SmartCopyPaste",
+      "selector": "toggleSmartInsertDelete:",
+      "title": "Smart Copy/Paste",
+      "path": "Edit > Format > Substitutions > Smart Copy/Paste",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SmartDashes",
+      "selector": "toggleAutomaticDashSubstitution:",
+      "title": "Smart Dashes",
+      "path": "Edit > Format > Substitutions > Smart Dashes",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SmartLinks",
+      "selector": "toggleAutomaticLinkDetection:",
+      "title": "Smart Links",
+      "path": "Edit > Format > Substitutions > Smart Links",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SmartQuotes",
+      "selector": "toggleAutomaticQuoteSubstitution:",
+      "title": "Smart Quotes",
+      "path": "Edit > Format > Substitutions > Smart Quotes",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SortFilesByName",
+      "selector": "sortFilesByName:",
+      "title": "By Name",
+      "path": "Edit > Sort > By Name",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SortFilesByType",
+      "selector": "sortFilesByType:",
+      "title": "By Type",
+      "path": "Edit > Sort > By Type",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StageSelectedFilesCommand",
+      "selector": "stageSelectedFilesCommand:",
+      "title": "Stage Selected Files",
+      "path": "Integrate > Stage Selected Files",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StageWorkingCopiesCommand",
+      "selector": "stageWorkingCopiesCommand:",
+      "title": "Stage All Changes",
+      "path": "Integrate > Stage All Changes",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StartSpeaking",
+      "selector": "startSpeaking:",
+      "title": "Start Speaking",
+      "path": "Edit > Format > Speech > Start Speaking",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StashCommand",
+      "selector": "stashCommand:",
+      "title": "Stash Changes…",
+      "path": "Integrate > Stash Changes…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StepInto",
+      "selector": "stepInto:",
+      "title": "Step Into",
+      "path": "Debug > Step Into",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StepIntoInstruction",
+      "selector": "stepIntoInstruction:",
+      "title": "Step Into Instruction",
+      "path": "Debug > Step Into Instruction",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StepIntoThread",
+      "selector": "stepIntoThread:",
+      "title": "Step Into Thread",
+      "path": "Debug > Step Into Thread",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StepOut",
+      "selector": "stepOut:",
+      "title": "Step Out",
+      "path": "Debug > Step Out",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StepOver",
+      "selector": "stepOver:",
+      "title": "Step Over",
+      "path": "Debug > Step Over",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StepOverInstruction",
+      "selector": "stepOverInstruction:",
+      "title": "Step Over Instruction",
+      "path": "Debug > Step Over Instruction",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StepOverThread",
+      "selector": "stepOverThread:",
+      "title": "Step Over Thread",
+      "path": "Debug > Step Over Thread",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Stop",
+      "selector": "cancelCurrentExecution:",
+      "title": "Stop",
+      "path": "Product > Stop",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.StopSpeaking",
+      "selector": "stopSpeaking:",
+      "title": "Stop Speaking",
+      "path": "Edit > Format > Speech > Stop Speaking",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Styles",
+      "selector": "orderFrontStylesPanel:",
+      "title": "Show Styles…",
+      "path": "Edit > Format > Font > Show Styles…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SubEditorPosition_Automatic",
+      "selector": "_setSubEditorPositionToAutomatic:",
+      "title": "Automatic",
+      "path": "Editor > Layout > Automatic",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SubEditorPosition_Below",
+      "selector": "_setSubEditorPositionToBelow:",
+      "title": "Editor on Top",
+      "path": "Editor > Layout > Editor on Top",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SubEditorPosition_OnRight",
+      "selector": "_setSubEditorPositionToOnRight:",
+      "title": "Editor on Left",
+      "path": "Editor > Layout > Editor on Left",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.SwiftProgrammingLanguageBook",
+      "selector": "showSwiftProgrammingLanguageBook:",
+      "title": "Swift Programming Language Book",
+      "path": "Help > Swift Programming Language Book",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.TakeScreenshot",
+      "selector": "takeScreenshot:",
+      "title": "Take Screenshot of Active Device",
+      "path": "Debug > View Debugging > Take Screenshot of Active Device",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Test",
+      "selector": "testActiveRunContext:",
+      "title": "Test",
+      "path": "Product > Test",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.TestAgain",
+      "selector": "testAgain:",
+      "title": "Test Again",
+      "path": "Product > Perform Action > Test Again",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.TestAgainWithoutBuilding",
+      "selector": "testAgainWithoutBuilding:",
+      "title": "Test Without Building Again",
+      "path": "Product > Perform Action > Test Without Building Again",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.TestSelectedItems",
+      "selector": "testSelectedItems:",
+      "title": "Test",
+      "path": "Product > Perform Action > Test",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.TestWithoutBuilding",
+      "selector": "testActiveRunContextWithoutBuilding:",
+      "title": "Test Without Building",
+      "path": "Product > Perform Action > Test Without Building",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.TextReplacement",
+      "selector": "toggleAutomaticTextReplacement:",
+      "title": "Text Replacement",
+      "path": "Edit > Format > Substitutions > Text Replacement",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleBreakpointAtCurrentLine",
+      "selector": "toggleBreakpointAtCurrentLine:",
+      "title": "Create Breakpoint at Current Line",
+      "path": "Debug > Breakpoints > Create Breakpoint at Current Line",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleBreakpointForSelection",
+      "selector": "toggleBreakpointForSelection:",
+      "title": "Create Breakpoint for Selection",
+      "path": "Debug > Breakpoints > Create Breakpoint for Selection",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleBreakpoints",
+      "selector": "toggleBreakpoints:",
+      "title": "Deactivate Breakpoints",
+      "path": "Debug > Deactivate Breakpoints",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleEditorOrientation",
+      "selector": "toggleEditorOrientation:",
+      "title": "Change Editor Orientation",
+      "path": "View > Change Editor Orientation",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleFocusEditor",
+      "selector": "_toggleMaximizeEditor:",
+      "title": "Focus Editor Pane",
+      "path": "View > Editor > Focus Editor Pane",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleFullScreen",
+      "selector": "toggleFullScreen:",
+      "title": "Enter Full Screen",
+      "path": "View > Enter Full Screen",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleKeyboardHints",
+      "selector": "toggleKeyboardHints:",
+      "title": "Show Keyboard Hints",
+      "path": "Help > Show Keyboard Hints",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.TogglePinSelectedEditorTab",
+      "selector": "togglePinSelectedEditorTab:",
+      "title": "Pin Editor Tab",
+      "path": "View > Pin Editor Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleRecordingUITest",
+      "selector": "toggleRecordingUITest:",
+      "title": "Start Recording UI Test",
+      "path": "Editor > Start Recording UI Test",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleShowCodeReview",
+      "selector": "_toggleShowCodeReviewForEditor:",
+      "title": "Show Code Review",
+      "path": "View > Show Code Review",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleToolbar",
+      "selector": "toggleToolbarShown:",
+      "title": "Hide Toolbar",
+      "path": "View > Hide Toolbar",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleWindowTabBar",
+      "selector": "toggleTabBar:",
+      "title": "Show Window Tab Bar",
+      "path": "View > Show Window Tab Bar",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ToggleWindowTabOverview",
+      "selector": "toggleTabOverview:",
+      "title": "Show All Window Tabs",
+      "path": "View > Show All Window Tabs",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.TouchBarSimulator.SelectSimulatorConfigurationGen1",
+      "selector": "selectSimulatorConfigurationGen1:",
+      "title": "Touch Bar (1st generation)",
+      "path": "Window > Touch Bar > Touch Bar (1st generation)",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.TouchBarSimulator.SelectSimulatorConfigurationGen2",
+      "selector": "selectSimulatorConfigurationGen2:",
+      "title": "Touch Bar (2nd generation)",
+      "path": "Window > Touch Bar > Touch Bar (2nd generation)",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.TouchBarSimulator.ShowTouchBar",
+      "selector": "toggleSimulatorWindowVisibility:",
+      "title": "Show Touch Bar",
+      "path": "Window > Touch Bar > Show Touch Bar",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.UISnapshotRefresh",
+      "selector": "uiSnapshotRefresh:",
+      "title": "Simulate UI Snapshot",
+      "path": "Debug > Simulate UI Snapshot",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Underline",
+      "selector": "underline:",
+      "title": "Underline",
+      "path": "Edit > Format > Font > Underline",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Undo",
+      "selector": "undo:",
+      "title": "Undo",
+      "path": "Edit > Undo",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.UnlockDocument",
+      "selector": "ide_unlockDocument:",
+      "title": "Unlock…",
+      "path": "File > Unlock…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.UnstageSelectedFilesCommand",
+      "selector": "unstageSelectedFilesCommand:",
+      "title": "Unstage Selected Files",
+      "path": "Integrate > Unstage Selected Files",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.UnstageWorkingCopiesCommand",
+      "selector": "unstageWorkingCopiesCommand:",
+      "title": "Unstage All Changes",
+      "path": "Integrate > Unstage All Changes",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.UpdateCommand",
+      "selector": "updateCommand:",
+      "title": "Pull…",
+      "path": "Integrate > Pull…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.UpdateToLatestPackageVersions",
+      "selector": "updateToLatestPackageVersions:",
+      "title": "Update to Latest Package Versions",
+      "path": "File > Packages > Update to Latest Package Versions",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.UseSelectionForFind",
+      "selector": "useSelectionForFind:",
+      "title": "Use Selection for Find",
+      "path": "Find > Use Selection for Find",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.UseSelectionForReplace",
+      "selector": "useSelectionForReplace:",
+      "title": "Use Selection for Replace",
+      "path": "Find > Use Selection for Replace",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ViewMemory",
+      "selector": "viewMemory:",
+      "title": "View Memory",
+      "path": "Debug > Debug Workflow > View Memory",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.WelcomeToXcode",
+      "selector": "showWelcomeToXcode:",
+      "title": "Welcome to Xcode",
+      "path": "Window > Welcome to Xcode",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.WhatsNew",
+      "selector": "showWhatsNewInXcode:",
+      "title": "What’s New in Xcode",
+      "path": "Help > What’s New in Xcode",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.XcodeExtensions",
+      "selector": "showXcodeExtensions:",
+      "title": "Xcode Extensions…",
+      "path": "Xcode > Xcode Extensions…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.XcodeHelp",
+      "selector": "showHelp:",
+      "title": "Xcode Help",
+      "path": "Help > Xcode Help",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.Zoom",
+      "selector": "performZoom:",
+      "title": "Zoom",
+      "path": "Window > Zoom",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.ZoomAll",
+      "selector": "zoomAll:",
+      "title": "Zoom All",
+      "path": "Window > Zoom All",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEKit.CmdDefinition.toggleShowEditorTabBar",
+      "selector": "toggleShowEditorTabBar:",
+      "title": "Show Editor Tab Bar",
+      "path": "View > Show Editor Tab Bar",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.AddDocumentation",
+      "selector": "addDocumentation:",
+      "title": "Add Documentation",
+      "path": "Editor > Structure > Add Documentation",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.BalanceDelimiter",
+      "selector": "balance:",
+      "title": "Balance Delimiters",
+      "path": "Editor > Selection > Balance Delimiters",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.CommentUncomment",
+      "selector": "toggleComments:",
+      "title": "Comment Selection",
+      "path": "Editor > Structure > Comment Selection",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.DecreaseFontSize",
+      "selector": "decreaseFontSize:",
+      "title": "Decrease",
+      "path": "Editor > Font Size > Decrease",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.EditAllInScope",
+      "selector": "toggleTokenizedEditing:",
+      "title": "Edit All in Scope",
+      "path": "Editor > Edit All in Scope",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ExpandMacro",
+      "selector": "showHideMacroExpansion:",
+      "title": "Expand Macro",
+      "path": "Editor > Expand Macro",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.FixAllInScope",
+      "selector": "fixAllIssues:",
+      "title": "Fix All Issues",
+      "path": "Editor > Fix All Issues",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Fold",
+      "selector": "fold:",
+      "title": "Fold",
+      "path": "Editor > Code Folding > Fold",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.FoldCommentBlocks",
+      "selector": "foldAllComments:",
+      "title": "Fold Comment Blocks",
+      "path": "Editor > Code Folding > Fold Comment Blocks",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.FoldMethodsOrFunctions",
+      "selector": "foldAllMethods:",
+      "title": "Fold Methods & Functions",
+      "path": "Editor > Code Folding > Fold Methods & Functions",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.FoldSelection",
+      "selector": "foldSelection:",
+      "title": "foldSelection:",
+      "path": "",
+      "source": "candidate"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatFile",
+      "selector": "formatFile:",
+      "title": "Format File",
+      "path": "Editor > Structure > Format File",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatSelection",
+      "selector": "formatSelection:",
+      "title": "Format Selection",
+      "path": "Editor > Structure > Format Selection",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatToMultipleLines",
+      "selector": "formatToMultipleLines:",
+      "title": "Format to Multiple Lines",
+      "path": "Editor > Structure > Format to Multiple Lines",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.HideAllMacros",
+      "selector": "hideAllMacroExpansions:",
+      "title": "Hide All Macro Expansions",
+      "path": "Editor > Hide All Macro Expansions",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.IncreaseFontSize",
+      "selector": "increaseFontSize:",
+      "title": "Increase",
+      "path": "Editor > Font Size > Increase",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToNextAnyChange",
+      "selector": "jumpToNextAnyChange:",
+      "title": "Jump to Next Local or Upstream Change",
+      "path": "Navigate > Jump to Next Local or Upstream Change",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToNextChange",
+      "selector": "jumpToNextChange:",
+      "title": "Jump to Next Change",
+      "path": "Navigate > Jump to Next Change",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToNextCounterpart",
+      "selector": "jumpToNextCounterpart:",
+      "title": "Jump to Next Counterpart",
+      "path": "Navigate > Jump to Next Counterpart",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToNextCounterpartWithAlternate",
+      "selector": "jumpToNextCounterpartWithAlternate:",
+      "title": "Jump to Next Counterpart using Tab",
+      "path": "Navigate > Jump to Next Counterpart using Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToNextCounterpartWithShiftPlusAlternate",
+      "selector": "jumpToNextCounterpartWithShiftPlusAlternate:",
+      "title": "Jump to Next Counterpart in Next Editor Pane",
+      "path": "Navigate > Jump to Next Counterpart in Next Editor Pane",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToNextPlaceholder",
+      "selector": "selectNextPlaceholder:",
+      "title": "Jump to Next Placeholder",
+      "path": "Navigate > Jump to Next Placeholder",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToPreviousAnyChange",
+      "selector": "jumpToPreviousAnyChange:",
+      "title": "Jump to Previous Local or Upstream Change",
+      "path": "Navigate > Jump to Previous Local or Upstream Change",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToPreviousChange",
+      "selector": "jumpToPreviousChange:",
+      "title": "Jump to Previous Change",
+      "path": "Navigate > Jump to Previous Change",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToPreviousCounterpart",
+      "selector": "jumpToPreviousCounterpart:",
+      "title": "Jump to Previous Counterpart",
+      "path": "Navigate > Jump to Previous Counterpart",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToPreviousCounterpartWithAlternate",
+      "selector": "jumpToPreviousCounterpartWithAlternate:",
+      "title": "Jump to Previous Counterpart using Tab",
+      "path": "Navigate > Jump to Previous Counterpart using Tab",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToPreviousCounterpartWithShiftPlusAlternate",
+      "selector": "jumpToPreviousCounterpartWithShiftPlusAlternate:",
+      "title": "Jump to Previous Counterpart in Next Editor Pane",
+      "path": "Navigate > Jump to Previous Counterpart in Next Editor Pane",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.JumpToPreviousPlaceholder",
+      "selector": "selectPreviousPlaceholder:",
+      "title": "Jump to Previous Placeholder",
+      "path": "Navigate > Jump to Previous Placeholder",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.MoveLineDown",
+      "selector": "moveCurrentLineDown:",
+      "title": "Move Line Down",
+      "path": "Editor > Structure > Move Line Down",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.MoveLineUp",
+      "selector": "moveCurrentLineUp:",
+      "title": "Move Line Up",
+      "path": "Editor > Structure > Move Line Up",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ReIndent",
+      "selector": "indentSelection:",
+      "title": "Re-Indent",
+      "path": "Editor > Structure > Re-Indent",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.AddMissingAbstractClassOverrides",
+      "selector": "addMissingAbstractClassOverrides:",
+      "title": "Add Missing Abstract Class Overrides",
+      "path": "Editor > Refactor > Add Missing Abstract Class Overrides",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.AddMissingProtocolRequirements",
+      "selector": "addMissingProtocolRequirements:",
+      "title": "Add Missing Protocol Requirements",
+      "path": "Editor > Refactor > Add Missing Protocol Requirements",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.AddMissingSwitchCases",
+      "selector": "addMissingSwitchCases:",
+      "title": "Add Missing Switch Cases",
+      "path": "Editor > Refactor > Add Missing Switch Cases",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.ConvertRegExLiteralToDSL",
+      "selector": "convertRegExToDSL:",
+      "title": "Convert to Regex Builder",
+      "path": "Editor > Refactor > Convert to Regex Builder",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.ConvertToSwitch",
+      "selector": "convertToSwitch:",
+      "title": "Convert to Switch",
+      "path": "Editor > Refactor > Convert to Switch",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.ExpandDefault",
+      "selector": "expandDefault:",
+      "title": "Expand Default",
+      "path": "Editor > Refactor > Expand Default",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.ExtractContainerToFile",
+      "selector": "extractContainerToFile:",
+      "title": "Extract to File",
+      "path": "Editor > Refactor > Extract to File",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.ExtractExpression",
+      "selector": "extractExpression:",
+      "title": "Extract to Variable",
+      "path": "Editor > Refactor > Extract to Variable",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.ExtractFunction",
+      "selector": "extractFunction:",
+      "title": "Extract to Function",
+      "path": "Editor > Refactor > Extract to Function",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.ExtractMethod",
+      "selector": "extractMethod:",
+      "title": "Extract to Method",
+      "path": "Editor > Refactor > Extract to Method",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.ExtractRepeatedExpression",
+      "selector": "extractRepeatedExpression:",
+      "title": "Extract All Occurrences",
+      "path": "Editor > Refactor > Extract All Occurrences",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.ExtractSelectionToFile",
+      "selector": "extractSelectionToFile:",
+      "title": "Extract Selection to File",
+      "path": "Editor > Refactor > Extract Selection to File",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.GenerateMemberwiseInitializer",
+      "selector": "generateMemberwiseInitializer:",
+      "title": "Generate Memberwise Initializer",
+      "path": "Editor > Refactor > Generate Memberwise Initializer",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.GenerateMissingFunctionDefinitions",
+      "selector": "generateMissingFunctionDefinitions:",
+      "title": "Generate Missing Function Definitions",
+      "path": "Editor > Refactor > Generate Missing Function Definitions",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.Rename",
+      "selector": "renameRefactor:",
+      "title": "Rename…",
+      "path": "Editor > Refactor > Rename…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Refactor.WrapInNSLocalizedString",
+      "selector": "wrapInNSLocalizedString:",
+      "title": "Wrap in NSLocalizedString",
+      "path": "Editor > Refactor > Wrap in NSLocalizedString",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ReformatToWidth",
+      "selector": "reformatToWidth:",
+      "title": "Reformat To Width",
+      "path": "Editor > Structure > Reformat To Width",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.RelativeLineNumbers",
+      "selector": "toggleLineNumbersStyle:",
+      "title": "Relative Line Numbers",
+      "path": "Editor > Relative Line Numbers",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ResetFontSize",
+      "selector": "resetFontSize:",
+      "title": "Reset",
+      "path": "Editor > Font Size > Reset",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.SelectAllSymbols",
+      "selector": "selectAllSymbols:",
+      "title": "Select All Symbols",
+      "path": "Editor > Selection > Select All Symbols",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.SelectColumnDown",
+      "selector": "selectColumnDown:",
+      "title": "Select Column Down",
+      "path": "Editor > Selection > Select Column Down",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.SelectColumnUp",
+      "selector": "selectColumnUp:",
+      "title": "Select Column Up",
+      "path": "Editor > Selection > Select Column Up",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShiftLeft",
+      "selector": "shiftLeft:",
+      "title": "Shift Left",
+      "path": "Editor > Structure > Shift Left",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShiftRight",
+      "selector": "shiftRight:",
+      "title": "Shift Right",
+      "path": "Editor > Structure > Shift Right",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowAuthors",
+      "selector": "toggleAuthorsShown:",
+      "title": "Authors",
+      "path": "Editor > Authors",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowBlameForLine",
+      "selector": "blameSelectedLine:",
+      "title": "Show Last Change for Line",
+      "path": "Editor > Show Last Change for Line",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowCallers",
+      "selector": "jumpToCallers:",
+      "title": "Show Callers…",
+      "path": "Editor > Show Callers…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowCodeCoverage",
+      "selector": "toggleCodeCoverageShown:",
+      "title": "Code Coverage",
+      "path": "Editor > Code Coverage",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowHideCompletions",
+      "selector": "complete:",
+      "title": "Show Completions",
+      "path": "Editor > Show Completions",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowHidePredictiveCompletion",
+      "selector": "predict:",
+      "title": "Show Predictive Completion",
+      "path": "Editor > Show Predictive Completion",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowInline",
+      "selector": "toggleInlineEnabled:",
+      "title": "Inline Comparison",
+      "path": "Editor > Inline Comparison",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowInvisibles",
+      "selector": "toggleInvisibleCharactersShown:",
+      "title": "Invisibles",
+      "path": "Editor > Invisibles",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowMinimap",
+      "selector": "toggleMinimapShown:",
+      "title": "Minimap",
+      "path": "Editor > Minimap",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowScopeGuides",
+      "selector": "toggleScopeGuidesShown:",
+      "title": "Scope Guides",
+      "path": "Editor > Scope Guides",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowTwoUp",
+      "selector": "toggleTwoUpEnabled:",
+      "title": "Side By Side Comparison",
+      "path": "Editor > Side By Side Comparison",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.SourceCodeAuxiliaryEditorMenuCommand2",
+      "selector": "generateLibraryContentProvider:",
+      "title": "Create Library Item",
+      "path": "Editor > Create Library Item",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.SplitSelectionByLines",
+      "selector": "splitSelectionByLine:",
+      "title": "Split Selection By Lines",
+      "path": "Editor > Selection > Split Selection By Lines",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ToggleAllIssueShown",
+      "selector": "toggleAllIssuesShown:",
+      "title": "Show All Issues",
+      "path": "Editor > Show All Issues",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ToggleIssueShown",
+      "selector": "toggleIssueShown:",
+      "title": "Show Issues",
+      "path": "Editor > Show Issues",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.Unfold",
+      "selector": "unfold:",
+      "title": "Unfold",
+      "path": "Editor > Code Folding > Unfold",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.UnfoldAll",
+      "selector": "unfoldAll:",
+      "title": "Unfold All",
+      "path": "Editor > Code Folding > Unfold All",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.UnfoldCommentBlocks",
+      "selector": "unfoldAllComments:",
+      "title": "Unfold Comment Blocks",
+      "path": "Editor > Code Folding > Unfold Comment Blocks",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.UnfoldMethodsOrFunctions",
+      "selector": "unfoldAllMethods:",
+      "title": "Unfold Methods & Functions",
+      "path": "Editor > Code Folding > Unfold Methods & Functions",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.ViMode",
+      "selector": "toggleViMode:",
+      "title": "Vim Mode",
+      "path": "Editor > Vim Mode",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPegasusSourceEditor.CmdDefinition.WrapLines",
+      "selector": "toggleWrapLines:",
+      "title": "Wrap Lines",
+      "path": "Editor > Wrap Lines",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPlaygroundsSupport.CmdDefinition.NewPlayground",
+      "selector": "newPlayground:",
+      "title": "Playground…",
+      "path": "File > New > Playground…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEPlaygroundsSupport.CmdDefinition.NewPlaygroundPage",
+      "selector": "newPlaygroundPage:",
+      "title": "Playground Page",
+      "path": "File > New > Playground Page",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDESiriLinkBuilder.CmdDefinition.AppShortCutPreview",
+      "selector": "showAppShortcutPreview:",
+      "title": "App Shortcuts Preview",
+      "path": "Product > App Shortcuts Preview",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDESourceControlUI.CmdDefinition.RevealInChangesNavigator",
+      "selector": "revealInChangesNavigator:",
+      "title": "Reveal in Changes Navigator",
+      "path": "Navigate > Reveal in Changes Navigator",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDESwiftPackageSupport.CmdDefinition.AddPackages",
+      "selector": "addPackages:",
+      "title": "Add Package Dependencies…",
+      "path": "File > Add Package Dependencies…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDETestPlanEditor.CmdDefinition.EditTestPlan",
+      "selector": "editTestPlan:",
+      "title": "Edit Test Plan",
+      "path": "Product > Test Plan > Edit Test Plan",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDETestPlanEditor.CmdDefinition.ManageTestPlans",
+      "selector": "manageTestPlans:",
+      "title": "Manage Test Plans…",
+      "path": "Product > Test Plan > Manage Test Plans…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDETestPlanEditor.CmdDefinition.NewTestPlan",
+      "selector": "createNewTestPlan:",
+      "title": "New Test Plan…",
+      "path": "Product > Test Plan > New Test Plan…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDETestPlanEditor.CmdDefinition.NextTestPlan",
+      "selector": "selectNextTestPlan:",
+      "title": "Select Next Test Plan",
+      "path": "Product > Test Plan > Select Next Test Plan",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDETestPlanEditor.CmdDefinition.PreviousTestPlan",
+      "selector": "selectPreviousTestPlan:",
+      "title": "Select Previous Test Plan",
+      "path": "Product > Test Plan > Select Previous Test Plan",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.IDEXCStringsSupport.CmdDefinition.ConvertContainerToXCStrings",
+      "selector": "showXCStringsMigrationAssistant:",
+      "title": "To String Catalogs…",
+      "path": "Edit > Convert > To String Catalogs…",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.CopyPreviewScreenshot",
+      "selector": "copyPreviewScreenshot:",
+      "title": "Copy Preview Screenshot",
+      "path": "Editor > Canvas > Copy Preview Screenshot",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.EnableJITMode",
+      "selector": "enableJITMode:",
+      "title": "Use Legacy Previews Execution",
+      "path": "Editor > Canvas > Use Legacy Previews Execution",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.ExportPreviewScreenshot",
+      "selector": "exportPreviewScreenshot:",
+      "title": "Export Preview Screenshot",
+      "path": "Editor > Canvas > Export Preview Screenshot",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.PinPreview",
+      "selector": "togglePinPreview:",
+      "title": "Pin Preview in Canvas",
+      "path": "Editor > Canvas > Pin Preview in Canvas",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.PreviewRefresh",
+      "selector": "refreshPreviews:",
+      "title": "Refresh Canvas",
+      "path": "Editor > Canvas > Refresh Canvas",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.ShowClippedViews",
+      "selector": "toggleShowClippedViews:",
+      "title": "Show Clipped Views",
+      "path": "Editor > Canvas > Show Clipped Views",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.ShowDiagnostics",
+      "selector": "showDiagnostics:",
+      "title": "Show Diagnostics",
+      "path": "Editor > Canvas > Show Diagnostics",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.ShowSelection",
+      "selector": "toggleShowSelection:",
+      "title": "Show Selection",
+      "path": "Editor > Canvas > Show Selection",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.TimelineNextEntry",
+      "selector": "nextTimelineEntry:",
+      "title": "Go to Next Timeline Entry",
+      "path": "Editor > Canvas > Canvas Timeline > Go to Next Timeline Entry",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.TimelinePlayPause",
+      "selector": "playPauseTimeline:",
+      "title": "Play Timeline",
+      "path": "Editor > Canvas > Canvas Timeline > Play Timeline",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.TimelinePreviousEntry",
+      "selector": "previousTimelineEntry:",
+      "title": "Go to Previous Timeline Entry",
+      "path": "Editor > Canvas > Canvas Timeline > Go to Previous Timeline Entry",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.TimelineShuffle",
+      "selector": "shuffleTimeline:",
+      "title": "Shuffle Timeline",
+      "path": "Editor > Canvas > Canvas Timeline > Shuffle Timeline",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.ToggleDeviceBezels",
+      "selector": "toggleDeviceBezels:",
+      "title": "Show Device Bezels",
+      "path": "Editor > Canvas > Show Device Bezels",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.ToggleThunkingEnabled",
+      "selector": "toggleThunkingEnabled:",
+      "title": "Automatically Refresh Canvas",
+      "path": "Editor > Canvas > Automatically Refresh Canvas",
+      "source": "menu"
+    },
+    {
+      "id": "Xcode.Ultraviolet.CmdDefinition.ToggleViewBoundaries",
+      "selector": "toggleViewBoundaries:",
+      "title": "Show View Bounds",
+      "path": "Editor > Canvas > Show View Bounds",
+      "source": "menu"
+    },
+    {
+      "id": "XcodeCloud.CmdDefinition.CreateWorkflowCommand",
+      "selector": "createWorkflow:",
+      "title": "Create Workflow…",
+      "path": "Integrate > Create Workflow…",
+      "source": "menu"
+    },
+    {
+      "id": "XcodeCloud.CmdDefinition.ManageWorkflowsCommand",
+      "selector": "manageWorkflows:",
+      "title": "Manage Workflows…",
+      "path": "Integrate > Manage Workflows…",
+      "source": "menu"
+    }
+  ]
+}

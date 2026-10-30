@@ -6,7 +6,6 @@
 //  Copyright © 2020 Dominik Bucher. All rights reserved.
 //
 
-import Carbon
 import AppKit
 
 @NSApplicationMain
@@ -17,7 +16,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   public var funnyTouchbarPresenter = FunnyTouchBarPresenter()
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    storeCurrentKeyboardLayout()
     touchbarPresenter.clearUpTouchBar()
     touchbarPresenter.makeTouchBar()
     menuHolder.start(with: touchbarPresenter)
@@ -61,18 +59,5 @@ private extension AppDelegate {
     } else {
       touchbarPresenter.hideXTouchBar()
     }
-  }
-  
-  // MARK: - Other stuff
-
-  /// It's good practice to store this all the time the application is starting up.
-  /// Feature requests for this is welcome. I don't know how much people change the input methods. :)
-  func storeCurrentKeyboardLayout() {
-    let source = TISCopyCurrentKeyboardInputSource()
-    let id: UnsafeMutableRawPointer = TISGetInputSourceProperty(source?.takeRetainedValue(), kTISPropertyInputSourceID)
-    guard let keyboardLayout = Unmanaged<AnyObject>.fromOpaque(id).takeUnretainedValue() as? String else {
-      fatalError("You 👽? Cannot get the current keyboard layout. Either you have no keyboard or Apple f'd up.")
-    }
-    UserDefaults.standard.set(keyboardLayout, forKey: Constants.Configuration.keyboardLayoutKey)
   }
 }

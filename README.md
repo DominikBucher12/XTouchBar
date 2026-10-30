@@ -9,12 +9,28 @@ Making proper use of Touchbar inside Xcode.
 
 You can [see it in action in here](https://vimeo.com/425121496) 
 
-# How to install this
+# Direct Xcode commands (`feature/true_power`)
+
+This branch integrates **XcodeCommandBridge v2** from the recovered GPT research.
+Touch Bar buttons now call the existing Xcode editor/workspace handlers through an
+in-process Objective-C host and a local Swift client. The snapshot contains 512
+command identifiers, with catalog inspection and a read-only handler audit.
+
+Open `XTouchBar.xcworkspace` to build the app. The direct backend requires loading the
+host library into your prepared XcodeResearch process after each Xcode restart.
+See [setup, architecture and tests](XcodeCommandBridge/README.md) for the complete steps.
+Use **Bridge Status…** in the menu to check the connection. Build, Run, Test, Stop and
+Show in Navigator are also available in the Touch Bar customization palette.
+
+The menu's **Command Backend** selects direct commands (default) or the original
+keyboard backend. Failed direct commands never retry automatically as keystrokes.
+
+# Original release installation
 
 If you don't wana bother with downloading the code and change the app to your needs, go to **release** section in this repo (one above the bar with programming language used) and download the binary :)
 
 
-# How to use this
+# Legacy keyboard backend setup
 
 **Disclaimer**: 
 This tool uses the default shortcuts, if you customized some of your shortcuts, you can customize this easily to your desires.
@@ -47,7 +63,7 @@ If you don't find any of the given shortcut on the list, feel free to add it ins
 7. You can now use this shortcut in the `TouchBarCustomizationPallete`!
 
 
-## TS;WM
+## Original keyboard implementation
 Basically keylogger which wil blow up your macbook, call shortcuts on fly and help you more with your workflow :) 
 
 ## Known limitations:
@@ -93,7 +109,7 @@ Oh yeah and, take a look at [guys at Showmax](https://tech.showmax.com), they ar
 - [X] Add Swiftlint to format a style a bit :)
 
 
-## TL;DR
+## Historical implementation notes (keyboard backend)
 
 ### How this project works.
 The first thing to do is to class-dump private Touchbar API from `AppKit` I really would love to know what `DFR` Prefix means, but let's put that aside :D

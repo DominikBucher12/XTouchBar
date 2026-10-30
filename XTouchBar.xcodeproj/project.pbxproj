@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10000000000000000000001 /* XcodeCommandDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000002 /* XcodeCommandDispatcher.swift */; };
+		A10000000000000000000003 /* XcodeCommandBridgeClient in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000004 /* XcodeCommandBridgeClient */; };
 		38C2BCE3243E5C330009A015 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE2243E5C330009A015 /* Shortcut.swift */; };
 		38C2BCE5243E5C4B0009A015 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2BCE4243E5C4B0009A015 /* Key.swift */; };
 		DA9155C1D92301000C308933 /* libPods-XTouchBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D2CA2E260FD1DF0ADC0E34 /* libPods-XTouchBar.a */; };
@@ -56,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A10000000000000000000002 /* XcodeCommandDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeCommandDispatcher.swift; sourceTree = "<group>"; };
 		08EAC9769BAEA2862342770F /* Pods-XTouchBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTouchBar.release.xcconfig"; path = "Target Support Files/Pods-XTouchBar/Pods-XTouchBar.release.xcconfig"; sourceTree = "<group>"; };
 		385EA4122437D68B0064C23D /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		385EA4162437D6E30064C23D /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7DAC10E2437DD17002A1DD9 /* DFRFoundation.framework in Frameworks */,
+				A10000000000000000000003 /* XcodeCommandBridgeClient in Frameworks */,
 				DA9155C1D92301000C308933 /* libPods-XTouchBar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +156,7 @@
 				E72CE3C524103EE800B9283D /* Bridging.h */,
 				E72CE39F24103A9D00B9283D /* AppDelegate.swift */,
 				E7718485244FAC39000DE4EC /* MenuCreator.swift */,
+				A10000000000000000000002 /* XcodeCommandDispatcher.swift */,
 				E756B534249D3240005930C6 /* FunnyView.swift */,
 				E779DF4D2437DE4600A70379 /* TouchBarSupport */,
 				E7CC78802448A9AA0092AAFF /* Constants */,
@@ -236,6 +241,7 @@
 			dependencies = (
 			);
 			name = XTouchBar;
+			packageProductDependencies = (A10000000000000000000004 /* XcodeCommandBridgeClient */,);
 			productName = TouchingMyBar;
 			productReference = E72CE39C24103A9D00B9283D /* XTouchBar.app */;
 			productType = "com.apple.product-type.application";
@@ -287,6 +293,7 @@
 				Base,
 			);
 			mainGroup = E72CE39324103A9D00B9283D;
+			packageReferences = (A10000000000000000000005 /* XCLocalSwiftPackageReference "XcodeCommandBridge" */,);
 			productRefGroup = E72CE39D24103A9D00B9283D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -396,6 +403,7 @@
 				E796044A24367E3100F39215 /* Constants.swift in Sources */,
 				E7557608243BAC2800441B69 /* TouchBarPresenter.swift in Sources */,
 				E7718486244FAC39000DE4EC /* MenuCreator.swift in Sources */,
+				A10000000000000000000001 /* XcodeCommandDispatcher.swift in Sources */,
 				E78F583D2413C6AC00420566 /* NSTouchbarSupport.swift in Sources */,
 				E72CE3A024103A9D00B9283D /* AppDelegate.swift in Sources */,
 				E7CC787E2447E59D0092AAFF /* KeyPresser.swift in Sources */,
@@ -432,6 +440,20 @@
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A10000000000000000000005 /* XCLocalSwiftPackageReference "XcodeCommandBridge" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = XcodeCommandBridge;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A10000000000000000000004 /* XcodeCommandBridgeClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = XcodeCommandBridgeClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E72CE3B524103AA100B9283D /* Debug */ = {

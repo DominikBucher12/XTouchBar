@@ -17,9 +17,40 @@ extension Shortcut {
 
   // MARK: - Useful
 
+  static let build = Shortcut(
+    iconData: "🔨".emojiImage()?.tiffRepresentation,
+    id: "buildActiveRunContext:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.Build",
+    key: .B, modifiers: [.command], itemDescription: "Build"
+  )
+  static let run = Shortcut(
+    iconData: "▶️".emojiImage()?.tiffRepresentation,
+    id: "runActiveRunContext:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.Run",
+    key: .R, modifiers: [.command], itemDescription: "Run"
+  )
+  static let test = Shortcut(
+    iconData: "✅".emojiImage()?.tiffRepresentation,
+    id: "testActiveRunContext:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.Test",
+    key: .U, modifiers: [.command], itemDescription: "Test"
+  )
+  static let stop = Shortcut(
+    iconData: "⏹".emojiImage()?.tiffRepresentation,
+    id: "cancelCurrentExecution:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.Stop",
+    key: .period, modifiers: [.command], itemDescription: "Stop"
+  )
+  static let showInNavigator = Shortcut(
+    iconData: "📂".emojiImage()?.tiffRepresentation,
+    id: "revealInProjectNavigator:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.RevealInProjectNavigator",
+    key: .J, modifiers: [.shift, .command], itemDescription: "Show in navigator"
+  )
   static let zoomIn = Shortcut(
     iconData: NSImage(named: "Zoom In")?.tiffRepresentation,
     id: "GPUDebugger_zoomInCounterGraph:",
+    commandIdentifier: "Xcode.IDEPegasusSourceEditor.CmdDefinition.IncreaseFontSize",
     key: .keypadPlus,
     modifiers: [.command],
     itemDescription: "Zooms in"
@@ -27,6 +58,7 @@ extension Shortcut {
   static let zoomOut = Shortcut(
     iconData: NSImage(named: "Zoom Out")?.tiffRepresentation,
     id: "GPUDebugger_zoomOutCounterGraph:",
+    commandIdentifier: "Xcode.IDEPegasusSourceEditor.CmdDefinition.DecreaseFontSize",
     key: .keypadMinus,
     modifiers: [.command],
     itemDescription: "Zooms out"
@@ -46,12 +78,14 @@ extension Shortcut {
   static let findInWorkspace = Shortcut(
     iconData: nil,
     id: "findInWorkspace:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.FindInWorkspace",
     key: .F,
     modifiers: [.shift, .command],
     itemDescription: "Find in workspace"
   )
   static let open = Shortcut(
     id: "openDocument:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.Open",
     key: .O,
     modifiers: [.command],
     itemDescription: "Open document (slowly)"
@@ -59,6 +93,7 @@ extension Shortcut {
   static let showCodeReview = Shortcut(
     iconData: NSImage(named: "Show Code Review")?.tiffRepresentation,
     id: "_toggleShowCodeReviewForEditor:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.ToggleShowCodeReview",
     key: .returnKey,
     modifiers: [.command, .shift, .option],
     itemDescription: "Show code review"
@@ -66,6 +101,7 @@ extension Shortcut {
 
   static let findAndReplaceInWorkspace = Shortcut(
     id: "findAndReplaceInWorkspace:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.FindAndReplaceInWorkspace",
     key: .F,
     modifiers: [.command, .shift, .option],
     itemDescription: "Find and replace in workspace"
@@ -74,6 +110,7 @@ extension Shortcut {
   static let openQuickly = Shortcut(
     iconData: NSImage(named: "Open Quickly")?.tiffRepresentation,
     id: "openQuickly:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.OpenQuickly",
     key: .O,
     modifiers: [.command, .shift],
     itemDescription: "Open quickly document"
@@ -84,6 +121,7 @@ extension Shortcut {
   static let addDocumentation = Shortcut(
     iconData: NSImage(named: "Add Documentation")?.tiffRepresentation,
     id: "addDocumentation:",
+    commandIdentifier: "Xcode.IDEPegasusSourceEditor.CmdDefinition.AddDocumentation",
     key: .slash,
     modifiers: [.option, .command],
     itemDescription: "Add documentation"
@@ -91,6 +129,7 @@ extension Shortcut {
   static let commentSelection = Shortcut(
     iconData: NSImage(named: "Comment")?.tiffRepresentation,
     id: "toggleComments:",
+    commandIdentifier: "Xcode.IDEPegasusSourceEditor.CmdDefinition.CommentUncomment",
     key: .slash,
     modifiers: [.command],
     itemDescription: "Comment selection"
@@ -98,6 +137,7 @@ extension Shortcut {
   static let editAllInScope = Shortcut(
     iconData: NSImage(named: "Edit All In Scope")?.tiffRepresentation,
     id: "toggleTokenizedEditing:",
+    commandIdentifier: "Xcode.IDEPegasusSourceEditor.CmdDefinition.EditAllInScope",
     key: .E,
     modifiers: [.command, .control],
     itemDescription: "Edit all in scope"
@@ -105,6 +145,7 @@ extension Shortcut {
   static let fixAllIssues = Shortcut(
     iconData: NSImage(named: "Fix All In Scope")?.tiffRepresentation,
     id: "fixAllIssues:",
+    commandIdentifier: "Xcode.IDEPegasusSourceEditor.CmdDefinition.FixAllInScope",
     key: .F,
     modifiers: [.command,.control,.option],
     itemDescription: "Fix all in scope"
@@ -112,6 +153,7 @@ extension Shortcut {
   static let jumpToDefinition = Shortcut(
     iconData: NSImage(named: "Jump To Definition")?.tiffRepresentation,
     id: "editorContext_jumpToDefinition:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.JumpToDefinition",
     key: .J, modifiers: [.command, .control],
     itemDescription: "Jump to definition"
   )
@@ -119,6 +161,7 @@ extension Shortcut {
   static let fold = Shortcut(
     iconData: NSImage(named: "Fold Code")?.tiffRepresentation,
     id: "fold:",
+    commandIdentifier: "Xcode.IDEPegasusSourceEditor.CmdDefinition.Fold",
     key: .leftArrow,
     modifiers: [.command, .option],
     itemDescription: "Fold code"
@@ -127,6 +170,7 @@ extension Shortcut {
   static let unfold = Shortcut(
     iconData: NSImage(named: "Unfold Code")?.tiffRepresentation,
     id: "unfold:",
+    commandIdentifier: "Xcode.IDEPegasusSourceEditor.CmdDefinition.Unfold",
     key: .rightArrow,
     modifiers: [.command, .option],
     itemDescription: "Unfold code"
@@ -136,6 +180,7 @@ extension Shortcut {
   static let findInSelectedGroups = Shortcut(
     iconData: NSImage(named: "Find In Selected Groups")?.tiffRepresentation,
     id: "searchInSelectedGroups:",
+    commandIdentifier: "Xcode.IDEKit.CmdDefinition.SearchInSelectedItems",
     key: .F,
     modifiers: [.control, .shift],
     itemDescription: "Search in selected groups"
@@ -144,6 +189,7 @@ extension Shortcut {
    static let authors = Shortcut(
     iconData: NSImage(named: "Authors")?.tiffRepresentation,
     id: "toggleAuthorsShown:",
+    commandIdentifier: "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowAuthors",
     key: .A,
     modifiers: [.control, .shift, .command],
     itemDescription: "Git blame, but politically correct ✍️"
@@ -153,6 +199,7 @@ extension Shortcut {
    static let minimap = Shortcut(
     iconData: "🗺".emojiImage()?.tiffRepresentation,
     id: "toggleMinimapShown:",
+    commandIdentifier: "Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowMinimap",
     key: .M,
     modifiers: [.control, .shift, .command],
     itemDescription: "Show mini 🗺"
